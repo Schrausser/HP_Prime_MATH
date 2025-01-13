@@ -16,3 +16,5 @@ ADDP
 1.000-(1.000-P)^N
 ZWERT
 (A-B)/C
+CIYX
+√(1-A^2)*B*NORMALD_ICDF(1-((1-C)/2))
