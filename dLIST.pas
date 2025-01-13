@@ -1,0 +1,17 @@
+//dLIST()/D.G.SCHRAUSSER/2025
+#cas
+dLIST():=
+BEGIN
+{}▶L1;
+{}▶L2;
+{}▶L3;
+{}▶L4;
+{}▶L5;
+{}▶L6;
+{}▶L7;
+{}▶L8;
+{}▶L9;
+{}▶L0;
+END;
+#end
+//
