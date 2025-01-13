@@ -5,7 +5,7 @@ KOR():=
 BEGIN
 //L1()(2) provided
 SIZE(L1)(1)▶N
-N-1▶df
+N-2▶df
 covariance_correlation(L1)▶L0
 L0(2)▶r
 L0(1)▶cv
