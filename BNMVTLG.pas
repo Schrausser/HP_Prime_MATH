@@ -1,0 +1,23 @@
+//BNMVTLG(p[e],a=k,n)/D.G.SCHRAUSSER/2025
+//e.g.BNMVTLG(0.5,5,10)
+#cas
+BNMVTLG(P,K,N):=
+BEGIN
+B=0;
+FOR I FROM 0 TO K DO
+ BINOMIAL(N,P,I)▶L4(I)
+ B=B+L4(I)
+END;
+D5=L4;L4={}
+FOR I FROM 0 TO N DO
+ BINOMIAL(N,P,I)▶L5(I);
+END;
+D6=L5;L5={};
+"D5"▶H1(1);5▶H1(3);
+"D6"▶H2(1);4▶H2(3);
+STARTAPP("Statistiken_1_Var");
+STARTVIEW(1);
+RETURN(B);
+END;
+#end
+//
