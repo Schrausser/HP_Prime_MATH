@@ -8,7 +8,6 @@ TRN(M1)▶L3
 L3(1)▶L1
 L3(2)▶L2
 {}▶L3
-{}▶M1
 L1,L2
 END;
 #end
