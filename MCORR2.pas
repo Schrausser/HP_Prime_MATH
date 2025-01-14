@@ -1,5 +1,4 @@
 //MCORR2()/D.G.SCHRAUSSER/2022
-//Multiple regression R "I do most of it with multiple regression"
 //[Statistiken_2_Var,Arbeitsblatt,Graph3D,FMCORR,MCORR]
 #cas
 MCORR2():=
@@ -31,9 +30,9 @@ C=MCORR(L1(1),L1(2),L1(3))
 C▶L2(1)
 F=FMCORR(C,NbItem)
 F▶L2(2)
-1-FISHER_CDF(NbItem,3,F)▶L2(5);
-NbItem▶L2(3)
-3▶L2(4)
+1-FISHER_CDF(3,NbItem-3-1,F)▶L2(5);
+NbItem-3-1▶L2(4)
+3▶L2(3)
 M2=0;L7={};
 1▶M2(1,1);L1(3)▶M2(1,2)
 L1(3)▶M2(2,1);1▶M2(2,2)
@@ -45,7 +44,6 @@ M4(2,1)*(L4(1)/L4(3))▶L5(2)
 L3(1)-(L5(1)*L3(2)+L5(2)*L3(3))▶L6(1)
 #y=b1x1+b2x2+a
 "L5(1)*X+L5(2)*Y+L6(1)"▶FZ1
-//SPREADSHEET
 STARTAPP("Arbeitsblatt");
 "R"▶A1;L2(1)▶B1;"r1c"▶C1;L1(1)▶D1
 "F"▶A2;L2(2)▶B2;"r2c"▶C2;L1(2)▶D2
@@ -58,4 +56,4 @@ STARTAPP("Arbeitsblatt");
 RETURN (L2);
 END;
 #end 
-// 
+//
