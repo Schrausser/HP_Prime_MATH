@@ -1,0 +1,21 @@
+//CPLHX(complex number,a+bi)/D.G.SCHRAUSSER/2022
+//e.g.CPLHX(2+i/2),[AdvancedGraphing]
+#cas
+CPLHX(C):=
+BEGIN
+C▶Z1
+RE(Z1)▶R
+IM(Z1)▶I
+Z1▶L1(1)
+ABS(Z1)▶L1(2)
+ARG(Z1)▶L1(3)
+"Y=R*X"▶V1
+"Y=I"▶V2
+"Y=√((R*X)^2+I^2)"▶V3
+"Y=(I/ABS(I))*(π/2)-ATAN((R/I)*X)"▶V4
+STARTAPP("Erweiterte_Grafiken")
+STARTVIEW(1)
+RETURN(L1);
+END;
+#end
+//
