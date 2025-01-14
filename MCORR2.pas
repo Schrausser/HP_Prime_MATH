@@ -45,6 +45,7 @@ M4(2,1)*(L4(1)/L4(3))▶L5(2)
 L3(1)-(L5(1)*L3(2)+L5(2)*L3(3))▶L6(1)
 #y=b1x1+b2x2+a
 "L5(1)*X+L5(2)*Y+L6(1)"▶FZ1
+//SPREADSHEET
 STARTAPP("Arbeitsblatt");
 "R"▶A1;L2(1)▶B1;"r1c"▶C1;L1(1)▶D1
 "F"▶A2;L2(2)▶B2;"r2c"▶C2;L1(2)▶D2
