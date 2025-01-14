@@ -1,5 +1,5 @@
 //CPLX(complex number,a+bi)/D.G.SCHRAUSSER/2022
-//e.g.CPLX(2+i/2),[AdvancedGraphing]
+//e.g.CPLX(2+i/2)[AdvancedGraphing]
 #cas
 CPLX(C):=
 BEGIN
