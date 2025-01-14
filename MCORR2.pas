@@ -1,4 +1,5 @@
 //MCORR2()/D.G.SCHRAUSSER/2022
+//Multiple correlation R
 //[Statistiken_2_Var,Arbeitsblatt,Graph3D,FMCORR,MCORR]
 #cas
 MCORR2():=
