@@ -1,5 +1,5 @@
 //MCORR2()/D.G.SCHRAUSSER/2022
-//Multiple regression R
+//Multiple regression R "I do most of it with multiple regression"
 //[Statistiken_2_Var,Arbeitsblatt,Graph3D,FMCORR,MCORR]
 #cas
 MCORR2():=
