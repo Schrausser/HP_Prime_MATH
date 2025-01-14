@@ -3,6 +3,7 @@
 #cas
 CIXY(X,C):=
 BEGIN
+//C1C2 provided
 STARTAPP("Statistiken_2_Var");
 STARTVIEW(−6)
 A=Corr
