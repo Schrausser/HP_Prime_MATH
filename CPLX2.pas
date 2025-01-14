@@ -1,5 +1,5 @@
 //CPLX2(complex number,a+bi)/D.G.SCHRAUSSER/2022
-//e.g.CPLX2(2+i/2),[Spreadsheet]//
+//e.g.CPLX2(2+i/2),[CPLX,Spreadsheet]//
 #cas
 CPLX2(C):=
 BEGIN
