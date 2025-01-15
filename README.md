@@ -10,7 +10,7 @@ Mathematical and statistical applications for HP Prime.
 ### Resampling
 
 ### Distribution function
-`NVTLG`, `EPSILON`, `FVTLG`, `TT_`
+`NVTLG`, `EPSILON`, `FVTLG`, `TT_`, `TV_`
 
 ### Correlation
 `KOR`, `TKV`, `pCor`, `PKR`, `CIXY`, `MCORR2`
