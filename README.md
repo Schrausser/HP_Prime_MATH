@@ -7,8 +7,10 @@ Mathematical and statistical applications for HP Prime.
 ### Probability
 `BNMVTLG`, `ABT1`, `NBNMVTLG`
 
+### Resampling
+
 ### Distribution function
-`NVTLG`, `EPSILON`, `FVTLG`
+`NVTLG`, `EPSILON`, `FVTLG`, `TT_`
 
 ### Correlation
 `KOR`, `TKV`, `pCor`, `PKR`, `CIXY`, `MCORR2`
