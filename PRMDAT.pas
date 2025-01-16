@@ -3,7 +3,7 @@
 #cas
 PRMDAT(N,K):=
 BEGIN
-//L3 provided
+//L3 M1 provided
 FOR J FROM 1 TO N DO
 FOR I FROM 1 TO K DO
 L3(M1(J,I))▶M2(J,I)
