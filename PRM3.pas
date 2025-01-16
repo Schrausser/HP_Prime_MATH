@@ -1,6 +1,6 @@
 //PRM3(elements n, class m)/D.G.SCHRAUSSER/2025
 //Complete permutation matrix (P) of n elements to class m
-//e.g.PRM2(6,3)
+//e.g.PRM3(6,3)[PRM3a]
 #cas
 PRM3(n,m):=
 BEGIN
@@ -36,7 +36,8 @@ END;
 0▶SW
 END;//while
 //
-L2▶M1
+//L2▶M1
+PRM3a(n,m)//
 END;
 #end
 //
