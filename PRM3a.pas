@@ -1,0 +1,31 @@
+//PRM3a(elements n,class m)/D.G.SCHRAUSSER/2025
+//e.g.PRM3a(6,3)
+#cas
+PRM3a(N,M):=
+BEGIN
+{}▶L3
+COMB(N,M)▶P
+MAKELIST(x+1-1,x,1,N)▶L1
+//
+FOR J FROM 1 TO P DO
+FOR I FROM 1 TO M DO
+L2(J,I)▶L3(I)
+END;
+L3▶L4(J)▶M1
+END;
+FOR I FROM 1 TO P DO
+L4(I)▶L5;DIFFERENCE(L5,L1)▶L7(I)
+END;
+FOR I FROM 1 TO P DO
+CONCAT(L4(I),L7(I))▶L8(I)
+END;
+L4▶L2;L8▶L3
+{}▶L4
+{}▶L8
+{}▶L5
+{}▶L6
+{}▶L7
+L3▶M2
+END;
+#end
+//
