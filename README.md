@@ -11,7 +11,7 @@ Mathematical and statistical applications for HP Prime.
 `BNMVTLG`, `ABT1`, `NBNMVTLG`
 
 ### resampling
-`PV_`, `mPV_`, `mPU_`, `BtU_`
+`PV_`, `mPV_`, `PU_`, `mPU_`, `BtU_`
 
 ### distribution function
 `NVTLG`, `EPSILON`, `FVTLG`, `TT_`, `TV_`, `TU_`
