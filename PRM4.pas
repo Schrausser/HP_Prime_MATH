@@ -1,6 +1,6 @@
 //PRM4(elements n, class m)/D.G.SCHRAUSSER/2025
 //variation matrix w(V)n(m), where V=n^m;n>=m
-//e.g.PRM4(4,2)
+//e.g.PRM4(4,2)[PRM4a]
 #cas
 PRM4(n,m):=
 BEGIN
@@ -25,7 +25,8 @@ END;//I
 SUPPRESS(L1,n+1)▶L2(J);J+1▶J
 END;//while
 //
-L2▶M1
+//L2▶M1
+PRM4a(n,m)
 END;
 #end
 //
