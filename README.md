@@ -22,7 +22,7 @@ Mathematical and statistical applications for HP Prime.
 ### complex plane
 `CPLX`, `CPLX2`, `CPLHX`
 
-### Functions for applications
+### functions for applications
 `E01`, `E02`, `F01`, `F02`, `F03`, `F01Z`, `F02Z`, `R01`, `U01`, `V00`, `X01`, `define.dat`
 
 ## References
