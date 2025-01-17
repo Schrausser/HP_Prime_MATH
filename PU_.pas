@@ -1,6 +1,6 @@
 //PU_()/D.G.SCHRAUSSER/2025
 //Permutation test in the random sampling model,
-//systematic permutation, p-value not randomized, mP
+//systematic permutation, p-value not randomized, P
 //2 independent samples (x|g)
 #cas
 PU_():=
