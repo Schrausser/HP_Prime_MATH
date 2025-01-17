@@ -1,10 +1,12 @@
 //PRM2(elements n)/D.G.SCHRAUSSER/2025
-//Complete permutation matrix (P) of elements n
+//Complete permutation matrix (P)n of elements n to 1 class,
+//where P=n!
 //e.g.PRM2(3)
 #cas
 PRM2(n):=
 BEGIN
 MAKELIST(1,P,1,n+1)▶L1
+P=PERM(n,n)
 0▶L1(1)
 {}▶L2
 0▶M1
@@ -36,6 +38,12 @@ END;
 END;//while
 //
 L2▶M1
+IF n=2 THEN
+M1=[[1,2],[2,1]]
+M1▶L2
+END;
+//
+P,M1
 END;
 #end
 //
