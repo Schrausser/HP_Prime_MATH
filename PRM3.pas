@@ -1,5 +1,6 @@
 //PRM3(elements n, class m)/D.G.SCHRAUSSER/2025
-//Complete permutation matrix (P) of n elements to class m
+//Complete permutation matrix w(P)n(km,kn-m) of n elements to class m, where P=n!/IIki!;n>=m
+//equivalent to combination without repetition Cn(m)
 //e.g.PRM3(6,3)[PRM3a]
 #cas
 PRM3(n,m):=
