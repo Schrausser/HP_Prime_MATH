@@ -32,7 +32,7 @@ WHILE J<M
 DO
 //
 FOR A FROM 1 TO N DO
-{RANDINT(N),L7(A)}▶L0(A) END;
+{RANDOM(),L7(A)}▶L0(A) END;
 //diff 
 {}▶L9
 SORT(L0)▶L31 //
