@@ -2,6 +2,7 @@
 //Permutation test in the random sampling model,
 //randomized permutation, p-value not randomized, mP
 //2 independent samples (x|g)
+//(executes the entire permutation including intra class permutation)
 //e.g.mPU_(100)
 #cas
 mPU_(M):=
@@ -20,6 +21,10 @@ N=N1+N2
 FOR I FROM 1 TO N DO
 I▶L7(I) END;
 //
+ABS(mean(L1)-mean(L2))▶Q02
+ΣLIST(L1)▶Q011
+ΣLIST(L2)▶Q012
+//
 MSGBOX("mPU")
 FOR J FROM 1 TO M 
 DO
@@ -31,11 +36,7 @@ sort(L0)▶L9
 FOR A FROM 1 TO N DO
 L9(A)▶L8;L8(2)▶L9(A) END;
 {}▶L8
-//
-ABS(mean(L1)-mean(L2))▶Q02
-ΣLIST(L1)▶Q011
-ΣLIST(L2)▶Q012
-CONCAT(L1,L2)▶L8 //
+CONCAT(L1,L2)▶L8
 //
 FOR A FROM 1 TO  N1 DO
 L8(L9(A))▶L3(A) END;
