@@ -1,5 +1,5 @@
 # HP_Prime_MATH
-Mathematical and statistical applications for HP Prime.
+Mathematical and statistical applications for HP Prime (2017).
 
 ### data
 `C2V`, `V2C`, `dList`, `dMatr`, `RNDNR`, `Cor.dat`, `U_.dat`, `V_.dat`
