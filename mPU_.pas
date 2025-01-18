@@ -2,7 +2,7 @@
 //Permutation test in the random sampling model,
 //randomized permutation, p-value not randomized, mP
 //2 independent samples (x|g)
-//(executes the entire permutation including intra class permutation)
+//(including intraclass permutation)
 //e.g.mPU_(100)
 #cas
 mPU_(M):=
@@ -31,7 +31,7 @@ DO
 //
 //prm vector L9
 FOR A FROM 1 TO N DO
-{RANDINT(N),L7(A)}▶L0(A) END;
+{RANDOM(),L7(A)}▶L0(A) END;
 sort(L0)▶L9
 FOR A FROM 1 TO N DO
 L9(A)▶L8;L8(2)▶L9(A) END;
