@@ -3,6 +3,7 @@
 //[L1:Raw]
 //L2:Distribution
 //L3:z-value
+//L4:z´-value
 #cas
 Q01_():=
 BEGIN
@@ -18,7 +19,8 @@ SEM=sqrt((VA1/N))
 VQ=SD/AM
 QGM= N NTHROOT(product(L1))
 QHM=N/Σ(1/L1)
-MAKELIST(((L2(X)-AM)/SD),X,1,N)▶L3 //z
+approx(MAKELIST(((L2(X)-AM)/SD),X,1,N))▶L3 //z
+approx(MAKELIST(((L2(X)-AM)/SD1),X,1,N))▶L4 //z´
 //
 approx(N,[AM,SEM],SD,SD1,VA,VA1,VQ,[QGM,QHM])
 END;
