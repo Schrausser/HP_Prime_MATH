@@ -1,6 +1,6 @@
 //PV_()/D.G.SCHRAUSSER/2025
 //Permutation test in the random sampling model,
-//systematic petmutation, p-value not randomized, P
+//systematic permutation, p-value not randomized, P
 //2 dependent samples (x1|x2)[PRM5]
 #cas
 PV_():=
