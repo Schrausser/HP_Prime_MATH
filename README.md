@@ -14,7 +14,7 @@ Mathematical and statistical applications for HP Prime (s. HP Inc., 2017):
 `PV_`, `mPV_`, `PU_`, `mPU2`, `mPU_`, `BtU_`
 
 ### distribution function
-`Q01_`, `Q02_`, `NVTLG`, `EPSILON`, `FVTLG`, `TT_`, `TV_`, `TU_`
+`Q01_`, `Q02_`, `AMG`, `NVTLG`, `EPSILON`, `FVTLG`, `TT_`, `TV_`, `TU_`
 
 ### correlation
 `KOR`, `TKV`, `pCor`, `PKR`, `CIXY`, `MCORR2`
