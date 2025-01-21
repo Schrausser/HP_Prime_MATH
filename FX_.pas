@@ -1,9 +1,8 @@
 //FX_(cell count a,b,c,d)/D.G.SCHRAUSSER/2025
-//e.g.FX_(1,2,3,1)
+//e.g.FX_(2,1,0,1)
 //Exact hypergeometric 4-field test according to R. A. Fisher
 //(Fisher Exact Test): Hypergeometric probability p to cell a of the 4-field initial arrangement for all possible arrangements a
 //Exact significance levels p[exact1], p[exact2]
-//(slow algorithm)
 #cas
 FX_(a,b,c,d):=
 BEGIN
@@ -23,11 +22,16 @@ PRINT("P0-")
 PRINT(P0)
 PRINT("Pi-")
 //
-FOR I FROM 0 TO N DO
-FOR J FROM 0 TO N DO
-FOR K FROM 0 TO N DO
-FOR L FROM 0 TO N DO
-a1=I+J; 
+IF z1>s1 THEN max1=z1 ELSE max1=s1 END;
+IF z1>s2 THEN max2=z1 ELSE max2=s2 END;
+IF z2>s1 THEN max3=z2 ELSE max3=s1 END;
+IF z2>s2 THEN max4=z2 ELSE max4=s2 END;
+//
+FOR I FROM 0 TO max1 DO
+FOR J FROM 0 TO max2 DO
+FOR K FROM 0 TO max3 DO
+FOR L FROM 0 TO max4 DO
+a1=I+J;
 a2=K+L; 
 b1=I+K;
 b2=J+L;
@@ -48,8 +52,7 @@ P10=(a1!*a2!*b1!*b2!)/(N!*I!*J!*K!*L!)
 X+1▶X
 P3=P10+P3
 approx(P10)▶L1(X)
-IF approx(P10)<approx(P0) OR 
-   approx(P10)=approx(P0)
+IF approx(P10)<approx(P0) OR approx(P10)=approx(P0)
 THEN
 P20+P10▶P20 END;
 PRINT(P10)
