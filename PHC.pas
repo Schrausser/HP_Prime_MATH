@@ -1,5 +1,5 @@
 //PHC(cell count a,b,c,d)/D.G.SCHRAUSSER/2025
-//e.g._(17,12,14,24)
+//e.g.PHC(17,12,14,24)
 //Phi- and tetrachoric correlation
 #cas
 PHC(a,b,c,d):=
