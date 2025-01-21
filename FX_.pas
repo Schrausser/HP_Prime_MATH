@@ -18,6 +18,7 @@ c+d▶z2
 a+c▶s1
 b+d▶s2
 P0= (z1!*z2!*s1!*s2!)/(N!*a!*b!*c!*d!);
+P0▶L2(1)
 PRINT("P0-")
 PRINT(P0)
 PRINT("Pi-")
@@ -67,7 +68,7 @@ PRINT("p--")
 PRINT(P3)
 //
 FOR I FROM 1 TO X DO
-IF L1(I)=P0 THEN
+IF L1(I)=L2(1) THEN
 0▶S
 END;
 IF S=1 THEN
@@ -76,7 +77,7 @@ END;
 END;
 P21+P0▶P21
 P22=1-(P21)
-// sums, P0, C, p[exact1], 1-p[exact1], p[exact2]
+//sums, P0, C, p[exact1], 1-p[exact1], p[exact2]
 z1,z2,s1,s2,N,[P0],X,P21,P22,[P20]
 END;
 #end
