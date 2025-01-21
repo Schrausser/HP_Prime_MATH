@@ -2,7 +2,7 @@
 Mathematical and statistical applications for HP Prime (s. HP Inc., 2017):
 
 ### data
-`C2V`, `V2C`, `dList`, `dMatr`, `RNDNR`, `Cor.dat`, `U_.dat`, `V_.dat`, `wV2_9.dat`, `wV2_10.dat`
+`C2V`, `V2C`, `dList`, `dMatr`, `RNDNR`, `Cor.dat`, `U_.dat`, `wP8_4_4.dat`, `wP9_4_5.dat`,`wP10_4_6.dat`, `wP10_5_5.dat`, `V_.dat`, `wV2_9.dat`, `wV2_10.dat`
 
 ### combinatorics
 `PRM1`, `PRM2`, `PRM3`, `PRM3a`, `PRM4`, `PRM4a`, `PRM5`, `PRMDAT`,`VAR1`
