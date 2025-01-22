@@ -1,5 +1,5 @@
 //FX_(cell count a,b,c,d)/D.G.SCHRAUSSER/2025
-//e.g.FX_(2,1,0,1)
+//e.g.FX_(1,2,3,1)
 //Exact hypergeometric 4-field test according to R. A. Fisher
 //(Fisher Exact Test): Hypergeometric probability p to cell a of the 4-field initial arrangement for all possible arrangements a
 //Exact significance levels p[exact1], p[exact2]
