@@ -1,5 +1,5 @@
-//FVTLG(F,df1,df2)/D.G.SCHRAUSSER/2022
-//e.g.FVTLG(2,3,10)[AdvancedGraphing]
+//FVTLG(F,df1,df2)/D.G.SCHRAUSSER/2025
+//e.g.FVTLG(2.8,10,5)
 #cas
 FVTLG(F,A,B):=
 BEGIN
@@ -13,7 +13,7 @@ CAS((X,Y)->Y<C*((A/B)^(A/2)*X^((A/2)-1)*(1+(A/B)*X)^(−(((A+B)/2)))) AND Y>0 AN
 FISHER_CDF(A,B,X)▶P
 STARTAPP("Erweiterte_Grafiken")
 STARTVIEW(1)
-RETURN(P);
+P,[1-P]
 END;
 #end 
 //
