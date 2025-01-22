@@ -1,4 +1,4 @@
-///FVTLG(F,df1,df2)/D.G.SCHRAUSSER/2022
+//FVTLG(F,df1,df2)/D.G.SCHRAUSSER/2022
 //e.g.FVTLG(2,3,10)[AdvancedGraphing]
 #cas
 FVTLG(F,A,B):=
