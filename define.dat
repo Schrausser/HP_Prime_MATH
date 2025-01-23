@@ -20,3 +20,7 @@ ZWERT
 (A-B)/C
 CIYX
 √(1-A^2)*B*NORMALD_ICDF(1-((1-C)/2))
+SQR
+A^2
+PTG
+√(A^2+B^2)
