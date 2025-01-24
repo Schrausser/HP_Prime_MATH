@@ -1,5 +1,5 @@
 //PKR()/D.G.SCHRAUSSER/2025
-//Partial corr rxy.z[pCor]
+//Partial corr rxy.z[pCor,ZCor]
 #cas
 PKR():=
 BEGIN
@@ -34,9 +34,14 @@ pCor(r2,N)(3)▶pr2
 rp=(r0-r1*r2)
 rp=rp/(sqrt(1-r1^2)*sqrt(1-r2^2))
 rp=approx(rp)
+ZCor(rp,N)(1)▶L0
+L0(1)*SQRT(N-2)▶zrp
+prp=NORMALD_CDF(zrp)
+IF prp>0.5 THEN prp=1-prp END;
+prp2=2*prp
 //pCor(rp,N)(3)▶p
-//df,rxy,p2,rxz,p2,ryz,p2,rxy.z
-df,r0,[pr0],r1,[pr1],r2,[pr2],rp
+//df,rxy,p2,rxz,p2,ryz,p2,rxy.z,p2
+df,[r0,pr0],[r1,pr1],[r2,pr2],[rp,prp]
 END;
 #end
-// 
+//
