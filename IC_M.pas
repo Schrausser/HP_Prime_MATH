@@ -9,6 +9,11 @@
 IC_M(K):=
 BEGIN
 //L1(n)(k) provided
+{}▶L4
+{}▶L5
+{}▶L6
+{}▶L7
+{}▶L8
 size(L1)▶N
 FOR I FROM 1 TO K DO
 FOR J FROM 1 TO K DO
