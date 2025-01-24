@@ -1,0 +1,23 @@
+//rDiff(r1,n1,r2,n2)/D.G.SCHRAUSSER/2025
+//e.g.rDiff(0.78,12,0.34,8)[ZCor]
+#cas
+rDiff(R1,N1,R2,N2):=
+BEGIN
+ZCor(R1,N1)(1)▶L2
+L2(1)▶L1(1)
+ZCor(R2,N2)(1)▶L2
+L2(1)▶L1(2)
+L1(1)-L1(2)▶L2(1)
+sqrt((1/(N1-3))+1/(N2-3))▶L2(2)
+L2(1)/L2(2)▶L2(3)
+NORMALD_CDF(L2(3))▶L2(4)
+1-L2(4)▶L2(5)
+2*L2(5)▶L2(6)
+IF L2(5)>0.5 THEN
+2*L2(4)▶L2(6)
+END;
+//Zd,sZd,z,p,1-p,p2
+[L2(1),L2(2)],[L2(3)],L2(4),L2(5),[L2(6)]
+END;
+#end
+//
