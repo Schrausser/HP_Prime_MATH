@@ -1,4 +1,7 @@
 # HP_Prime_MATH
+
+[mov](https://m.youtube.com/watch?v=-4HJJQdxEFU)
+
 Mathematical and statistical applications for HP Prime (s. HP Inc., 2017):
 
 ### data
