@@ -7,7 +7,7 @@ BEGIN
 size(L1)▶N
 mean(L1)▶L3
 MAKELIST((L1(I)(1)-L1(I)(2))^2,I,1,N)▶L2
-ΣLIST(L2)▶SUM
+Σ(L2)▶SUM
 RHO=1-((6*SUM)/(N*(N^2-1)))
 KR=approx((2/(N/2))*(L3(1)-L3(2)))
 //n,rho,rbisR,r
