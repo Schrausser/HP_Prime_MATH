@@ -28,3 +28,9 @@ rZ
 (e^(2*A)-1)/(e^(2*A)+1)
 Zr
 0.5*LN((1+A)/(1-A))
+RND1
+MAKELIST(RANDNORM,A,1,B)
+RND2
+MAKELIST(RANDOM,A,1,B)
+rbisR
+(2/(SIZE(L1)+SIZE(L2)))*(mean(L1)-mean(L2))
