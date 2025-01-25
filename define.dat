@@ -50,3 +50,15 @@ END;
 
 rpbis
 (mean(L1)-mean(L2))/stddev(CONCAT(L1,L2))*√(SIZE(L1)*SIZE(L2)/(SIZE(CONCAT(L1,L2)))^2)
+
+rbis
+((mean(L1)-mean(L2))/stddev(CONCAT(L1,L2)))*SIZE(L1)*SIZE(L2)/((1/(√(2*π)))*e^(-(NORMALD_ICDF((SIZE(L2)/SIZE(CONCAT(L1,L2))))^2)/2)*SIZE(CONCAT(L1,L2))^2)
+
+srbis
+√(SIZE(L1)*SIZE(L2))/((√SIZE(CONCAT(L1,L2))*SIZE(CONCAT(L1,L2))*1/(√(2*π)))*e^(-(NORMALD_ICDF((SIZE(L2)/SIZE(CONCAT(L1,L2))))^2)/2))
+
+zrbis
+(((mean(L1)-mean(L2))/stddev(CONCAT(L1,L2)))*SIZE(L1)*SIZE(L2)/((1/(√(2*π)))*e^(-(NORMALD_ICDF((SIZE(L2)/SIZE(CONCAT(L1,L2))))^2)/2)*SIZE(CONCAT(L1,L2))^2))/(√(SIZE(L1)*SIZE(L2))/((√SIZE(CONCAT(L1,L2))*SIZE(CONCAT(L1,L2))*1/(√(2*π)))*e^(-(NORMALD_ICDF((SIZE(L2)/SIZE(CONCAT(L1,L2))))^2)/2)))
+
+prbis
+normald_cdf((((mean(L1)-mean(L2))/stddev(CONCAT(L1,L2)))*SIZE(L1)*SIZE(L2)/((1/(√(2*π)))*e^(-(NORMALD_ICDF((SIZE(L2)/SIZE(CONCAT(L1,L2))))^2)/2)*SIZE(CONCAT(L1,L2))^2))/(√(SIZE(L1)*SIZE(L2))/((√SIZE(CONCAT(L1,L2))*SIZE(CONCAT(L1,L2))*1/(√(2*π)))*e^(-(NORMALD_ICDF((SIZE(L2)/SIZE(CONCAT(L1,L2))))^2)/2))))
