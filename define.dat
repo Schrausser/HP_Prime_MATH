@@ -34,3 +34,19 @@ RND2
 MAKELIST(RANDOM,A,1,B)
 rbisR
 (2/(SIZE(L1)+SIZE(L2)))*(mean(L1)-mean(L2))
+SMG [SMG(A,B),SMG(sd,n)]
+√((A^2)*(B/(B-1))/B)
+CIx [CIx(B,C,A),CIx(n,ci%,sd),e.g.6.7+CIx(10,0.99,1.676)]
+STUDENT_ICDF(B-1,1-((1-C)/2))*√((A^2)*(B/(B-1))/B)
+HM_[e.g.HM_(L2)]
+SIZE(L1)/Σ((L1(B))^(-1),B,1,SIZE(L1))
+
+#cas
+GM_(L1):=
+BEGIN
+SIZE(L1) NTHROOT (product(L1(I),I,1,SIZE(L1)))
+END;
+#end
+
+rpbis
+(mean(L1)-mean(L2))/stddev(CONCAT(L1,L2))*√(SIZE(L1)*SIZE(L2)/(SIZE(CONCAT(L1,L2)))^2)
