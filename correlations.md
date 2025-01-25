@@ -6,8 +6,8 @@ Table 1. Appropriate correlation coefficients, product-moment or Pearson correla
            i 		o 		n 
 
 i 	rxy	             
-o       rbis		rho¹      	
-n     	rpbis      	rbisR	    	phi²
+o       		rho¹      	
+n     	rpbis, rbis    	rbisR	    	phi²
 ~~~
 ¹) also tetrachoric correlation $r_{tet}$.  
 ²) also *L*, *C* or *Lambda*.  
