@@ -6,7 +6,8 @@ Table 1. Appropriate correlation coefficients, product-moment or Pearson correla
            i 		o 		n 
 
 i 	rxy	             
-o       		rho      	
-n     	rpbis, rbis    	rbisR	    	phi¹
+o       		rho¹      	
+n     	rpbis, rbis    	rbisR	    	phi²
 ~~~
-¹) also tetrachoric correlation $r_{tet}$.  
+¹) also Kendall's tau $\tau$ coefficient.  
+²) also tetrachoric correlation $r_{tet}$.  
