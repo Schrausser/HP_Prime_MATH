@@ -19,6 +19,48 @@ A^2.000*(B-4.000)/(3.000*(-(A^2.000)+1.000))
 BINOM(a,b)
 Σ(((A+B)!/(I!*(A+B-I)!))*2.000^(-I)*2.000^(-(A+B-I)),I,0.000,A)
 
+x2F(a,b)
+((A-((A+B)/2))^2/((A+B)/2))+(B-((A+B)/2))^2/((A+B)/2)
+
+p2F(a,b)
+(1-CHISQUARE_CDF(1,((A-((A+B)/2))^2/((A+B)/2))+((B-((A+B)/2))^2/((A+B)/2))))/2
+
+zBN(a,b)
+(A-(A+B)/2)/(√((A+B)/4))
+
+pzBN(a,b)
+NORMALD_CDF(((A-(A+B)/2)/(√((A+B)/4))))
+
+x4F(a,b,c,d)
+(A+B+C+D)*(A*D-B*C)^2/((A+B)*(C+D)*(A+C)*(B+D))
+
+p4F(a,b,c,d)
+(1-CHISQUARE_CDF(1,((A+B+C+D)*(A*D-B*C)^2/((A+B)*(C+D)*(A+C)*(B+D)))))/2
+
+x4FY(a,b,c,d) Yates corr 4<fe<7
+(A+B+C+D)*(ABS(A*D-B*C)-((A+B+C+D)/2))^2/((A+B)*(C+D)*(A+C)*(B+D))
+
+p4FY(a,b,c,d) Yates corr 4<fe<7
+(1-CHISQUARE_CDF(1,((A+B+C+D)*(ABS(A*D-B*C)-((A+B+C+D)/2))^2/((A+B)*(C+D)*(A+C)*(B+D)))))/2
+
+z4F(a,b,c,d)
+(D-(A+B+C+D)*((D+B)*(C+D)/(A+B+C+D)^2))/(√((A+B+C+D)*(1-((D+B)*(C+D)/(A+B+C+D)^2))-(A+B+C+D)*(A+B+C+D-1)*((D+B)*(C+D)/(A+B+C+D)^2)*(((D+B)*(C+D)/(A+B+C+D)^2)-((D+B-1)*(C+D-1)/(A+B+C+D-1)^2))))
+
+pz4F(a,b,c,d)[e.g.pz4F(11,20,80,58)]
+NORMALD_CDF(((D-(A+B+C+D)*((D+B)*(C+D)/(A+B+C+D)^2))/(√((A+B+C+D)*(1-((D+B)*(C+D)/(A+B+C+D)^2))-(A+B+C+D)*(A+B+C+D-1)*((D+B)*(C+D)/(A+B+C+D)^2)*(((D+B)*(C+D)/(A+B+C+D)^2)-((D+B-1)*(C+D-1)/(A+B+C+D-1)^2))))))
+
+xMN(b,c)
+(A-B)^2/(A+B)
+
+pMN(b,c)
+(1-CHISQUARE_CDF(1,((A-B)^2/(A+B))))/2
+
+xMNY(b,c) Yates corr 20<b+c<30
+(ABS(A-B)-0.5)^2/(A+B)
+
+pMNY(b,c) Yates corr 20<b+c<30
+(1-CHISQUARE_CDF(1,((ABS(A-B)-0.5)^2/(A+B))))/2
+
 NBINOM(k,p,r)
 Σ(((K+I-1.000)!/(I!*(K-1.000)!))*P^K*(1.000-P)^I,I,0.000,R-K)
 
@@ -88,6 +130,12 @@ TRW(L1,L2)
 
 pRW(L1,L2)
 STUDENT_CDF(SIZE(L1)-2,((correlation(L1,L2)*√(SIZE(L1)-2))/(√(1-correlation(L1,L2)^2))))
+
+tTKV(L1,L2)
+((variance(L1)-variance(L2))*sqrt(size(L1)-2))/(2*sqrt(variance(L1)*variance(L2)*(1-correlation(L1,L2))))
+
+pTKV(L1,L2)
+STUDENT_CDF(SIZE(L1)+SIZE(L2)-2,(((variance(L1)-variance(L2))*√(SIZE(L1)-2))/(2*√(variance(L1)*variance(L2)*(1-correlation(L1,L2))))))
 
 tTT_(L1,y)
 (mean(L1)-A)/(√(stddev(L1)^2/(SIZE(L1)-1)))
