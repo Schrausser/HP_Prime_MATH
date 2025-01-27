@@ -1,0 +1,25 @@
+//DELTA2()/D.G.SCHRAUSSER/2025
+//Somers' D for binary values [0,1]
+#cas
+DELTA2():=
+BEGIN
+SIZE(L1)▶N
+{}▶L3
+0▶X01
+0▶X02
+FOR I FROM 1 TO N DO
+IF L1(I)=1 AND L2(I)=1 THEN
+X01=X01+1
+END;
+IF L1(I)=1 AND L2(I)=0 THEN
+X02=X02+1
+END;
+END;
+X01/N▶L3(1)
+X02/N▶L3(2)
+L3(1)-L3(2)▶L3(3)
+//pA,pB,D
+approx(L3)
+END;
+#end
+//
