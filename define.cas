@@ -58,6 +58,8 @@ END;
 //
 // Corr //
 //
+rxy(x1,x2)
+approx(correlation(L1,L2))
 CIYX(r,n,p)
 √(1-A^2)*B*NORMALD_ICDF(1-((1-C)/2))
 //
@@ -87,6 +89,12 @@ normald_cdf((((mean(L1)-mean(L2))/stddev(CONCAT(L1,L2)))*SIZE(L1)*SIZE(L2)/((1/(
 //
 PHI(a,d,b,c)
 (A*D-B*C)/(sqrt((A+C)*(B+D)*(A+B)*(C+D)))
+//
+xPHI(a,d,b,c)
+(((A*D-B*C)/(√((A+C)*(B+D)*(A+B)*(C+D)))))^2*(A+B+C+D)
+//
+pPHI(a,d,b,c)
+(1-CHISQUARE_CDF(1,((A*D-B*C)/(√((A+C)*(B+D)*(A+B)*(C+D))))^2*(A+B+C+D)))/2
 //
 rtet(b,c,a,d)
 COS((π/(1+√(B*C/(A*D)))))
