@@ -60,6 +60,7 @@ END;
 //
 rxy(x1,x2)
 approx(correlation(L1,L2))
+//
 CIYX(r,n,p)
 √(1-A^2)*B*NORMALD_ICDF(1-((1-C)/2))
 //
@@ -225,4 +226,7 @@ STUDENT_CDF(SIZE(L1)+SIZE(L2)-2,(mean(L1)-mean(L2))/(√((ΣLIST(MAKELIST((L1(A)
 //
 tTUX(x1,x2,s21,n1,s22,n2)
 (A-B)/(√((C*D+E*F)/(D-1+F-1))*(√(1/D)+√(1/F)))
+//
+pTUX(n1,n2,x1,x2,s21,s22)
+STUDENT_CDF(D+F-2,((A-B)/(√((C*D+E*F)/(D-1+F-1))*(√(1/D)+√(1/F)))))
 //
