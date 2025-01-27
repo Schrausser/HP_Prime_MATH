@@ -40,6 +40,9 @@ MAKELIST(RANDOM,A,1,B)
 ZWERT(x1,x,s)
 (A-B)/C
 //
+EFG(x1,L1)'epsilon'
+(A-mean(L1))/stddevp(L1)
+//
 SMG [SMG(A,B),SMG(sd,n)]
 √((A^2)*(B/(B-1))/B)
 //
@@ -61,6 +64,9 @@ END;
 rxy(x1,x2)
 approx(correlation(L1,L2))
 //
+RED(r)
+A^2*100
+//
 CIYX(r,n,p)
 √(1-A^2)*B*NORMALD_ICDF(1-((1-C)/2))
 //
@@ -69,6 +75,18 @@ rZ(Z)
 //
 Zr(r)
 0.5*LN((1+A)/(1-A))
+//
+mZ(r1,n1,r2,n2)
+((0.5*LN(((1+A)/(1-A)))*(B-3))+(0.5*LN(((1+C)/(1-C)))*(D-3)))/((B-3)+(D-3))
+//
+mr(r1,n1,r2,n2)
+(e^(2*(((0.5*LN(((1+A)/(1-A)))*(B-3))+(0.5*LN(((1+C)/(1-C)))*(D-3)))/((B-3)+(D-3))))-1)/(e^(2*(((0.5*LN(((1+A)/(1-A)))*(B-3))+(0.5*LN(((1+C)/(1-C)))*(D-3)))/((B-3)+(D-3))))+1)
+//
+zrr(r1,r2,n1,n2)
+(0.5*LN((1+A)/(1-A))-0.5*LN((1+B)/(1-B)))/(√(1/(C-3)+1/(D-3)))
+//
+prr(r1,r2,n1,n2)
+NORMALD_CDF(((0.5*LN(((1+A)/(1-A)))-0.5*LN(((1+B)/(1-B))))/(√((1/(C-3))+1/(D-3)))))
 //
 rbisR(L1,L2)
 (2/(SIZE(L1)+SIZE(L2)))*(mean(L1)-mean(L2))
@@ -112,6 +130,8 @@ TRW(L1,L2)
 pRW(L1,L2)
 STUDENT_CDF(SIZE(L1)-2,((correlation(L1,L2)*√(SIZE(L1)-2))/(√(1-correlation(L1,L2)^2))))
 //
+pRWx(n,r)
+STUDENT_CDF(B-2,((A*√(B-2))/(√(1-A^2))))
 tTKV(L1,L2)
 ((variance(L1)-variance(L2))*sqrt(size(L1)-2))/(2*sqrt(variance(L1)*variance(L2)*(1-correlation(L1,L2))))
 //
