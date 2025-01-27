@@ -96,8 +96,14 @@ xPHI(a,d,b,c)
 pPHI(a,d,b,c)
 (1-CHISQUARE_CDF(1,((A*D-B*C)/(√((A+C)*(B+D)*(A+B)*(C+D))))^2*(A+B+C+D)))/2
 //
-rtet(b,c,a,d)
+rtet(b,c,a,d),rad
 COS((π/(1+√(B*C/(A*D)))))
+//
+srtet(b,c,a,d)
+√(((A+B)/(A+B+C+D))*((A+C)/(A+B+C+D))*((C+D)/(A+B+C+D))*((B+D)/(A+B+C+D))/(A+B+C+D))*(1/(((1/(√(2*π)))*e^(-(NORMALD_ICDF(((C+D)/(A+B+C+D)))^2)/2))*((1/(√(2*π)))*e^(-(NORMALD_ICDF(((B+D)/(A+B+C+D)))^2)/2))))
+//
+prtet(b,c,a,d)
+NORMALD_CDF((COS((π/(1+√(B*C/(A*D)))))/(√(((A+B)/(A+B+C+D))*((A+C)/(A+B+C+D))*((C+D)/(A+B+C+D))*((B+D)/(A+B+C+D))/(A+B+C+D))*(1/(((1/(√(2*π)))*e^(-(NORMALD_ICDF(((C+D)/(A+B+C+D)))^2)/2))*((1/(√(2*π)))*e^(-(NORMALD_ICDF(((B+D)/(A+B+C+D)))^2)/2)))))))
 //
 TRW(L1,L2)
 (correlation(L1,L2)*√(SIZE(L1)-2))/(√(1-correlation(L1,L2)^2))
