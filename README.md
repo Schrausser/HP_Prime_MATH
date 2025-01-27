@@ -20,7 +20,7 @@ Mathematical and statistical applications for HP Prime (s. HP Inc., 2017):
 `VFC0`, `VFCH`, `Q01_`, `Q02_`, `AMG`, `RNK`, `NVTLG`, `ch2VTLG`, `tVTLG`, `EPSILON`, `FVTLG`, `TT_`, `TV_`, `TU_`
 
 ### correlation
-`PHC`, `RHO`, `TAU`, `TAUb`, `KOR`, `TKV`, `pCor`, `ZCor`, `mZ`, `rDiff`, `IC_M`, `PKR`, `CIXY`, `MCORR2`
+`PHC`, `RHO`, `TAU`, `KOR`, `TKV`, `pCor`, `ZCor`, `mZ`, `rDiff`, `IC_M`, `PKR`, `CIXY`, `MCORR2`
 
 ### complex plane
 `CPLX`, `CPLX2`, `CPLHX`
