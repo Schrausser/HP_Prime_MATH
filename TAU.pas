@@ -9,6 +9,7 @@ FOR I FROM 1 TO N-1 DO
 ((SIGN(L1(I)-L1(I+1))))*((SIGN(L2(I)-L2(I+1))))▶L3(I)
 IF L3(I)=1 THEN 0▶L3(I) END;
 IF L3(I)=-1 THEN 1▶L3(I) END;
+888▶M1(L1(I),L2(I))
 END;
 //(N*(N-1)/2-2*ΣLIST(L3))/(N*(N-1)/2)▶tau_a
 approx(1-2*ΣLIST(L3)/(N*(N-1)/2))▶L4(1)
@@ -20,6 +21,7 @@ IF L4(3)<0.5 THEN 2*L4(3)▶L4(5)
 END;
 //taua,z,p,1-p,p2
 [L4(1)],[L4(2)],L4(3),L4(4),[L4(5)]
+//M1
 END;
 #end
 //
