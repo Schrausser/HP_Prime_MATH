@@ -1,5 +1,5 @@
 //TU_()/D.G.SCHRAUSSER/2025
-//t-test for independent samples 
+//t-test for unpaired samples 
 #cas
 TU_():=
 BEGIN
