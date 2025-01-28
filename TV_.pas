@@ -1,5 +1,5 @@
 //TV_()/D.G.SCHRAUSSER/2025
-//t-test for dependent samples 
+//t-test for paired samples 
 #cas
 TV_():=
 BEGIN
