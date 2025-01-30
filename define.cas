@@ -29,6 +29,9 @@ BINOM(a,b)
 NBINOM(k,p,r)
 Σ(((K+I-1.000)!/(I!*(K-1.000)!))*P^K*(1.000-P)^I,I,0.000,R-K)
 //
+nk(N,K)
+N!/(K!*(N-K)!)
+//
 // Stat ////////////
 //
 RND1(n)
@@ -66,6 +69,9 @@ approx(correlation(L1,L2))
 //
 RED(r)
 A^2*100
+//
+tr
+(R*√(N-2))/(√(1-R^2))
 //
 CIYX(r,n,p)
 √(1-A^2)*B*NORMALD_ICDF(1-((1-C)/2))
