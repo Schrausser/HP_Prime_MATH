@@ -1,7 +1,7 @@
 //mPV_(simulation cycles M)/D.G.SCHRAUSSER/2025
 //Permutation test in the random sampling model,
 //randomized permutation, p-value not randomized, mP
-//2 dependent samples (x1|x2)
+//2 paired samples (x1|x2)
 //e.g.mPV_(100)
 #cas
 mPV_(M):=
