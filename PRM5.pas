@@ -1,6 +1,6 @@
-//PRM5(cases n)/D.G.SCHRAUSSER/2025
-//variation matrix w(V)2(n) for dependent 2 sample design PV_,
-//where V=2^n
+//PRM5(cases m)/D.G.SCHRAUSSER/2025
+//variation matrix w(V)2(m) for paired 2 sample design PV_,
+//where V=2^m
 //e.g.PRM5(3)
 #cas
 PRM5(N):=
@@ -23,7 +23,7 @@ A=A*0.5
 END;
 //
 M1▶L3
-M1
+P,M1
 END;
 #end
 //
