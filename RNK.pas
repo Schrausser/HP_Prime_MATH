@@ -1,5 +1,5 @@
 //RNK()/D.G.SCHRAUSSER/2025
-//L1 to ranking scale L3
+//L1 to ranking L3
 #cas
 RNK():=
 BEGIN
@@ -26,7 +26,7 @@ Q01+1▶Q01;S1=1
 END;
 END;
 Σ(L3)▶SR
-//n,linked R,Rsum,meanR
+//n,ties,Rsum,meanR
 approx(N,V,SR,[SR/N])
 END;
 #end
