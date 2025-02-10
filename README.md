@@ -11,7 +11,7 @@ Mathematical and statistical applications for HP Prime (s. HP Inc., 2017):
 `PRM1`, `PRM2`, `PRM3`, `PRM3a`, `PRM4`, `PRM4a`, `PRM5`, `PRMDAT`,`VAR1`
 
 ### probability
-`BNMVTLG`, `ABT1`, `NBNMVTLG`, `ABT2`, `FX_`
+`BNMVTLG`, `ABT1`, `GMVTLG`, `NBNMVTLG`, `ABT2`, `FX_`
 
 ### resampling
 `PV_`, `mPV_`, `PU_`, `mPU2`, `mPU_`, `BtU_`
