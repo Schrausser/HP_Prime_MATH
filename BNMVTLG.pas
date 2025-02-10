@@ -13,10 +13,11 @@ FOR I FROM 0 TO N DO
  BINOMIAL(N,P,I)▶L5(I);
 END;
 D6=L5;L5={};
-"D5"▶H1(1);5▶H1(3);
-"D6"▶H2(1);4▶H2(3);
 STARTAPP("Statistiken_1_Var");
 STARTVIEW(1);
+"D5"▶H1(1);5▶H1(3);
+"D6"▶H2(1);5▶H2(3);
+//p
 RETURN(B);
 END;
 #end
