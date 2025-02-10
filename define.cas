@@ -43,8 +43,11 @@ MAKELIST(RANDOM,A,1,B)
 ZWERT(x1,x,s)
 (A-B)/C
 //
-EFG(x1,L1)'epsilon'
+EFG(x1,L1)'epsilon, Cohen's d'
 (A-mean(L1))/stddevp(L1)
+//
+EFR(x1,L1,R)'epsilon, Cohen's d for paired samples'
+((A-mean(L1))/stddevp(L1))/√(1-R)
 //
 SMG [SMG(A,B),SMG(sd,n)]
 √((A^2)*(B/(B-1))/B)
@@ -162,6 +165,9 @@ MCORR(r1,r2,r3)
 SCR(n,k,R)
 1.00-((A-3.00)/(A-B-2.00))*((1.00-C^2.00)+((2.00/(A-B)))*(1.00-C^2.00)^2.00)
 //
+Cf2(R)'Cohen's f²'
+R^2/(1-R^2)
+//
 FMCORR(R,n)
 A^2.000*(B-4.000)/(3.000*(-(A^2.000)+1.000))
 //
@@ -255,4 +261,4 @@ tTUX(x1,x2,s21,n1,s22,n2)
 //
 pTUX(n1,n2,x1,x2,s21,s22)
 STUDENT_CDF(D+F-2,((A-B)/(√((C*D+E*F)/(D-1+F-1))*(√(1/D)+√(1/F)))))
-//
+// 
