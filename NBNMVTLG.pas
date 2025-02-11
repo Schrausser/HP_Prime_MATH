@@ -5,7 +5,7 @@ NBNMVTLG(K,P,R,N):=
 BEGIN
 B=0
 FOR I FROM 0 TO R-K DO
- ((K+I-1)!/(I!*(K(I)-1)!))*P^K*(1-P)^I▶L4(I+1)
+ ((K+I-1)!/(I!*(K-1)!))*P^K*(1-P)^I▶L4(I+1)
  B=B+L4(I+1)
 END
 D7=L4;L4={}
