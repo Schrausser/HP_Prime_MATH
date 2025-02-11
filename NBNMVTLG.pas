@@ -1,15 +1,15 @@
-//NBNMVTLG(k,p[e],r,n)/D.G.SCHRAUSSER/2025
+//NBNMVTLG(k,p[e],n,m)/D.G.SCHRAUSSER/2025
 //e.g.NBNMVTLG(1,0.2,8,10)
 #cas
-NBNMVTLG(K,P,R,N):=
+NBNMVTLG(K,P,N,M):=
 BEGIN
 B=0
-FOR I FROM 0 TO R-K DO
+FOR I FROM 0 TO N-K DO
  ((K+I-1)!/(I!*(K-1)!))*P^K*(1-P)^I▶L4(I+1)
  B=B+L4(I+1)
 END
 D7=L4;L4={}
-FOR I FROM 0 TO N-1 DO
+FOR I FROM 0 TO M-1 DO
  ((K+I-1)!/(I!*(K-1)!))*P^K*(1-P)^I▶L5(I+1)
 END
 D8=L5;L5={};
