@@ -10,7 +10,7 @@ FOR Y FROM YA TO YB STEP DY DO
 P=P+(1/(2*π*sqrt(1-R^2)))*e^((-1/(2*(1-R^2)))*(X^2-2*R*X*Y+Y^2))
 END;
 END;
-P*D^2
+P*DX*DY
 END
 #end
 //
