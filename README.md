@@ -26,7 +26,7 @@ Mathematical and statistical applications for HP Prime (s. HP Inc., 2017):
 `CPLX`, `CPLX2`, `CPLHX`
 
 ### functions for applications
-`E01`, `E02`, `F01`, `F02`, `F03`, `F01Z`, `F02Z`, `R01`, `U01`, `V00`, `X01`, `define.dat`
+`E01`, `E02`, `F01`, `F02`, `F03`, `F04`, `F01Z`, `F02Z`, `R01`, `U01`, `V00`, `X01`, `define.dat`
 
 ## References
 
