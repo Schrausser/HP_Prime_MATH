@@ -1,8 +1,8 @@
 //F01Z()/D.G.SCHRAUSSER/2025
 //Graph 3D: Equations 1.0
-//Complex plane f(z)=z,
-//with z=|x+i|
-//where f(x,y=i)=√x²+y²
+//Gamma
+//Spherical functions
+//Sine
 EXPORT F01Z()
 BEGIN
 "CAS.Gamma(Y)"▶FZ1;
@@ -15,9 +15,6 @@ BEGIN
 "√((X-X^2)+(Y-Y^2))"▶FZ8;
 "−1*√((X-X^2)+(Y-Y^2))"▶FZ9;
 "SIN(X)*SIN(Y)*1.5"▶FZ0;
-//"√(X^2+Y^2)"▶FZ1
-//"(1/π)*e^(-(ABS(√(X^2+Y^2))^2))"▶FZ2
-//"X^((√(X^2+Y^2))-1)*e^(-X)"▶FZ3
 "Graph 3D: Equations 1.0"
 END;
-// 
+//
