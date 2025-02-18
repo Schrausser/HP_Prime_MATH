@@ -1,8 +1,8 @@
 //F01Z()/D.G.SCHRAUSSER/2025
 //Graph 3D: Equations 1.0
-//Gamma
-//Spherical functions
-//Sine
+//FZ1-2:Gamma
+//FZ4-9:Spherical functions
+//FZ0:Sine
 EXPORT F01Z()
 BEGIN
 "CAS.Gamma(Y)"▶FZ1;
