@@ -1,5 +1,7 @@
 //F04()/D.G.SCHRAUSSER/2025
 //Function: Equations 4.0
+//F3:Derivative of Gamma, f'(x)
+//F5-7:Derivatives of the exponential function, f(x)={f'(x)-f'''(x)...}
 EXPORT F04()
 BEGIN
 "CAS.Gamma(X)"▶F1;
