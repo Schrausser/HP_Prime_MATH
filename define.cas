@@ -20,14 +20,23 @@ X/π*180.000
 //
 // Prob ////////////
 //
+Ch(p1,p2)'Cohen's h for proportion differences'
+2*ASIN(√A)-2*ASIN(√B)
+//
+ChA(p2,h)
+SIN((1/2)*(2*ASIN(√B)+H))^2
+//
+ChB(p1,h)
+(-SIN((1/2)*(-2*ASIN(√A)+H)))^2
+//
 ADDP(p,n)
 1.000-(1.000-P)^N
 //
 BINOM(a,b)
 Σ(((A+B)!/(I!*(A+B-I)!))*2.000^(-I)*2.000^(-(A+B-I)),I,0.000,A)
 //
-NBINOM(k,p,r)
-Σ(((K+I-1.000)!/(I!*(K-1.000)!))*P^K*(1.000-P)^I,I,0.000,R-K)
+NBINOM(k,p,n)
+Σ(((K+I-1.000)!/(I!*(K-1.000)!))*P^K*(1.000-P)^I,I,0.000,N-K)
 //
 nk(N,K)
 N!/(K!*(N-K)!)
@@ -141,6 +150,7 @@ STUDENT_CDF(SIZE(L1)-2,((correlation(L1,L2)*√(SIZE(L1)-2))/(√(1-correlation(
 //
 pRWx(n,r)
 STUDENT_CDF(B-2,((A*√(B-2))/(√(1-A^2))))
+//
 tTKV(L1,L2)
 ((variance(L1)-variance(L2))*sqrt(size(L1)-2))/(2*sqrt(variance(L1)*variance(L2)*(1-correlation(L1,L2))))
 //
@@ -156,7 +166,7 @@ zrxy_z(rxy_z,n)
 prxy_z(rxy_z,n)
 NORMALD_CDF(0.5*LN(((1+A)/(1-A)))*√(B-2))
 //
-rx_yz(rxy,rxz,ryz)
+ry_xz(rxy,rxz,ryz)
 (A-B*C)/(sqrt(1-B^2))
 //
 MCORR(r1,r2,r3)
@@ -261,4 +271,4 @@ tTUX(x1,x2,s21,n1,s22,n2)
 //
 pTUX(n1,n2,x1,x2,s21,s22)
 STUDENT_CDF(D+F-2,((A-B)/(√((C*D+E*F)/(D-1+F-1))*(√(1/D)+√(1/F)))))
-// 
+//
