@@ -8,7 +8,7 @@ Mathematical and statistical applications for HP Prime (s. HP Inc., 2017):
 `PHC`, `RHO`, `TAU`, `DELTA2`, `KOR`, `TKV`, `pCor`, `ZCor`, `mZ`, `rDiff`, `IC_M`, `PKR`, `CIXY`, `MCORR2`
 
 ### distribution function
-`VFC0`, `VFCH`, `Q01_`, `Q02_`, `AMG`, `RNK`, `NVTLG`, `NVXY`, `ch2VTLG`, `tVTLG`, `F06_`, `F07_`, `EPSILON`, `EPSILON2`, `FVTLG`, `TT_`, `TV_`, `TU_`
+`VFC0`, `VFCH`, `Q01_`, `Q02_`, `MDN`, `AMG`, `RNK`, `NVTLG`, `NVXY`, `ch2VTLG`, `tVTLG`, `F06_`, `F07_`, `EPSILON`, `EPSILON2`, `FVTLG`, `TT_`, `TV_`, `TU_`
 
 ### probability
 `BNMVTLG`, `ABT1`, `GMVTLG`, `NBNMVTLG`, `ABT2`, `FX_`
