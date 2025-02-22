@@ -1,5 +1,6 @@
 //CIXY(x,y'CI)/D.G.SCHRAUSSER/2022
-//e.g.CIXY(3,0.99)[ZWERT,Statistics_2_Var,Spreadsheet,AdvancedGraphing]
+//Standard error of prediction sy'x, CI
+//e.g.CIXY(3,0.99[ZWERT,Statistics_2_Var,Spreadsheet,AdvancedGraphing]
 #cas
 CIXY(X,C):=
 BEGIN
@@ -34,6 +35,7 @@ STARTVIEW(1)
 "Y=-1*√(1-X^2)"▶V6
 "X<A AND X>0 AND Y<A AND Y>0"▶V7
 CAS((X,Y)->((Y<O) AND (Y>U)) AND ((X==Q))▶V0)
+//y'-,y',y'+,sy'x,CIp
 RETURN(L3);
 END;
 #end
