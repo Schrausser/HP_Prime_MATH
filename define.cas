@@ -115,7 +115,7 @@ zrbisR(L1,L2)
 prbisR(L1,L2)
 normald_cdf(((size(L1)*size(L2)+(((size(L1))^2+size(L1))/2)-ΣLIST(L1)-size(L1)*size(L2)/2)/(sqrt(size(L1)*size(L2)*(size(L1)+size(L2)+1)/12))))
 //
-rpbisR(L1,L2)
+rpbis(L1,L2)
 (mean(L1)-mean(L2))/stddev(CONCAT(L1,L2))*√(SIZE(L1)*SIZE(L2)/(SIZE(CONCAT(L1,L2)))^2)
 //
 rbis(L1,L2)
