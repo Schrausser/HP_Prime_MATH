@@ -1,5 +1,5 @@
 //MDN()/D.G.SCHRAUSSER/2025
-//Mean dispersion d
+//Mean dispersion D
 #cas
 MDN():=
 BEGIN
@@ -11,9 +11,10 @@ IF L1(I)=L4(1) THEN
 0▶L3(I)
 END;
 END;
-stddev(L2)▶L4(3)
-Σ(L2)/Σ(L3)▶L4(2)
-//AM,d,s
+stddev(L2)▶L4(2)
+Σ(L2)/Σ(L3)▶L4(3)
+L4(2)*L4(3)*(SIZE(L1)/(SIZE(L1)-1))▶L4(4)
+//AM,s,D,D'
 END;
 #end
-// 
+//
