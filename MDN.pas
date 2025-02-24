@@ -14,7 +14,8 @@ END;
 stddev(L2)▶L4(2)
 Σ(L2)/Σ(L3)▶L4(3)
 L4(2)*L4(3)*(SIZE(L1)/(SIZE(L1)-1))▶L4(4)
-//AM,s,D,D'
+0.5*√((L4(2)*(SIZE(L1)/(SIZE(L1)-1)))/(SIZE(L1)))▶L4(5)
+//AM,s,D,D',sD
 END;
 #end
 //
