@@ -52,6 +52,12 @@ MAKELIST(RANDOM,A,1,B)
 ZWERT(x1,x,s)
 (A-B)/C
 //
+zVAL(L1),e.g.L2:=zVAL(L1)
+approx(MAKELIST(((L1(X)-mean(L1))/stddev(L1)),X,1,SIZE(L1)))
+//
+zVALp(L1),e.g.L3:=zVAL(L1)
+approx(MAKELIST(((L1(X)-mean(L1))/stddevp(L1)),X,1,SIZE(L1)))
+//
 EFG(x1,L1)'epsilon, Cohen's d'
 (A-mean(L1))/stddevp(L1)
 //
