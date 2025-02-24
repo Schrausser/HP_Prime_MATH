@@ -6,7 +6,7 @@
 //E4: Standard normal distribution z(0,1)
 //E5: Effect size epsilon
 //E6: Linear regression y'
-//E7: Standard prediction error y'+-C with zcrit
+//E7: Standard error of prediction y'+-C with zcrit
 //E8: p of correlation r with n (2-tailed sig p2=2*(1-p);p>0.5)
 EXPORT E01()
 BEGIN
