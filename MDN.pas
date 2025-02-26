@@ -11,10 +11,10 @@ IF L1(I)=L4(1) THEN
 0▶L3(I)
 END;
 END;
-stddev(L2)▶L4(2)
+stddev(L1)▶L4(2)
 Σ(L2)/Σ(L3)▶L4(3)
-L4(2)*L4(3)*(SIZE(L1)/(SIZE(L1)-1))▶L4(4)
-0.5*√((L4(2)*(SIZE(L1)/(SIZE(L1)-1)))/(SIZE(L1)))▶L4(5)
+L4(2)*0.8/(SIZE(L1)/(SIZE(L1)-1))*(√((SIZE(L1)/(SIZE(L1)-1))))▶L4(4)
+sqrt((L4(2)^2*(SIZE(L1)/(SIZE(L1)-1)))/(SIZE(L1)))*(1/(2*0.8*(SIZE(L1)/(SIZE(L1)-1))))▶L4(5)
 //AM,s,D,D',sD
 END;
 #end
