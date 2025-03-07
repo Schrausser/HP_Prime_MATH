@@ -14,8 +14,9 @@ END;
 stddev(L1)▶L4(2)
 stddevp(L1)▶L4(3)
 Σ(L2)/Σ(L3)▶L4(4)
-L4(3)*0.8▶L4(5)
+L4(3)*0.8*(1-1/300)^(−1)▶L4(5) //+corr
 sqrt((L4(3)^2*(SIZE(L1)/(SIZE(L1)-1)))/(SIZE(L1)))*(1/(2*0.8*(SIZE(L1)/(SIZE(L1)-1))))▶L4(6)
+L4(6)*(1-(1/40))▶L4(6) //corr
 //AM,s,s',D,D',s'D
 END;
 #end
