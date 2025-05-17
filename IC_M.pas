@@ -1,4 +1,4 @@
-//IC_M_(n of variables k)/D.G.SCHRAUSSER/2025
+//IC_M(n of variables k)/D.G.SCHRAUSSER/2025
 //Intercorrelation matrix, Pearson correlation r
 //e.g.IC_M(5)[pCor]
 //M1:r
