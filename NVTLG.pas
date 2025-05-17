@@ -1,4 +1,4 @@
-///NVTLG(z[crit],tail[1/2])/D.G.SCHRAUSSER/2025
+//NVTLG(z[crit],tail[1/2])/D.G.SCHRAUSSER/2025
 //e.g.NVTLG(1.96,2)
 #cas
 NVTLG(Z,S):=
