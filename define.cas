@@ -18,6 +18,35 @@ X/180.000*π
 R2D(rad)
 X/π*180.000
 //
+// Exposure ///////
+//
+Ev(Tv,Av)'exposure value'
+(LN(2))^(-1)*LN(T*A^2)
+//
+TEv(Ev,Av)
+2^E/A^2
+//
+AEv(Ev,Tv)
+√(2^E*T)/T
+//
+AvTv(Av0,Tv0,Tv)
+A*e^(0.5*LN((T/B)))
+//
+AvS(A0,S0,S)
+A*e^(0.25*LN(S^(-1)*B))
+//
+AvTvk(Av0,Tv steps k),e.g.AvTvk(8,-3)
+A*(√2^K)
+//
+AvSk(A0,S steps k),e.g.AvSk(100,3)
+A*((4) NTHROOT (2))^K
+//
+ISOL(iso)
+(10*LN(S)/LN(10))+1
+//
+ISOA(iso°)
+10^(0.1*(S-1))
+//
 // Prob ////////////
 //
 Ch(p1,p2)'Cohen's h for proportion differences'
@@ -103,7 +132,7 @@ approx(correlation(L1,L2))
 RED(r)
 A^2*100
 //
-tr
+tr(r,n)
 (R*√(N-2))/(√(1-R^2))
 //  
 CIr(P,S,R),CIr(ci%,sdx or sdy,rxy),e.g.CIr(0.99,0.342,0.98)  
