@@ -744,7 +744,7 @@ with
 
 $$t_{(df)}=\frac{d_\overline{x}}{\hat\sigma_{d_{\overline x}}},$$
 
-$$\hat\sigma_{d_{\overline x}}=\sqrt{\frac{\sum_{i=1}^{n_1}{(x_{(i,1)}-\overline{x}_1)^2}+\sum_{i=1}^{n_2}{(x_{(i,2)}-\overline{x}_2)^2}}{n-2}}\cdot\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}$$
+$$\hat\sigma_{d_{\overline x}}=\sqrt{\frac{\sum_{i=1}^{n_1}{(x_{(i,1)}-\overline x_1)^2}+\sum_{i=1}^{n_2}{(x_{(i,2)}-\overline x_2)^2}}{n-2}}\cdot\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}$$
 
 where
 
