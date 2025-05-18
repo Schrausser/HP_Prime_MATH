@@ -546,7 +546,7 @@ $r$ = correlation $r_{(z_1,z_2)}$
 
 <br>
 
-#### [`tVTLNG`|`F06_`] [`F02`|`F06`|`F03Z`] Student's-$t$ distribution $f(x=t)$
+#### [`tVTLNG`|`F06_`] [`F02`|`F06`|`F03Z`] Student's $t$ distribution $f(x=t)$
 
 ---
 
@@ -783,7 +783,7 @@ $$z=\frac{b-\frac{b+c}{2}}{\sqrt{\frac{b+c}{4}}}$$
 <br>
 
 
-#### [`VFCH`] [`x4F`|`p4F`|`x4FY`|`p4FY`|`z4F`|`pz4F`] 2×2 $\chi^2$ test for independence
+#### [`VFCH`] [`x4F`|`p4F`|`x4FY`|`p4FY`|`z4F`|`pz4F`] 2 × 2 $\chi^2$ test for independence
 
 ---
 
