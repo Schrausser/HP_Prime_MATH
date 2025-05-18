@@ -910,7 +910,7 @@ $$z=\frac{b-\frac{b+c}{2}}{\sqrt{\frac{b+c}{4}}}$$
 
 <br>
 
-#### [`FX_`] [z4F`|`pz4F`] Exact hypergeometric 2×2 test
+#### [`FX`] [`z4F`|`pz4F`] Exact hypergeometric 2 × 2 test
 
 ---
 
