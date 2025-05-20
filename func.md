@@ -306,9 +306,9 @@ $$Av_S=Av_{S_0}\cdot a_{S}$$
 
 where
 
-$$a_S=2^{\frac{1}{4}\cdot\log2\frac{S}{S_0}}$$
+$$a_S=2^{\frac{1}{2}\cdot\log2\frac{S}{S_0}}$$
 
-$$=e^{\frac{1}{4}\cdot\log\frac{S}{S_0}}$$
+$$=e^{\frac{1}{2}\cdot\log\frac{S}{S_0}}$$
 
 with
 
@@ -334,7 +334,7 @@ $Av_0$ = initial aperture value
 
 ---
 
-$$Av=Av_0\cdot\sqrt[4]2^k$$
+$$Av=Av_0\cdot\sqrt[]2^k$$
 
 with
 
