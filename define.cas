@@ -33,13 +33,13 @@ AvTv(Av0,Tv0,Tv)
 A*e^(0.5*LN((T/B)))
 //
 AvS(A0,S0,S)
-A*e^(0.25*LN(S^(-1)*B))
+A*e^(0.5*LN(S^(-1)*B))
 //
 AvTvk(Av0,Tv steps k),e.g.AvTvk(8,-3)
 A*(√2^K)
 //
 AvSk(A0,S steps k),e.g.AvSk(100,3)
-A*((4) NTHROOT (2))^K
+A*((2) NTHROOT (2))^K
 //
 ISOL(iso)
 (10*LN(S)/LN(10))+1
