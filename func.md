@@ -321,7 +321,7 @@ $Av$= aperture value $f$
 #### [`AvTvk`] Aperture $Av$ shift from time $Tv$ in steps $k$
 
 ---
-$$Tv_n=Tv_{n-k}\cdot 2^k,Tv_n=\frac{Tv_{n+k}}{2^k}$$
+$$Tv_{n-k}=Tv_n\cdot 2^k,Tv_{n+k}=\frac{Tv_n}{2^k}$$
 
 with
 
@@ -337,7 +337,7 @@ $Av_0$ = initial aperture value
 
 ---
 
-$$S_n=S_{n+k}\cdot \sqrt{2}^k,S_n=\frac{S_{n-k}}{\sqrt{2}^k}$$
+$$S_{n+k}=S_n\cdot \sqrt{2}^k,S_{n-k}=\frac{S_n}{\sqrt{2}^k}$$
 
 with
 
