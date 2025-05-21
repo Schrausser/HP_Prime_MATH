@@ -271,7 +271,7 @@ $$Tv=\frac{2^{Ev}}{Av^2},$$
 
 $$Av=\frac{\sqrt{2^{Ev}\cdot Tv}}{Tv}$$
 
-with
+where
 
 $Tv$ = time value with $Tv=s^{-1}$  
 $Av$= aperture value $f$
@@ -284,13 +284,13 @@ $Av$= aperture value $f$
 
 $$Av_{Tv}=Av_{Tv_0}\cdot a_{Tv}$$
 
-where
+with
 
 $$a_{Tv}=2^{\frac{1}{2}\cdot\log2\frac{Tv_0}{Tv}}$$
 
 $$=e^{\frac{1}{2}\cdot\log\frac{Tv_0}{Tv}}$$
 
-with
+where
 
 $Tv$ = time value with $Tv=s^{-1}$  
 $Tv_0$ = initial time value with $Tv_0=s^{-1}$  
@@ -304,13 +304,13 @@ $Av$= aperture value $f$
 
 $$Av_S=Av_{S_0}\cdot a_{S}$$
 
-where
+with
 
 $$a_S=2^{\frac{1}{2}\cdot\log2\frac{S}{S_0}}$$
 
 $$=e^{\frac{1}{2}\cdot\log\frac{S}{S_0}}$$
 
-with
+where
 
 $S$ = arithmetic speed $ISO$  
 $S_0$ = initial arithmetic speed $ISO$  
@@ -321,10 +321,13 @@ $Av$= aperture value $f$
 #### [`AvTvk`] Aperture $Av$ shift from time $Tv$ in steps $k$
 
 ---
+$$Tv_n=Tv_{n-k}\cdot 2^k,Tv_n=\frac{Tv_{n+k}}{2^k}$$
+
+with
 
 $$Av=Av_0\cdot\sqrt2^k$$
 
-with
+where
 
 $Av_0$ = initial aperture value
 
@@ -334,9 +337,13 @@ $Av_0$ = initial aperture value
 
 ---
 
-$$Av=Av_0\cdot\sqrt[]2^k$$
+$$S_n=S_{n+k}\cdot \sqrt{2}^k,S_n=\frac{S_{n-k}}{\sqrt{2}^k}$$
 
 with
+
+$$Av=Av_0\cdot\sqrt[]2^k$$
+
+where
 
 $Av_0$ = initial aperture value
 
