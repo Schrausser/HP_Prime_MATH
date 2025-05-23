@@ -1,7 +1,7 @@
-//tVTLNG(t,df)/D.G.SCHRAUSSER/2025
-//e.g.tVTLNG(2.65,8)[AdvancedGraphing]
+//tVTLG(t,df)/D.G.SCHRAUSSER/2025
+//e.g.tVTLG(2.65,8)[AdvancedGraphing]
 #cas
-tVTLNG(T857,D187):=
+tVTLG(T857,D187):=
 BEGIN
 G25478=Gamma((D187+1)/2)/Gamma(D187/2)
 P=∫(G25478*(D187*π)^(-1/2)*(1+(X^2/D187))^(-(D187+1)/2),X,−∞,T857)
