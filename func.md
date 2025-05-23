@@ -525,7 +525,7 @@ $\zeta_{\overline d}=\overline\delta=\frac{4}{5}$
 
 <br>
 
-#### [`NVTLNG`] [`F02`|`F03`] Standard normal distribution $f(x=z)$
+#### [`NVTLG`] [`F02`|`F03`] Standard normal distribution $f(x=z)$
 
 ---
 
@@ -553,7 +553,7 @@ $r$ = correlation $r_{(z_1,z_2)}$
 
 <br>
 
-#### [`tVTLNG`|`F06_`] [`F02`|`F06`|`F03Z`] Student's $t$ distribution $f(x=t)$
+#### [`tVTLG`|`F06_`] [`F02`|`F06`|`F03Z`] Student's $t$ distribution $f(x=t)$
 
 ---
 
@@ -569,7 +569,7 @@ $\Gamma_x=\int_{0}^\infty{y^{x-1}\cdot e^{-y}dy+c}$
 
 <br>
 
-#### [`ch2VTLNG`|`F07_`] [`F02`|`F07`|`F03Z`] $\chi^2$ distribution $f(x=\chi^2)$
+#### [`ch2VTLG`|`F07_`] [`F02`|`F07`|`F03Z`] $\chi^2$ distribution $f(x=\chi^2)$
 
 ---
 
@@ -585,7 +585,7 @@ $\Gamma_x=\int_{0}^\infty{y^{x-1}\cdot e^{-y}dy+c}$
 
 <br>
 
-#### [`FVTLNG`] [`F02`|`F03Z`] $F$ distribution $f(x=F)$
+#### [`FVTLG`] [`F02`|`F03Z`] $F$ distribution $f(x=F)$
 
 ---
 
