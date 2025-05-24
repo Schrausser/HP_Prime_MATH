@@ -1,6 +1,6 @@
 # func_tab.md
 
-Table 1. Methods and the corresponding HP Prime ([2017](https://www.hpcalc.org/details/7445)) *CAS*, *User* and *Application* functions (Schrausser, [2025](https://doi.org/10.5281/zenodo.14721085)) compared to equivalent Schrausser-MAT functions *MAT* (Schrausser, [2022](https://doi.org/doi.org/10.13140/RG.2.2.28314.52164)).			
+Table 1. Methods and the corresponding HP Prime ([2017](https://www.hpcalc.org/details/7445)) *CAS*, *User* and *Application* functions (Schrausser, [2025](https://doi.org/10.5281/zenodo.14721085)) compared to equivalent Schrausser-MAT functions *MAT* (Schrausser, [2022](https://doi.org/10.13140/RG.2.2.28314.52164)).			
 ~~~
 Method		HP-Prime Function			
 		CAS	User	App.	MAT
@@ -158,6 +158,6 @@ Complex plane	CPLX		F02Z
 
 HP Inc. (2017). *HP Prime Graphing Calculator: Manual*. 3rd ed. Stanford Research Park, Palo Alto, California, U.S.: HP Development Company, L.P. [https://www.hpcalc.org/details/7445](https://www.hpcalc.org/details/7445).
 
-Schrausser, D. G. (2022). Mathematical-Statistical Algorithm Interpreter, SCHRAUSSER-MAT: Function Index, Manual. *Handbooks. Academia*. [https://doi.org/doi.org/10.13140/RG.2.2.28314.52164](https://doi.org/doi.org/10.13140/RG.2.2.28314.52164)
+Schrausser, D. G. (2022). Mathematical-Statistical Algorithm Interpreter, SCHRAUSSER-MAT: Function Index, Manual. *Handbooks. Academia*. [https://doi.org/10.13140/RG.2.2.28314.52164](https://doi.org/10.13140/RG.2.2.28314.52164)
 
 ———. (2025). Schrausser/HP_Prime_MATH: 1.5. *Zenodo. January 2025*. [https://doi.org/10.5281/zenodo.14721085](https://doi.org/10.5281/zenodo.14721085)
