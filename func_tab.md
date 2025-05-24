@@ -87,9 +87,9 @@ Distribution	Q01_	zVAL		Z__
 					SSH
 					ZSH
 		Q02_			EXZ
-				EZP
-				SEX
-				ZEX
+					EZP
+					SEX
+					ZEX
 		SMG	CIx		SMG
 					SMX
 		CIXY	CIr		
@@ -98,36 +98,36 @@ Distribution	Q01_	zVAL		Z__
 		EPSILON2		EFS
 		EPSILON2		OPP
 		TKV	pTKV		TKV
-				tTKV		
+			tTKV		
 		TV_	pTV		TV_
-				tTV		
+			tTV		
 		TU_	pTU_		TU_
-				pTUx	TUX
-				tTU_		
-				tTUx		
+			pTUx		TUX
+			tTU_		
+			tTUx		
 		TT_	pTT_		TT_
-				tTT_		
+			tTT_		
 		ABT1	p2F		EDX
-				pzBN	ZBN
-				x2F		
-				zBN		
+			pzBN		ZBN
+			x2F		
+			zBN		
 		VFCH	p4F		VFX
-				p4FY	VFYX
-				pz4F	ZFX
-				x4F		
-				x4FY		
-				z4F		
-		VFCH		pMN	MNX
-				pMNY	MNYX
-				xMN		
-				xMNY		
+			p4FY		VFYX
+			pz4F		ZFX
+			x4F		
+			x4FY		
+			z4F		
+		VFCH	pMN		MNX
+			pMNY		MNYX
+			xMN		
+			xMNY		
 Probability		ch		
 			chA		
 			chB		
 		ABT1	ADDP		AWN
 		GMVTLG			GMP
 					GMW
-		NBNMVTLG	NBINOM	NBP
+		NBNMVTLGNBINOM		NBP
 					NBW
 		ABT1	BINOM		BN0
 			pzBN		BN1
