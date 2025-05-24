@@ -156,7 +156,7 @@ Complex plane	CPLX		F02Z
 
 ## References
 
-HP Inc. (2017). *HP Prime Graphing Calculator: Manual*. 3rd ed. Stanford Research Park, Palo Alto, California, U.S.: HP Development Company, L.P. [https://www.hpcalc.org/details/7445](https://www.hpcalc.org/details/7445).
+HP Inc. (2017). *HP Prime Graphing Calculator: Manual*. 3rd ed. Stanford Research Park, Palo Alto, California, U.S.: HP Development Company, L.P. [https://www.hpcalc.org/details/7445](https://www.hpcalc.org/details/7445)
 
 Schrausser, D. G. (2022). Mathematical-Statistical Algorithm Interpreter, SCHRAUSSER-MAT: Function Index, Manual. *Handbooks. Academia*. [https://www.academia.edu/81395688](https://www.academia.edu/81395688)
 
