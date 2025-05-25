@@ -968,7 +968,7 @@ $P_n=n!$
 
 ---
 
-for dependent 2 sample design, $n=2$ elements to class $m$
+For the dependent 2 sample design, $n=2$ elements to class $m$
 
 $$\mathbf{ ^w V_2^m}=\begin{bmatrix}v_1(x_1)&\cdots&v_1(x_m)\\\\\vdots&\ddots&\vdots\\\v_{^wV}(x_1)&\cdots&v_{^wV}(x_m)\end{bmatrix}$$
 
