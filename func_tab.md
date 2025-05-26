@@ -46,11 +46,11 @@ Correlation	IC_M	pRW		DET
 			MCORR		BMK
 			pMCORR		MBC
 			SCR		FMK
-Exposure		AEv		
+Exposure		AEv	E03	
 			Ev		
 			TEv		
 			AvTv		
-			AvS		
+			AvS	E03	
 			AvTvk		
 			AvSk		
 Integration			F01	
