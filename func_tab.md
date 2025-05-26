@@ -5,7 +5,7 @@ Table 1. Methods and the corresponding HP Prime ([2017](https://www.hpcalc.org/d
 Method		HP-Prime Function			
 		CAS	User	App.	MAT
 
-Correlation	IC_M	pRW		DET
+Correlation	IC_M	pRW	E01	DET
 		KOR	pRWx		KOR
 			RED		KOX
 			rxy		RED
@@ -71,8 +71,9 @@ Distribution	Q01_	zVAL		Z__
 		Q01_			
 		Q01_			SDV
 		MDN			D__
-		NVTLG		F02	DZW
-				F03	PZD
+		NVTLG		E01	DZW
+				F02	PZD
+				F03
 		NVXY		F01Z	
 		F06_		F02	DTW
 		tVTLG		F03Z	PTD
@@ -92,8 +93,8 @@ Distribution	Q01_	zVAL		Z__
 					ZEX
 		SMG	CIx		SMG
 					SMX
-		CIXY	CIr		
-		EPSILON	EFG		EFG
+		CIXY	CIr	E01	
+		EPSILON	EFG	E01	EFG
 			EFR		
 		EPSILON2		EFS
 		EPSILON2		OPP
@@ -124,12 +125,12 @@ Distribution	Q01_	zVAL		Z__
 Probability		ch		
 			chA		
 			chB		
-		ABT1	ADDP		AWN
+		ABT1	ADDP	E01	AWN
 		GMVTLG			GMP
 					GMW
-		NBNMVTLGNBINOM		NBP
+		NBNMVTLGNBINOM	E01	NBP
 					NBW
-		ABT1	BINOM		BN0
+		ABT1	BINOM	E01	BN0
 			pzBN		BN1
 			zBN		BN2
 		FX_	pz4F		FX0
