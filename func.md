@@ -1033,7 +1033,7 @@ $\Theta^2$ = Two-tailed test value
 
 <br>
 
-#### [`mPV_`] Randomized Permutation test *mP* for 2 paired samples $(x1|x2)$
+#### [`mPV_`] Randomized permutation test *mP* for 2 paired samples $(x1|x2)$
 
 ---
 
