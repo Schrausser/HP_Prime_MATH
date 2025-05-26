@@ -23,7 +23,7 @@ Mathematical and statistical applications for HP Prime (s. HP Inc., 2017), for t
 `CPLX`, `CPLX2`, `CPLHX`
 
 ### functions for applications
-`E01`, `E02`, `F01`, `F02`, `F03`, `F04`, `F05`, `F06`, `F07`, `F01Z`, `F02Z`, `F03Z`, `R01`, `U01`, `V00`, `X01`, `define.dat`
+`E01`, `E02`, `E03`, `F01`, `F02`, `F03`, `F04`, `F05`, `F06`, `F07`, `F01Z`, `F02Z`, `F03Z`, `R01`, `U01`, `V00`, `X01`, `define.dat`
 
 ### data
 `C2V`, `V2C`, `dList`, `dMatr`, `RNDNR`, `Cor.dat`, `U_.dat`, `wP8_4_4.dat`, `wP9_4_5.dat`,`wP10_4_6.dat`, `wP10_5_5.dat`, `V_.dat`, `wV2_9.dat`, `wV2_10.dat`
