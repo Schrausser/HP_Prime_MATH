@@ -5,7 +5,7 @@ Dietmar G. Schrausser, 2025
 
 ### Correlation
 
-#### [`KOR`|`IC_M`] [`rxy`|`RED`|`tr`|`TRW`|`pRW`|`pRWx`] Pearson product-moment correlation coefficient $r_{xy}$
+#### [`KOR`|`IC_M`] [`rxy`|`RED`|`tr`|`TRW`|`pRW`|`pRWx`] [`E01`] Pearson product-moment correlation coefficient $r_{xy}$
 
 ---
 
@@ -259,7 +259,7 @@ To calculate the appropriate *time-aperture-speed* combination for given *light 
 
 <br>
 
-#### [`Ev`|`TEv`|`AEv`] Exposure value $Ev$
+#### [`Ev`|`TEv`|`AEv`] [`E03`] Exposure value $Ev$
 
 ---
 
@@ -298,7 +298,7 @@ $Av$= aperture value $f$
 
 <br>
 
-#### [`AvS`] Aperture $Av$ for speed $S$ with given $Ev$
+#### [`AvS`] [`E03`] Aperture $Av$ for speed $S$ with given $Ev$
 
 ---
 
@@ -525,7 +525,7 @@ $\zeta_{\overline d}=\overline\delta=\frac{4}{5}$
 
 <br>
 
-#### [`NVTLG`] [`F02`|`F03`] Standard normal distribution $f(x=z)$
+#### [`NVTLG`] [`E01`|`F02`|`F03`] Standard normal distribution $f(x=z)$
 
 ---
 
@@ -648,7 +648,7 @@ $n$ = number of cases
 
 <br>
 
-#### [`CIXY`] [`CIr`] Standard error of prediction $\sigma_{\hat yx}$ , confidence interval $CI_p$
+#### [`CIXY`] [`CIr`] [`E01`] Standard error of prediction $\sigma_{\hat yx}$ , confidence interval $CI_p$
 
 ---
 
@@ -664,7 +664,7 @@ $\hat y$ = predicted value $y$
 
 <br>
 
-#### [`EPSILON`] [`EFG`|`EFR`] Effect size $\epsilon$, Cohen's $d$
+#### [`EPSILON`] [`EFG`|`EFR`] [`E01`] Effect size $\epsilon$, Cohen's $d$
 
 ---
 
@@ -846,7 +846,7 @@ probabilities = $p_1$, $p_2$
 
 <br>
 
-#### [`ABT1`] [`ADDP`] Additive probability for independent events $^u p(\cup_n A)$
+#### [`ABT1`] [`ADDP`] [`E01`] Additive probability for independent events $^u p(\cup_n A)$
 
 ---
 
@@ -880,7 +880,7 @@ $r+1 = n$ = number of events
 
 <br>
 
-#### [`NBNMVTLG`] [`NBINOM`] Negative binomial distribution $f(X\le r|r,p)$
+#### [`NBNMVTLG`] [`NBINOM`] [`E01`] Negative binomial distribution $f(X\le r|r,p)$
 
 ---
 
@@ -899,7 +899,7 @@ $k$ = number of successes
 
 <br>
 
-#### [`ABT1`] [`BINOM`|`zBN`|`pzBN`] Exact binomial test
+#### [`ABT1`] [`BINOM`|`zBN`|`pzBN`] [`E01`] Exact binomial test
 
 ---
 
