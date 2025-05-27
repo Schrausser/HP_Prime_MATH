@@ -5,7 +5,7 @@
 Mathematical and statistical applications for HP Prime (s. HP Inc., 2017), for the full function index see `func.md`, `func_tab.md`:
 
 ### correlation
-`PHC`, `RHO`, `TAU`, `DELTA2`, `KOR`, `TKV`, `pCor`, `ZCor`, `mZ`, `rDiff`, `IC_M`, `PKR`, `CIXY`, `MCORR2`
+`PHC`, `RHO`, `TAU`, `DELTA2`, `KOR`, `TKV`, `pCor`, `ZCor`, `mZ`, `rDiff`, `IC_M`, `PKR`, `CIXY`, `MCORR2`; s. `correlation.md`
 
 ### distribution
 `VFC0`, `VFCH`, `Q01_`, `Q02_`, `MDN`, `AMG`, `RNK`, `NVTLG`, `NVXY`, `ch2VTLG`, `tVTLG`, `F06_`, `F07_`, `EPSILON`, `EPSILON2`, `FVTLG`, `TT_`, `TV_`, `TU_`
