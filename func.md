@@ -1,9 +1,11 @@
 # HP_Prime_MATH: Functions
 Dietmar G. Schrausser, 2025
 
-## Functions
+<br>
 
 ### Correlation
+
+<br>
 
 #### [`KOR`|`IC_M`] [`rxy`|`RED`|`tr`|`TRW`|`pRW`|`pRWx`] [`E01`] Pearson product-moment correlation coefficient $r_{xy}$
 
@@ -253,9 +255,7 @@ $df_2 = n-4$
 <br>
 <br>
 
-### Exposure functions
-
-To calculate the appropriate *time-aperture-speed* combination for given *light values* on a logarithmic scale.  
+### Exposure
 
 <br>
 
@@ -360,7 +360,7 @@ $$S=10^{\frac{S°-1}{10}}$$
 <br>
 <br>
 
-### Functions of integration, $\pi$ and $\Gamma$
+### Integration, $\pi$ and $\Gamma$
 
 
 <br>
@@ -436,7 +436,7 @@ $$F'(x)=\frac{\partial \Gamma}{\partial x}$$
 <br>
 <br>
 
-### Distribution functions
+### Distribution
 
 <br>
 
@@ -968,7 +968,7 @@ $P_n=n!$
 
 ---
 
-For the dependent 2 sample design, $n=2$ elements to class $m$
+For the dependent 2 sample design, $n=2$ elements to class $m$.
 
 $$\mathbf{ ^w V_2^m}=\begin{bmatrix}v_1(x_1)&\cdots&v_1(x_m)\\\\\vdots&\ddots&\vdots\\\v_{^wV}(x_1)&\cdots&v_{^wV}(x_m)\end{bmatrix}$$
 
