@@ -2,7 +2,7 @@
 
 [mov](https://m.youtube.com/watch?v=-4HJJQdxEFU)
 
-Mathematical and statistical applications for HP Prime (s. HP Inc., 2017), for the full function index see `func.md`, `func_tab.md`:
+Mathematical and statistical applications for HP Prime (s. HP Inc., 2017), for an *overview* of the implemented methods and their *historical development* s. `paper.md`, for the full function index see `func.md`, `func_tab.md`:
 
 ### correlation
 `PHC`, `RHO`, `TAU`, `DELTA2`, `KOR`, `TKV`, `pCor`, `ZCor`, `mZ`, `rDiff`, `IC_M`, `PKR`, `CIXY`, `MCORR2`; s. `correlation.md`
