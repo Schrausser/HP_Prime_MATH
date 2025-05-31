@@ -388,7 +388,7 @@ Fisher, R. A. (1915). Frequency Distribution of the Values of the Correlation Co
 
 Galton, F. (1877). Typical Laws of Heredity 1. *Nature 15*: 492–95. [https://doi.org/10.1038/015492a0](https://doi.org/10.1038/015492a0)
 
-Gauß, C. F. (1809). *Theoria motvs corporvm coelestivm in sectionibvs conicis Solem ambientivm*. Hambvrgi: Svmtibvs F. Perthes et I. H. Besser. [https://archive.org/details/theoriamotuscor00gausgoog/page/n1/mode/1up](https://archive.org/details/theoriamotuscor00gausgoog/page/n1/mode/1up)
+Gauss, C. F. (1809). *Theoria motvs corporvm coelestivm in sectionibvs conicis Solem ambientivm*. Hambvrgi: Svmtibvs F. Perthes et I. H. Besser. [https://archive.org/details/theoriamotuscor00gausgoog/page/n1/mode/1up](https://archive.org/details/theoriamotuscor00gausgoog/page/n1/mode/1up)
 
 ———. (1823). *Theoria Combinationis Observationum Erroribus Minimis Obnoxiae*. Göttingen: apud Henricum Dieterich. [https://doi.org/10.3931/e-rara-2857](https://doi.org/10.3931/e-rara-2857)
 
