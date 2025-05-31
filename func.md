@@ -1012,7 +1012,7 @@ $^wP_n^{(k_m,k_{n-m})}=\frac{n!}{\prod_{i=1}^2 k_i!};n\ge m$
 
 <br>
 
-#### [`PV_`] Permutation test *P* for 2 paired samples $(x1|x2)$
+#### [`PV_`] Permutation test *P* for 2 paired samples $(x_1|x_2)$
 
 ---
 
@@ -1033,7 +1033,7 @@ $\Theta^2$ = Two-tailed test value
 
 <br>
 
-#### [`mPV_`] Randomized permutation test *mP* for 2 paired samples $(x1|x2)$
+#### [`mPV_`] Randomized permutation test *mP* for 2 paired samples $(x_1|x_2)$
 
 ---
 
