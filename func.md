@@ -21,7 +21,7 @@ $$t_{(df)}=\frac{r\cdot\sqrt{n-2}}{\sqrt{1-r^2}}$$
 
 where
 
-$r^2$ = coefficient of determination *det*, redundancy   $det%=r^2\cdot100$  
+$r^2$ = coefficient of determination, redundancy $det%=r^2\cdot100$  
 $\sigma^2_{xy}$ = covariance of $x$ and $y$  
 $df$ = $n-2$  
 
@@ -31,7 +31,7 @@ $df$ = $n-2$
 
 ---
 
-Equivalent to the product moment correlation when rank values ​​are present.
+Equivalent to the product moment correlation when *rank* values ​​are present.
 
 $$r_s=\rho=1-\frac{6\cdot\sum_{i=1}^n{d_i^2}}{n\cdot(n^2-2)}$$
 
@@ -50,7 +50,7 @@ $df$ = $n-2$
 
 ---
 
-Without adjustment for ties.
+Without adjustment for *ties*.
 
 $$\tau_a=1-\frac{2\cdot n_d}{0.5\cdot n\cdot(n-1)},$$
 
@@ -74,7 +74,7 @@ $n_c$ = Number of concordant pairs, with $n_c=\binom{n}{2}-n_d$
 
 ---
 
-For binary data [0,1].
+For *binary* data [0,1].
 
 $$D_{YX}=\frac{n_{1,1}}{n}-\frac{n_{1,0}}{n}$$
 
@@ -85,7 +85,6 @@ $n_{1,1}$ = Number of pairs with $Y=1, X=1$
 $n_{1,0}$ = Number of pairs with $Y=1, X=0$  
 
 <br>
-
 
 #### [`rpbis`] Point biserial correlation coefficient $r_{pb}$
 
@@ -127,7 +126,7 @@ $\vartheta=\frac{1}{\sqrt{2\cdot\pi}}\cdot e^{-\frac{F(p=\frac{n_0}{n})^2}{2}}$
 
 ---
 
-Also rank *biseral* correlation, corresponds to the *effect size* for the *Mann–Whitney* $U$ *test*.
+Also rank *biseral* correlation, corresponds to the *effect size* for the *Mann–Whitney* $U$-test.
 
 $$r_{bisR}=\frac{2}{n}\cdot(\overline{i}_1-\overline{i}_2)$$
 
@@ -161,7 +160,7 @@ $df=1$
 
 ---
 
-Proposed approximate algorithm.
+*Proposed* approximate algorithm.
 
 $$r_{tet}=\cos\frac{\pi}{1+\sqrt{\frac{b\cdot c}{a\cdot d}}}$$
 
@@ -171,15 +170,12 @@ $$z=\frac{r_{tet}}{\sigma_{r_{tet}}},$$
 
 $$\sigma_{r_{tet}}=\sqrt{\frac{\frac{a+b}{n}\cdot\frac{a+c}{n}\cdot\frac{c+d}{n}\cdot\frac{b+d}{n}}{n}}\cdot\frac{1}{\vartheta_x\cdot \vartheta_y}$$
 
-
 where
 
 $\vartheta_x=\frac{1}{\sqrt{2\cdot\pi}}\cdot e^{-\frac{F(p=\frac{c+d}{n})^2}{2}}$  
 $\vartheta_y=\frac{1}{\sqrt{2\cdot\pi}}\cdot e^{-\frac{F(p=\frac{b+d}{n})^2}{2}}$  
 
 <br>
-
-
 
 #### [`PKR`] [`rxy_z`|`zrxy_z`|`prxy_z`|`ry_xz`]  Partial correlation $r_{xy\cdot z}$
 
@@ -362,14 +358,13 @@ $$S=10^{\frac{S°-1}{10}}$$
 
 ### Integration, $\pi$ and $\Gamma$
 
-
 <br>
 
 #### [`F01`|`F05`] Circular function, $\pi$
 
 ---
 
-Weierstraß describes $\frac{\pi}{2}=\int_0^{\infty}\frac{1}{1-x^2}dx$, which may be less heuristic.
+Weierstraß describes $\frac{\pi}{2}=\int_0^{\infty}\frac{1}{1-x^2}dx$, which *may* be less heuristic.
 
 $$f(x)=\sqrt{1-(\frac{x-b}{a})^2}\cdot a+c$$
 
@@ -419,7 +414,6 @@ $d=\sqrt(2)$
 $\pi=\frac{3\cdot F_3(x,y)}{\sqrt{2}}$  
 $O=\pi$  
 
-
 <br>
 
 #### [`F04`|`F01Z`] Gamma function, $\Gamma$
@@ -464,7 +458,6 @@ where
 
 $a$ = test value  
 $N$ = number of cases, population  
-
 
 <br>
 
@@ -514,7 +507,6 @@ $$\overline d=\frac{\sum_{i=1}^n{|x_i-\overline x|}}{\sum_{i=1}^n1};x_i\ne \over
 
 $$\hat{\overline \delta}=\sigma\cdot\zeta\cdot\sqrt{\frac{n}{n-1}}=\hat\sigma\cdot\zeta$$
 
-
 with
 
 $$\hat\sigma_{\overline d}=\sigma\cdot\frac{1}{2\cdot\zeta\cdot\sqrt{n}}$$
@@ -535,7 +527,6 @@ with
 
 $$F(z)=p=\int_{-\infty}^z{f(z)dz},$$
 $$f'(z)=\frac{\partial f(z)}{\partial z}$$
-
 
 <br>
 
@@ -789,7 +780,6 @@ $$z=\frac{b-\frac{b+c}{2}}{\sqrt{\frac{b+c}{4}}}$$
 
 <br>
 
-
 #### [`VFCH`] [`x4F`|`p4F`|`x4FY`|`p4FY`|`z4F`|`pz4F`] 2 × 2 $\chi^2$ test for independence
 
 ---
@@ -820,7 +810,6 @@ $$\chi^2=\frac{(b-c)^2}{b+c},$$
 $$\chi^2=\frac{(|b-c|-\frac{1}{2})^2}{b+c};20\lt (b+c)\lt 30$$
 
 <br>
-<br>
 
 ### Probability
 
@@ -850,7 +839,7 @@ probabilities = $p_1$, $p_2$
 
 ---
 
-Corresponds to the geometric distribution $f(X\le r|p)$.
+Corresponds to the *geometric distribution* $f(X\le r|p)$.
 
 $$^u p(\cup_n A)=1-(1-pA)^n$$
 
@@ -865,7 +854,7 @@ $pA$ = probability of event A
 
 ---
 
-Corresponds to the additive probability $^u p(\cup_n A)$.
+Corresponds to the *additive* probability $^u p(\cup_n A)$.
 
 $$f(X=r|p)=P_n=p\cdot q^r$$
 
@@ -884,7 +873,7 @@ $r+1 = n$ = number of events
 
 ---
 
-With $k=1$ it corresponds to the geometric distribution $f(X\le r|p)$ and the additive probability $^u p(\cup_n A)$.
+With $k=1$ it corresponds to the *geometric distribution* $f(X\le r|p)$ and the *additive* probability $^u p(\cup_n A)$.
 
 $$f(X=r|r,p)=P_n=\frac{(k+r-1)!}{r!\cdot(k-1)!} \cdot p^k\cdot q^r$$
 
@@ -943,10 +932,8 @@ $\hat P_d=\frac{(d+b-1)\cdot(c+d-1)}{(N-1)^2}$
 $df$=1  
 
 <br>
-<br>
 
 ### Combinatorics
-
 
 <br>
 
@@ -968,7 +955,7 @@ $P_n=n!$
 
 ---
 
-For the dependent 2 sample design, $n=2$ elements to class $m$.
+For the *dependent* 2 sample design, $n=2$ elements to class $m$.
 
 $$\mathbf{ ^w V_2^m}=\begin{bmatrix}v_1(x_1)&\cdots&v_1(x_m)\\\\\vdots&\ddots&\vdots\\\v_{^wV}(x_1)&\cdots&v_{^wV}(x_m)\end{bmatrix}$$
 
@@ -1009,14 +996,13 @@ $^wP_n^{(k_m,k_{n-m})}=\frac{n!}{\prod_{i=1}^2 k_i!};n\ge m$
 
 ### Resampling
 
-
 <br>
 
 #### [`PV_`] Permutation test *P* for 2 paired samples $(x_1|x_2)$
 
 ---
 
-Random sampling model, systematic permutation, $p$-value not randomized, variation matrix $\mathbf{ ^w V_2^m}$ required.
+Random sampling model, *systematic* permutation, $p$-value *not* randomized, variation matrix $\mathbf{ ^w V_2^m}$ required.
 
 $$\Theta^1_1=\sum_{i=1}^n{x_{1_i}},\Theta^1_2=\sum_{i=1}^n{x_{2_i}},$$
 
@@ -1037,7 +1023,7 @@ $\Theta^2$ = Two-tailed test value
 
 ---
 
-Random sampling model, $p$-value not randomized.
+Random sampling model, $p$-value *not* randomized.
 
 $$\Theta^1_1=\sum_{i=1}^n{x_{1_i}},\Theta^1_2=\sum_{i=1}^n{x_{2_i}},$$
 
@@ -1059,7 +1045,7 @@ $M$ = Simulation cycles over variations $^w V_2^m=2^n$
 
 ---
 
-Random sampling model, systematic permutation, $p$-value not randomized, permutation matrix $\mathbf{^w P_n^{(k_m,k_{n-m})}}$ required.
+Random sampling model, *systematic* permutation, $p$-value *not* randomized, permutation matrix $\mathbf{^w P_n^{(k_m,k_{n-m})}}$ required.
 
 $$\Theta^1_1=\sum_{i=1}^{n_1}{x_{g1_i}},\Theta^1_2=\sum_{i=1}^{n_2}{x_{g2_i}},$$
 
@@ -1081,7 +1067,7 @@ $n=n_1+n_2$
 
 ---
 
-Random sampling model, $p$-value not randomized.
+Random sampling model, $p$-value *not* randomized.
 
 $$\Theta^1_1=\sum_{i=1}^{n_1}{x_{g1_i}},\Theta^1_2=\sum_{i=1}^{n_2}{x_{g2_i}},$$
 
@@ -1120,7 +1106,6 @@ $n=n_1+n_2$
 $B$ = Simulation cycles over variations $^w V_n^m=n^n$  
 
 <br>
-<br>
 
 ### Complex plane
 
@@ -1130,7 +1115,7 @@ $B$ = Simulation cycles over variations $^w V_n^m=n^n$
 
 ---
 
-Argand diagram.
+*Argand diagram*.
 
 $$z=\Re+\Im=x+iy,$$
 
@@ -1163,5 +1148,3 @@ $$y_3=\sqrt{(\Re\cdot x)^2+\Im^2},$$
 
 $$y_4=\frac{\Im}{|\Im|}\cdot\frac{\pi}{2}-\arctan({\frac{\Re}{\Im}\cdot x})$$
 
-<br>
-<br>
