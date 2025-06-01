@@ -187,9 +187,9 @@ with
 
 $$z=Z_{r_{xy\cdot z}}\cdot\sqrt{n-2}$$
 
-where
+and *semi* partial correlation
 
-$r_{y(x \cdot z)}=\frac{r_{xy}-r_{xz}\cdot r_{yz}}{\sqrt{1-r_{xz}^2}}$, semi partial correlation
+$$r_{y(x \cdot z)}=\frac{r_{xy}-r_{xz}\cdot r_{yz}}{\sqrt{1-r_{xz}^2}}$$ 
 
 <br>
 
@@ -245,10 +245,9 @@ $$F_{(3,df_2)}=\frac{R_{c,12}^2\cdot(n-4)}{(1-R_{c,12}^2)\cdot 3}$$
 
 where
 
-$f^2$ = effect size for multiple regression.  
+$f^2$ = effect size for multiple regression    
 $df_2 = n-4$  
 
-<br>
 <br>
 
 ### Exposure
@@ -467,8 +466,6 @@ $N$ = number of cases, population
 
 $$\ddot{\overline x}=\frac{\sum_{i=1}^k{\overline x_i\cdot n_i}}{n}$$
 
-where
-
 <br>
 
 #### [`Q01_`|`AMG`|`GM_`] Geometric mean $\dot x$
@@ -673,7 +670,7 @@ $$t_{(df)}^{\beta}=\frac{\overline x_{0_1}-\mu_1}{\hat\sigma_{\overline x}}$$
 
 where
 
-$d_v$ = d for paired samples  
+$d_v$ = $d$ for paired samples  
 $r$ = correlation  
 Power = $p^{1-\beta}=1-p^{\beta}$  
 
@@ -683,7 +680,7 @@ Power = $p^{1-\beta}=1-p^{\beta}$
 
 ---
 
-$$\epsilon_p=\sqrt{\frac{{(2\cdot t_{(p_{crit},df)}})^2}{n}},$$
+$$\epsilon_p=\sqrt{\frac{{(2\cdot t_{(p_{crit},df)}})^2}{n}}$$
 
 <br>
 
