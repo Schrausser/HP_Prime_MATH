@@ -221,7 +221,7 @@ $$z=\frac{d_Z}{\sqrt{\frac{1}{n_1-3}+\frac{1}{n_2-3}}}$$
 
 <br>
 
-#### [`mZ`|`mr`] Averaged Fisher-Z
+#### [`mZ`|`mr`] Averaged Fisher $Z$
 
 ---
 
@@ -443,7 +443,7 @@ $$\zeta=z'=\frac{a-\overline x_x}{\hat\sigma_x}$$
 
 where
 
-$z'$ = estimated population z-values
+$z'$ = estimated population $z$-values
 
 <br>
 
@@ -541,7 +541,7 @@ $r$ = correlation $r_{(z_1,z_2)}$
 
 <br>
 
-#### [`tVTLG`|`F06_`] [`F02`|`F06`|`F03Z`] Student's $t$ distribution $f(x=t)$
+#### [`tVTLG`|`F06_`] [`F02`|`F06`|`F03Z`] Student's $t$-distribution $f(x=t)$
 
 ---
 
@@ -557,7 +557,7 @@ $\Gamma_x=\int_{0}^\infty{y^{x-1}\cdot e^{-y}dy+c}$
 
 <br>
 
-#### [`ch2VTLG`|`F07_`] [`F02`|`F07`|`F03Z`] $\chi^2$ distribution $f(x=\chi^2)$
+#### [`ch2VTLG`|`F07_`] [`F02`|`F07`|`F03Z`] $\chi^2$-distribution $f(x=\chi^2)$
 
 ---
 
@@ -573,7 +573,7 @@ $\Gamma_x=\int_{0}^\infty{y^{x-1}\cdot e^{-y}dy+c}$
 
 <br>
 
-#### [`FVTLG`] [`F02`|`F03Z`] $F$ distribution $f(x=F)$
+#### [`FVTLG`] [`F02`|`F03Z`] $F$-distribution $f(x=F)$
 
 ---
 
@@ -636,7 +636,7 @@ $n$ = number of cases
 
 <br>
 
-#### [`CIXY`] [`CIr`] [`E01`] Standard error of prediction $\sigma_{\hat yx}$ , confidence interval $CI_p$
+#### [`CIXY`] [`CIr`] [`E01`] Standard error of prediction $\sigma_{\hat yx}$, confidence interval $CI_p$
 
 ---
 
@@ -765,7 +765,7 @@ $df$ = $n-1$
 
 <br>
 
-#### [`ABT1`] [`x2F`|`p2F`|`zBN`|`pzBN`] $\chi^2$ test for independence
+#### [`ABT1`] [`x2F`|`p2F`|`zBN`|`pzBN`] $\chi^2$-test for independence
 
 ---
 
@@ -777,7 +777,7 @@ $$z=\frac{b-\frac{b+c}{2}}{\sqrt{\frac{b+c}{4}}}$$
 
 <br>
 
-#### [`VFCH`] [`x4F`|`p4F`|`x4FY`|`p4FY`|`z4F`|`pz4F`] 2 × 2 $\chi^2$ test for independence
+#### [`VFCH`] [`x4F`|`p4F`|`x4FY`|`p4FY`|`z4F`|`pz4F`] 2 × 2 $\chi^2$-test for independence
 
 ---
 
@@ -798,7 +798,7 @@ $df$=1
 
 <br>
 
-#### [`VFCH`] [`xMN`|`pMN`|`xMNY`|`pMNY`] McNemar's test for paired  2 × 2 contingency tables with dichotomous trait
+#### [`VFCH`] [`xMN`|`pMN`|`xMNY`|`pMNY`] McNemar's $\chi^2$-test for paired  2 × 2 contingency tables with dichotomous trait
 
 ---
 
