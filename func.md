@@ -70,11 +70,11 @@ $n_c$ = Number of concordant pairs, with $n_c=\binom{n}{2}-n_d$
 
 <br>
 
-#### [`DELTA2`] Somers' *D*
+#### [`DELTA2`] Somers' $D$
 
 ---
 
-For *binary* data [0,1].
+For *binary* data $[0,1]$.
 
 $$D_{YX}=\frac{n_{1,1}}{n}-\frac{n_{1,0}}{n}$$
 
@@ -193,7 +193,7 @@ $r_{y(x \cdot z)}=\frac{r_{xy}-r_{xz}\cdot r_{yz}}{\sqrt{1-r_{xz}^2}}$, semi par
 
 <br>
 
-#### [`ZCor`] [`Zr`|`rZ`] Fisher-Z transformation
+#### [`ZCor`] [`Zr`|`rZ`] Fisher $Z$-transformation
 
 ---
 
@@ -209,7 +209,7 @@ $$r_Z=\frac{e^{2\cdot Z}-1}{e^{2\cdot Z}+1}$$
 
 <br>
 
-#### [`Zrr`|`prr`] Fisher-Z difference, Cohen's $q$
+#### [`Zrr`|`prr`] Fisher $Z$ difference, Cohen's $q$
 
 ---
 
