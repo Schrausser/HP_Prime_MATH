@@ -38,7 +38,7 @@ The following functions for correlations are implemented, s. also `correlation.m
 
 (3) Kendall's tau $\tau_a$, without adjustment for *ties* (s. Kendall, [1938](http://www.jstor.org/stable/2332226)).
 
-(4) Somers' *D*, for *binary* data [0,1] (s. Somers, [1962](http://www.jstor.org/stable/2090408)).
+(4) Somers' $D$, for *binary* data [0,1] (s. Somers, [1962](http://www.jstor.org/stable/2090408)).
 
 (5) *Point biserial* correlation coefficient $r_{pb}$, also point *biseral*.
 
@@ -53,11 +53,11 @@ also called *biseral*.
 
 (10) *Partial* correlation $r_{xy\cdot z}$.
 
-(11) Fisher-$Z$ transformation, Fisher ([1915](https://doi.org/10.2307/2331838)).
+(11) Fisher $Z$-transformation, Fisher ([1915](https://doi.org/10.2307/2331838)).
 
-(12) Fisher-$Z$ *difference*, Cohen's $q$ ([1988](https://www.scirp.org/(S(lz5mqp453edsnp55rrgjct55))/reference/ReferencesPapers.aspx?ReferenceID=2041144), p. 110).
+(12) Fisher $Z$ *difference*, Cohen's $q$ ([1988](https://www.scirp.org/(S(lz5mqp453edsnp55rrgjct55))/reference/ReferencesPapers.aspx?ReferenceID=2041144), p. 110).
 
-(13) *Averaged* Fisher-$Z$.
+(13) *Averaged* Fisher $Z$.
 
 (14) Coefficient of *multiple* correlation $R_{c,12}$, Cohen's $f^2$. For $\hat R_{c,12}^2$ see Olkin & Pratt ([1958](https://doi.org/10.1214/aoms/1177706717)), with *effect size* for *multiple* regression $f^2$ (Cohen, [1988](https://www.scirp.org/(S(lz5mqp453edsnp55rrgjct55))/reference/ReferencesPapers.aspx?ReferenceID=2041144), p. 410).
 
@@ -87,7 +87,7 @@ The discovery of the *normal distribution* is attributed to Abraham de Moivre ([
 
 The $t$*-distribution* first derived as a posterior distribution by Lüroth ([1876](https://doi.org/10.1002/asna.18760871402)), appeared later in a more general form as *Pearson Type IV* (Pearson, [1895](https://doi.org/10.1098/rsta.1895.0010)). However it gets its name as *Student's* $t$*-distribution* from William Sealy Gosset ([1908](https://doi.org/10.2307/2331554)) who published it using the pseudonym *Student*, though it was actually through the *extensive* works of Sir Ronald Aylmer Fisher that the distribution became well known.  
 
-The $\chi^2$*-distribution* was first described by Friedrich Robert Helmert ([1876](https://gdz.sub.uni-goettingen.de/id/PPN599415665_0021)) and independently *rediscovered* by Pearson ([1900b](https://doi.org/10.1080/14786440009463897)) in the context of *goodness of fit*, for which he developed his Pearson's $\chi^2$*-squared test* with computed *table* of values, published by Elderton ([1902](https://doi.org/10.1093/biomet/1.2.155)), collected by Pearson ([1914](https://doi.org/10.1093/biomet/10.1.85)), see e.g. Plackett ([1983](https://doi.org/10.2307/1402731)).
+The $\chi^2$*-distribution* was first described by Friedrich Robert Helmert ([1876](https://gdz.sub.uni-goettingen.de/id/PPN599415665_0021)) and independently *rediscovered* by Pearson ([1900b](https://doi.org/10.1080/14786440009463897)) in the context of *goodness of fit*, for which he developed his Pearson's $\chi^2$-test with computed *table* of values, published by Elderton ([1902](https://doi.org/10.1093/biomet/1.2.155)), collected by Pearson ([1914](https://doi.org/10.1093/biomet/10.1.85)), see e.g. Plackett ([1983](https://doi.org/10.2307/1402731)).
 
 Fisher ([1918](https://hdl.handle.net/2440/15097), [1921](https://hdl.handle.net/2440/15169), [1925](https://www.scirp.org/(S(i43dyn45teexjx455qlt3d2q))/reference/ReferencesPapers.aspx?ReferenceID=2056938)) introduced the term *variance* and proposed its formal analysis, as well as the $F$*-distribution* (Fisher, [1924](https://repository.rothamsted.ac.uk/item/8w2q9/on-a-distribution-yielding-the-error-functions-of-several-well-known-statistics); s. also Snedecor, [1934](https://doi.org/10.1037/13308-000) and Scheffé, [1959](https://psycnet.apa.org/record/1961-00074-000)). The methods became widely known from *Methods for Research Workers* (Fisher, [1925](https://www.scirp.org/(S(i43dyn45teexjx455qlt3d2q))/reference/ReferencesPapers.aspx?ReferenceID=2056938), [1954](https://www.worldcat.org/de/title/statistical-methods-for-research-workers/oclc/312138), [1973](https://www.amazon.com/Statistical-methods-research-workers-Fourteenth/dp/0050021702), [2017](https://www.amazon.com/Statistical-Methods-Research-Workers-Fisher/dp/9351286584)). 
 
@@ -113,15 +113,15 @@ Following functions for the most *relevant* methods are available:
 
 (10) *Student's* $t$*-distribution* $f(x=t)$, Lüroth ([1876](https://doi.org/10.1002/asna.18760871402)), Pearson ([1895](https://doi.org/10.1098/rsta.1895.0010)), Gosset ([1908](https://doi.org/10.2307/2331554)).
 
-(11) $\chi^2$ *-distribution* $f(x=\chi^2)$, Helmert ([1876](https://gdz.sub.uni-goettingen.de/id/PPN599415665_0021)), Pearson ([1900b](https://doi.org/10.1080/14786440009463897), [1914](https://doi.org/10.1093/biomet/10.1.85)), Elderton ([1902](https://doi.org/10.1093/biomet/1.2.155)), Plackett ([1983](https://doi.org/10.2307/1402731)).
+(11) $\chi^2$*-distribution* $f(x=\chi^2)$, Helmert ([1876](https://gdz.sub.uni-goettingen.de/id/PPN599415665_0021)), Pearson ([1900b](https://doi.org/10.1080/14786440009463897), [1914](https://doi.org/10.1093/biomet/10.1.85)), Elderton ([1902](https://doi.org/10.1093/biomet/1.2.155)), Plackett ([1983](https://doi.org/10.2307/1402731)).
 
-(12) $F$ *-distribution* $f(x=F)$, Fisher ([1924](https://repository.rothamsted.ac.uk/item/8w2q9/on-a-distribution-yielding-the-error-functions-of-several-well-known-statistics)), Snedecor ([1934](https://doi.org/10.1037/13308-000)), Scheffé ([1959](https://psycnet.apa.org/record/1961-00074-000)).
+(12) $F$*-distribution* $f(x=F)$, Fisher ([1924](https://repository.rothamsted.ac.uk/item/8w2q9/on-a-distribution-yielding-the-error-functions-of-several-well-known-statistics)), Snedecor ([1934](https://doi.org/10.1037/13308-000)), Scheffé ([1959](https://psycnet.apa.org/record/1961-00074-000)).
 
 (13) *Third* standardized moment, skewness $\alpha_3$.
 
 (14) *Fourth* standardized moment, excess kurtosis $\alpha_4$.
 
-(15) *Estimated standard error* of *mean* $\hat\sigma_{\overline x}$, *confidence interval* $CI_p$, Neyman ([1937]([https://doi.org/10.1098/rsta.1937.0005)) introduced the *confidence interval* into statistical hypothesis testing vs. Fisher's *null hypothesis* testings, the *Neyman–Pearson lemma* (Neyman & Pearson, [1933](https://doi.org/10.1098/rsta.1933.0009); Lehmann, [1993](https://doi.org/10.1080/01621459.1993.10476404)).
+(15) *Estimated standard error* of *mean* $\hat\sigma_{\overline x}$, *confidence interval* $CI_p$, Neyman ([1937]([https://doi.org/10.1098/rsta.1937.0005)) introduced the *confidence interval* into statistical hypothesis testing vs. Fisher's *null hypothesis* testing, the *Neyman–Pearson lemma* (Neyman & Pearson, [1933](https://doi.org/10.1098/rsta.1933.0009); Lehmann, [1993](https://doi.org/10.1080/01621459.1993.10476404)).
 
 (16) *Standard error* of *prediction* $\sigma_{\hat yx}$ , *confidence interval* $CI_p$.
 
@@ -143,7 +143,7 @@ Following functions for the most *relevant* methods are available:
 
 (25) *2 × 2* $\chi^2$-test for *independence*, for Yates's correction for *continuity* see Yates ([1934](http://www.jstor.org/stable/2983604)).
 
-(26) McNemar's test for *paired 2 × 2 contingency* tables with *dichotomous* trait, McNemar ([1947](https://doi.org/10.1007/BF02295996)).
+(26) McNemar's $\chi^2$-test for *paired 2 × 2 contingency* tables with *dichotomous* trait, McNemar ([1947](https://doi.org/10.1007/BF02295996)).
 
 ### 2.5. Probability
 
@@ -157,9 +157,9 @@ The arguably *most* important methods are implemented as follows:
 
 (2) *Additive probability* for *independent* events $^u p(\cup_n A)$, corresponds to the *geometric distribution* $f(X\le r|p)$.
 
-(3) *Geometric distribution* $f(X\le r|p)$, corresponds to the *additive probability* $^u p(\cup_n A)$.
+(3) *Geometric distribution* $f(X\le r|p)$, corresponds to the *additive* probability $^u p(\cup_n A)$.
 
-(4) *Negative binomial distribution* $f(X\le r|r,p)$, with $k=1$ it corresponds to the *geometric distribution* $f(X\le r|p)$ and the *additive probability* $^u p(\cup_n A)$.
+(4) *Negative binomial distribution* $f(X\le r|r,p)$, with $k=1$ it corresponds to the *geometric distribution* $f(X\le r|p)$ and the *additive* probability $^u p(\cup_n A)$.
 
 (5) *Exact binomial* test.
 
