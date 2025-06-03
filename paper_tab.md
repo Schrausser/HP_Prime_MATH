@@ -1,0 +1,74 @@
+# paper_tab.md
+
+Table 1. Timeline (*year*) of initial *work* on the *methods*, corresponding *authors* with *origin* and *field* of expertise.				
+~~~					
+year	n	Name				origin		from	to	field			n	method				work
+
+1280									
+1290	1	Rabbi Levi ben Gershon		France		1288	1344	Theologian			
+1300									
+1310									
+1320									
+1330													1	Combinatorics			1321
+1340									
+:									
+:									
+1500									
+1510	2	Gerolamo Cardano		Italy		1501	1576	Polymat			
+1520									
+1530									
+1540									
+1550													2	"imaginary"			1545
+1560									
+1570									
+1580									
+1590									
+1600	3	René Descartes			France		1596	1650	Philosopher			
+1610									
+1620	4	Antoine Arnauld 		France		1618	1698	Theologian			
+	5	Blaise Pascal			France		1623	1662	Philosopher			
+1630	4	Pierre Nicole			France		1625	1685	Theologian			
+1640	6	Sir Isaac Newton		England		1643	1727	Polymat			
+1650	7	Gottfried Wilhelm Leibniz	Germany		1646	1716	Polymat			
+1660	8	Jacob Bernoulli			Switzerland	1655	1705	Mathematician		4	Probability			1662
+1670	9	Abraham de Moivre		France		1667	1754	Mathematician		3	Complex numbers			1664
+													5	Combinatorics			1665
+1680									
+1690	10	Brook Taylor			England		1685	1731	Mathematician		6,7	Calculus			1684
+1700	11	Daniel Bernoulli		Switzerland	1700	1782	Mathematician			
+	12	Rev. Thomas Bayes		England		1701	1761	Theologian			
+	13	Leonhard Euler			Switzerland	1707	1783	Mathematician			
+1710													9,8	Binomial distribution		1711
+1720													10	Taylor series of sine		1715
+1730													11	Gamma				1729
+1740													9	Normal distribution		1738
+1750													13	Complex exponential functions	1748
+1760													12	Bayes' theorem			1763
+1770	14	Jean-Robert Argand		Switzerland	1768	1822	Polymat			
+1780	15	Johann Carl Friedrich Gauss	Germany		1777	1855	Mathematician			
+1790									
+1800									
+1810													15	Estimator of mean		1809
+1820													14	Argand diagram			1813
+1830	16	Sir Francis Galton		England		1822	1911	Anthropology			
+1840									
+1850	17	Friedrich Robert Helmert	Germany		1843	1917	Geodesy, mathematics			
+	18	Jacob Lüroth			Germany		1844	1910	Mathematics			
+1860	19	Karl Pearson			England		1857	1936	Biology, mathematics			
+1870													17,18	t-, chi²-distribution		1876
+1880													16	Reversion			1877
+1890	20	Louis Leon Thurstone		USA		1887	1955	Psychophysics			
+1900	21	Sir Ronald Aylmer Fisher	England		1890	1962	Biology, mathematics			
+1910													19	Correlation			1904
+1920									
+1930	22	Jacob Cohen			USA		1923	1998	Psychology, statistics	21	F-distribution			1924
+1940													20	Factor analysis			1931
+													21	Permutation test		1935
+	23	Bradley Efron			USA		1938		Statistics			
+1950									
+1960									
+1970									
+1980													23	Bootstrap			1978
+1990													22	Effect size			1988
+2000
+~~~
