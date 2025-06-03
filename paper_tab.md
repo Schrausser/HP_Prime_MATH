@@ -68,7 +68,7 @@ year	n	Name				origin		from	to	field			n	method				work
 1950									
 1960									
 1970									
-1980													23	Bootstrap			1978
+1980													23	Bootstrap			1979
 1990													22	Effect size			1988
 2000
 ~~~
