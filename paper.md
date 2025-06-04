@@ -1,4 +1,4 @@
-# Mathematical and statistical applications for HP Prime
+ # Mathematical and statistical applications for HP Prime
 
 Dietmar G. Schrausser, 2025
 
@@ -6,16 +6,16 @@ Dietmar G. Schrausser, 2025
 
 ## Abstract
 
-Applications for *HP Prime CAS*, *User* functions and *Applications*, an overview of the methods and their origins is given.
+Applications for HP Prime *CAS*, *User* functions and *Applications*, an overview of the methods and their origins is given.
 
 <br>
 
 ## 1. Introduction
 
-Mathematical and statistical applications `HP_Prime_MATH` for (1) the Computer Algebra System *CAS*, by means of the *Pascal* based HP Prime Programming Language *HP PPL*, (2) HP Prime *User* functions and (3) HP Prime *Applications* (s. HP Inc., [2017](https://www.hpcalc.org/details/7445); Schrausser, [2025](https://doi.org/10.5281/zenodo.14721085)), 
-including methods for (1) *correlation*, (2) *exposure*, (3) *integration*, (4) *distribution*, (5) *probability*, (6) *combinatorics*, (7) *resampling* and (8) *complex plane* calculations. 
+Mathematical and statistical applications `HP_Prime_MATH` for (1) the Computer Algebra System *CAS*, by means of the *Pascal* based *HP Prime Programming Language* (HP PPL), (2) the HP Prime *User* functions and (3) HP Prime *Applications* (s. HP Inc., [2017](https://www.hpcalc.org/details/7445)), 
+including methods for (1) *correlation*, (2) *exposure*, (3) *integration*, (4) *distribution*, (5) *probability*, (6) *combinatorics*, (7) *resampling* and (8) *complex plane* calculations (Schrausser, [2025](https://doi.org/10.5281/zenodo.14721085)). 
 
-The description of the *underlying* algorithms and functions is deliberately omitted, as these are presented and discussed in detail in `func.md`. Instead, an *overview* of the implemented methods is given here and *additionally* their *historical development* is outlined.
+The description of the *underlying* algorithms and functions is deliberately omitted, as these are presented and discussed in detail in `func.md`. Instead, an *overview* of the implemented methods is given and *additionally* their *historical development* is outlined (s. `paper_tab.md`).
 
 <br>
 
@@ -23,43 +23,43 @@ The description of the *underlying* algorithms and functions is deliberately omi
 
 ### 2.1. Correlation
 
-To measure a linear *correlation* of variables,
-Karl Pearson was developing statistical techniques between 1893 and 1904 for biometry including the *correlation* and *regression* coefficients based on the works of Bravais ([1844](https://books.google.com/books?id=7g\_hAQAACAAJ)) and
- Galton ([1877](https://doi.org/10.1038/015492a0)) who was first using the term *reversion* and the symbol $r$.
+To measure the degree of a linear *relation* between variables,
+Karl Pearson ([1904](https://openlibrary.org/books/OL24168960M)) was developing statistical techniques for biometry including the *correlation* and *regression* coefficients based on the works of Bravais ([1844](https://books.google.com/books?id=7g\_hAQAACAAJ)) and
+ Galton ([1877](https://doi.org/10.1038/015492a0)) who introduced the symbol $r$, on the then designation of the term *reversion*.
 
 *Factor analysis*, based on *multiple regression* and *matrix* calculation was first discussed by
-Charles Edward Spearman ([1904](http://www.jstor.org/stable/1412159)), initial developed took place by Louis Leon Thurstone ([1931](https://doi.org/10.1037/h0069792), [1934](https://doi.org/10.1037/h0075959), [1935](https://archive.org/details/vectorsofmindmul010122mbp/page/n7/mode/1up); s. also Cattell, [1966](https://doi.org/10.1207/s15327906mbr0102\_10)). 
+Charles Edward Spearman ([1904](http://www.jstor.org/stable/1412159)), later the initial developed took place by Louis Leon Thurstone ([1931](https://doi.org/10.1037/h0069792), [1934](https://doi.org/10.1037/h0075959), [1935](https://archive.org/details/vectorsofmindmul010122mbp/page/n7/mode/1up); s. also Cattell, [1966](https://doi.org/10.1207/s15327906mbr0102\_10)). 
 
-The following functions for correlations are implemented, s. also `correlation.md`:
+The following functions for *correlation*- and *regression*-techniques are implemented, c.f. also `correlation.md`:
 
 (1) Pearson *product-moment* correlation coefficient $r_{xy}$, see Pearson ([1904](https://openlibrary.org/books/OL24168960M), [1905](https://openlibrary.org/books/OL6555066M)).
 
-(2) Spearman's $\rho$, equivalent to the *product moment* correlation when *rank* values are present (s. Spearman, [1904](http://www.jstor.org/stable/1412159)).
+(2) Spearman's $\rho$, being equivalent to the *product moment* correlation when *rank* values are present (s. Spearman, [1904](http://www.jstor.org/stable/1412159)).
 
-(3) Kendall's tau $\tau_a$, without adjustment for *ties* (s. Kendall, [1938](http://www.jstor.org/stable/2332226)).
+(3) Kendall's tau $\tau_a$, i.e. without adjustment for *ties* (s. Kendall, [1938](http://www.jstor.org/stable/2332226)).
 
 (4) Somers' $D$, for *binary* data [0,1] (s. Somers, [1962](http://www.jstor.org/stable/2090408)).
 
-(5) *Point biserial* correlation coefficient $r_{pb}$, also point *biseral*.
+(5) *Point biserial* correlation coefficient $r_{pb}$, or also *point biseral*.
 
-(6) *Biserial* correlation coefficient $r_{bis}$, Pearson ([1909](http://www.jstor.org/stable/2345365)), see e.g. Tate ([1955](http://www.jstor.org/stable/2333437)),
+(6) *Biserial* correlation coefficient $r_{bis}$, Pearson ([1909](http://www.jstor.org/stable/2345365)), s. Tate ([1955](http://www.jstor.org/stable/2333437)),
 also called *biseral*. 
 
-(7) *Rank biserial* correlation coefficient $r_{bisR}$, also rank *biseral* correlation, corresponds to the *effect size* for the *Mann–Whitney* $U$*-test* (Mann & Whitney, [1947](https://doi.org/10.1214/aoms/1177730491)).
+(7) *Rank biserial* correlation coefficient $r_{bisR}$, or *rank biseral*, corresponding to the *effect size* for the *Mann–Whitney* $U$*-test* (Mann and Whitney, [1947](https://doi.org/10.1214/aoms/1177730491)).
 
 (8) *Phi* coefficient $\Phi$, Yule ([1912](http://www.jstor.org/stable/2340126)).
 
-(9) *Tetrachoric* correlation $r_{tet}$, Pearson ([1900a](https://royalsocietypublishing.org/doi/abs/10.1098/rsta.1900.0022)), Everitt ([1910](https://doi.org/10.1093/biomet/7.4.437), [1912](http://www.jstor.org/stable/2331587)), s. e.g. Brown ([1977](http://www.jstor.org/stable/2346985)), Digby ([1983](http://www.jstor.org/stable/2531104)), also Bonett & Price ([2005](http://www.jstor.org/stable/3701350)) or Long et al. ([2009](https://doi.org/10.1177/0013164408324463)), *proposed* approximate algorithm.
+(9) *Tetrachoric* correlation $r_{tet}$, Pearson ([1900a](https://royalsocietypublishing.org/doi/abs/10.1098/rsta.1900.0022)), Everitt ([1910](https://doi.org/10.1093/biomet/7.4.437), [1912](http://www.jstor.org/stable/2331587)), s. e.g. Brown ([1977](http://www.jstor.org/stable/2346985)), Digby ([1983](http://www.jstor.org/stable/2531104)), also Bonett and Price ([2005](http://www.jstor.org/stable/3701350)) or Long et al. ([2009](https://doi.org/10.1177/0013164408324463)), *proposed* approximate algorithm.
 
 (10) *Partial* correlation $r_{xy\cdot z}$.
 
 (11) Fisher $Z$-transformation, Fisher ([1915](https://doi.org/10.2307/2331838)).
 
-(12) Fisher $Z$ *difference*, Cohen's $q$ ([1988](https://www.scirp.org/(S(lz5mqp453edsnp55rrgjct55))/reference/ReferencesPapers.aspx?ReferenceID=2041144), p. 110).
+(12) Fisher $Z$ *difference*, also Cohen's $q$ ([1988](https://www.scirp.org/(S(lz5mqp453edsnp55rrgjct55))/reference/ReferencesPapers.aspx?ReferenceID=2041144), p. 110).
 
 (13) *Averaged* Fisher $Z$.
 
-(14) Coefficient of *multiple* correlation $R_{c,12}$, Cohen's $f^2$. For $\hat R_{c,12}^2$ see Olkin & Pratt ([1958](https://doi.org/10.1214/aoms/1177706717)), with *effect size* for *multiple* regression $f^2$ (Cohen, [1988](https://www.scirp.org/(S(lz5mqp453edsnp55rrgjct55))/reference/ReferencesPapers.aspx?ReferenceID=2041144), p. 410).
+(14) Coefficient of *multiple* correlation $R_{c,12}$, for $\hat R_{c,12}^2$ see Olkin and Pratt ([1958](https://doi.org/10.1214/aoms/1177706717)), with the *effect size* for *multiple* regression $f^2$ (Cohen, [1988](https://www.scirp.org/(S(lz5mqp453edsnp55rrgjct55))/reference/ReferencesPapers.aspx?ReferenceID=2041144), p. 410).
 
 ### 2.2. Exposure
 
@@ -68,34 +68,34 @@ included for the calculation of (1) Exposure values $Ev$, where $Ev=\frac{\log(T
 
 ### 2.3. Functions of integration for $\pi$ and $\Gamma$
 
-Gottfried Wilhelm Leibniz ([1684](https://gdz.sub.uni-goettingen.de/id/PPN788262599), [1686](https://gdz.sub.uni-goettingen.de/id/PPN788262947), [1693](https://archive.org/details/s1id13206590)) along with Sir Isaac Newton ([1687](https://books.google.com/books?id=XJwx0lnKvOgC), [1713](https://digital.onb.ac.com/OnbViewer/viewer.faces?doc=ABO_%2BZ180810706&order=7&view=SINGLE), [1726](https://gdz.sub.uni-goettingen.de/id/PPN512261393)) are considered the discoverers of *differential* and *integral calculus*. According to current consensus, both developed the methods independently of each other; see the so-called *Leibniz-Newton calculus controversy* (c.f. Cajori, [1919](http://www.jstor.org/stable/2974042); Cassirer, [1943](http://www.jstor.org/stable/2180670); Rosenthal, [1951](http://www.jstor.org/stable/2308368); Schrader, [1962](http://www.jstor.org/stable/27956626); Kossovsky, [2020](https://doi.org/10.1007/978-3-030-51744-1_33)).
+Gottfried Wilhelm Leibniz ([1684](https://gdz.sub.uni-goettingen.de/id/PPN788262599), [1686](https://gdz.sub.uni-goettingen.de/id/PPN788262947), [1693](https://archive.org/details/s1id13206590)) along with Sir Isaac Newton ([1687](https://books.google.com/books?id=XJwx0lnKvOgC), [1713](https://digital.onb.ac.com/OnbViewer/viewer.faces?doc=ABO_%2BZ180810706&order=7&view=SINGLE), [1726](https://gdz.sub.uni-goettingen.de/id/PPN512261393)) are considered the discoverers of *differential* and *integral calculus*. According to current consensus, both developed the methods independently of each other, see the so-called *Leibniz-Newton calculus controversy* (c.f. Cajori, [1919](http://www.jstor.org/stable/2974042); Cassirer, [1943](http://www.jstor.org/stable/2180670); Rosenthal, [1951](http://www.jstor.org/stable/2308368); Schrader, [1962](http://www.jstor.org/stable/27956626); Kossovsky, [2020](https://doi.org/10.1007/978-3-030-51744-1_33)).
 
-Newton begun working on a *form* of calculus (the method of *fluxions and fluents*) in 1666, this *geometrical* form was published in [1687](https://books.google.com/books?id=XJwx0lnKvOgC), see Roero ([2005](https://doi.org/https://doi.org/10.1016/B978-044450871-3/50085-1)). However, it was Leibniz who *introduced* the signs $\int$ and $\partial$, see Gerhardt ([1848](https://doi.org/10.3931/e-rara-4272)).
+Newton *began* working on a *geometric* form of *calculus* (the method of *fluxions and fluents*) in 1666, published in [1687](https://books.google.com/books?id=XJwx0lnKvOgC) (c.f. Roero,  [2005](https://doi.org/https://doi.org/10.1016/B978-044450871-3/50085-1)), yet, it was Leibniz who *introduced* the symbols $\int$ and $\partial$.
 
-The Functions are intended to display and calculate $\pi$ and $\Gamma$ within the coordinate system:
+Here, the functions are primarily intended to display and calculate $\pi$ and $\Gamma$ within the coordinate system:
 
 (1) *Circular* function for $\pi$, where Weierstraß ([1894](https://quod.lib.umich.edu/u/umhistmath/AAN8481.0001.001), p. 53) describes $\frac{\pi}{2}=\int_0^{\infty}\frac{1}{1-x^2}dx$, which *may* be less heuristic (s. `func.md`).
 
-(2) *Spherical* functions for $\pi$, for source codes to *volume integrals* of the *sphere* see Schrausser ([2024b](https://doi.org/10.5281/zenodo.14280500)).
+(2) *Spherical* functions for $\pi$, for source codes to *volume integrals* of the *sphere* see e.g. Schrausser ([2024d](https://doi.org/10.5281/zenodo.14280500)).
 
-(3) *Gamma* function $\Gamma$, to extend the *factorial* to *non-integer* arguments, first considered by Daniel Bernoulli and Christian Goldbach 
-(Bernoulli, [1729](https://commons.m.wikimedia.org/wiki/File:DanielBernoulliLetterToGoldbach-1729-10-06.jpg)), later Leonhard Euler ([1738](https://scholarlycommons.pacific.edu/euler-works/19/)) and Johann Carl Friedrich Gauss (s. Remmert, [1998](https://doi.org/10.1007/978-1-4757-2956-6_2)), first *tables* were given by Jahnke & Emde ([1909](https://books.google.com/books?id=BVRzvgAACAAJ), [1933](https://books.google.com/books?id=SB5tAAAAMAAJ), [1938](https://books.google.com/books?id=5vlrAAAAIAAJ), [1945](https://archive.org/details/tablesoffunction0000jahn)), Knoll ([1939](https://doi.org/10.1007/BF01695545)) and Jahnke et al. ([1966](https://dokumen.pub/jahnke-emde-lsch-tafeln-hherer-funktionen-tables-of-higher-functions-7nbsped.html)).
+(3) *Gamma* function $\Gamma$, meant to extend the *factorial* to *non-integer* arguments, was first considered by Daniel Bernoulli and Christian Goldbach 
+(Bernoulli, [1729](https://commons.m.wikimedia.org/wiki/File:DanielBernoulliLetterToGoldbach-1729-10-06.jpg)), later Leonhard Euler ([1738](https://scholarlycommons.pacific.edu/euler-works/19/)) and Johann Carl Friedrich Gauss (s. Remmert, [1998](https://doi.org/10.1007/978-1-4757-2956-6_2)), first *tables* were given by Jahnke and Emde ([1909](https://books.google.com/books?id=BVRzvgAACAAJ), [1933](https://books.google.com/books?id=SB5tAAAAMAAJ), [1938](https://books.google.com/books?id=5vlrAAAAIAAJ), [1945](https://archive.org/details/tablesoffunction0000jahn)), Knoll ([1939](https://doi.org/10.1007/BF01695545)) and Jahnke et al. ([1966](https://dokumen.pub/jahnke-emde-lsch-tafeln-hherer-funktionen-tables-of-higher-functions-7nbsped.html)).
 
 ### 2.4. Distribution functions
 
 The discovery of the *normal distribution* is attributed to Abraham de Moivre ([1738](https://books.google.com/books?id=PII\_AAAAcAAJ)), later Gauss ([1809](https://archive.org/details/theoriamotuscor00gausgoog/page/n1/mode/1up)) described the *arithmetic mean* as an estimator in context with the *normal law of errors*. Beneath the *normal distribution*, Gauss ([1823](https://doi.org/10.3931/e-rara-2857)) also introduces several important statistical concepts, such as the methods of *least squares* and of *maximum likelihood*.   
 
-The $t$*-distribution* first derived as a posterior distribution by Lüroth ([1876](https://doi.org/10.1002/asna.18760871402)), appeared later in a more general form as *Pearson Type IV* (Pearson, [1895](https://doi.org/10.1098/rsta.1895.0010)). However it gets its name as *Student's* $t$*-distribution* from William Sealy Gosset ([1908](https://doi.org/10.2307/2331554)) who published it using the pseudonym *Student*, though it was actually through the *extensive* works of Sir Ronald Aylmer Fisher that the distribution became well known.  
+The $t$*-distribution* first derived as a posterior distribution by Lüroth ([1876](https://doi.org/10.1002/asna.18760871402)), appearing later as *Pearson Type IV* (Pearson, [1895](https://doi.org/10.1098/rsta.1895.0010)),  however gets its name as *Student's* $t$*-distribution* from William Sealy Gosset ([1908](https://doi.org/10.2307/2331554)), who published it using the pseudonym *Student*, though it was actually through the *extensive* works of Sir Ronald Aylmer Fisher that the distribution became well known.  
 
-The $\chi^2$*-distribution* was first described by Friedrich Robert Helmert ([1876](https://gdz.sub.uni-goettingen.de/id/PPN599415665_0021)) and independently *rediscovered* by Pearson ([1900b](https://doi.org/10.1080/14786440009463897)) in the context of *goodness of fit*, for which he developed his Pearson's $\chi^2$-test with computed *table* of values, published by Elderton ([1902](https://doi.org/10.1093/biomet/1.2.155)), collected by Pearson ([1914](https://doi.org/10.1093/biomet/10.1.85)), see e.g. Plackett ([1983](https://doi.org/10.2307/1402731)).
+The $\chi^2$*-distribution* was first described by Friedrich Robert Helmert ([1876](https://gdz.sub.uni-goettingen.de/id/PPN599415665_0021)) and independently *rediscovered* by Pearson ([1900b](https://doi.org/10.1080/14786440009463897)) in context with the *goodness of fit* paradigm, where he developed the $\chi^2$-test with computed *table* of values, published by Elderton ([1902](https://doi.org/10.1093/biomet/1.2.155)), s. further Pearson ([1914](https://doi.org/10.1093/biomet/10.1.85)) or Plackett ([1983](https://doi.org/10.2307/1402731)).
 
 Fisher ([1918](https://hdl.handle.net/2440/15097), [1921](https://hdl.handle.net/2440/15169), [1925](https://www.scirp.org/(S(i43dyn45teexjx455qlt3d2q))/reference/ReferencesPapers.aspx?ReferenceID=2056938)) introduced the term *variance* and proposed its formal analysis, as well as the $F$*-distribution* (Fisher, [1924](https://repository.rothamsted.ac.uk/item/8w2q9/on-a-distribution-yielding-the-error-functions-of-several-well-known-statistics); s. also Snedecor, [1934](https://doi.org/10.1037/13308-000) and Scheffé, [1959](https://psycnet.apa.org/record/1961-00074-000)). The methods became widely known from *Methods for Research Workers* (Fisher, [1925](https://www.scirp.org/(S(i43dyn45teexjx455qlt3d2q))/reference/ReferencesPapers.aspx?ReferenceID=2056938), [1954](https://www.worldcat.org/de/title/statistical-methods-for-research-workers/oclc/312138), [1973](https://www.amazon.com/Statistical-methods-research-workers-Fourteenth/dp/0050021702), [2017](https://www.amazon.com/Statistical-Methods-Research-Workers-Fisher/dp/9351286584)). 
 
 Following functions for the most *relevant* methods are available:
 
-(1) *Standardizing*, $z$-values and $\zeta$-values.
+(1) *Standardizing*, i.e. $z$-values and $\zeta$-values.
 
-(2) *Quantity proportion* of $a$ at $N$, $n_{^\ge p}$.
+(2) *Quantity proportion* of $a$ at $N$ for $n_{^\ge p}$.
 
 (3) *Weighted arithmetic* mean $\ddot{\overline x}$.
 
@@ -121,7 +121,7 @@ Following functions for the most *relevant* methods are available:
 
 (14) *Fourth* standardized moment, excess kurtosis $\alpha_4$.
 
-(15) *Estimated standard error* of *mean* $\hat\sigma_{\overline x}$, *confidence interval* $CI_p$, Neyman ([1937]([https://doi.org/10.1098/rsta.1937.0005)) introduced the *confidence interval* into statistical hypothesis testing vs. Fisher's *null hypothesis* testing, the *Neyman–Pearson lemma* (Neyman & Pearson, [1933](https://doi.org/10.1098/rsta.1933.0009); Lehmann, [1993](https://doi.org/10.1080/01621459.1993.10476404)).
+(15) *Estimated standard error* of *mean* $\hat\sigma_{\overline x}$, *confidence interval* $CI_p$, Neyman ([1937]([https://doi.org/10.1098/rsta.1937.0005)) introduced the *confidence interval* into statistical hypothesis testing vs. Fisher's *null hypothesis* testing, the *Neyman–Pearson lemma* (Neyman and Pearson, [1933](https://doi.org/10.1098/rsta.1933.0009); Lehmann, [1993](https://doi.org/10.1080/01621459.1993.10476404)).
 
 (16) *Standard error* of *prediction* $\sigma_{\hat yx}$ , *confidence interval* $CI_p$.
 
@@ -147,27 +147,31 @@ Following functions for the most *relevant* methods are available:
 
 ### 2.5. Probability
 
-Since in the Renaissance a *probable* opinion was merely *confirmed* by an authority and hence there was no further concept of *inductive* evidence (see Hacking, [1975](https://philpapers.org/rec/HACTEO-8); Hald, [2003](https://www.wiley.com/en-us/A+History+of+Probability+and+Statistics+and+Their+Applications+before+1750-p-9780471725176), p. 31), an *objective* representation of *probability* as such was first discussed by Arnauld and Nicole, ([1662](https://gallica.bnf.fr/ark:/12148/bpt6k574432.image), [1682](https://books.google.com/books?id=XQVaAAAAcAAJ), [1693](https://archive.org/details/logicorartofthin00arnaiala)), Arnauld et al. ([1970](https://philpapers.org/rec/ARNLLO-8); s. also van Evra, [1997](https://philpapers.org/rec/VANAAA-13); Dessì & Albury, [1997](https://doi.org/10.1080/01445349708837281) and Finocchiaro, [1997](https://doi.org/10.1023/A:1007756105432)) and e.g. Bayes & Price, ([1763](http://www.jstor.org/stable/105741)), s. Stigler ([2018](https://www.jstor.org/stable/26770983)). For an account of the *systematics and logic* of *dependent probabilities* within the framework of *Bayes' theorem* see also Schrausser ([2024a](https://doi.org/10.5281/zenodo.14183565)).
+Since until the Renaissance a *probable* opinion was merely *confirmed* by an authority and hence there was no further concept of *inductive* evidence (see Hacking, [1975](https://philpapers.org/rec/HACTEO-8); Hald, [2003](https://www.wiley.com/en-us/A+History+of+Probability+and+Statistics+and+Their+Applications+before+1750-p-9780471725176), p. 31), an *objective* representation of *probability* as such was first discussed by Antoine Arnauld and Pierre Nicole, ([1662](https://gallica.bnf.fr/ark:/12148/bpt6k574432.image), [1682](https://books.google.com/books?id=XQVaAAAAcAAJ), [1693](https://archive.org/details/logicorartofthin00arnaiala); c.f. also Arnauld et al., [1970](https://philpapers.org/rec/ARNLLO-8); van Evra, [1997](https://philpapers.org/rec/VANAAA-13); Dessì and Albury, [1997](https://doi.org/10.1080/01445349708837281) or Finocchiaro, [1997](https://doi.org/10.1023/A:1007756105432)).
 
-The *binomial distribution* is primarily attributable to de Moivre ([1711](https://doi.org/10.1098/rstl.1710.0018), [1718](https://books.google.com/books?id=3EPac6QpbuMC), [1738](https://books.google.com/books?id=PII\_AAAAcAAJ)) and Jacob Bernoulli ([1713](https://www.e-rara.ch/zut/doi/10.3931/e-rara-9001)), see also Schneider ([2005a](https://doi.org/10.1016/B978-044450871-3/50087-5), [b](https://doi.org/10.1016/B978-044450871-3/50087-5)). Although not included as function, due to its *considerability* in this context, the *configuration frequency analysis, CFA* should be mentioned here (c.f. Krauth, [1973](https://d-nb.info/740097938); Krauth & Lienert, [1993](https://books.google.com/books?id=4oeIAAAACAAJ)).
+The *binomial distribution* is primarily attributable to de Moivre ([1711](https://doi.org/10.1098/rstl.1710.0018), [1718](https://books.google.com/books?id=3EPac6QpbuMC), [1738](https://books.google.com/books?id=PII\_AAAAcAAJ)) and Jacob Bernoulli ([1713](https://www.e-rara.ch/zut/doi/10.3931/e-rara-9001)), see also Schneider ([2005a](https://doi.org/10.1016/B978-044450871-3/50087-5), [b](https://doi.org/10.1016/B978-044450871-3/50087-5)). Although not included as function, due to its *considerability* in this context, the *configuration frequency analysis, CFA* should be mentioned particularly (c.f. Krauth, [1973](https://d-nb.info/740097938); Krauth and Lienert, [1993](https://books.google.com/books?id=4oeIAAAACAAJ)).
 
-The arguably *most* important methods are implemented as follows:
+An account of the *systematics and logic* of *dependent probabilities* within the framework of *Bayes' theorem* (Bayes and Price, [1763](http://www.jstor.org/stable/105741); c.f. Stigler, [2018](https://www.jstor.org/stable/26770983)) can be found in Schrausser ([2024c](https://doi.org/10.5281/zenodo.14183565)).
+
+The arguably *most* important methods regarding the calculation of *probability parameters* are implemented as follows:
 
 (1) *Arcsine transformation*, Cohen's $h$ ([1988](https://www.scirp.org/(S(lz5mqp453edsnp55rrgjct55))/reference/ReferencesPapers.aspx?ReferenceID=2041144), p. 181).
 
-(2) *Additive probability* for *independent* events $^u p(\cup_n A)$, corresponds to the *geometric distribution* $f(X\le r|p)$.
+(2) *Additive probability* for *independent* events $^u p(\cup_n A)$, which corresponding to the *geometric distribution* $f(X\le r|p)$.
 
-(3) *Geometric distribution* $f(X\le r|p)$, corresponds to the *additive* probability $^u p(\cup_n A)$.
+(3) *Geometric distribution* $f(X\le r|p)$, corresponding to the *additive* probability $^u p(\cup_n A)$.
 
 (4) *Negative binomial distribution* $f(X\le r|r,p)$, with $k=1$ it corresponds to the *geometric distribution* $f(X\le r|p)$ and the *additive* probability $^u p(\cup_n A)$.
 
 (5) *Exact binomial* test.
 
-(6) *Exact hypergeometric 2 × 2* test, *Fisher Exact* test (Fisher, [1922](https://doi.org/10.2307/2340521); Agresti, [1992](https://doi.org/10.1214/ss/1177011454)).
+(6) *Exact hypergeometric 2 × 2* test, the so-called *Fisher Exact* test (Fisher, [1922](https://doi.org/10.2307/2340521); Agresti, [1992](https://doi.org/10.1214/ss/1177011454)).
 
 ### 2.6. Combinatorics
 
-After Gersonides' *pioneering* work from 1321 dealing with *arithmetical* operations and *combinatorics* (s. Abraham Bar Hiyya Savasorda, [1450](https://www.loc.gov/item/2021667539/); Rabinovitch, [1970](http://www.jstor.org/stable/41133303)), the method is *mainly* based on Blaise Pascal ([1665](https://gallica.bnf.fr/ark:/12148/btv1b86262012.image#)), Bernoulli ([1713](https://www.e-rara.ch/zut/doi/10.3931/e-rara-9001)) and Euler ([1753](https://scholarlycommons.pacific.edu/euler-works/201/)), also Ettingshausen ([1826](https://archive.org/details/diecombinatoris00ettigoog/page/n70/mode/1up?view=theater)), s. further Sylvester ([1904](https://archive.org/details/collectedmathem01sylvrich/page/n7/mode/1up), [1908](https://archive.org/details/SylvesterCollected2/page/n3/mode/1up), [1909](https://archive.org/details/TheCollectedMathematicalPapersOfJamesJosephSylvesterVolumeIii/page/n3/mode/1up), [1912](https://archive.org/details/collectedmathema04sylvuoft/page/n8/mode/1up)) and MacMahon ([1915](https://openlibrary.org/works/OL1109964W/Combinatory_analysis), [1916]([https://books.google.com/books/about/Combinatory_Analysis.html?id=A_PuAAAAMAAJ&redir_esc=y)), giving fundamental contributions to *matrix-theory* and *combinatorics*. 
+After Gersonides' *pioneering* work from 1321 dealing with *arithmetical* operations and *combinatorics* (s. Abraham Bar Hiyya Savasorda, [1450](https://www.loc.gov/item/2021667539/); Rabinovitch, [1970](http://www.jstor.org/stable/41133303)), the methods, being a fundamental part for *probability calculations*, are *mainly* based on Blaise Pascal ([1665](https://gallica.bnf.fr/ark:/12148/btv1b86262012.image#)), Bernoulli ([1713](https://www.e-rara.ch/zut/doi/10.3931/e-rara-9001)) and Euler ([1753](https://scholarlycommons.pacific.edu/euler-works/201/)), c.f. Ettingshausen ([1826](https://archive.org/details/diecombinatoris00ettigoog/page/n70/mode/1up?view=theater)). 
+
+See further Sylvester ([1904](https://archive.org/details/collectedmathem01sylvrich/page/n7/mode/1up), [1908](https://archive.org/details/SylvesterCollected2/page/n3/mode/1up), [1909](https://archive.org/details/TheCollectedMathematicalPapersOfJamesJosephSylvesterVolumeIii/page/n3/mode/1up), [1912](https://archive.org/details/collectedmathema04sylvuoft/page/n8/mode/1up)) and MacMahon ([1915](https://openlibrary.org/works/OL1109964W/Combinatory_analysis), [1916](https://books.google.com/books/about/Combinatory_Analysis.html?id=A_PuAAAAMAAJ&redir_esc=y)), giving fundamental contributions to *matrix-theory* and *combinatorics*. 
 
 The following functions to *generate permutation* and *variation* matrices are available, *primarily* to support the *resampling* procedures described below:
 
@@ -181,13 +185,13 @@ The following functions to *generate permutation* and *variation* matrices are a
 
 ### 2.7. Resampling
 
-*Permutation* or *randomization tests* were first mentioned by Fisher ([1935](https://psycnet.apa.org/record/1939-04964-000)), based on experiments in agriculture (Fisher, [1926](https://doi.org/10.23637/rothamsted.8v61q); Neyman, [1923](https://link.springer.com/chapter/10.1007/978-94-015-8816-4_10)). In this context see Pitman ([1937a](http://www.jstor.org/stable/2984124), [b](http://www.jstor.org/stable/2983647), [1938](http://www.jstor.org/stable/2332008)), Fisher ([1966](https://scirp.org/reference/referencespapers.aspx?referenceid=895747), [1971](https://home.iitk.ac.in/~shalab/anova/DOE-RAF.pdf), res.), especially Eugene Sinclair Edgington ([1964](https://doi.org/10.1080/00223980.1964.9916711), [1980](https://doi.org/10.2307/1164966), [1987](https://doi.org/10.1037/0022-0167.34.4.437), [2011](https://doi.org/10.1007/978-3-642-04898-2_56)), Edgington & Onghena ([2007](https://doi.org/10.1201/9781420011814)), res.
+*Permutation* or *randomization tests* were first mentioned by Fisher ([1935](https://psycnet.apa.org/record/1939-04964-000)), based on experiments in agriculture (Fisher, [1926](https://doi.org/10.23637/rothamsted.8v61q); Neyman, [1923](https://link.springer.com/chapter/10.1007/978-94-015-8816-4_10)). In this context see Pitman ([1937a](http://www.jstor.org/stable/2984124), [b](http://www.jstor.org/stable/2983647), [1938](http://www.jstor.org/stable/2332008)), Fisher ([1966](https://scirp.org/reference/referencespapers.aspx?referenceid=895747), [1971](https://home.iitk.ac.in/~shalab/anova/DOE-RAF.pdf), res.), especially Eugene Sinclair Edgington ([1964](https://doi.org/10.1080/00223980.1964.9916711), [1980](https://doi.org/10.2307/1164966), [1987](https://doi.org/10.1037/0022-0167.34.4.437), [2011](https://doi.org/10.1007/978-3-642-04898-2_56)) or Edgington and Onghena ([2007](https://doi.org/10.1201/9781420011814)).
 
-The *bootstrap* method was introduced by Bradley Efron ([1979](https://doi.org/10.1214/aos/1176344552), [1981](https://doi.org/10.1093/biomet/68.3.589), [1982](https://doi.org/10.1137/1.9781611970319)) as a further development (Quenouille, [1949](https://doi.org/10.1111/j.2517-6161.1949.tb00023.x); Metropolis & Ulam, [1949](https://doi.org/10.1080/01621459.1949.10483310)), for *software* solutions see e.g Solomon ([1982](https://doi.org/10.5555/1035853.1035900)), Dallal, ([1986](http://www.jstor.org/stable/2684555), [1988](https://doi.org/https://doi.org/10.1016/0010-4809(88)90037-7)), Peladeau ([1993](https://doi.org/10.3758/BF03204533)), Wooff & Peladeau, ([1994](https://doi.org/10.2307/2986032)), Mehta et al., ([2014](https://doi.org/10.1002/9781118445112.stat04892)),  also Schrausser ([2024](https://doi.org/10.5281/zenodo.14280500)).
+The *bootstrap* method was introduced by Bradley Efron ([1979](https://doi.org/10.1214/aos/1176344552), [1981](https://doi.org/10.1093/biomet/68.3.589), [1982](https://doi.org/10.1137/1.9781611970319)) as a further development (Quenouille, [1949](https://doi.org/10.1111/j.2517-6161.1949.tb00023.x); Metropolis and Ulam, [1949](https://doi.org/10.1080/01621459.1949.10483310)), for *software* solutions see e.g Solomon ([1982](https://doi.org/10.5555/1035853.1035900)), Dallal ([1986](http://www.jstor.org/stable/2684555), [1988](https://doi.org/https://doi.org/10.1016/0010-4809(88)90037-7)), Peladeau ([1993](https://doi.org/10.3758/BF03204533)), Wooff and Peladeau ([1994](https://doi.org/10.2307/2986032)), Mehta et al. ([2014](https://doi.org/10.1002/9781118445112.stat04892)),  also Schrausser ([2024d](https://doi.org/10.5281/zenodo.14280500)).
 
 Following functions were *developed*:
 
-(1) *Permutation test P* for 2 *paired* samples $(x_1|x_2)$. Random sampling model, *systematic* permutation, $p$-value *not* randomized, *variation* matrix $\mathbf{ ^w V_2^m}$ *required*, s. Scambor ([1997](https://doi.org/10.13140/RG.2.2.28632.06405)), Scambor & Schrausser ([2022](https://www.academia.edu/94993376), p. 7), respectively.
+(1) *Permutation test P* for 2 *paired* samples $(x_1|x_2)$. Random sampling model, *systematic* permutation, $p$-value *not* randomized, *variation* matrix $\mathbf{ ^w V_2^m}$ *required*, s. Scambor ([1997](https://doi.org/10.13140/RG.2.2.28632.06405)), Scambor and Schrausser ([2022](https://www.academia.edu/94993376), p. 7), respectively.
 
 (2) *Randomized permutation test mP* for 2 *paired* samples $(x_1|x_2)$. Random sampling model, $p$-value *not* randomized.
 
@@ -195,31 +199,33 @@ Following functions were *developed*:
 
 (4) *Randomized permutation test mP* for 2 *independent* samples $(x|g)$. Random sampling model, $p$-value *not* randomized.
 
-(5) *Bootstrap* test *Bt* for 2 *independent* samples $(x|g)$, c.f. Quenouille ([1949](https://doi.org/10.1111/j.2517-6161.1949.tb00023.x), Efron ([1979](https://doi.org/10.1214/aos/1176344552), [1981](https://doi.org/10.1093/biomet/68.3.589), [1982](https://doi.org/10.1137/1.9781611970319)).
+(5) *Bootstrap* test *Bt* for 2 *independent* samples $(x|g)$, c.f. Quenouille ([1949](https://doi.org/10.1111/j.2517-6161.1949.tb00023.x)), Efron ([1979](https://doi.org/10.1214/aos/1176344552), [1981](https://doi.org/10.1093/biomet/68.3.589), [1982](https://doi.org/10.1137/1.9781611970319)).
 
 ### 2.8. Complex plane
 
-It was Cardano ([1545a](https://archive.org/details/arsmagnaorruleso0000card), [b](https://web.archive.org/web/20220201093634/http://www.filosofia.unimi.it/cardano/testi/operaomnia/vol_4_s_4.pdf)) who *first* conceived the term *imaginary*, for the further historical development of *complex numbers* s. René Descartes ([1664](https://books.google.com/books?id=VtFcAAAAcAAJ), [2012](https://books.google.com/books?id=MB7F32p0y5MC), res.), Gauss ([1828](https://doi.org/10.3931/e-rara-61066), [1832](https://doi.org/10.3931/e-rara-61067)) also Wirtinger ([1927](https://doi.org/10.1007/BF01447872)). 
+It was the Italian mathematician Gerolamo Cardano ([1545a](https://archive.org/details/arsmagnaorruleso0000card), [b](https://web.archive.org/web/20220201093634/http://www.filosofia.unimi.it/cardano/testi/operaomnia/vol_4_s_4.pdf)) who *first* conceived the term *imaginary*, for the further historical development of *complex numbers* s. René Descartes ([1664](https://books.google.com/books?id=VtFcAAAAcAAJ), [2012](https://books.google.com/books?id=MB7F32p0y5MC), res.), Gauss ([1828](https://doi.org/10.3931/e-rara-61066), [1832](https://doi.org/10.3931/e-rara-61067)) also Wirtinger ([1927](https://doi.org/10.1007/BF01447872)). 
 
 Here finally realized are (1) the *Geometric* representation of *complex numbers* $z$ in the complex plane, the *Argand diagram* (s. Argand, [1813](https://fr.wikisource.org/wiki/Annales_de_math%C3%A9matiques_pures_et_appliqu%C3%A9es/Tome_04/Philosophie_math%C3%A9matique,_article_4), [1874](http://catalogue.bnf.fr/ark:/12148/cb300261909), res.) and (2) the *Graph* of the *complex function*, where $z=\Re+\Im$.
 
-At this point, one should recall the *definitional* importance of *geometry* and *trigonometry* in context with the calculation of *complex numbers*, where $|z|$ is *calculated* according to Pythagoras (c.f. Ratdolt, [1482](https://catalog.lindahall.org/discovery/delivery/01LINDAHALL_INST:LHL/1286816310005961), Propositio 46) by $|z|=r=\sqrt{x^2+y^2}$.
+At this point, one should recall the *definitional* importance of *geometry* and *trigonometry* in context with the calculation of *complex numbers* itself, where $|z|$ is *calculated* according to Pythagoras (c.f. Ratdolt, [1482](https://catalog.lindahall.org/discovery/delivery/01LINDAHALL_INST:LHL/1286816310005961), propositio 46) by $|z|=r=\sqrt{x^2+y^2}$.
 
-After the fundamental change in mathematics from *geometric* to *algebraic* representation took place in the 16th century (c.f. Heath, [1908a](https://archive.org/details/thirteenbookseu02heibgoog), [b](https://archive.org/details/thirteenbookseu00heibgoog), [c](https://archive.org/details/thirteenbookseu03heibgoog); Bochner, [1978](https://hdl.handle.net/1911/63315); Anglin & Lambek, [1995](https://doi.org/10.1007/978-1-4612-0803-7_25); Malet, [2006](https://doi.org/10.1016/j.hm.2004.11.011) or Alten et al., [2014](https://doi.org/10.1007/978-3-642-38239-0_4)), the origins of *trigonometric series* of *tangents* and *sine* can be seen following early attempts (s. Jyesthadeva, [1530](https://archive.org/details/raswhishNA-124); Whish, [1834](https://doi.org/10.1017/S0950473700001221); Gupta, [1974](https://doi.org/10.1016/0315-0860(74)90067-6) or Divakaran, [2007](http://www.jstor.org/stable/23497280)) during the European *reinvention* in the works of Gregory ([1671](https://archivesearch.lib.cam.ac.uk/repositories/2/archival_objects/566767), [1668a](https://books.google.com/books?id=ZtRYqgyD5YsC), [b](https://archive.org/details/gregory_universalis)), Leibniz ([1682](https://books.google.com/books/about/Acta_eruditorum.html?id=E7MasYIsMKQC), [2012](https://doi.org/10.26015/adwdocs-1924)), Newton ([1669](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00204), [1711](https://doi.org/10.3931/e-rara-8934)) and Brook Taylor ([1715](https://books.google.com/books?id=iXN1xgEACAAJ), [1717](https://books.google.com/books?id=r-Gq9YyZYXYC)) with the definition of the *Taylor series* of *sine* where $\sin⁡x=\sum_{n=0}^\infty\frac{(-1)^n }{(2⋅n+1)!}⋅x^{2⋅n+1}$. (c.f. Gregory & Collins, [1939](https://books.google.com/books?id=\_eruAAAAMAAJ); Boyer, [1968](https://archive.org/details/ahistoryofmathematicscarlbboyer1968_315_t), p. 422 ff.; Feigenbaum, [1985](http://www.jstor.org/stable/41133765)). 
+After the fundamental change in mathematics from *geometric* to *algebraic* representation took place in the 16th century (c.f. Heath, [1908a](https://archive.org/details/thirteenbookseu02heibgoog), [b](https://archive.org/details/thirteenbookseu00heibgoog), [c](https://archive.org/details/thirteenbookseu03heibgoog); Bochner, [1978](https://hdl.handle.net/1911/63315); Anglin and Lambek, [1995](https://doi.org/10.1007/978-1-4612-0803-7_25); Malet, [2006](https://doi.org/10.1016/j.hm.2004.11.011) or Alten et al., [2014](https://doi.org/10.1007/978-3-642-38239-0_4)), the origins of *trigonometric series* of *tangents* and *sine* can be seen following early attempts (s. Jyesthadeva, [1530](https://archive.org/details/raswhishNA-124); Whish, [1834](https://doi.org/10.1017/S0950473700001221); Gupta, [1974](https://doi.org/10.1016/0315-0860(74)90067-6) or Divakaran, [2007](http://www.jstor.org/stable/23497280)) during the European *reinvention* in the works of Gregory ([1671](https://archivesearch.lib.cam.ac.uk/repositories/2/archival_objects/566767), [1668a](https://books.google.com/books?id=ZtRYqgyD5YsC), [b](https://archive.org/details/gregory_universalis)), Leibniz ([1682](https://books.google.com/books/about/Acta_eruditorum.html?id=E7MasYIsMKQC), [2012](https://doi.org/10.26015/adwdocs-1924)), Newton ([1669](https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00204), [1711](https://doi.org/10.3931/e-rara-8934)) and Brook Taylor ([1715](https://books.google.com/books?id=iXN1xgEACAAJ), [1717](https://books.google.com/books?id=r-Gq9YyZYXYC)) with the definition of the *Taylor series* of *sine* where $\sin⁡x=\sum_{n=0}^\infty\frac{(-1)^n }{(2⋅n+1)!}⋅x^{2⋅n+1}$. (c.f. Gregory and Collins, [1939](https://books.google.com/books?id=\_eruAAAAMAAJ); Boyer, [1968](https://archive.org/details/ahistoryofmathematicscarlbboyer1968_315_t), p. 422 ff.; Feigenbaum, [1985](http://www.jstor.org/stable/41133765)). 
 
 Finally, Euler ([1748a](https://scholarlycommons.pacific.edu/euler-works/101/), [b](https://scholarlycommons.pacific.edu/euler-works/102/)) established the *analytic* treatment of *trigonometric* functions, defining them in relation with *complex exponential* functions by $e^{ix}=\cos⁡x+i \sin⁡x$, where $e=\sum_{n=0}^\infty\frac{1}{n!}$
-and thus laid the foundation of *modern* mathematical analysis (c.f. Finkel, [1897](http://www.jstor.org/stable/2968971); Walter, [1982](http://www.jstor.org/stable/2320218); Koyama & Kurokawa, [2005](http://www.jstor.org/stable/4097775); Calinger, [2016](http://www.jstor.org/stable/j.ctv7h0smb) and Schrausser, [2024c](https://doi.org/10.5281/zenodo.11356370)).
+and thus laid the foundation of *modern* mathematical analysis (c.f. Finkel, [1897](http://www.jstor.org/stable/2968971); Walter, [1982](http://www.jstor.org/stable/2320218); Koyama and Kurokawa, [2005](http://www.jstor.org/stable/4097775); Calinger, [2016](http://www.jstor.org/stable/j.ctv7h0smb) and Schrausser, [2024b](https://doi.org/10.5281/zenodo.11356370)).
 
 <br>
 
 ## 3. Conclusion 
 
-In addition, raw data sets are provided for correlation and resampling methods;
-*CAS* programs, HP Prime *User* functions and functions for HP Prime *Applications* in comparison to corresponding *Schrausser-MAT* functions (Schrausser, [2022a](https://www.academia.edu/81395688)) are displayed in `func_tab.md`. Furthermore, the application `FunktionWin` for the precise calculation of *probability distributions* should be considered (Schrausser, [2023c](https://doi.org/10.5281/zenodo.7651660)) as well as the author's further software applications for *mathematical* and *statistical* analyses (Schrausser, [2023a](https://doi.org/10.5281/zenodo.7664141), [b](https://doi.org/10.5281/zenodo.7655056), [d](https://doi.org/10.5281/zenodo.7664088)).
+In addition to the *source codes* of the functions, *raw* data sets are provided for *correlation-* as well as *resampling*-methods.
+*CAS* programs, HP Prime *User* functions and functions for HP Prime *Applications* in comparison to corresponding *Schrausser-MAT* functions (Schrausser, [2022a](https://www.academia.edu/81395688)) are displayed in `func_tab.md`. Furthermore, the application `FunktionWin` for a precise calculation of *probability distributions* can additionally be considered (Schrausser, [2023c](https://doi.org/10.5281/zenodo.7651660)) as well as the author's further software applications for *mathematical* and *statistical* analyses (Schrausser, [2023a](https://doi.org/10.5281/zenodo.7664141), [b](https://doi.org/10.5281/zenodo.7655056), [d](https://doi.org/10.5281/zenodo.7664088)).
 
-On *mathematical statistical* methods in general see e.g. Cox & Hinkley ([1974](https://doi.org/10.1201/b14832)), Bortz & Weber ([2005](https://doi.org/10.1007/b137571)), Lehmann & Romano ([2008](https://books.google.com/books?id=IlJE_9_e8UEC)), Bortz & Schuster ([2010](https://doi.org/10.1007/978-3-642-12770-0)), for *calculus* and *theory of functions* see e.g. Meyberg & Vachenauer ([2001a](https://doi.org/10.1007/978-3-642-56654-7), [b](https://doi.org/10.1007/978-3-642-56655-4)) and Remmert & Schumacher ([2002](https://doi.org/10.1007/978-3-642-56281-5)), for *complex numbers* in the *complex plane* s. e.g. Burckel ([2021](https://doi.org/10.1007/978-1-0716-1965-0)) or Vince ([2021](https://doi.org/10.1007/978-1-4471-7509-4_4)). Works on *resampling* methods are given by e.g. Good ([2006](https://www.amazon.com/Resampling-Methods-Practical-Guide-Analysis/dp/0817643869)) and Beasley & Rodgers ([2009](https://psycnet.apa.org/doi/10.4135/9780857020994.n16)). 
+On *mathematical statistical* methods in general see e.g. Cox and Hinkley ([1974](https://doi.org/10.1201/b14832)), Bortz and Weber ([2005](https://doi.org/10.1007/b137571)), Lehmann and Romano ([2008](https://books.google.com/books?id=IlJE_9_e8UEC)) or Bortz and Schuster ([2010](https://doi.org/10.1007/978-3-642-12770-0)), Schrausser ([2024a](https://doi.org/10.5281/zenodo.10969144)) provides a comprehensive overview of the most important *distribution functions* and corresponding *algorithms*.
 
-For the history of *statistical inference* in general see e.g. Stigler ([1986](https://www.scirp.org/(S(351jmbntvnsjt1aadkposzje))/reference/ReferencesPapers.aspx?ReferenceID=1973131)) and Hald ([1990](https://onlinelibrary.wiley.com/doi/book/10.1002/0471725161), [1998](https://www.abebooks.com/History-Mathematical-Statistics-1750-1930-Wiley/31042381048/bd), [2003](https://www.wiley.com/en-us/A+History+of+Probability+and+Statistics+and+Their+Applications+before+1750-p-9780471725176), [2007](https://link.springer.com/book/10.1007/978-0-387-46409-1#bibliographic-information)), for the *historical foundations* of mathematics in general, see e.g. Suter ([1887](https://doi.org/10.3931/e-rara-65095)), Heath ([1921a](https://archive.org/details/cu31924008704219), [b]([https://archive.org/details/historyofgreekma029268mbp/page/n5/mode/1up)), Boyer ([1968](https://archive.org/details/ahistoryofmathematicscarlbboyer1968_315_t)), Neugebauer ([1969](https://books.google.com/books?id=JVhTtVA2zr8C)), Ewald ([1996a](https://philpapers.org/rec/BRAFKT), [b](https://philpapers.org/rec/EWAFKT-4)), Katz ([2009](https://www.gettextbooks.com/isbn/9780321387004/)) or Merzbach & Boyer ([2011](https://books.google.com/books/about/A_History_of_Mathematics.html?id=bR9HAAAAQBAJ)).
+For *calculus* and *theory of functions* see e.g. Meyberg and Vachenauer ([2001a](https://doi.org/10.1007/978-3-642-56654-7), [b](https://doi.org/10.1007/978-3-642-56655-4)) or Remmert and Schumacher ([2002](https://doi.org/10.1007/978-3-642-56281-5)), on *complex numbers* in the *complex plane* see e.g. Burckel ([2021](https://doi.org/10.1007/978-1-0716-1965-0)) and Vince ([2021](https://doi.org/10.1007/978-1-4471-7509-4_4)), introducing works on *resampling* methods are given by e.g. Good ([2006](https://www.amazon.com/Resampling-Methods-Practical-Guide-Analysis/dp/0817643869)) or Beasley and Rodgers ([2009](https://psycnet.apa.org/doi/10.4135/9780857020994.n16)). 
+
+For the history of *statistical inference* in general see e.g. Stigler ([1986](https://www.scirp.org/(S(351jmbntvnsjt1aadkposzje))/reference/ReferencesPapers.aspx?ReferenceID=1973131)) and Hald ([1990](https://onlinelibrary.wiley.com/doi/book/10.1002/0471725161), [1998](https://www.abebooks.com/History-Mathematical-Statistics-1750-1930-Wiley/31042381048/bd), [2003](https://www.wiley.com/en-us/A+History+of+Probability+and+Statistics+and+Their+Applications+before+1750-p-9780471725176), [2007](https://link.springer.com/book/10.1007/978-0-387-46409-1#bibliographic-information)), the *historical foundations* of mathematics are thematized and discussed in e.g. Suter ([1887](https://doi.org/10.3931/e-rara-65095)), Heath ([1921a](https://archive.org/details/cu31924008704219), [b]([https://archive.org/details/historyofgreekma029268mbp/page/n5/mode/1up)), Boyer ([1968](https://archive.org/details/ahistoryofmathematicscarlbboyer1968_315_t)), Neugebauer ([1969](https://books.google.com/books?id=JVhTtVA2zr8C)), Ewald ([1996a](https://philpapers.org/rec/BRAFKT), [b](https://philpapers.org/rec/EWAFKT-4)), Katz ([2009](https://www.gettextbooks.com/isbn/9780321387004/)) or Merzbach and Boyer ([2011](https://books.google.com/books/about/A_History_of_Mathematics.html?id=bR9HAAAAQBAJ)); c.f. `paper_tab.md`.
 
 <br>
 
@@ -233,7 +239,7 @@ Allbright, G. S. (1991). Emulsion Speed Rating Systems. *The Journal of Photogra
 
 Alten, H. -W., Naini, A. D., Eick, B., Folkerts, M., Schlosser, H., Schlote, K. -H., Wesemüller-Kock, H., & Wussing, H. (2014). Algebra Im Europa Des Mittelalters Und Der Renaissance. In *4000 Jahre Algebra: Geschichte – Kulturen – Menschen*, 207–63. Berlin, Heidelberg: Springer. [https://doi.org/10.1007/978-3-642-38239-0_4](https://doi.org/10.1007/978-3-642-38239-0_4)
 
-Anglin, W. S., Lambek, J. (1995). Mathematics in the Renaissance. In *The Heritage of Thales*, 125–31. New York, NY: Springer. [https://doi.org/10.1007/978-1-4612-0803-7_25](https://doi.org/10.1007/978-1-4612-0803-7_25)
+Anglin, W. S., & Lambek, J. (1995). Mathematics in the Renaissance. In *The Heritage of Thales*, 125–31. New York, NY: Springer. [https://doi.org/10.1007/978-1-4612-0803-7_25](https://doi.org/10.1007/978-1-4612-0803-7_25)
 
 Argand, R. (1813). Essai sur une manière de représenter les quantités imaginaires dans les constructions géométriques. *Annales de Mathématiques Pures Et Appliquées 4*: 133–47. [https://fr.wikisource.org/wiki/Annales_de_math%C3%A9matiques_pures_et_appliqu%C3%A9es/Tome_04/Philosophie_math%C3%A9matique,_article_4](https://fr.wikisource.org/wiki/Annales_de_math%C3%A9matiques_pures_et_appliqu%C3%A9es/Tome_04/Philosophie_math%C3%A9matique,_article_4)
 
@@ -427,7 +433,7 @@ Heath, T. L. (1908a). *The Thirteen Books of Euclid’s Elements Translated from
 ———. (1908c). *The Thirteen Books of Euclid’s Elements Translated from the Text of Heiberg with Introduction and Commentary*. Vol. III Books X–XIII and Appendix. Cambridge: University Press. [https://archive.org/details/thirteenbookseu03heibgoog](https://archive.org/details/thirteenbookseu03heibgoog)
 
 ———. (1921a). *A History of Greek Mathematics. Vol. I From Thales to Euclid*. Oxford: At the Clarendon Press. [https://archive.org/details/cu31924008704219](https://archive.org/details/cu31924008704219)
-.
+
 ———. (1921b). *A History of Greek Mathematics. Vol. II From Aristarchus to Diophantus*. Oxford: At the Clarendon Press. [https://archive.org/details/historyofgreekma029268mbp/page/n5/mode/1up](https://archive.org/details/historyofgreekma029268mbp/page/n5/mode/1up)
 
 Helmert, F. R. (1876). Ueber die Wahrscheinlichkeit der Potenzsummen der Beobachtungsfehler und über einige damit im Zusammenhange stehende Fragen. *Zeitschrift für Mathematik und Physik 21*: 192–219. [https://gdz.sub.uni-goettingen.de/id/PPN599415665_0021](https://gdz.sub.uni-goettingen.de/id/PPN599415665_0021)
@@ -594,12 +600,14 @@ Schrausser, D. G. (1996). *Permutationstests: Theoretische und praktische Arbeit
 
 ———. (2023d). *Schrausser/PCE500_MATH: Mathematical and statistical applications for SHARP PC-E500* (version v1.0.0). Zenodo. [https://doi.org/10.5281/zenodo.7664088](https://doi.org/10.5281/zenodo.7664088)
 
-———. (2024a). *Schrausser/Abh_wkt: 1.5* (version v1.5.0). Zenodo. [https://doi.org/10.5281/zenodo.14183565](https://doi.org/10.5281/zenodo.14183565)
+———. (2024a). *Handbook: Distribution Functions (Verteilungs Funktionen)*. PsyArXiv. [https://doi.org/10.5281/zenodo.10969144](https://doi.org/10.5281/zenodo.10969144)
 
-———. (2024b). *Schrausser/Various_programs: 3.5* (version v3.5.2). Zenodo. [https://doi.org/10.5281/zenodo.14280500](https://doi.org/10.5281/zenodo.14280500)
-
-———. (2024c). Ptolemy’s Table of Chords: Implications Considered and Discussed. *Zenodo. May 2024*.
+———. (2024b). Ptolemy’s Table of Chords: Implications Considered and Discussed. *Zenodo. May 2024*.
 [https://doi.org/10.5281/zenodo.11356370](https://doi.org/10.5281/zenodo.11356370)
+
+———. (2024c). *Schrausser/Abh_wkt: 1.5* (version v1.5.0). Zenodo. [https://doi.org/10.5281/zenodo.14183565](https://doi.org/10.5281/zenodo.14183565)
+
+———. (2024d). *Schrausser/Various_programs: 3.5* (version v3.5.2). Zenodo. [https://doi.org/10.5281/zenodo.14280500](https://doi.org/10.5281/zenodo.14280500)
 
 ———. (2025). Schrausser/HP_Prime_MATH: 1.5. *Zenodo. January 2025*. [https://doi.org/10.5281/zenodo.14721085](https://doi.org/10.5281/zenodo.14721085)
 
