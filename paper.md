@@ -488,7 +488,7 @@ Lüroth, J. (1876). Vergleichung von zwei Werthen des wahrscheinlichen Fehlers. 
 
 MacMohan, P. A. (1915). *Combinatory Analysis*. Vol. 1. Cambridge: University Press. [https://openlibrary.org/works/OL1109964W/Combinatory_analysis](https://openlibrary.org/works/OL1109964W/Combinatory_analysis)
 
-———. (1916). *Combinatory Analysis*. Vol. 2. Cambridge: University Press. [https://books.google.com/books/about/Combinatory_Analysis.html?id=A_PuAAAAMAAJ&redir_esc=y]([https://books.google.com/books/about/Combinatory_Analysis.html?id=A_PuAAAAMAAJ&redir_esc=y)
+———. (1916). *Combinatory Analysis*. Vol. 2. Cambridge: University Press. [https://books.google.com/books/about/Combinatory_Analysis.html?id=A_PuAAAAMAAJ&redir_esc=y](https://books.google.com/books/about/Combinatory_Analysis.html?id=A_PuAAAAMAAJ&redir_esc=y)
 
 Malet, A. (2006). Renaissance Notions of Number and Magnitude. *Historia Mathematica 33* (1): 63–81. [https://doi.org/10.1016/j.hm.2004.11.011](https://doi.org/10.1016/j.hm.2004.11.011)
 
