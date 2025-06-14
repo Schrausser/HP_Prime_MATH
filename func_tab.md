@@ -153,12 +153,16 @@ Resampling	PV_
 Complex plane	CPLX		F02Z	
 		CPLX2			
 		CPLHX			
+Astronomy¹			E04
 ~~~
+¹) For more extensive calculations see `SSR` (Schrausser, [2023](https://doi.org/10.5281/zenodo.8240203))
 
 ## References
 
 HP Inc. (2017). *HP Prime Graphing Calculator: Manual*. 3rd ed. Stanford Research Park, Palo Alto, California, U.S.: HP Development Company, L.P. [https://www.hpcalc.org/details/7445](https://www.hpcalc.org/details/7445)
 
 Schrausser, D. G. (2022). Mathematical-Statistical Algorithm Interpreter, SCHRAUSSER-MAT: Function Index, Manual. *Handbooks. Academia*. [https://www.academia.edu/81395688](https://www.academia.edu/81395688)
+
+———. (2023). *Schrausser/SSR: Solar System Simulation (version v3.7)*. Zenodo. [https://doi.org/10.5281/zenodo.8240203](https://doi.org/10.5281/zenodo.8240203)
 
 ———. (2025). Schrausser/HP_Prime_MATH: 1.5. *Zenodo. January 2025*. [https://doi.org/10.5281/zenodo.14721085](https://doi.org/10.5281/zenodo.14721085)
