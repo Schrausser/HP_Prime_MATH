@@ -254,7 +254,7 @@ $df_2 = n-4$
 
 <br>
 
-#### [`Ev`|`TEv`|`AEv`] [`E03`] Exposure value $Ev$
+#### [`Ev`|`TEv`|`AEv`] [`E02`|`E03`] Exposure value $Ev$
 
 ---
 
