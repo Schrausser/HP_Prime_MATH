@@ -121,11 +121,11 @@ Following functions for the most *relevant* methods are available:
 
 (14) *Fourth* standardized moment, excess kurtosis $\alpha_4$.
 
-(15) *Estimated standard error* of *mean* $\hat\sigma_{\overline x}$, *confidence interval* $CI_p$, Neyman ([1937]([https://doi.org/10.1098/rsta.1937.0005)) introduced the *confidence interval* into statistical hypothesis testing vs. Fisher's *null hypothesis* testing, the *Neyman–Pearson lemma* (Neyman and Pearson, [1933](https://doi.org/10.1098/rsta.1933.0009); Lehmann, [1993](https://doi.org/10.1080/01621459.1993.10476404)).
+(15) *Estimated standard error* of *mean* $\hat\sigma_{\overline x}$, *confidence interval* $CI_p$, Neyman ([1937](https://doi.org/10.1098/rsta.1937.0005)) introduced the *confidence interval* into statistical hypothesis testing vs. Fisher's *null hypothesis* testing, the *Neyman–Pearson lemma* (Neyman and Pearson, [1933](https://doi.org/10.1098/rsta.1933.0009); Lehmann, [1993](https://doi.org/10.1080/01621459.1993.10476404)).
 
 (16) *Standard error* of *prediction* $\sigma_{\hat yx}$ , *confidence interval* $CI_p$.
 
-(17) *Effect size* $\epsilon$, Cohen's $d$ ([1977](https://doi.org/10.1016/C2013-0-10517-X), [1988](https://www.scirp.org/(S(lz5mqp453edsnp55rrgjct55))/reference/ReferencesPapers.aspx?ReferenceID=2041144), p. 20, p. 49, [1992](https://doi.org/10.1037/0033-2909.112.1.15)), Borenstein et al.  ([1997](https://www.semanticscholar.org/paper/Power-and-precision-%3A-a-computer-program-for-power-Borenstein-Rothstein/f379f13a460b01488c35aea408e355436dbae839)), Borenstein et al. ([2001]([https://books.google.com/books?id=tYg02XZBeNAC&printsec=frontcover&hl=de#v=onepage&q&f=false)).
+(17) *Effect size* $\epsilon$, Cohen's $d$ ([1977](https://doi.org/10.1016/C2013-0-10517-X), [1988](https://www.scirp.org/(S(lz5mqp453edsnp55rrgjct55))/reference/ReferencesPapers.aspx?ReferenceID=2041144), p. 20, p. 49, [1992](https://doi.org/10.1037/0033-2909.112.1.15)), Borenstein et al.  ([1997](https://www.semanticscholar.org/paper/Power-and-precision-%3A-a-computer-program-for-power-Borenstein-Rothstein/f379f13a460b01488c35aea408e355436dbae839)), Borenstein et al. ([2001](https://books.google.com/books?id=tYg02XZBeNAC&printsec=frontcover&hl=de#v=onepage&q&f=false)).
 
 (18) *Optimal effect size* $\epsilon_p$.
 
