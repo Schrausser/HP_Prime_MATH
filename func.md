@@ -132,7 +132,7 @@ $$r_{bisR}=\frac{2}{n}\cdot(\overline{i}_1-\overline{i}_2)$$
 
 with
 
-$$z=\frac{U-n_1\cdot\frac{n_2}{2}}{\sqrt{\frac{n_1\cdot n_2\cdot(n+1)}{12}}},$$
+$$z=\frac{U-n_1\cdot\frac{n_2}{2}}{\sqrt{\frac{n_1\cdot n_2\cdot(n+1)}{12}}}$$
 
 where
 
