@@ -1,6 +1,6 @@
 # correlation.md
 
-Table 1. Appropriate correlation coefficients; product-moment or Pearson correlation $r_{xy}$, Spearman's rank correlation coefficient *rho* $\rho$, biserial (or *biseral*) coefficients $r_{bis}$, $r_{pbis}$, $r_{bisR}$ and *phi* coefficient $\Phi$ at the corresponding scale levels, *intervall i*, *ordinal o*, and *nominal n*.
+Table 1. Appropriate correlation coefficients; *product-moment* or Pearson correlation $r_{xy}$, Spearman's *rank* correlation coefficient *rho* $\rho$, biserial (or *biseral*) coefficients $r_{bis}$, $r_{pbis}$, $r_{bisR}$ and *phi* coefficient $\Phi$ at the corresponding scale levels, *intervall i*, *ordinal o*, and *nominal n*.
 ~~~    
 	i 		o 		n 
 
@@ -9,7 +9,7 @@ o       		rho¹
 n     	rpbis, rbis    	rbisR	    	phi²
 ~~~
 ¹) also Kendall's tau $\tau$ ([1938](http://www.jstor.org/stable/2332226)) or Somers' $D$ ([1962](http://www.jstor.org/stable/2090408)).  
-²) also tetrachoric correlation $r_{tet}$.  
+²) also *tetrachoric* correlation $r_{tet}$.  
 
 ### References
 
