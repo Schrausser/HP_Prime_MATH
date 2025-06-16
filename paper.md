@@ -45,7 +45,7 @@ The following functions for *correlation*- and *regression*-techniques are imple
 (6) *Biserial* correlation coefficient $r_{bis}$, Pearson ([1909](http://www.jstor.org/stable/2345365)), s. Tate ([1955](http://www.jstor.org/stable/2333437)),
 also called *biseral*. 
 
-(7) *Rank biserial* correlation coefficient $r_{bisR}$, or *rank biseral*, corresponding to the *effect size* for the *Mann–Whitney* $U$*-test* (Mann and Whitney, [1947](https://doi.org/10.1214/aoms/1177730491)).
+(7) *Rank biserial* correlation coefficient $r_{bisR}$ or *rank biseral*, corresponding to the *effect size* for the *Mann–Whitney* $U$*-test* (Mann and Whitney, [1947](https://doi.org/10.1214/aoms/1177730491)).
 
 (8) *Phi* coefficient $\Phi$, Yule ([1912](http://www.jstor.org/stable/2340126)).
 
