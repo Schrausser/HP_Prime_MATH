@@ -64,7 +64,7 @@ also called *biseral*.
 ### 2.2. Exposure
 
 To determine the appropriate *time-aperture-speed* combination for given *light values* on a logarithmic scale (c.f. Allbright, [1991](https://doi.org/10.1080/00223638.1991.11737126); Marsden and Weinstein, [1985](https://doi.org/10.1007/978-1-4612-5024-1_9); Howie, [2001](https://doi.org/10.1007/978-1-4471-0341-7_6) and Sobot, [2021](https://doi.org/10.1007/978-3-030-79545-0_4)), following functions are
-included for the calculation of (1) Exposure values $Ev$, where $Ev=\frac{\log(Tv\cdot Av^2)}{\log(2)}$, (2) Aperture $Av$ for time $Tv$ or speed $S$ with given $Ev$, (3) Aperture $Av$ *shift* from time $Tv$ or speed $S$ in *steps* $k$ and (4) Speed $S$ in *logarithmic* $ISO°$ or *arithmetic* $ISO$ values.
+included for the calculation of (1) Exposure values $Ev$, where $Ev=\frac{\log(Tv\cdot Av^2)}{\log(2)}$, (2) Aperture $Av$ for time $Tv$ or speed $S$ with given $Ev$, (3) Aperture $Av$ *shift* from time $Tv$ or speed $S$ in *steps* $k$ and (4) speed $S$ in *logarithmic* $ISO°$ or *arithmetic* $ISO$ values.
 
 ### 2.3. Functions of integration for $\pi$ and $\Gamma$
 
