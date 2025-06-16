@@ -40,7 +40,7 @@ The following functions for *correlation*- and *regression*-techniques are imple
 
 (4) Somers' $D$, for *binary* data [0,1] (s. Somers, [1962](http://www.jstor.org/stable/2090408)).
 
-(5) *Point biserial* correlation coefficient $r_{pb}$, or also *point biseral*.
+(5) *Point biserial* correlation coefficient $r_{pb}$ or also *point biseral*.
 
 (6) *Biserial* correlation coefficient $r_{bis}$, Pearson ([1909](http://www.jstor.org/stable/2345365)), s. Tate ([1955](http://www.jstor.org/stable/2333437)),
 also called *biseral*. 
