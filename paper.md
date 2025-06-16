@@ -24,11 +24,11 @@ The description of the *underlying* algorithms and functions is deliberately omi
 ### 2.1. Correlation
 
 To measure the degree of a linear *relation* between variables,
-Karl Pearson ([1904](https://openlibrary.org/books/OL24168960M)) was developing statistical techniques for biometry including the *correlation* and *regression* coefficients based on the works of Bravais ([1844](https://books.google.com/books?id=7g\_hAQAACAAJ)) and
+Karl Pearson ([1904](https://openlibrary.org/books/OL24168960M)) was developing statistical procedures for biometry including the *correlation* and *regression* coefficients based on the works of Bravais ([1844](https://books.google.com/books?id=7g\_hAQAACAAJ)) and
  Galton ([1877](https://doi.org/10.1038/015492a0)) who introduced the symbol $r$, on the then designation of the term *reversion*.
 
 *Factor analysis*, based on *multiple regression* and *matrix* calculation was first discussed by
-Charles Edward Spearman ([1904](http://www.jstor.org/stable/1412159)), later the initial developed took place by Louis Leon Thurstone ([1931](https://doi.org/10.1037/h0069792), [1934](https://doi.org/10.1037/h0075959), [1935](https://archive.org/details/vectorsofmindmul010122mbp/page/n7/mode/1up); s. also Cattell, [1966](https://doi.org/10.1207/s15327906mbr0102\_10)). 
+Charles Edward Spearman ([1904](http://www.jstor.org/stable/1412159)), later the *initial* developed took place by Louis Leon Thurstone ([1931](https://doi.org/10.1037/h0069792), [1934](https://doi.org/10.1037/h0075959), [1935](https://archive.org/details/vectorsofmindmul010122mbp/page/n7/mode/1up); s. also Cattell, [1966](https://doi.org/10.1207/s15327906mbr0102\_10)). 
 
 The following functions for *correlation*- and *regression*-techniques are implemented, c.f. also `correlation.md`:
 
