@@ -2,7 +2,7 @@
 
 Table 1. Timeline (*year*) of initial *work* on the *methods*, corresponding *authors* with *origin* and *field* of expertise.				
 ~~~					
-year	n	Name				origin		from	to	field			n	method				work
+year	n	name				origin		from	to	field			n	method				work
 
 1280									
 1290	1	Rabbi Levi ben Gershon		France		1288	1344	Theologian			
