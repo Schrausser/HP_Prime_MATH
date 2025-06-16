@@ -15,7 +15,7 @@ Applications for HP Prime *CAS*, *User* functions and *Applications*, an overvie
 Mathematical and statistical applications `HP_Prime_MATH` for (1) the Computer Algebra System *CAS*, by means of the *Pascal* based *HP Prime Programming Language* (HP PPL), (2) the HP Prime *User* functions and (3) HP Prime *Applications* (s. HP Inc., [2017](https://www.hpcalc.org/details/7445)), 
 including methods for (1) *correlation*, (2) *exposure*, (3) *integration*, (4) *distribution*, (5) *probability*, (6) *combinatorics*, (7) *resampling* and (8) *complex plane* calculations (Schrausser, [2025](https://doi.org/10.5281/zenodo.14721085)). 
 
-The description of the *underlying* algorithms and functions is deliberately omitted, as these are presented and discussed in detail in `func.md`. Instead, an *overview* of the implemented methods is given and *additionally* their *historical development* is outlined (s. `paper_tab.md`).
+The description of the *underlying* algorithms and functions is deliberately omitted, as these are presented and discussed in detail in `func.md`. Instead, an *overview* of the implemented methods is given and *additionally* their *historical development* is outlined (c.f. `paper_tab.md`).
 
 <br>
 
