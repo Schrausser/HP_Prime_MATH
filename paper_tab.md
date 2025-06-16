@@ -14,7 +14,7 @@ year	n	name				origin		from	to	field			n	method				work
 :									
 :									
 1500									
-1510	2	Gerolamo Cardano		Italy		1501	1576	Polymat			
+1510	2	Gerolamo Cardano		Italy		1501	1576	Polymath			
 1520									
 1530									
 1540									
@@ -28,8 +28,8 @@ year	n	name				origin		from	to	field			n	method				work
 1620	4	Antoine Arnauld 		France		1618	1698	Theologian			
 	5	Blaise Pascal			France		1623	1662	Philosopher			
 1630	4	Pierre Nicole			France		1625	1685	Theologian			
-1640	6	Sir Isaac Newton		England		1643	1727	Polymat			
-1650	7	Gottfried Wilhelm Leibniz	Germany		1646	1716	Polymat			
+1640	6	Sir Isaac Newton		England		1643	1727	Polymath			
+1650	7	Gottfried Wilhelm Leibniz	Germany		1646	1716	Polymath			
 1660	8	Jacob Bernoulli			Switzerland	1655	1705	Mathematician		4	Probability			1662
 1670	9	Abraham de Moivre		France		1667	1754	Mathematician		3	Complex numbers			1664
 													5	Combinatorics			1665
@@ -44,7 +44,7 @@ year	n	name				origin		from	to	field			n	method				work
 1740													9	Normal distribution		1738
 1750													13	Complex exponential functions	1748
 1760													12	Bayes' theorem			1763
-1770	14	Jean-Robert Argand		Switzerland	1768	1822	Polymat			
+1770	14	Jean-Robert Argand		Switzerland	1768	1822	Polymath			
 1780	15	Johann Carl Friedrich Gauss	Germany		1777	1855	Mathematician			
 1790									
 1800									
