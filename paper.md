@@ -64,7 +64,7 @@ also called *biseral*.
 ### 2.2. Exposure
 
 To determine the appropriate *time-aperture-speed* combination for given *light values* on a logarithmic scale (c.f. Allbright, [1991](https://doi.org/10.1080/00223638.1991.11737126); Marsden and Weinstein, [1985](https://doi.org/10.1007/978-1-4612-5024-1_9); Howie, [2001](https://doi.org/10.1007/978-1-4471-0341-7_6) and Sobot, [2021](https://doi.org/10.1007/978-3-030-79545-0_4)), following functions are
-included for the calculation of (1) Exposure values $Ev$, where $Ev=\frac{\log(Tv\cdot Av^2)}{\log(2)}$, (2) Aperture $Av$ for time $Tv$ or speed $S$ with given $Ev$, (3) Aperture $Av$ *shift* from time $Tv$ or speed $S$ in *steps* $k$ and (4) speed $S$ in *logarithmic* $ISO°$ or *arithmetic* $ISO$ values.
+included for the calculation of (1) *exposure values* $Ev$, where $Ev=\frac{\log(Tv\cdot Av^2)}{\log(2)}$, (2) *aperture* $Av$ for time $Tv$ or speed $S$ with given $Ev$, (3) *aperture* $Av$ *shift* from time $Tv$ or speed $S$ in *steps* $k$ and (4) *speed* $S$ in *logarithmic* $ISO°$ or *arithmetic* $ISO$ values.
 
 ### 2.3. Functions of integration for $\pi$ and $\Gamma$
 
@@ -205,7 +205,7 @@ Following functions were *developed*:
 
 It was the Italian mathematician Gerolamo Cardano ([1545a](https://archive.org/details/arsmagnaorruleso0000card), [b](https://web.archive.org/web/20220201093634/http://www.filosofia.unimi.it/cardano/testi/operaomnia/vol_4_s_4.pdf)) who *first* conceived the term *imaginary*, for the further historical development of *complex numbers* s. René Descartes ([1664](https://books.google.com/books?id=VtFcAAAAcAAJ), [2012](https://books.google.com/books?id=MB7F32p0y5MC), res.), Gauss ([1828](https://doi.org/10.3931/e-rara-61066), [1832](https://doi.org/10.3931/e-rara-61067)) also Wirtinger ([1927](https://doi.org/10.1007/BF01447872)). 
 
-Here finally realized are (1) the *Geometric* representation of *complex numbers* $z$ in the complex plane, the *Argand diagram* (s. Argand, [1813](https://fr.wikisource.org/wiki/Annales_de_math%C3%A9matiques_pures_et_appliqu%C3%A9es/Tome_04/Philosophie_math%C3%A9matique,_article_4), [1874](http://catalogue.bnf.fr/ark:/12148/cb300261909), res.) and (2) the *Graph* of the *complex function*, where $z=\Re+\Im$.
+Here finally realized are (1) the *geometric* representation of *complex numbers* $z$ in the complex plane, the *Argand diagram* (s. Argand, [1813](https://fr.wikisource.org/wiki/Annales_de_math%C3%A9matiques_pures_et_appliqu%C3%A9es/Tome_04/Philosophie_math%C3%A9matique,_article_4), [1874](http://catalogue.bnf.fr/ark:/12148/cb300261909), res.) and (2) the *graph* of the *complex function*, where $z=\Re+\Im$.
 
 At this point, one should recall the *definitional* importance of *geometry* and *trigonometry* in context with the calculation of *complex numbers* itself, where $|z|$ is *calculated* according to Pythagoras (c.f. Ratdolt, [1482](https://catalog.lindahall.org/discovery/delivery/01LINDAHALL_INST:LHL/1286816310005961), propositio 46) by $|z|=r=\sqrt{x^2+y^2}$.
 
