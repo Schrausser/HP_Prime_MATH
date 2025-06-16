@@ -2,7 +2,7 @@
 
 [mov](https://m.youtube.com/watch?v=-4HJJQdxEFU)
 
-Mathematical and statistical applications for HP Prime (s. HP Inc., 2017), for an *overview* of the implemented methods and their *historical development* see `paper.md` and `paper_tab.md`, for the full function index see `func.md` or `func_tab.md`, respectively:
+Mathematical and statistical applications for HP Prime (s. HP Inc., [2017](https://www.hpcalc.org/details/7445)), for an *overview* of the implemented methods and their *historical development* see `paper.md` and `paper_tab.md`, for the full function index see `func.md` or `func_tab.md`, respectively:
 
 ### Correlation
 `PHC`, `RHO`, `TAU`, `DELTA2`, `KOR`, `TKV`, `pCor`, `ZCor`, `mZ`, `rDiff`, `IC_M`, `PKR`, `CIXY`, `MCORR2`; see `correlation.md`
@@ -33,4 +33,4 @@ Mathematical and statistical applications for HP Prime (s. HP Inc., 2017), for a
 
 ## References
 
-HP Inc. (2017). *HP Prime Graphing Calculator: Manual*. 3rd ed. Stanford Research Park, Palo Alto, California, U.S.: HP Development Company, L.P. https://www.hpcalc.org/details/7445.
+HP Inc. (2017). *HP Prime Graphing Calculator: Manual*. 3rd ed. Stanford Research Park, Palo Alto, California, U.S.: HP Development Company, L.P. [https://www.hpcalc.org/details/7445](https://www.hpcalc.org/details/7445).
