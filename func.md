@@ -824,7 +824,7 @@ with
 
 $$p_1=\sin({\frac{2\cdot\sin^{-1}\sqrt{p_2}+h}{2}})^2,$$
 
-$$p_2=-\sin({\frac{-2\cdot\sin^{-+}\sqrt{p_1}+h}{2}})^2$$
+$$p_2=-\sin({\frac{-2\cdot\sin^{-1}\sqrt{p_1}+h}{2}})^2$$
 
 where
 
