@@ -531,7 +531,7 @@ $$f'(z)=\frac{\partial f(z)}{\partial z}$$
 
 ---
 
-$$f(z_1,z_2)=\vartheta=\frac{1}{2\cdot\pi\cdot\sqrt{1-r^2}}\cdot e^{\frac{-1}{2\cdot(1-r^2)}\cdot(z_1^2-2\cdot r\cdot z_1\cdot z_2+z_2^2)}$$
+$$f(z_1,z_2)=\vartheta=\frac{1}{2\cdot\pi\cdot\sqrt{1-r^2}}\cdot e^{\frac{-1}{2\cdot(1-r^2)}\cdot(z_1^2-2\cdot r\cdot z_1\cdot z_2+z_2^2)},$$
 
 $$F(z_1,z_2)=1=\iint_{-\infty}^\infty f(z_1,z_2)dz_1dz_2$$
 
