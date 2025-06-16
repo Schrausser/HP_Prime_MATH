@@ -55,7 +55,7 @@ also called *biseral*.
 
 (11) Fisher $Z$-transformation, Fisher ([1915](https://doi.org/10.2307/2331838)).
 
-(12) Fisher $Z$ *difference*, also Cohen's $q$ ([1988](https://www.scirp.org/(S(lz5mqp453edsnp55rrgjct55))/reference/ReferencesPapers.aspx?ReferenceID=2041144), p. 110).
+(12) Fisher $Z$ *difference*, also Cohen's $q$ (Cohen, [1988](https://www.scirp.org/(S(lz5mqp453edsnp55rrgjct55))/reference/ReferencesPapers.aspx?ReferenceID=2041144), p. 110).
 
 (13) *Averaged* Fisher $Z$.
 
@@ -125,7 +125,7 @@ Following functions for the most *relevant* methods are available:
 
 (16) *Standard error* of *prediction* $\sigma_{\hat yx}$ , *confidence interval* $CI_p$.
 
-(17) *Effect size* $\epsilon$, Cohen's $d$ ([1977](https://doi.org/10.1016/C2013-0-10517-X), [1988](https://www.scirp.org/(S(lz5mqp453edsnp55rrgjct55))/reference/ReferencesPapers.aspx?ReferenceID=2041144), p. 20, p. 49, [1992](https://doi.org/10.1037/0033-2909.112.1.15)), Borenstein et al.  ([1997](https://www.semanticscholar.org/paper/Power-and-precision-%3A-a-computer-program-for-power-Borenstein-Rothstein/f379f13a460b01488c35aea408e355436dbae839)), Borenstein et al. ([2001](https://books.google.com/books?id=tYg02XZBeNAC&printsec=frontcover&hl=de#v=onepage&q&f=false)).
+(17) *Effect size* $\epsilon$, Cohen's $d$ (Cohen, [1977](https://doi.org/10.1016/C2013-0-10517-X), [1988](https://www.scirp.org/(S(lz5mqp453edsnp55rrgjct55))/reference/ReferencesPapers.aspx?ReferenceID=2041144), p. 20, p. 49, [1992](https://doi.org/10.1037/0033-2909.112.1.15)), Borenstein et al.  ([1997](https://www.semanticscholar.org/paper/Power-and-precision-%3A-a-computer-program-for-power-Borenstein-Rothstein/f379f13a460b01488c35aea408e355436dbae839)), Borenstein et al. ([2001](https://books.google.com/books?id=tYg02XZBeNAC&printsec=frontcover&hl=de#v=onepage&q&f=false)).
 
 (18) *Optimal effect size* $\epsilon_p$.
 
@@ -147,7 +147,7 @@ Following functions for the most *relevant* methods are available:
 
 ### 2.5. Probability
 
-Since until the Renaissance a *probable* opinion was merely *confirmed* by an authority and hence there was no further concept of *inductive* evidence (see Hacking, [1975](https://philpapers.org/rec/HACTEO-8); Hald, [2003](https://www.wiley.com/en-us/A+History+of+Probability+and+Statistics+and+Their+Applications+before+1750-p-9780471725176), p. 31), an *objective* representation of *probability* as such was *first discussed* by Antoine Arnauld and Pierre Nicole, ([1662](https://gallica.bnf.fr/ark:/12148/bpt6k574432.image), [1682](https://books.google.com/books?id=XQVaAAAAcAAJ), [1693](https://archive.org/details/logicorartofthin00arnaiala); c.f. also Arnauld et al., [1970](https://philpapers.org/rec/ARNLLO-8); van Evra, [1997](https://philpapers.org/rec/VANAAA-13); Dessì and Albury, [1997](https://doi.org/10.1080/01445349708837281) or Finocchiaro, [1997](https://doi.org/10.1023/A:1007756105432)).
+Since until the Renaissance a *probable* opinion was merely *confirmed* by an authority and hence there was no further concept of *inductive* evidence (see Hacking, [1975](https://philpapers.org/rec/HACTEO-8); Hald, [2003](https://www.wiley.com/en-us/A+History+of+Probability+and+Statistics+and+Their+Applications+before+1750-p-9780471725176), p. 31), an *objective* representation of *probability* as such was *first discussed* by Antoine Arnauld and Pierre Nicole ([1662](https://gallica.bnf.fr/ark:/12148/bpt6k574432.image), [1682](https://books.google.com/books?id=XQVaAAAAcAAJ), [1693](https://archive.org/details/logicorartofthin00arnaiala); c.f. also Arnauld et al., [1970](https://philpapers.org/rec/ARNLLO-8); van Evra, [1997](https://philpapers.org/rec/VANAAA-13); Dessì and Albury, [1997](https://doi.org/10.1080/01445349708837281) or Finocchiaro, [1997](https://doi.org/10.1023/A:1007756105432)).
 
 The *binomial distribution* is primarily attributable to de Moivre ([1711](https://doi.org/10.1098/rstl.1710.0018), [1718](https://books.google.com/books?id=3EPac6QpbuMC), [1738](https://books.google.com/books?id=PII\_AAAAcAAJ)) and Jacob Bernoulli ([1713](https://www.e-rara.ch/zut/doi/10.3931/e-rara-9001)), see also Schneider ([2005a](https://doi.org/10.1016/B978-044450871-3/50087-5), [b](https://doi.org/10.1016/B978-044450871-3/50087-5)). Although not included as function, due to its *considerability* in this context, the *configuration frequency analysis, CFA* should be mentioned particularly (c.f. Krauth, [1973](https://d-nb.info/740097938); Krauth and Lienert, [1993](https://books.google.com/books?id=4oeIAAAACAAJ)).
 
@@ -155,7 +155,7 @@ An account of the *systematics and logic* of *dependent probabilities* within th
 
 The arguably *most* important methods regarding the calculation of *probability parameters* are implemented as follows:
 
-(1) *Arcsine transformation*, Cohen's $h$ ([1988](https://www.scirp.org/(S(lz5mqp453edsnp55rrgjct55))/reference/ReferencesPapers.aspx?ReferenceID=2041144), p. 181).
+(1) *Arcsine transformation*, Cohen's $h$ (Cohen, [1988](https://www.scirp.org/(S(lz5mqp453edsnp55rrgjct55))/reference/ReferencesPapers.aspx?ReferenceID=2041144), p. 181).
 
 (2) *Additive probability* for *independent* events $^u p(\cup_n A)$, which corresponding to the *geometric distribution* $f(X\le r|p)$.
 
@@ -225,7 +225,7 @@ On *mathematical statistical* methods in general see e.g. Cox and Hinkley ([1974
 
 For *calculus* and *theory of functions* see e.g. Meyberg and Vachenauer ([2001a](https://doi.org/10.1007/978-3-642-56654-7), [b](https://doi.org/10.1007/978-3-642-56655-4)) or Remmert and Schumacher ([2002](https://doi.org/10.1007/978-3-642-56281-5)), on *complex numbers* in the *complex plane* see e.g. Burckel ([2021](https://doi.org/10.1007/978-1-0716-1965-0)) and Vince ([2021](https://doi.org/10.1007/978-1-4471-7509-4_4)), introducing works on *resampling* methods are given by e.g. Good ([2006](https://www.amazon.com/Resampling-Methods-Practical-Guide-Analysis/dp/0817643869)) or Beasley and Rodgers ([2009](https://psycnet.apa.org/doi/10.4135/9780857020994.n16)). 
 
-For the history of *statistical inference* in general see e.g. Stigler ([1986](https://www.scirp.org/(S(351jmbntvnsjt1aadkposzje))/reference/ReferencesPapers.aspx?ReferenceID=1973131)) and Hald ([1990](https://onlinelibrary.wiley.com/doi/book/10.1002/0471725161), [1998](https://www.abebooks.com/History-Mathematical-Statistics-1750-1930-Wiley/31042381048/bd), [2003](https://www.wiley.com/en-us/A+History+of+Probability+and+Statistics+and+Their+Applications+before+1750-p-9780471725176), [2007](https://link.springer.com/book/10.1007/978-0-387-46409-1#bibliographic-information)), the *historical foundations* of mathematics are thematized and discussed in e.g. Suter ([1887](https://doi.org/10.3931/e-rara-65095)), Heath ([1921a](https://archive.org/details/cu31924008704219), [b]([https://archive.org/details/historyofgreekma029268mbp/page/n5/mode/1up)), Boyer ([1968](https://archive.org/details/ahistoryofmathematicscarlbboyer1968_315_t)), Neugebauer ([1969](https://books.google.com/books?id=JVhTtVA2zr8C)), Ewald ([1996a](https://philpapers.org/rec/BRAFKT), [b](https://philpapers.org/rec/EWAFKT-4)), Katz ([2009](https://www.gettextbooks.com/isbn/9780321387004/)) or Merzbach and Boyer ([2011](https://books.google.com/books/about/A_History_of_Mathematics.html?id=bR9HAAAAQBAJ)), c.f. `paper_tab.md`.
+For the history of *statistical inference* in general see e.g. Stigler ([1986](https://www.scirp.org/(S(351jmbntvnsjt1aadkposzje))/reference/ReferencesPapers.aspx?ReferenceID=1973131)) and Hald ([1990](https://onlinelibrary.wiley.com/doi/book/10.1002/0471725161), [1998](https://www.abebooks.com/History-Mathematical-Statistics-1750-1930-Wiley/31042381048/bd), [2003](https://www.wiley.com/en-us/A+History+of+Probability+and+Statistics+and+Their+Applications+before+1750-p-9780471725176), [2007](https://link.springer.com/book/10.1007/978-0-387-46409-1#bibliographic-information)), the *historical foundations* of mathematics are thematized and discussed in e.g. Suter ([1887](https://doi.org/10.3931/e-rara-65095)), Heath ([1921a](https://archive.org/details/cu31924008704219), [b](https://archive.org/details/historyofgreekma029268mbp/page/n5/mode/1up)), Boyer ([1968](https://archive.org/details/ahistoryofmathematicscarlbboyer1968_315_t)), Neugebauer ([1969](https://books.google.com/books?id=JVhTtVA2zr8C)), Ewald ([1996a](https://philpapers.org/rec/BRAFKT), [b](https://philpapers.org/rec/EWAFKT-4)), Katz ([2009](https://www.gettextbooks.com/isbn/9780321387004/)) or Merzbach and Boyer ([2011](https://books.google.com/books/about/A_History_of_Mathematics.html?id=bR9HAAAAQBAJ)), c.f. `paper_tab.md`.
 
 <br>
 
