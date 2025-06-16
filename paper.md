@@ -528,7 +528,7 @@ Neyman, J., & Pearson, E. S. (1933). On the problem of the most efficient tests 
 
 Olkin, I., & Pratt, J. W. (1958). Unbiased Estimation of Certain Correlation Coefficients. *The Annals of Mathematical Statistics 29* (1): 201–11. [https://doi.org/10.1214/aoms/1177706717](https://doi.org/10.1214/aoms/1177706717)
 
-Pascal, B. (1665). *Traite´ du triangle arithmetique : auec quelques autres petits traitez sur la mesme matie‘re*. A Paris: Chez Guillaume Desprez, rue Saint Jacques, a Saint Prosper. [https://gallica.bnf.fr/ark:/12148/btv1b86262012.image#]([https://gallica.bnf.fr/ark:/12148/btv1b86262012.image#)
+Pascal, B. (1665). *Traite´ du triangle arithmetique : auec quelques autres petits traitez sur la mesme matie‘re*. A Paris: Chez Guillaume Desprez, rue Saint Jacques, a Saint Prosper. [https://gallica.bnf.fr/ark:/12148/btv1b86262012.image#](https://gallica.bnf.fr/ark:/12148/btv1b86262012.image#)
 
 Pearson, K. (1895). Contributions to the Mathematical Theory of Evolution. II. Skew Variation in Homogeneous Material. *Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences 186*: 343–414. [https://doi.org/10.1098/rsta.1895.0010](https://doi.org/10.1098/rsta.1895.0010)
 
