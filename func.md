@@ -818,13 +818,13 @@ $$\chi^2=\frac{(|b-c|-\frac{1}{2})^2}{b+c};20\lt (b+c)\lt 30$$
 
 $$\theta=p_1-p_2,$$
 
-$$h=2\cdot\arcsin{\sqrt{p_1}}-2\cdot\arcsin{\sqrt{p_2}}$$
+$$h=2\cdot\sin^{-1}{\sqrt{p_1}}-2\cdot\sin^{-1}{\sqrt{p_2}}$$
 
 with
 
-$$p_1=\sin({\frac{2\cdot\arcsin\sqrt{p_2}+h}{2}})^2,$$
+$$p_1=\sin({\frac{2\cdot\sin^{-1}\sqrt{p_2}+h}{2}})^2,$$
 
-$$p_2=-\sin({\frac{-2\cdot\arcsin\sqrt{p_1}+h}{2}})^2$$
+$$p_2=-\sin({\frac{-2\cdot\sin^{-+}\sqrt{p_1}+h}{2}})^2$$
 
 where
 
