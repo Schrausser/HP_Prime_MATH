@@ -121,7 +121,7 @@ Following functions for the most *relevant* methods are available:
 
 (14) *Fourth* standardized moment, excess kurtosis $\alpha_4$.
 
-(15) *Estimated standard error* of *mean* $\hat\sigma_{\overline x}$, *confidence interval* $CI_p$, Neyman ([1937](https://doi.org/10.1098/rsta.1937.0005)) introduced the *confidence interval* into statistical hypothesis testing vs. Fisher's *null hypothesis* testing, the *Neyman–Pearson lemma* (Neyman and Pearson, [1933](https://doi.org/10.1098/rsta.1933.0009); Lehmann, [1993](https://doi.org/10.1080/01621459.1993.10476404)).
+(15) *Estimated standard error* of *mean* $\hat\sigma_{\overline x}$, *confidence interval* $CI_p$. Neyman ([1937](https://doi.org/10.1098/rsta.1937.0005)) introduced the *confidence interval* into statistical hypothesis testing vs. Fisher's *null hypothesis* testing, the *Neyman–Pearson lemma* (Neyman and Pearson, [1933](https://doi.org/10.1098/rsta.1933.0009); Lehmann, [1993](https://doi.org/10.1080/01621459.1993.10476404)).
 
 (16) *Standard error* of *prediction* $\sigma_{\hat yx}$ , *confidence interval* $CI_p$.
 
