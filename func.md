@@ -64,9 +64,9 @@ $$z=\frac{n_c-n_d}{\sqrt{\frac{1}{18}\cdot n\cdot(n-1)\cdot(2\cdot n+5)}}$$
 
 where
 
-$n$ = Total Number of pairs  
-$n_d$ = Number of discordant pairs  
-$n_c$ = Number of concordant pairs, with $n_c=\binom{n}{2}-n_d$ 
+$n$ = total number of pairs  
+$n_d$ = number of discordant pairs  
+$n_c$ = number of concordant pairs, with $n_c=\binom{n}{2}-n_d$ 
 
 <br>
 
@@ -80,9 +80,9 @@ $$D_{YX}=\frac{n_{1,1}}{n}-\frac{n_{1,0}}{n}$$
 
 where
 
-$n$ = Total Number of pairs  
-$n_{1,1}$ = Number of pairs with $Y=1, X=1$  
-$n_{1,0}$ = Number of pairs with $Y=1, X=0$  
+$n$ = total number of pairs  
+$n_{1,1}$ = number of pairs with $Y=1, X=1$  
+$n_{1,0}$ = number of pairs with $Y=1, X=0$  
 
 <br>
 
@@ -1011,8 +1011,8 @@ $$p^{exact}=\frac{\sum_{i=1}^{2^n}{1}}{2^n};\theta_i\ge \Theta$$
 
 where
 
-$\Theta^1_1, \Theta^1_2$ = One-tailed test values  
-$\Theta^2$ = Two-tailed test value  
+$\Theta^1_1, \Theta^1_2$ = one-tailed test values  
+$\Theta^2$ = two-tailed test value  
 
 <br>
 
@@ -1032,9 +1032,9 @@ $$p=\frac{\sum_{i=1}^{M}{1}}{M};\theta_i\ge \Theta$$
 
 where
 
-$\Theta^1_1, \Theta^1_2$ = One-tailed test values  
-$\Theta^2$ = Two-tailed test value  
-$M$ = Simulation cycles over variations $^w V_2^m=2^n$  
+$\Theta^1_1, \Theta^1_2$ = one-tailed test values  
+$\Theta^2$ = two-tailed test value  
+$M$ = simulation cycles over variations $^w V_2^m=2^n$  
 
 <br>
 
@@ -1054,8 +1054,8 @@ $$p^{exact}=\frac{\sum_{i=1}^{\frac{n!}{n_1!\cdot n_2!}}{1}}{\frac{n!}{n_1!\cdot
 
 where
 
-$\Theta^1_1, \Theta^1_2$ = One-tailed test values  
-$\Theta^2$ = Two-tailed test value  
+$\Theta^1_1, \Theta^1_2$ = one-tailed test values  
+$\Theta^2$ = two-tailed test value  
 $n=n_1+n_2$  
 
 <br>
@@ -1076,10 +1076,10 @@ $$p=\frac{\sum_{i=1}^M{1}}{M};\theta_i\ge \Theta$$
 
 where
 
-$\Theta^1_1, \Theta^1_2$ = One-tailed test values  
-$\Theta^2$ = Two-tailed test value  
+$\Theta^1_1, \Theta^1_2$ = one-tailed test values  
+$\Theta^2$ = two-tailed test value  
 $n=n_1+n_2$  
-$M$ = Simulation cycles over permutations   $^wP_n^{(k_m,k_{n-m})}=\frac{n!}{n_1!\cdot n_2!}$  
+$M$ = simulation cycles over permutations   $^wP_n^{(k_m,k_{n-m})}=\frac{n!}{n_1!\cdot n_2!}$  
 
 <br>
 
@@ -1097,10 +1097,10 @@ $$p=\frac{\sum_{i=1}^B{1}}{B};\theta_i\ge \Theta$$
 
 where
 
-$\Theta^1_1, \Theta^1_2$ = One-tailed test values  
-$\Theta^2$ = Two-tailed test value  
+$\Theta^1_1, \Theta^1_2$ = one-tailed test values  
+$\Theta^2$ = two-tailed test value  
 $n=n_1+n_2$  
-$B$ = Simulation cycles over variations $^w V_n^m=n^n$  
+$B$ = simulation cycles over variations $^w V_n^m=n^n$  
 
 <br>
 
