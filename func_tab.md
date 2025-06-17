@@ -1,6 +1,6 @@
 # func_tab.md
 
-Table 1. Methods and the corresponding HP Prime ([2017](https://www.hpcalc.org/details/7445)) *CAS*, *User* and *Application* functions (Schrausser, [2025](https://doi.org/10.5281/zenodo.14721085)) compared to equivalent `Schrausser-MAT` functions *MAT* (Schrausser, [2022](https://www.academia.edu/81395688)).			
+Table 1. Methods and the corresponding HP Prime ([2017](https://www.hpcalc.org/details/7445)) *CAS*, *User* and *Application* functions (Schrausser, [2025](https://doi.org/10.5281/zenodo.14721085)) compared to equivalent `SCHRAUSSER-MAT` functions *MAT* (Schrausser, [2022](https://www.academia.edu/81395688)).			
 ~~~
 method		HP-Prime function			
 		CAS	User	App.	MAT
