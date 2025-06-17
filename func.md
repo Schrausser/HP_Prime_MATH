@@ -1122,7 +1122,7 @@ with
 
 $$\varphi=\pi;x\lt0\wedge y=0,$$
 
-$$\varphi=2\cdot\arctan{\frac{y}{\sqrt{x^2+y^2}+x}};y\ne0,$$
+$$\varphi=2\cdot\tan^{-1}{\frac{y}{\sqrt{x^2+y^2}+x}};y\ne0,$$
 
 $$\varphi=0;x\gt0\wedge y=0$$
 
@@ -1143,5 +1143,5 @@ $$y_2=\Im,$$
 
 $$y_3=\sqrt{(\Re\cdot x)^2+\Im^2},$$
 
-$$y_4=\frac{\Im}{|\Im|}\cdot\frac{\pi}{2}-\arctan({\frac{\Re}{\Im}\cdot x})$$
+$$y_4=\frac{\Im}{|\Im|}\cdot\frac{\pi}{2}-\tan^{-1}({\frac{\Re}{\Im}\cdot x})$$
 
