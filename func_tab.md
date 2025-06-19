@@ -165,4 +165,4 @@ Schrausser, D. G. (2022). Mathematical-Statistical Algorithm Interpreter, SCHRAU
 
 ———. (2023). *Schrausser/SSR: Solar System Simulation (version v3.7)*. Zenodo. [https://doi.org/10.5281/zenodo.8240203](https://doi.org/10.5281/zenodo.8240203)
 
-———. (2025). Schrausser/HP_Prime_MATH: 1.5. *Zenodo. January 2025*. [https://doi.org/10.5281/zenodo.14721085](https://doi.org/10.5281/zenodo.14721085)
+———. (2025). Schrausser/HP_Prime_MATH: 3.0. *Zenodo. June 2025*. [https://doi.org/10.5281/zenodo.14721085](https://doi.org/10.5281/zenodo.14721085)
