@@ -609,7 +609,7 @@ Schrausser, D. G. (1996). *Permutationstests: Theoretische und praktische Arbeit
 
 ———. (2024d). *Schrausser/Various_programs: 3.5* (version v3.5.2). Zenodo. [https://doi.org/10.5281/zenodo.14280500](https://doi.org/10.5281/zenodo.14280500)
 
-———. (2025). Schrausser/HP_Prime_MATH: 1.5. *Zenodo. January 2025*. [https://doi.org/10.5281/zenodo.14721085](https://doi.org/10.5281/zenodo.14721085)
+———. (2025). Schrausser/HP_Prime_MATH: 3.0. *Zenodo. June 2025*. [https://doi.org/10.5281/zenodo.14721085](https://doi.org/10.5281/zenodo.14721085)
 
 Siegel, I. H. (1942). Index-Number Differences: Geometric Means. *Journal of the American Statistical Association 37* (218): 271–74. [https://doi.org/10.1080/01621459.1942.10500636](https://doi.org/10.1080/01621459.1942.10500636)
 
