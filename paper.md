@@ -55,11 +55,11 @@ also called *biseral*.
 
 (11) Fisher $Z$-transformation, Fisher ([1915](https://doi.org/10.2307/2331838)).
 
-(12) Fisher $Z$ *difference*, also Cohen's $q$ (Cohen, [1988](https://www.scirp.org/(S(lz5mqp453edsnp55rrgjct55))/reference/ReferencesPapers.aspx?ReferenceID=2041144), p. 110).
+(12) Fisher $Z$ *difference*, also Cohen's $q$ (Cohen, [1988](https://doi.org/10.4324/9780203771587), p. 110).
 
 (13) *Averaged* Fisher $Z$.
 
-(14) Coefficient of *multiple* correlation $R_{c,12}$, for $\hat R_{c,12}^2$ see Olkin and Pratt ([1958](https://doi.org/10.1214/aoms/1177706717)), with the *effect size* for *multiple* regression $f^2$ (Cohen, [1988](https://www.scirp.org/(S(lz5mqp453edsnp55rrgjct55))/reference/ReferencesPapers.aspx?ReferenceID=2041144), p. 410).
+(14) Coefficient of *multiple* correlation $R_{c,12}$, for $\hat R_{c,12}^2$ see Olkin and Pratt ([1958](https://doi.org/10.1214/aoms/1177706717)), with the *effect size* for *multiple* regression $f^2$ (Cohen, [1988](https://doi.org/10.4324/9780203771587), p. 410).
 
 ### 2.2. Exposure
 
@@ -125,7 +125,7 @@ Following functions for the most *relevant* methods are available:
 
 (16) *Standard error* of *prediction* $\sigma_{\hat yx}$ , *confidence interval* $CI_p$.
 
-(17) *Effect size* $\epsilon$, Cohen's $d$ (Cohen, [1977](https://doi.org/10.1016/C2013-0-10517-X), [1988](https://www.scirp.org/(S(lz5mqp453edsnp55rrgjct55))/reference/ReferencesPapers.aspx?ReferenceID=2041144), p. 20, p. 49, [1992](https://doi.org/10.1037/0033-2909.112.1.15)), Borenstein et al.  ([1997](https://www.semanticscholar.org/paper/Power-and-precision-%3A-a-computer-program-for-power-Borenstein-Rothstein/f379f13a460b01488c35aea408e355436dbae839)), Borenstein et al. ([2001](https://books.google.com/books?id=tYg02XZBeNAC&printsec=frontcover&hl=de#v=onepage&q&f=false)).
+(17) *Effect size* $\epsilon$, Cohen's $d$ (Cohen, [1977](https://doi.org/10.1016/C2013-0-10517-X), [1988](https://doi.org/10.4324/9780203771587), p. 20, p. 49, [1992](https://doi.org/10.1037/0033-2909.112.1.15)), Borenstein et al.  ([1997](https://www.semanticscholar.org/paper/Power-and-precision-%3A-a-computer-program-for-power-Borenstein-Rothstein/f379f13a460b01488c35aea408e355436dbae839)), Borenstein et al. ([2001](https://books.google.com/books?id=tYg02XZBeNAC&printsec=frontcover&hl=de#v=onepage&q&f=false)).
 
 (18) *Optimal effect size* $\epsilon_p$.
 
@@ -155,7 +155,7 @@ An account of the *systematics and logic* of *dependent probabilities* within th
 
 The arguably *most* important methods regarding the calculation of *probability parameters* are implemented as follows:
 
-(1) *Arcsine transformation*, Cohen's $h$ (Cohen, [1988](https://www.scirp.org/(S(lz5mqp453edsnp55rrgjct55))/reference/ReferencesPapers.aspx?ReferenceID=2041144), p. 181).
+(1) *Arcsine transformation*, Cohen's $h$ (Cohen, [1988](https://doi.org/10.4324/9780203771587), p. 181).
 
 (2) *Additive probability* for *independent* events $^u p(\cup_n A)$, which corresponding to the *geometric distribution* $f(X\le r|p)$.
 
@@ -296,7 +296,7 @@ Cattell, R. B. (1966). The Scree Test for the Number of Factors. *Multivariate B
 
 Cohen, J. (1977). *Statistical Power Analysis for the Behavioral Science*. Amsterdam: Elsevier Academic Press. [https://doi.org/10.1016/C2013-0-10517-X](https://doi.org/10.1016/C2013-0-10517-X)
 
-———. (1988). *Statistical Power Analysis for the Behavioral Science*. 2nd ed. Hillsdale, NJ: Lawrence Erlbaum Associates. [https://www.scirp.org/(S(lz5mqp453edsnp55rrgjct55))/reference/ReferencesPapers.aspx?ReferenceID=2041144](https://www.scirp.org/(S(lz5mqp453edsnp55rrgjct55))/reference/ReferencesPapers.aspx?ReferenceID=2041144)
+———. (1988). *Statistical Power Analysis for the Behavioral Science*. 2nd ed. Hillsdale, NJ: Lawrence Erlbaum Associates. [https://doi.org/10.4324/9780203771587](https://doi.org/10.4324/9780203771587)
 
 ———. (1992). A Power Primer. *Psychological Bulletin 112* (1): 155–59. [https://doi.org/10.1037/0033-2909.112.1.15](https://doi.org/10.1037/0033-2909.112.1.15)
 
