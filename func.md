@@ -21,7 +21,7 @@ $$t_{(df)}=\frac{r\cdot\sqrt{n-2}}{\sqrt{1-r^2}}$$
 
 where
 
-$r^2$ = coefficient of determination, redundancy $det%=r^2\cdot100$  
+$r^2$ = coefficient of determination, redundancy $det\\%=r^2\cdot 100$  
 $\sigma^2_{xy}$ = covariance of $x$ and $y$  
 $df$ = $n-2$  
 
