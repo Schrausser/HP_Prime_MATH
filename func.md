@@ -744,7 +744,7 @@ $$\hat\sigma_{d_{\overline x}}=\sqrt{\frac{\sum_{i=1}^{n_1}{(x_{(i,1)}-\overline
 where
 
 $d_{\overline x}$ = difference of the means $\overline x_1$ and $\overline x_2$  
-$df$ = $n_1+n_2=n-2$  
+$df$ = $n-2$  
 
 <br>
 
