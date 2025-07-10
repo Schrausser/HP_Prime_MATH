@@ -1,0 +1,883 @@
+<html> 
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="Author" content="Dietmar Gerald Schrausser">
+
+<title>
+HP_Prime_Math/func
+</title>
+
+</head> 
+<body style="font-family:calibri;font-size:85%;background-color:#eceff1;color:#37474f">
+
+<style></style>
+<h1 id="hp_prime_math-functions">HP_Prime_MATH: Functions</h1>
+<p><a href="https://orcid.org/0000-0002-4924-8280">
+Dietmar G. Schrausser</a>, 2025</p>
+<br>
+<h3 id="correlation">Correlation</h3>
+<br>
+<h4 id="koric_m-rxyredtrtrwprwprwx-e01-pearson-product-moment-correlation-coefficient-r_xy">[<code>KOR</code>|<code>IC_M</code>] [<code>rxy</code>|<code>RED</code>|<code>tr</code>|<code>TRW</code>|<code>pRW</code>|<code>pRWx</code>] [<code>E01</code>] Pearson product-moment correlation coefficient <math display="inline">
+<msub><mi>r</mi><mrow data-mjx-texclass="ORD"><mi>x</mi><mi>y</mi></mrow></msub>
+</math></h4>
+<hr />
+<p>$$r_{xy}=\frac{\sigma_{xy}^2}{\sigma_x\cdot \sigma_y},$$</p>
+<p>$$\sigma^2_{xy}=\frac{\sum_{i=1}^n{(x_i-\overline{x})\cdot(y_i-\overline{y})}}{n}$$</p>
+<p>with</p>
+<p>$$t_{(df)}=\frac{r\cdot\sqrt{n-2}}{\sqrt{1-r^2}}$$</p>
+<p>where</p>
+<p><math display="inline"><msup><mi>r</mi><mn>2</mn></msup>
+</math> = coefficient of determination, redundancy <math display="inline"><mi>d</mi><mi>e</mi><mi>t</mi><mi mathvariant="normal">%</mi><mo>=</mo><msup><mi>r</mi><mn>2</mn></msup><mo>⋅</mo><mn>100</mn>
+</math><br />
+<math display="inline"><msubsup><mi>&sigma;</mi><mrow data-mjx-texclass="ORD"><mi>x</mi><mi>y</mi></mrow><mn>2</mn></msubsup>
+</math> = covariance of <math display=„inline“> <mi>x</mi> </math> and <math display=„inline“> <mi>y</mi> </math><br />
+<math display=„inline“>
+<mi>d</mi><mi>f</mi>
+</math> = <math display="inline">
+<mi>n</mi><mo>&minus; 2</mo>
+</math></p>
+<br>
+<h4 id="rho-spearmans-rho">[<code>RHO</code>] Spearman's <math display="inline">
+<mi>&rho;</mi>
+</math></h4>
+<hr />
+<p>Equivalent to the product moment correlation when <em>rank</em> values are present.</p>
+<p>$$r_s=\rho=1-\frac{6\cdot\sum_{i=1}^n{d_i^2}}{n\cdot(n^2-2)}$$</p>
+<p>with</p>
+<p>$$t_{(df)}=\frac{\rho\cdot\sqrt{n-2}}{\sqrt{1-\rho^2}};n\ge30$$</p>
+<p>where</p>
+<p><math display="inline"><msub><mi>d</mi><mi>i</mi></msub></math> = rank difference of <math display="inline"><msub><mi>x</mi><mi>i</mi></msub></math> and <math display="inline"><msub><mi>y</mi><mi>i</mi></msub></math><br />
+<math display=„inline“>
+<mi>d</mi><mi>f</mi>
+</math> = <math display="inline">
+<mi>n</mi><mo>&minus; 2</mo>
+</math></p>
+<br>
+<h4 id="tau-kendalls-tau-tau_a">[<code>TAU</code>] Kendall's tau <math display="inline">
+<msub><mi>&tau;</mi><mi>a</mi></msub>
+</math></h4>
+<hr />
+<p>Without adjustment for <em>ties</em>.</p>
+<p>$$\tau_a=1-\frac{2\cdot n_d}{0.5\cdot n\cdot(n-1)},$$</p>
+<p>with</p>
+<p>$$z=3\cdot\tau_a\cdot\frac{\sqrt{n\cdot(n-1)}}{\sqrt{2\cdot(2\cdot n+5)}};n\gt 10$$</p>
+<p>alternatively</p>
+<p>$$z=\frac{n_c-n_d}{\sqrt{\frac{1}{18}\cdot n\cdot(n-1)\cdot(2\cdot n+5)}}$$</p>
+<p>where</p>
+<p><math display=„inline“> <mi>n</mi> </math> = total number of pairs<br />
+<math display="inline"><msub><mi>n</mi><mi>d</mi></msub></math> = number of discordant pairs<br />
+<math display="inline"><msub><mi>n</mi><mi>c</mi></msub></math> = number of concordant pairs, with <math display="inline"><msub><mi>n</mi><mi>c</mi></msub><mo>=</mo><mrow data-mjx-texclass="ORD"><mrow data-mjx-texclass="OPEN"><mo minsize="2.047em" maxsize="2.047em">(</mo></mrow><mfrac linethickness="0"><mi>n</mi><mn>2</mn></mfrac><mrow data-mjx-texclass="CLOSE"><mo minsize="2.047em" maxsize="2.047em">)</mo></mrow></mrow><mo>-</mo><msub><mi>n</mi><mi>d</mi></msub>
+</math></p>
+<br>
+<h4 id="delta2-somers-d">[<code>DELTA2</code>] Somers' <math display="inline">
+<mi>D</mi>
+</math></h4>
+<hr />
+<p>For <em>binary</em> data [0,1].</p>
+<p>$$D_{YX}=\frac{n_{1,1}}{n}-\frac{n_{1,0}}{n}$$</p>
+<p>where</p>
+<p><math display=„inline“> <mi>n</mi> </math> = total number of pairs<br />
+<math display="inline"><msub><mi>n</mi><mi>1,1</mi></msub></math> = number of pairs with <math display="inline"><mi>Y</mi><mo>=</mo><mn>1</mn><mo>,</mo><mi>X</mi><mo>=</mo><mn>1</mn>
+</math><br />
+<math display="inline"><msub><mi>n</mi><mi>1,0</mi></msub></math> = number of pairs with <math display="inline"><mi>Y</mi><mo>=</mo><mn>1</mn><mo>,</mo><mi>X</mi><mo>=</mo><mn>0</mn>
+</math></p>
+<br>
+<h4 id="rpbis-point-biserial-correlation-coefficient-r_pb">[<code>rpbis</code>] Point biserial correlation coefficient <math display="inline">
+<msub><mi>r</mi><mrow data-mjx-texclass="ORD"><mi>p</mi><mi>b</mi></mrow></msub>
+</math></h4>
+<hr />
+<p>Also point <em>biseral</em>.</p>
+<p>$$r_{pb}=\frac{\overline{x}_1-\overline{x}_0}{\sigma_x}\cdot\sqrt{\frac{n_1\cdot n_2}{n^2}}$$</p>
+<p>with</p>
+<p>$$t_{(df)}=\frac{r_{pb}\cdot\sqrt{n-2}}{\sqrt{1-r_{pb}^2}}$$</p>
+<p>where</p>
+<p><math display=„inline“>
+<mi>d</mi><mi>f</mi>
+</math> = <math display="inline">
+<mi>n</mi><mo>&minus; 2</mo>
+</math></p>
+<br>
+<h4 id="rbissrbiszrbisprbis-biserial-correlation-coefficient-r_bis">[<code>rbis</code>|<code>srbis</code>|<code>zrbis</code>|<code>prbis</code>] Biserial correlation coefficient <math display="inline">
+<msub><mi>r</mi><mrow data-mjx-texclass="ORD"><mi>b</mi><mi>i</mi><mi>s</mi></mrow></msub>
+</math></h4>
+<hr />
+<p>$$r_{bis}=\frac{\overline{x}_1-\overline{x}_0}{\sigma_x}\cdot\frac{n_1\cdot n_2}{\vartheta\cdot n^2}$$</p>
+<p>with</p>
+<p>$$z=\frac{r_{bis}}{\sigma_{r_{bis}}},$$</p>
+<p>$$\sigma_{r_{bis}}=\frac{\sqrt{n_1\cdot n_2}}{\vartheta\cdot n\cdot\sqrt{n}}$$</p>
+<p>where</p>
+<p><math display="inline"><mi>&vartheta;</mi><mo>=</mo><mfrac><mn>1</mn><msqrt><mn>2</mn><mo>&middot;</mo><mo>&pi;</mo></msqrt></mfrac><mo>&middot;</mo><msup><mo>e</mo><mrow data-mjx-texclass="ORD"><mo>-</mo><mfrac><mrow><mi>F</mi><mo stretchy="false">(</mo><mi>p</mi><mo>=</mo><mfrac><msub><mi>n</mi><mn>0</mn></msub><mi>n</mi></mfrac><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow><mn>2</mn></mfrac></mrow></msup>
+</math></p>
+<br>
+<h4 id="rbisru_1u_2zrbisrprbisr-rank-biserial-correlation-coefficient-r_bisr">[<code>rbisR</code>|<code>U_1</code>|<code>U_2</code>|<code>zrbisR</code>|<code>prbisR</code>] Rank biserial correlation coefficient <math display="inline">
+<msub><mi>r</mi><mrow data-mjx-texclass="ORD"><mi>b</mi><mi>i</mi><mi>s</mi><mi>R</mi></mrow></msub>
+</math></h4>
+<hr />
+<p>Also rank <em>biseral</em> correlation, corresponds to the <em>effect size</em> for the <em>Mann–Whitney</em> <math display="inline">
+<mi>U</mi>
+</math>-test.</p>
+<p>$$r_{bisR}=\frac{2}{n}\cdot(\overline{i}_1-\overline{i}_2)$$</p>
+<p>with</p>
+<p>$$z=\frac{U-n_1\cdot\frac{n_2}{2}}{\sqrt{\frac{n_1\cdot n_2\cdot(n+1)}{12}}}$$</p>
+<p>where</p>
+<p><math display="inline"><mi>U</mi><mo>=</mo><msub><mi>n</mi><mn>1</mn></msub><mo>&middot;</mo><msub><mi>n</mi><mn>2</mn></msub><mo>+</mo><mfrac><mrow><msubsup><mi>n</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><msub><mi>n</mi><mn>1</mn></msub></mrow><mn>2</mn></mfrac><mrow data-mjx-texclass="ORD"><mo>-</mo></mrow><munderover><mo data-mjx-texclass="OP">&Sigma;</mo><mrow data-mjx-texclass="ORD"><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow data-mjx-texclass="ORD"><msub><mi>n</mi><mn>1</mn></msub></mrow></munderover><msub><mi>x</mi><mi>i</mi></msub>
+</math></p>
+<br>
+<h4 id="phc-phixphipphi-phi-coefficient-phi">[<code>PHC</code>] [<code>PHI</code>|<code>xPHI</code>|<code>pPHI</code>] Phi coefficient <math display="inline">
+<mi>&Phi;</mi>
+</math></h4>
+<hr />
+<p>$$\Phi=\frac{a\cdot d-b\cdot c}{\sqrt{(a+c)\cdot(b+d)\cdot(a+b)\cdot(c+d)}}$$</p>
+<p>with</p>
+<p>$$\chi^2_{(df)}=n\cdot\Phi^2$$</p>
+<p>where</p>
+<p><math display="inline">
+<mi>d</mi><mi>f</mi>
+</math>=1</p>
+<br>
+<h4 id="phc-rtetsrtetprtet-tetrachoric-correlation-r_tet">[<code>PHC</code>] [<code>rtet</code>|<code>srtet</code>|<code>prtet</code>] Tetrachoric correlation <math display="inline">
+<msub><mi>r</mi><mrow data-mjx-texclass="ORD"><mi>t</mi><mi>e</mi><mi>t</mi></mrow></msub>
+</math></h4>
+<hr />
+<p><em>Proposed</em> approximate algorithm.</p>
+<p>$$r_{tet}=\cos\frac{\pi}{1+\sqrt{\frac{b\cdot c}{a\cdot d}}}$$</p>
+<p>with</p>
+<p>$$z=\frac{r_{tet}}{\sigma_{r_{tet}}},$$</p>
+<p>$$\sigma_{r_{tet}}=\sqrt{\frac{\frac{a+b}{n}\cdot\frac{a+c}{n}\cdot\frac{c+d}{n}\cdot\frac{b+d}{n}}{n}}\cdot\frac{1}{\vartheta_x\cdot \vartheta_y}$$</p>
+<p>where</p>
+<p><math display="inline"><msub><mi>&vartheta;</mi><mi>x</mi></msub><mo>=</mo><mfrac><mn>1</mn><msqrt><mn>2</mn><mo>&middot;</mo><mo>&pi;</mo></msqrt></mfrac><mo>&middot;</mo><msup><mo>e</mo><mrow data-mjx-texclass="ORD"><mo>-</mo><mfrac><mrow><mi>F</mi><mo stretchy="false">(</mo><mi>p</mi><mo>=</mo><mfrac><mrow><mi>c</mi><mo>+</mo><mi>d</mi></mrow><mi>n</mi></mfrac><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow><mn>2</mn></mfrac></mrow></msup>
+</math><br />
+<math display="inline"><msub><mi>&vartheta;</mi><mi>y</mi></msub><mo>=</mo><mfrac><mn>1</mn><msqrt><mn>2</mn><mo>&middot;</mo><mo>&pi;</mo></msqrt></mfrac><mo>&middot;</mo><msup><mo>e</mo><mrow data-mjx-texclass="ORD"><mo>-</mo><mfrac><mrow><mi>F</mi><mo stretchy="false">(</mo><mi>p</mi><mo>=</mo><mfrac><mrow><mi>b</mi><mo>+</mo><mi>d</mi></mrow><mi>n</mi></mfrac><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow><mn>2</mn></mfrac></mrow></msup>
+</math></p>
+<br>
+<h4 id="pkr-rxy_zzrxy_zprxy_zry_xz--partial-correlation-r_xycdot-z">[<code>PKR</code>] [<code>rxy_z</code>|<code>zrxy_z</code>|<code>prxy_z</code>|<code>ry_xz</code>]  Partial correlation <math display="inline">
+<msub><mi>r</mi><mrow data-mjx-texclass="ORD"><mi>x</mi><mi>y</mi><mo>&middot;</mo><mi>z</mi></mrow></msub>
+</math></h4>
+<hr />
+<p>$$r_{xy \cdot z}=\frac{r_{xy}-r_{xz}\cdot r_{yz}}{\sqrt{1-r_{xz}^2}\cdot \sqrt{1-r_{yz}^2}}$$</p>
+<p>with</p>
+<p>$$z=Z_{r_{xy\cdot z}}\cdot\sqrt{n-2}$$</p>
+<p>and <em>semi</em> partial correlation</p>
+<p>$$r_{y(x \cdot z)}=\frac{r_{xy}-r_{xz}\cdot r_{yz}}{\sqrt{1-r_{xz}^2}}$$</p>
+<br>
+<h4 id="zcor-zrrz-fisher-z-transformation">[<code>ZCor</code>] [<code>Zr</code>|<code>rZ</code>] Fisher <math display="inline">
+<mi>Z</mi>
+</math>-transformation</h4>
+<hr />
+<p>$$Z=\frac{1}{2}\cdot \ln\frac{1+r}{1-r}$$</p>
+<p>with</p>
+<p>$$z=\frac{Z}{\sqrt{\frac{1}{n-3}}}$$</p>
+<p>and</p>
+<p>$$r_Z=\frac{e^{2\cdot Z}-1}{e^{2\cdot Z}+1}$$</p>
+<br>
+<h4 id="zrrprr-fisher-z-difference-cohens-q">[<code>Zrr</code>|<code>prr</code>] Fisher <math display="inline">
+<mi>Z</mi>
+</math> difference, Cohen's <math display=„inline“> <mi>q</mi> </math></h4>
+<hr />
+<p>$$\theta=d_Z=Z_{r_1}-Z_{r_2}$$</p>
+<p>with</p>
+<p>$$z=\frac{d_Z}{\sqrt{\frac{1}{n_1-3}+\frac{1}{n_2-3}}}$$</p>
+<br>
+<h4 id="mzmr-averaged-fisher-z">[<code>mZ</code>|<code>mr</code>] Averaged Fisher <math display="inline">
+<mi>Z</mi>
+</math></h4>
+<hr />
+<p>$$\overline Z=\frac{\sum_{i=1}^k{(n_i-3)}\cdot Z_i}{\sum_{i=1}^k{(n_i-3)}}$$</p>
+<br>
+<h4 id="mcorr2-mcorrscrcf2fmcorrpmcorr-coefficient-of-multiple-correlation-r_c12-cohens-f2">[<code>MCORR2</code>] [<code>MCORR</code>|<code>SCR</code>|<code>Cf2</code>|<code>FMCORR</code>|<code>pMCORR</code>] Coefficient of multiple correlation <math display="inline"><msub><mi>R</mi><mrow data-mjx-texclass="ORD"><mi>c</mi><mo>,</mo><mn>12</mn></mrow></msub>
+</math>, Cohen's <math display="inline"><msup><mi>f</mi><mn>2</mn></msup>
+</math></h4>
+<hr />
+<p>$$R_{c,12}=\sqrt{\frac{r_{1c}^2+r_{2c}^2-2\cdot r_{12}\cdot r_{1c}\cdot r_{2c}}{1-r_{12}^2}},$$</p>
+<p>$$\hat R_{c,12}^2=1-\frac{n-3}{n-k-2}\cdot \biggl[(1-R_{c,12}^2)+\frac{2}{n-k}\cdot(1-R_{c,12}^2)^2\biggr];k=2$$</p>
+<p>with</p>
+<p>$$f^2=\frac{R_{c,12}^2}{1-R_{c,12}^2},$$</p>
+<p>$$F_{(3,df_2)}=\frac{R_{c,12}^2\cdot(n-4)}{(1-R_{c,12}^2)\cdot 3}$$</p>
+<p>where</p>
+<p><math display="inline"><msup><mi>f</mi><mn>2</mn></msup>
+</math> = effect size for multiple regression<br />
+<math display="inline"><mi>d</mi><msub><mi>f</mi><mn>2</mn></msub><mo>=</mo><mi>n</mi><mo>−</mo><mn>4</mn>
+</math></p>
+<br>
+<h3 id="exposure">Exposure</h3>
+<br>
+<h4 id="evtevaev-e02e03-exposure-value-ev">[<code>Ev</code>|<code>TEv</code>|<code>AEv</code>] [<code>E02</code>|<code>E03</code>] Exposure value <math display=„inline“>
+<mi>E</mi><mi>v</mi>
+</math></h4>
+<hr />
+<p>$$Ev=\log2\frac{{Av}^2}{Tv^{-1}}=\frac{\log(Tv\cdot Av^2)}{\log(2)}$$</p>
+<p>hence</p>
+<p>$$Tv=\frac{2^{Ev}}{Av^2},$$</p>
+<p>$$Av=\frac{\sqrt{2^{Ev}\cdot Tv}}{Tv}$$</p>
+<p>where</p>
+<p><math display=„inline“>
+<mi>T</mi><mi>v</mi>
+</math> = time value with <math display="inline"><mi>T</mi><mi>v</mi><mo>=</mo><msup><mi>s</mi><mrow data-mjx-texclass="ORD"><mo>-</mo><mn>1</mn></mrow></msup>
+</math><br />
+<math display=„inline“>
+<mi>A</mi><mi>v</mi>
+</math> = aperture value <math display=„inline“> <mi>f</mi> </math></p>
+<br>
+<h4 id="avtv-aperture-av-for-time-tv-with-given-ev">[<code>AvTv</code>] Aperture <math display=„inline“>
+<mi>A</mi><mi>v</mi>
+</math> for time <math display=„inline“>
+<mi>T</mi><mi>v</mi>
+</math> with given <math display=„inline“>
+<mi>E</mi><mi>v</mi>
+</math></h4>
+<hr />
+<p>$$Av_{Tv}=Av_{Tv_0}\cdot a_{Tv}$$</p>
+<p>with</p>
+<p>$$a_{Tv}=2^{\frac{1}{2}\cdot\log2\frac{Tv_0}{Tv}}$$</p>
+<p>$$=e^{\frac{1}{2}\cdot\log\frac{Tv_0}{Tv}}$$</p>
+<p>where</p>
+<p><math display=„inline“>
+<mi>T</mi><mi>v</mi>
+</math> = time value with <math display="inline"><mi>T</mi><mi>v</mi><mo>=</mo><msup><mi>s</mi><mrow data-mjx-texclass="ORD"><mo>-</mo><mn>1</mn></mrow></msup>
+</math><br />
+<math display="inline"><mi>T</mi><msub><mi>v</mi><mn>0</mn></msub>
+</math> = initial time value with <math display="inline"><mi>T</mi><msub><mi>v</mi><mn>0</mn></msub><mo>=</mo><msup><mi>s</mi><mrow data-mjx-texclass="ORD"><mo>-</mo><mn>1</mn></mrow></msup>
+</math><br />
+<math display=„inline“>
+<mi>A</mi><mi>v</mi>
+</math> = aperture value <math display=„inline“> <mi>f</mi> </math></p>
+<br>
+<h4 id="avs-e03-aperture-av-for-speed-s-with-given-ev">[<code>AvS</code>] [<code>E03</code>] Aperture <math display=„inline“>
+<mi>A</mi><mi>v</mi>
+</math> for speed <math display=„inline“> <mi>S</mi> </math> with given <math display=„inline“>
+<mi>E</mi><mi>v</mi>
+</math></h4>
+<hr />
+<p>$$Av_S=Av_{S_0}\cdot a_{S}$$</p>
+<p>with</p>
+<p>$$a_S=2^{\frac{1}{2}\cdot\log2\frac{S}{S_0}}$$</p>
+<p>$$=e^{\frac{1}{2}\cdot\log\frac{S}{S_0}}$$</p>
+<p>where</p>
+<p><math display=„inline“> <mi>S</mi> </math> = arithmetic speed <math display="inline">
+<mi>I</mi><mi>S</mi><mi>O</mi>
+</math><br />
+<math display="inline"><msub><mi>S</mi><mo>0</mo></msub></math> = initial arithmetic speed <math display="inline">
+<mi>I</mi><mi>S</mi><mi>O</mi>
+</math><br />
+<math display=„inline“>
+<mi>A</mi><mi>v</mi>
+</math> = aperture value <math display=„inline“> <mi>f</mi> </math></p>
+<br>
+<h4 id="avtvk-aperture-av-shift-from-time-tv-in-steps-k">[<code>AvTvk</code>] Aperture <math display=„inline“>
+<mi>A</mi><mi>v</mi>
+</math> shift from time <math display=„inline“>
+<mi>T</mi><mi>v</mi>
+</math> in steps <math display=„inline“> <mi>k</mi> </math></h4>
+<hr />
+<p>$$Tv_{n-k}=Tv_n\cdot 2^k,Tv_{n+k}=\frac{Tv_n}{2^k}$$</p>
+<p>with</p>
+<p>$$Av=Av_0\cdot\sqrt2^k$$</p>
+<p>where</p>
+<p><math display="inline"><mi>A</mi><msub><mi>v</mi><mn>0</mn></msub>
+</math> = initial aperture value</p>
+<br>
+<h4 id="avsk-aperture-av-shift-from-speed-s-in-steps-k">[<code>AvSk</code>] Aperture <math display=„inline“>
+<mi>A</mi><mi>v</mi>
+</math> shift from speed <math display=„inline“> <mi>S</mi> </math> in steps <math display=„inline“> <mi>k</mi> </math></h4>
+<hr />
+<p>$$S_{n+k}=S_n\cdot \sqrt{2}^k,S_{n-k}=\frac{S_n}{\sqrt{2}^k}$$</p>
+<p>with</p>
+<p>$$Av=Av_0\cdot\sqrt[]2^k$$</p>
+<p>where</p>
+<p><math display="inline"><mi>A</mi><msub><mi>v</mi><mn>0</mn></msub>
+</math> = initial aperture value</p>
+<br>
+<h4 id="isolisoa-speed-s-in--logarithmic--iso-or-arithmetic-iso-conversion">[<code>ISOL</code>|<code>ISOA</code>] Speed <math display=„inline“> <mi>S</mi> </math> in  logarithmic  <math display="inline">
+<mi>I</mi><mi>S</mi><mi>O</mi><mi>°</mi>
+</math> or arithmetic <math display="inline">
+<mi>I</mi><mi>S</mi><mi>O</mi>
+</math> conversion</h4>
+<hr />
+<p>$$S°=10\cdot\log10(S)+1=\frac{10\cdot\log{(S)}}{\log{(10)}}+1,$$</p>
+<p>$$S=10^{\frac{S°-1}{10}}$$</p>
+<br>
+<br>
+<h3 id="integration-pi-and-gamma">Integration, <math display="inline">
+<mo>&pi;</mo>
+</math> and <math display=„inline“> <mi>&Gamma;</mi> </math></h3>
+<br>
+<h4 id="f01f05-circular-function-pi">[<code>F01</code>|<code>F05</code>] Circular function, <math display="inline">
+<mo>&pi;</mo>
+</math></h4>
+<hr />
+<p>Weierstraß describes <math display="inline"><mfrac><mo>&pi;</mo><mn>2</mn></mfrac><mo>=</mo><msubsup><mo data-mjx-texclass="OP">&int;</mo><mn>0</mn><mrow data-mjx-texclass="ORD"><mi mathvariant="normal">&infin;</mi></mrow></msubsup><mfrac><mn>1</mn><mrow><mn>1</mn><mo>&minus;</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mi>d</mi><mi>x</mi>
+</math>, which <em>may</em> be less heuristic.</p>
+<p>$$f(x)=\sqrt{1-(\frac{x-b}{a})^2}\cdot a+c$$</p>
+<p>with</p>
+<p>$$F(x)=\frac{\pi}{2}=\int_{-1}^1f(x)dx;a=1,b=c=0$$</p>
+<br>
+<h4 id="f01z-spherical-functions-pi">[<code>F01Z</code>] Spherical functions, <math display="inline">
+<mo>&pi;</mo>
+</math></h4>
+<hr />
+<p>$$f_1(x,y)=\sqrt{(1-x^2)+(1-y^2)}$$</p>
+<p>with</p>
+<p>$$F_1(x,y)=\frac{\sqrt{2}\cdot8\cdot\pi}{3}=2\cdot\iint_{-\sqrt{2}}^{\sqrt{2}}f_1(x,y)dxdy$$</p>
+<p>where</p>
+<p><math display="inline"><mi>d</mi><mo>=</mo><mn>2</mn><mo>&middot;</mo><msqrt><mn>2</mn></msqrt>
+</math><br />
+<math display="inline"><mo>&pi;</mo><mo>=</mo><mfrac><mrow><mn>3</mn><mo>&middot;</mo><msub><mi>F</mi><mn>1</mn></msub><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mrow><mn>8</mn><mo>&middot;</mo><msqrt><mn>2</mn></msqrt></mrow></mfrac>
+</math><br />
+<math display="inline"><mi>O</mi><mo>=</mo><mn>8</mn><mo>&middot;</mo><mo>&pi;</mo>
+</math></p>
+<p>$$f_2(x,y)=\sqrt{1-x^2-y^2}$$</p>
+<p>with</p>
+<p>$$F_2(x,y)=\frac{4\cdot\pi}{3}=2\cdot\iint_{-1}^{1}f_2(x,y)dxdy$$</p>
+<p>where</p>
+
+<p><math display="inline"><mi>d</mi><mo>=</mo><mn>2</mn></math><br />
+
+<math display="inline"><mo>&pi;</mo><mo>=</mo><mfrac><mrow><mn>3</mn><mo>&middot;</mo><msub><mi>F</mi><mn>2</mn></msub><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mn>4</mn></mfrac>
+</math></p>
+<math display="inline"><mi>O</mi><mo>=</mo><mn>4</mn><mo>&middot;</mo><mo>&pi;</mo>
+</math>
+
+<p>$$f_3(x,y)=\sqrt{(x-x^2)+(y-y^2)}$$</p>
+<p>with</p>
+<p>$$F_3(x,y)=\frac{\sqrt{2}\cdot\pi}{3}=2\cdot\iint_{1-\sqrt{\frac{1}{2}}-\frac{1}{2}}^{1+\sqrt{\frac{1}{2}}-\frac{1}{2}}f_3(x,y)dxdy$$</p>
+<p>where</p>
+
+<p><math display="inline"><mi>d</mi><mo>=</mo><msqrt><mn>2</mn></msqrt>
+</math><br />
+<math display="inline"><mo>&pi;</mo><mo>=</mo><mfrac><mrow><mn>3</mn><mo>&middot;</mo><msub><mi>F</mi><mn>3</mn></msub><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><msqrt><mn>2</mn></msqrt></mfrac></math><br />
+<math display="inline"><mi>O</mi><mo>=</mo><mo>&pi;</mo>
+</math></p>
+
+<br>
+<h4 id="f04f01z-gamma-function-gamma">[<code>F04</code>|<code>F01Z</code>] Gamma function, <math display=„inline“> <mi>&Gamma;</mi> </math></h4>
+<hr />
+<p>$$f(x,t)=\vartheta_\Gamma=t^{x-1}\cdot e^t$$</p>
+<p>with</p>
+<p>$$F(x,t)=\Gamma_x=\int_{0}^{\infty}f(x,t) dt+c,$$
+$$F'(x)=\frac{\partial \Gamma}{\partial x}$$</p>
+<br>
+<br>
+<h3 id="distribution">Distribution</h3>
+<br>
+<h4 id="q01_-zwertzvalzvalp-standardizing-z-values">[<code>Q01_</code>] [<code>ZWERT</code>|<code>zVAL</code>|<code>zVALp</code>] Standardizing, <math display="inline">
+<mi>z</mi>
+</math>-values</h4>
+<hr />
+<p>$$z=\frac{a-\overline x_x}{\sigma_x},$$</p>
+<p>$$\zeta=z'=\frac{a-\overline x_x}{\hat\sigma_x}$$</p>
+<p>where</p>
+<p><math display="inline">
+<mi>z</mi><mi>′</mi>
+</math> = estimated population <math display="inline">
+<mi>z</mi>
+</math>-values</p>
+<br>
+<h4 id="npz-quantity-proportion-of-a-at-n-n_ge-p">[<code>npz</code>] Quantity proportion of <math display="inline">
+<mi>a</mi>
+</math> at <math display="inline">
+<mi>N</mi>
+</math>, <math display="inline"><msub><mi>n</mi><mrow data-mjx-texclass="ORD"><msup><mi></mi><mo>&ge;</mo></msup><mi>p</mi></mrow></msub>
+</math></h4>
+<hr />
+<p>$$n_{^\ge p}=(1-p_{{\frac{a-\overline x}{\sigma}}})\cdot N$$</p>
+<p>where</p>
+<p><math display="inline">
+<mi>a</mi>
+</math> = test value<br />
+<math display="inline">
+<mi>N</mi>
+</math> = number of cases, population</p>
+<br>
+<h4 id="amg-weighted-arithmetic-mean-ddotoverline-x">[<code>AMG</code>] Weighted arithmetic mean</h4>
+<hr />
+<p>$$\ddot{\overline x}=\frac{\sum_{i=1}^k{\overline x_i\cdot n_i}}{n}$$</p>
+<br>
+<h4 id="q01_amggm_-geometric-mean-dot-x">[<code>Q01_</code>|<code>AMG</code>|<code>GM_</code>] Geometric mean <math display="inline"><mrow data-mjx-texclass="ORD"><mover><mi>x</mi><mo>&dot;</mo></mover></mrow></math></h4>
+<hr />
+<p>$$\dot x=\sqrt[n]{\prod_{i=1}^n{x_i}},$$</p>
+<p>$$\ddot{\dot x}=\sqrt[\sum_{i=1}^k{n_i}]{\prod_{i=1}^k{\dot x_i}^{n_i}}$$</p>
+<br>
+<h4 id="q01_amghm_-harmonic-mean-overlineoverline-x">[<code>Q01_</code>|<code>AMG</code>|<code>HM_</code>] Harmonic mean <math display="inline"><mrow data-mjx-texclass="ORD"><mover><mi>x</mi><mo>=</mo></mover></mrow></math></h4>
+<hr />
+<p>$$\overline{\overline x}=H=\frac{n}{\sum_{i=1}^n{x_i^{-1}}},$$</p>
+<p>$$\ddot{\overline{\overline x}}=\frac{\sum_{i=1}^k{n_i}}{\sum_{i=1}^k\frac{n_i}{\overline{\overline x}_i}}$$</p>
+<br>
+<h4 id="q01_-coefficient-of-variation-omega">[<code>Q01_</code>] Coefficient of variation <math display=„inline“> <mi>&omega;</mi> </math></h4>
+<hr />
+<p>$$\omega=\frac{\sigma}{\overline x};\overline x\gt0$$</p>
+<br>
+<h4 id="mdn-mean-dispersion-overline-d">[<code>MDN</code>] Mean dispersion <math display="inline"><mover><mi>d</mi><mo accent="true">&minus;</mo></mover>
+</math></h4>
+<hr />
+<p>$$\overline d=\frac{\sum_{i=1}^n{|x_i-\overline x|}}{\sum_{i=1}^n1};x_i\ne \overline x,$$</p>
+<p>$$\hat{\overline \delta}=\sigma\cdot\zeta\cdot\sqrt{\frac{n}{n-1}}=\hat\sigma\cdot\zeta$$</p>
+<p>with</p>
+<p>$$\hat\sigma_{\overline d}=\sigma\cdot\frac{1}{2\cdot\zeta\cdot\sqrt{n}}$$</p>
+<p>where</p>
+<p><math display="inline"><msub><mi>&zeta;</mi><mrow data-mjx-texclass="ORD"><mover><mi>d</mi><mo accent="true">&minus;</mo></mover></mrow></msub><mo>=</mo><mover><mi>&delta;</mi><mo accent="true">&minus;</mo></mover><mo>=</mo><mfrac><mn>4</mn><msup><mn>5</mn></msup></mfrac>
+</math></p>
+<br>
+<h4 id="nvtlg-e01f02f03-standard-normal-distribution-fxz">[<code>NVTLG</code>] [<code>E01</code>|<code>F02</code>|<code>F03</code>] Standard normal distribution <math display=„inline“><mi>f</mi><mo stretchy=„false“>(</mo><mi>x</mi><mo>=</mo><mi>z</mi><mo stretchy=„false“>)</mo>
+</math></h4>
+<hr />
+<p>$$f(z)=\vartheta=\frac{1}{\sqrt{2\cdot\pi}}\cdot e^{-\frac{z^2}{2}}$$</p>
+<p>with</p>
+<p>$$F(z)=p=\int_{-\infty}^z{f(z)dz},$$
+$$f'(z)=\frac{\partial f(z)}{\partial z}$$</p>
+<br>
+<h4 id="nvxy-f01z-bivariate-normal-distribution-fz_1z_2">[<code>NVXY</code>] [<code>F01Z</code>] Bivariate normal distribution <math display="inline"><mi>f</mi><mo stretchy="false">(</mo><msub><mi>z</mi><mn>1</mn></msub><mo>,</mo><msub><mi>z</mi><mn>2</mn></msub><mo stretchy="false">)</mo>
+</math></h4>
+<hr />
+<p>$$f(z_1,z_2)=\vartheta=\frac{1}{2\cdot\pi\cdot\sqrt{1-r^2}}\cdot e^{\frac{-1}{2\cdot(1-r^2)}\cdot(z_1^2-2\cdot r\cdot z_1\cdot z_2+z_2^2)},$$</p>
+<p>$$F(z_1,z_2)=1=\iint_{-\infty}^\infty f(z_1,z_2)dz_1dz_2$$</p>
+<p>where</p>
+<p><math display=„inline“> <mi>r</mi> </math> = correlation <math display="inline"><msub><mi>r</mi><mrow data-mjx-texclass="ORD"><mo stretchy="false">(</mo><msub><mi>z</mi><mn>1</mn></msub><mo>,</mo><msub><mi>z</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></msub>
+</math></p>
+<br>
+<h4 id="tvtlgf06_-f02f06f03z-students-t-distribution-fxt">[<code>tVTLG</code>|<code>F06_</code>] [<code>F02</code>|<code>F06</code>|<code>F03Z</code>] Student's <math display=„inline“> <mi>t</mi> </math>-distribution <math display=„inline“><mi>f</mi><mo stretchy=„false“>(</mo><mi>x</mi><mo>=</mo><mi>t</mi><mo stretchy=„false“>)</mo>
+</math></h4>
+<hr />
+<p>$$f(t)=\vartheta=\frac{\Gamma_\frac{df+1}{2}}{\Gamma_{\frac{df}{2}}}\cdot(df\cdot \pi)^{-\frac{1}{2}}\cdot(1+\frac{t^2}{df})^{-\frac{df+1}{2}}$$</p>
+<p>with</p>
+<p>$$F(t,df)=p=\int_{-\infty}^t{f(t)dt}$$</p>
+<p>where</p>
+<p><math display="inline"><msub><mi mathvariant="normal">&Gamma;</mi><mi>x</mi></msub><mo>=</mo><msubsup><mo data-mjx-texclass="OP">&int;</mo><mrow data-mjx-texclass="ORD"><mn>0</mn></mrow><mi mathvariant="normal">&infin;</mi></msubsup><mrow data-mjx-texclass="ORD"><msup><mi>y</mi><mrow data-mjx-texclass="ORD"><mi>x</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>&middot;</mo><msup><mo>e</mo><mrow data-mjx-texclass="ORD"><mo>-</mo><mi>y</mi></mrow></msup><mi>d</mi><mi>y</mi><mo>+</mo><mi>c</mi></mrow>
+</math></p>
+<br>
+<h4 id="ch2vtlgf07_-f02f07f03z-chi2-distribution-fxchi2">[<code>ch2VTLG</code>|<code>F07_</code>] [<code>F02</code>|<code>F07</code>|<code>F03Z</code>] <math display="inline"><msup><mi>&chi;</mi><mn>2</mn></msup>
+</math>-distribution <math display="inline"><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo>=</mo><msup><mi>&chi;</mi><mn>2</mn></msup><mo stretchy="false">)</mo>
+</math></h4>
+<hr />
+<p>$$f(\chi^2)=\vartheta=\frac{1}{2^\frac{df}{2}\cdot\Gamma_\frac{df}{2}}\cdot{\chi^2}^{\frac{df}{2}-1}\cdot e^{-\frac{\chi^2}{2}}$$</p>
+<p>with</p>
+<p>$$F(\chi^2,df)=1-p^{\alpha2}=\int_{0}^{\chi^2}{f(\chi^2)d\chi^2}$$</p>
+<p>where</p>
+<p><math display="inline"><msub><mi mathvariant="normal">&Gamma;</mi><mi>x</mi></msub><mo>=</mo><msubsup><mo data-mjx-texclass="OP">&int;</mo><mrow data-mjx-texclass="ORD"><mn>0</mn></mrow><mi mathvariant="normal">&infin;</mi></msubsup><mrow data-mjx-texclass="ORD"><msup><mi>y</mi><mrow data-mjx-texclass="ORD"><mi>x</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>&middot;</mo><msup><mo>e</mo><mrow data-mjx-texclass="ORD"><mo>-</mo><mi>y</mi></mrow></msup><mi>d</mi><mi>y</mi><mo>+</mo><mi>c</mi></mrow>
+</math></p>
+<br>
+<h4 id="fvtlg-f02f03z-f-distribution-fxf">[<code>FVTLG</code>] [<code>F02</code>|<code>F03Z</code>] <math display=„inline“> <mi>F</mi> </math>-distribution <math display=„inline“><mi>f</mi><mo stretchy=„false“>(</mo><mi>x</mi><mo>=</mo><mi>F</mi><mo stretchy=„false“>)</mo>
+</math></h4>
+<hr />
+<p>$$f(F)=\vartheta=\frac{\Gamma_{\frac{df_1+df_2}{2}}}{\Gamma_{\frac{df_1}{2}}\cdot\Gamma_{\frac{df_2}{2}}}\cdot(\frac{df_1}{df_2})^{\frac{df_1}{2}}\cdot F^{\frac{df_1}{2}-1}\cdot(1+\frac{df_1}{df_2}\cdot F)^{-\frac{df_1+df_2}{2}}$$</p>
+<p>with</p>
+<p>$$F(F,df_1,df_2)=1-p^{\alpha2}=\int_{0}^{F}{f(F)dF}$$</p>
+<p>where</p>
+<p><math display="inline"><msub><mi mathvariant="normal">&Gamma;</mi><mi>x</mi></msub><mo>=</mo><msubsup><mo data-mjx-texclass="OP">&int;</mo><mrow data-mjx-texclass="ORD"><mn>0</mn></mrow><mi mathvariant="normal">&infin;</mi></msubsup><mrow data-mjx-texclass="ORD"><msup><mi>y</mi><mrow data-mjx-texclass="ORD"><mi>x</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>&middot;</mo><msup><mo>e</mo><mrow data-mjx-texclass="ORD"><mo>-</mo><mi>y</mi></mrow></msup><mi>d</mi><mi>y</mi><mo>+</mo><mi>c</mi></mrow>
+</math></p>
+<br>
+<h4 id="q02_-third-standardized-moment-skewness--alpha_3">[<code>Q02_</code>] Third standardized moment, skewness  <math display=„inline“><msub><mi>&alpha;</mi><mn>3</mn></msub>
+</math></h4>
+<hr />
+<p>$$\alpha_3=\frac{\sum_{i=1}^n{z_i^3}}{n},$$</p>
+<p>$$\hat\alpha_3=\frac{n\cdot\sum_{i=1}^n{(x_i-\overline x)^3}}{(n-1)\cdot(n-2)\cdot\hat\sigma^3}$$</p>
+<p>with</p>
+<p>$$z=\frac{\alpha_3}{\sqrt{\frac{6}{n}}}$$</p>
+<br>
+<h4 id="q02_-fourth-standardized-moment-excess-kurtosis-alpha_4">[<code>Q02_</code>] Fourth standardized moment, excess kurtosis <math display=„inline“><msub><mi>&alpha;</mi><mn>4</mn></msub>
+</math></h4>
+<hr />
+<p>$$\alpha_4=\frac{\sum_{i=1}^n{z_i^4}}{n}-3,$$</p>
+<p>$$\hat\alpha_4=\frac{n\cdot(n+1)\cdot\sum_{i=1}^n{(x_i-\overline x)^4}-3\cdot\sum_{i=1}^n{(x_i-\overline x)^2}\cdot\sum_{i=1}^n{(x_i-\overline x)^2\cdot(n-1)}}{(n-1)\cdot(n-2)\cdot(n-3)\cdot\hat\sigma^4}$$</p>
+<p>with</p>
+<p>$$z=\frac{\alpha_4}{2\cdot\sqrt{\frac{6}{n}}}$$</p>
+<br>
+<h4 id="smg-cix-estimated-standard-error-of-mean-hatsigma_overline-x-confidence-interval-ci_p">[<code>SMG</code>] [<code>CIx</code>] Estimated standard error of mean <math display="inline"><msub><mrow data-mjx-texclass="ORD"><mover><mi>&sigma;</mi><mo stretchy="false">^</mo></mover></mrow><mrow data-mjx-texclass="ORD"><mover><mi>x</mi><mo accent="true">&minus;</mo></mover></mrow></msub>
+</math>, confidence interval <math display=„inline“><mi>C</mi><msub><mi>I</mi><mi>p</mi></msub>
+</math></h4>
+<hr />
+<p>$$\hat\sigma_{\overline x}=\sqrt{\frac{\sigma\cdot\frac{n}{n-1}}{n}}$$</p>
+<p>with</p>
+<p>$$CI_p=\overline x\pm t_{(1-\frac{1-p}{2},n-1)}\cdot\hat\sigma_{\overline x},$$</p>
+<p>$$CI_p=\theta\pm t_{(1-\frac{1-p}{2},df)}\cdot\hat\sigma_{\theta}$$</p>
+<p>where</p>
+<p><math display=„inline“> <mi>p</mi> </math> = probability<br />
+<math display=„inline“> <mi>n</mi> </math> = number of cases</p>
+<br>
+<h4 id="cixy-cir-e01-standard-error-of-prediction-sigma_hat-yx-confidence-interval-ci_p">[<code>CIXY</code>] [<code>CIr</code>] [<code>E01</code>] Standard error of prediction <math display="inline"><msub><mi>&sigma;</mi><mrow data-mjx-texclass="ORD"><mrow data-mjx-texclass="ORD"><mover><mi>y</mi><mo stretchy="false">^</mo></mover></mrow><mi>x</mi></mrow></msub>
+</math>, confidence interval <math display=„inline“><mi>C</mi><msub><mi>I</mi><mi>p</mi></msub>
+</math></h4>
+<hr />
+<p>$$\sigma_{\hat yx}=\sigma_y\cdot\sqrt{1-r^2}$$</p>
+<p>with</p>
+<p>$$CI_p=\hat y_x\pm z_{(1-\frac{1-p}{2})}\cdot\sigma_{\hat yx}$$</p>
+<p><math display=„inline“> <mi>p</mi> </math> = probability<br />
+<math display=„inline“> <mi>r</mi> </math> = correlation<br />
+<math display="inline"><mrow data-mjx-texclass="ORD"><mover><mi>y</mi><mo stretchy="false">^</mo></mover></mrow>
+</math> = predicted value <math display=„inline“> <mi>y</mi> </math></p>
+<br>
+<h4 id="epsilon-efgefr-e01-effect-size-epsilon-cohens-d">[<code>EPSILON</code>] [<code>EFG</code>|<code>EFR</code>] [<code>E01</code>] Effect size <math display=„inline“> <mi>&epsilon;</mi> </math>, Cohen's <math display=„inline“> <mi>d</mi> </math></h4>
+<hr />
+<p>$$\epsilon=d=\frac{\mu_1-\mu_0}{\hat\sigma},$$</p>
+<p>$$d_v=\frac{d}{\sqrt{1-r}}$$</p>
+<p>with</p>
+<p>$$\overline x_{crit}^\beta=\mu_1±t_{(p_{crit},df)}\cdot\hat\sigma_{\overline x},$$</p>
+<p>$$t_{(df)}^{\alpha}=\frac{\overline x_{0_1}-\mu_0}{\hat\sigma_{\overline x}},$$</p>
+<p>$$t_{(df)}^{\beta}=\frac{\overline x_{0_1}-\mu_1}{\hat\sigma_{\overline x}}$$</p>
+<p>where</p>
+<p><math display="inline">
+<msub><mi>d</mi><mi>v</mi></msub>
+</math> = <math display=„inline“> <mi>d</mi> </math> for paired samples<br />
+<math display=„inline“> <mi>r</mi> </math> = correlation<br />
+Power = <math display="inline"><msup><mi>p</mi><mrow data-mjx-texclass="ORD"><mn>1</mn><mo>&minus;</mo><mi>&beta;</mi></mrow></msup><mo>=</mo><mn>1</mn><mo>&minus;</mo><msup><mi>p</mi><mrow data-mjx-texclass="ORD"><mi>&beta;</mi></mrow></msup>
+</math></p>
+<br>
+<h4 id="epsilon2-optimal-effect-size-epsilon_p">[<code>EPSILON2</code>] Optimal effect size <math display="inline"><msub><mi>&epsilon;</mi><mi>p</mi></msub>
+</math></h4>
+<hr />
+<p>$$\epsilon_p=\sqrt{\frac{{(2\cdot t_{(p_{crit},df)}})^2}{n}}$$</p>
+<br>
+<h4 id="epsilon2-optimal-alpha-level">[<code>EPSILON2</code>] Optimal alpha level</h4>
+<hr />
+<p>$$t^\alpha _{(opt,df)}=\frac{\sqrt{\epsilon^2\cdot n}}{2}$$</p>
+<br>
+<h4 id="tkv-ttkvptkv-variance-difference-t-test">[<code>TKV</code>] [<code>tTKV</code>|<code>pTKV</code>] Variance difference <math display=„inline“> <mi>t</mi> </math>-test</h4>
+<hr />
+<p>For paired samples <math display=„inline“><mo stretchy=„false“>(</mo><msub><mi>x</mi><mn>1</mn></msub><mrow data-mjx-texclass=„ORD“><mo stretchy=„false“>|</mo></mrow><msub><mi>x</mi><mn>2</mn></msub><mo stretchy=„false“>)</mo>
+</math>.</p>
+<p>$$\theta=d_{\sigma ^2}=\sigma_1^2-\sigma_2^2$$</p>
+<p>with</p>
+<p>$$t_{(df)}=d_{\sigma^2}\cdot\frac{\sqrt{n-2}}{2\cdot\sqrt{\sigma_1^2\cdot\sigma_2^2\cdot(1-r^2)}}$$</p>
+<p>where</p>
+<p><math display=„inline“>
+<mi>d</mi><mi>f</mi>
+</math> = <math display="inline">
+<mi>n</mi><mo>&minus; 2</mo>
+</math></p>
+<br>
+<h4 id="tv_-ttvptv-paired-2-sample-t-test">[<code>TV_</code>] [<code>tTV</code>|<code>pTV</code>] Paired 2-sample <math display=„inline“> <mi>t</mi> </math>-test</h4>
+<hr />
+<p>$$\theta=\overline x_d=\frac{\sum_{i=1}^n{x_{(i,1)}-x_{(i,2)}}}{n}$$</p>
+<p>with</p>
+<p>$$t_{(df)}=\frac{\overline x_d}{\hat\sigma_{\overline x_d}},$$</p>
+<p>$$\hat\sigma_{\overline x_d}=\sqrt{{\frac{\sum_{i=1}^n{(x_{(i,1)}-x_{(i,2)})^2}-\frac{(\sum_{i=1}^n{x_{(i,1)}-x_{(i,2)}})^2}{n}}{n-1}}}\cdot \frac{1}{\sqrt{n}}$$</p>
+<p>where</p>
+<p><math display="inline"><msub><mover><mi>x</mi><mo accent="true">&minus;</mo></mover><mi>d</mi></msub>
+</math> = mean of the differences of <math display="inline"><msub><mi>x</mi><mi>1</mi></msub></math> and <math display="inline"><msub><mi>x</mi><mi>2</mi></msub></math> values<br />
+<math display=„inline“>
+<mi>d</mi><mi>f</mi>
+</math> = <math display="inline">
+<mi>n</mi><mo>&minus; 1</mo>
+</math></p>
+<br>
+<h4 id="tu_-ttu_ptu_ttuxptux-unpaired-2-sample-t-test">[<code>TU_</code>] [<code>tTU_</code>|<code>pTU_</code>|<code>tTUx</code>|<code>pTUx</code>] Unpaired 2-sample <math display=„inline“> <mi>t</mi> </math>-test</h4>
+<hr />
+<p>$$\theta=d_\overline{x}=\overline x_1-\overline x_2$$</p>
+<p>with</p>
+<p>$$t_{(df)}=\frac{d_\overline{x}}{\hat\sigma_{d_{\overline x}}},$$</p>
+<p>$$\hat\sigma_{d_{\overline x}}=\sqrt{\frac{\sum_{i=1}^{n_1}{(x_{(i,1)}-\overline x_1)^2}+\sum_{i=1}^{n_2}{(x_{(i,2)}-\overline x_2)^2}}{n-2}}\cdot\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}$$</p>
+<p>where</p>
+<p><math display="inline"><msub><mi>d</mi><mrow data-mjx-texclass="ORD"><mover><mi>x</mi><mo accent="true">&minus;</mo></mover></mrow></msub>
+</math> = difference of the means <math display="inline"><msub><mover><mi>x</mi><mo accent="true">&minus;</mo></mover><mn>1</mn></msub>
+</math> and <math display="inline"><msub><mover><mi>x</mi><mo accent="true">&minus;</mo></mover><mn>2</mn></msub>
+</math><br />
+<math display=„inline“>
+<mi>d</mi><mi>f</mi>
+</math> = <math display="inline"><mi>n</mi><mo>&minus;</mo><mn>2</mn>
+</math></p>
+<br>
+<h4 id="tt_-ttt_ptt_-one-sample-t-test">[<code>TT_</code>] [<code>tTT_</code>|<code>pTT_</code>] One-sample <math display=„inline“> <mi>t</mi> </math>-test</h4>
+<hr />
+<p>$$\theta=d_{\overline x y}=\overline x-y$$</p>
+<p>with</p>
+<p>$$t_{(df)}=\frac{d_{\overline x y}}{\sqrt{\frac{\sigma^2}{n-1}}}$$</p>
+<p>where</p>
+<p><math display="inline"><msub><mi>d</mi><mrow data-mjx-texclass="ORD"><mover><mi>x</mi><mo accent="true">&minus;</mo></mover><mi>y</mi></mrow></msub>
+</math> = difference between sample mean <math display="inline"><mover><mi>x</mi><mo accent="true">&minus;</mo></mover>
+</math> and test value <math display=„inline“> <mi>y</mi> </math><br />
+<math display=„inline“>
+<mi>d</mi><mi>f</mi>
+</math> = <math display="inline">
+<mi>n</mi><mo>&minus; 1</mo>
+</math></p>
+<br>
+<h4 id="abt1-x2fp2fzbnpzbn-chi2-test-for-independence">[<code>ABT1</code>] [<code>x2F</code>|<code>p2F</code>|<code>zBN</code>|<code>pzBN</code>] <math display="inline"><msup><mi>&chi;</mi><mn>2</mn></msup>
+</math>-test for independence</h4>
+<hr />
+<p>$$\chi^2=\sum_{i=1}^n{\frac{(f_{e_i}-f_{b_i})^2}{f_{b_i}}}$$</p>
+<p>with</p>
+<p>$$z=\frac{b-\frac{b+c}{2}}{\sqrt{\frac{b+c}{4}}}$$</p>
+<br>
+<h4 id="vfch-x4fp4fx4fyp4fyz4fpz4f-2--2-chi2-test-for-independence">[<code>VFCH</code>] [<code>x4F</code>|<code>p4F</code>|<code>x4FY</code>|<code>p4FY</code>|<code>z4F</code>|<code>pz4F</code>] 2 × 2 <math display="inline"><msup><mi>&chi;</mi><mn>2</mn></msup>
+</math>-test for independence</h4>
+<hr />
+<p>$$\chi^2=\frac{N\cdot (a\cdot d-b\cdot c)^2}{(a+b)\cdot(c+d)\cdot(a+c)\cdot(b+d)},$$</p>
+<p>$$\chi^2_{Yates}=\frac{N\cdot (|a\cdot d-b\cdot c|\cdot\frac{N}{2})^2}{(a+b)\cdot(c+d)\cdot(a+c)\cdot(b+d)};4\lt f_e\lt7$$</p>
+<p>with</p>
+<p>$$z=\frac{d-N\cdot P_d}{\sqrt{N\cdot P_d\cdot(1-P_d)-N\cdot (N-1)\cdot P_d\cdot(P_d-\hat P_d)}}$$</p>
+<p>where</p>
+<p><math display="inline"><msub><mi>f</mi><mn>e</mn></msub>
+</math> = expected frequency<br />
+<math display="inline"><msub><mi>P</mi><mi>d</mi></msub><mo>=</mo><mfrac><mrow><mo stretchy="false">(</mo><mi>d</mi><mo>+</mo><mi>b</mi><mo stretchy="false">)</mo><mo>&middot;</mo><mo stretchy="false">(</mo><mi>c</mi><mo>+</mo><mi>d</mi><mo stretchy="false">)</mo></mrow><msup><mi>N</mi><mn>2</mn></msup></mfrac>
+</math><br />
+<math display="inline"><msub><mrow data-mjx-texclass="ORD"><mover><mi>P</mi><mo stretchy="false">^</mo></mover></mrow><mi>d</mi></msub><mo>=</mo><mfrac><mrow><mo stretchy="false">(</mo><mi>d</mi><mo>+</mo><mi>b</mi><mo>&minus;</mo><mn>1</mn><mo stretchy="false">)</mo><mo>&middot;</mo><mo stretchy="false">(</mo><mi>c</mi><mo>+</mo><mi>d</mi><mo>&minus;</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><mi>N</mi><mo>&minus;</mo><mn>1</mn><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow></mfrac>
+</math><br />
+<math display=„inline“>
+<mi>d</mi><mi>f</mi>
+</math>=1</p>
+<br>
+<h4 id="vfch-xmnpmnxmnypmny-mcnemars-chi2-test-for-paired--2--2-contingency-tables-with-dichotomous-trait">[<code>VFCH</code>] [<code>xMN</code>|<code>pMN</code>|<code>xMNY</code>|<code>pMNY</code>] McNemar's <math display="inline"><msup><mi>&chi;</mi><mn>2</mn></msup>
+</math>-test for paired  2 × 2 contingency tables with dichotomous trait</h4>
+<hr />
+<p>$$\chi^2=\frac{(b-c)^2}{b+c},$$</p>
+<p>$$\chi^2=\frac{(|b-c|-\frac{1}{2})^2}{b+c};20\lt (b+c)\lt 30$$</p>
+<br>
+<h3 id="probability">Probability</h3>
+<br>
+<h4 id="chchachb-arcsine-transformation-cohens-h">[<code>Ch</code>|<code>ChA</code>|<code>ChB</code>] Arcsine transformation, Cohen's <math display=„inline“> <mi>h</mi> </math></h4>
+<hr />
+<p>$$\theta=p_1-p_2,$$</p>
+<p>$$h=2\cdot\sin^{-1}{\sqrt{p_1}}-2\cdot\sin^{-1}{\sqrt{p_2}}$$</p>
+<p>with</p>
+<p>$$p_1=\sin({\frac{2\cdot\sin^{-1}\sqrt{p_2}+h}{2}})^2,$$</p>
+<p>$$p_2=-\sin({\frac{-2\cdot\sin^{-1}\sqrt{p_1}+h}{2}})^2$$</p>
+<p>where</p>
+<p>probabilities = <math display="inline">
+<msub><mi>p</mi><mi>1</mi></msub>
+</math>, <math display="inline">
+<msub><mi>p</mi><mi>2</mi></msub>
+</math></p>
+<br>
+<h4 id="abt1-addp-e01-additive-probability-for-independent-events-u-pcup_n-a">[<code>ABT1</code>] [<code>ADDP</code>] [<code>E01</code>] Additive probability for independent events <math display="inline"><msup><mi></mi><mi>u</mi></msup><mi>p</mi><mo stretchy="false">(</mo><msub><mo>&cup;</mo><mi>n</mi></msub><mi>A</mi><mo stretchy="false">)</mo>
+</math></h4>
+<hr />
+<p>Corresponds to the <em>geometric distribution</em> <math display=„inline“><mi>f</mi><mo stretchy=„false“>(</mo><mi>X</mi><mo>&le;</mo><mi>r</mi><mrow data-mjx-texclass=„ORD“><mo stretchy=„false“>|</mo></mrow><mi>p</mi><mo stretchy=„false“>)</mo>
+</math>.</p>
+<p>$$^u p(\cup_n A)=1-(1-pA)^n$$</p>
+<p>where</p>
+<p><math display=„inline“> <mi>n</mi> </math> = number of events A<br />
+<math display=„inline“> <mi>p</mi><mi>A</mi> </math> = probability of event A</p>
+<br>
+<h4 id="gmvtlg-geometric-distribution-fxle-rp">[<code>GMVTLG</code>] Geometric distribution <math display=„inline“><mi>f</mi><mo stretchy=„false“>(</mo><mi>X</mi><mo>&le;</mo><mi>r</mi><mrow data-mjx-texclass=„ORD“><mo stretchy=„false“>|</mo></mrow><mi>p</mi><mo stretchy=„false“>)</mo>
+</math></h4>
+<hr />
+<p>Corresponds to the <em>additive</em> probability <math display="inline"><msup><mi></mi><mi>u</mi></msup><mi>p</mi><mo stretchy="false">(</mo><msub><mo>&cup;</mo><mi>n</mi></msub><mi>A</mi><mo stretchy="false">)</mo>
+</math></p>
+<p>$$f(X=r|p)=P_n=p\cdot q^r$$</p>
+<p>with</p>
+<p>$$f(X\le r|p)=p_n=\sum_{i=0}^r{p\cdot q^i}$$</p>
+<p>where</p>
+<p><math display=„inline“> <mi>p</mi> </math> = probability of event<br />
+<math display="inline"><mi>r</mi><mo>+</mo><mn>1</mn><mo>=</mo><mi>n</mi>
+</math> = number of events</p>
+<br>
+<h4 id="nbnmvtlg-nbinom-e01-negative-binomial-distribution-fxle-rrp">[<code>NBNMVTLG</code>] [<code>NBINOM</code>] [<code>E01</code>] Negative binomial distribution <math display=„inline“><mi>f</mi><mo stretchy=„false“>(</mo><mi>X</mi><mo>&le;</mo><mi>r</mi><mrow data-mjx-texclass=„ORD“><mo stretchy=„false“>|</mo></mrow><mi>r</mi><mo>,</mo><mi>p</mi><mo stretchy=„false“>)</mo>
+</math></h4>
+<hr />
+<p>With <math display="inline"><mi>k</mi><mo>=</mo><mo>1</mo>
+</math> it corresponds to the <em>geometric distribution</em> <math display=„inline“><mi>f</mi><mo stretchy=„false“>(</mo><mi>X</mi><mo>&le;</mo><mi>r</mi><mrow data-mjx-texclass=„ORD“><mo stretchy=„false“>|</mo></mrow><mi>p</mi><mo stretchy=„false“>)</mo>
+</math> and the <em>additive</em> probability <math display="inline"><msup><mi></mi><mi>u</mi></msup><mi>p</mi><mo stretchy="false">(</mo><msub><mo>&cup;</mo><mi>n</mi></msub><mi>A</mi><mo stretchy="false">)</mo>
+</math>.</p>
+<p>$$f(X=r|r,p)=P_n=\frac{(k+r-1)!}{r!\cdot(k-1)!} \cdot p^k\cdot q^r$$</p>
+<p>with</p>
+<p>$$f(X\le r|r,p)=p_n=\sum_{i=0}^r{\frac{(k+i-1)!}{i!\cdot(k-1)!} \cdot p^k\cdot q^i}$$</p>
+<p>where</p>
+<p><math display="inline"><mi>r</mi><mo>+</mo><mn>k</mn><mo>=</mo><mi>n</mi>
+</math> = number of events<br />
+<math display=„inline“> <mi>k</mi> </math> = number of successes</p>
+<br>
+<h4 id="abt1-binomzbnpzbn-e01-exact-binomial-test">[<code>ABT1</code>] [<code>BINOM</code>|<code>zBN</code>|<code>pzBN</code>] [<code>E01</code>] Exact binomial test</h4>
+<hr />
+<p>$$f(X=b|b,c)=P0=\frac{(b+c)!}{b!\cdot c!}\cdot2^{-b}\cdot2^{-c}$$</p>
+<p>with</p>
+<p>$$f(X\le b|b,c)=p=p^{exact1}=\sum_{i=0}^b{\frac{(b+c)!}{i!\cdot(b+c-i)!}}\cdot2^{-i}\cdot2^{-(b+c-i)};p\le\frac{1}{2},$$</p>
+<p>$$p^{exact1}=(1-p)+P0;p\gt\frac{1}{2}$$</p>
+<p>also</p>
+<p>$$z=\frac{b-\frac{b+c}{2}}{\sqrt{\frac{b+c}{4}}}$$</p>
+<br>
+<h4 id="fx-z4fpz4f-exact-hypergeometric-2--2-test">[<code>FX</code>] [<code>z4F</code>|<code>pz4F</code>] Exact hypergeometric 2 × 2 test</h4>
+<hr />
+<p>$$f(X=a|a,b,c,d)=P0=\frac{(a+b)!\cdot(c+d)!\cdot(a+c)!\cdot(b+d)!}{N!\cdot a!\cdot b!\cdot c!\cdot d!}$$</p>
+<p>with</p>
+<p>$$f(X\le a|a,b,c,d)=p^{exact1}=\sum_{i=1}^aPi;p\le\frac{1}{2},$$
+$$f(X\ge a|a,b,c,d)=p^{exact1}=\sum_{i=a}^nPi;p\gt\frac{1}{2}$$</p>
+<p>where</p>
+<p><math display="inline"><mi>P</mi><mi>i</mi><mo>=</mo><mfrac><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo stretchy="false">)</mo><mo>!</mo><mo>&middot;</mo><mo stretchy="false">(</mo><mi>c</mi><mo>+</mo><mi>d</mi><mo stretchy="false">)</mo><mo>!</mo><mo>&middot;</mo><mo stretchy="false">(</mo><mi>a</mi><mo>+</mo><mi>c</mi><mo stretchy="false">)</mo><mo>!</mo><mo>&middot;</mo><mo stretchy="false">(</mo><mi>b</mi><mo>+</mo><mi>d</mi><mo stretchy="false">)</mo><mo>!</mo></mrow><mrow><mi>N</mi><mo>!</mo><mo>&middot;</mo><mi>i</mi><mo>!</mo><mo>&middot;</mo><mo stretchy="false">(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>&minus;</mo><mi>i</mi><mo stretchy="false">)</mo><mo>!</mo><mo>&middot;</mo><mo stretchy="false">(</mo><mi>a</mi><mo>+</mo><mi>c</mi><mo>&minus;</mo><mi>i</mi><mo stretchy="false">)</mo><mo>!</mo><mo>&middot;</mo><mo stretchy="false">(</mo><mn>2</mn><mo>&middot;</mo><mi>c</mi><mo>+</mo><mi>d</mi><mo>&minus;</mo><mi>a</mi><mo>&minus;</mo><mi>i</mi><mo stretchy="false">)</mo><mo>!</mo></mrow></mfrac>
+</math></p>
+<p>also</p>
+<p>$$z=\frac{d-N\cdot P_d}{\sqrt{N\cdot P_d\cdot(1-P_d)-N\cdot (N-1)\cdot P_d\cdot(P_d-\hat P_d)}}$$</p>
+<p>where</p>
+<p><math display="inline"><msub><mi>P</mi><mi>d</mi></msub><mo>=</mo><mfrac><mrow><mo stretchy="false">(</mo><mi>d</mi><mo>+</mo><mi>b</mi><mo stretchy="false">)</mo><mo>&middot;</mo><mo stretchy="false">(</mo><mi>c</mi><mo>+</mo><mi>d</mi><mo stretchy="false">)</mo></mrow><msup><mi>N</mi><mn>2</mn></msup></mfrac>
+</math><br />
+<math display="inline"><msub><mrow data-mjx-texclass="ORD"><mover><mi>P</mi><mo stretchy="false">^</mo></mover></mrow><mi>d</mi></msub><mo>=</mo><mfrac><mrow><mo stretchy="false">(</mo><mi>d</mi><mo>+</mo><mi>b</mi><mo>&minus;</mo><mn>1</mn><mo stretchy="false">)</mo><mo>&middot;</mo><mo stretchy="false">(</mo><mi>c</mi><mo>+</mo><mi>d</mi><mo>&minus;</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><mi>N</mi><mo>&minus;</mo><mn>1</mn><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow></mfrac>
+</math><br />
+<math display=„inline“>
+<mi>d</mi><mi>f</mi>
+</math>=1</p>
+<br>
+<h3 id="combinatorics">Combinatorics</h3>
+<br>
+<h4 id="prm2-permutation-matrix-mathbfp_n">[<code>PRM2</code>] Permutation matrix <math display="inline"><mrow data-mjx-texclass="ORD"><msub><mi mathvariant="bold">P</mi><mi mathvariant="bold">n</mi></msub></mrow>
+</math></h4>
+<hr />
+<p><math display=„inline“> <mi>n</mi> </math> elements to <math display="inline"><mi>k</mi><mo>=</mo><mo>1</mo>
+</math> class.</p>
+<p>$$\mathbf{P_n}=\begin{bmatrix}p_1(x_1)&amp;\cdots&amp;p_1(x_n)\\\vdots&amp;\ddots&amp;\vdots\\p_P(x_1)&amp;\cdots&amp;p_P(x_n)\end{bmatrix}$$</p>
+<p>where</p>
+<p><math display="inline"><msub><mi>P</mi><mi>n</mi></msub><mo>=</mo><mi>n</mi><mo>!</mo>
+</math></p>
+<br>
+<h4 id="prm5-variation-matrix-mathbf-w-v_2m">[<code>PRM5</code>] Variation matrix <math display="inline"><mrow data-mjx-texclass="ORD"><msup><mi></mi><mi mathvariant="bold">w</mi></msup><msubsup><mi mathvariant="bold">V</mi><mn mathvariant="bold">2</mn><mi mathvariant="bold">m</mi></msubsup></mrow></math></h4>
+<hr />
+<p>For the <em>dependent</em> 2 sample design, <math display="inline">
+<mi>n</mi><mo>= 2</mo>
+</math> elements to class <math display=„inline“> <mi>m</mi> </math>.</p>
+<p>$$\mathbf{ ^w V_2^m}=\begin{bmatrix}v_1(x_1)&amp;\cdots&amp;v_1(x_m)\\\vdots&amp;\ddots&amp;\vdots\\v_{^wV}(x_1)&amp;\cdots&amp;v_{^wV}(x_m)\end{bmatrix}$$</p>
+<p>where</p>
+<p><math display="inline"><msup><mi></mi><mi>w</mi></msup><msubsup><mi>V</mi><mn>2</mn><mi>m</mi></msubsup><mo>=</mo><msup><mn>2</mn><mi>m</mi></msup>
+</math></p>
+<br>
+<h4 id="prm4-variation-matrix-mathbf-w-v_nm">[<code>PRM4</code>] Variation matrix <math display="inline"><mrow data-mjx-texclass="ORD"><msup><mi></mi><mi mathvariant="bold">w</mi></msup><msubsup><mi mathvariant="bold">V</mi><mi mathvariant="bold">n</mi><mi mathvariant="bold">m</mi></msubsup></mrow></math></h4>
+<hr />
+<p><math display=„inline“> <mi>n</mi> </math> elements to class <math display=„inline“> <mi>m</mi> </math>.</p>
+<p>$$\mathbf{ ^w V_n^m}=\begin{bmatrix}v_1(x_1)&amp;\cdots&amp;v_1(x_m)\\\vdots&amp;\ddots&amp;\vdots\\v_{^wV}(x_1)&amp;\cdots&amp;v_{^wV}(x_m)\end{bmatrix}$$</p>
+<p>where</p>
+<p><math display="inline"><msup><mi></mi><mi>w</mi></msup><msubsup><mi>V</mi><mi>n</mi><mi>m</mi></msubsup><mo>=</mo><msup><mi>n</mi><mi>m</mi></msup><mo>;</mo><mi>n</mi><mo>&gt;</mo><mi>m</mi>
+</math></p>
+<br>
+<h4 id="prm3-nk-permutation-matrix-mathbfw-p_nk_mk_n-m">[<code>PRM3</code>] [<code>nk</code>] Permutation matrix <math display="inline"><mrow data-mjx-texclass="ORD"><msup><mi></mi><mi mathvariant="bold">w</mi></msup><msubsup><mi mathvariant="bold">P</mi><mi mathvariant="bold">n</mi><mrow data-mjx-texclass="ORD"><mo mathvariant="bold" stretchy="false">(</mo><msub><mi mathvariant="bold">k</mi><mi mathvariant="bold">m</mi></msub><mo mathvariant="bold">,</mo><msub><mi mathvariant="bold">k</mi><mrow data-mjx-texclass="ORD"><mi mathvariant="bold">n</mi><mo mathvariant="bold">-</mo><mi mathvariant="bold">m</mi></mrow></msub><mo mathvariant="bold" stretchy="false">)</mo></mrow></msubsup></mrow>
+</math></h4>
+<hr />
+<p><math display=„inline“> <mi>n</mi> </math> elements to class <math display=„inline“> <mi>m</mi> </math>.</p>
+<p>$$\mathbf{^w P_n^{(k_m,k_{m-n})}}=\begin{bmatrix}\begin{array}{ccc|ccc} p_1(x_{11})&amp;\cdots&amp;p_1(x_{k_1})&amp;p_1(x_{12})&amp;\cdots&amp;p_1(x_{k_2})\\\vdots&amp;\ddots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\p_{^wP}(x_{11})&amp;\cdots&amp;p_{^wP}(x_{k_1})&amp;p_{^wP}(x_{12})&amp;\cdots&amp;p_{^wP}(x_{k_2}) \end{array}\end{bmatrix}$$</p>
+<p>where</p>
+<p><math display="inline"><msup><mi></mi><mi>w</mi></msup><msubsup><mi>P</mi><mi>n</mi><mrow data-mjx-texclass="ORD"><mo stretchy="false">(</mo><msub><mi>k</mi><mi>m</mi></msub><mo>,</mo><msub><mi>k</mi><mrow data-mjx-texclass="ORD"><mi>n</mi><mo>&minus;</mo><mi>m</mi></mrow></msub><mo stretchy="false">)</mo></mrow></msubsup><mo>=</mo><mfrac><mrow><mi>n</mi><mo>!</mo></mrow><mrow><munderover><mo data-mjx-texclass="OP">&Pi;</mo><mrow data-mjx-texclass="ORD"><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mn>2</mn></munderover><msub><mi>k</mi><mi>i</mi></msub><mo>!</mo></mrow></mfrac><mo>;</mo><mi>n</mi><mo>&ge;</mo><mi>m</mi>
+</math></p>
+<br>
+<br>
+<h3 id="resampling">Resampling</h3>
+<br>
+<h4 id="pv_-permutation-test-p-for-2-paired-samples-x_1x_2">[<code>PV_</code>] Permutation test <em>P</em> for 2 paired samples <math display=„inline“><mo stretchy=„false“>(</mo><msub><mi>x</mi><mn>1</mn></msub><mrow data-mjx-texclass=„ORD“><mo stretchy=„false“>|</mo></mrow><msub><mi>x</mi><mn>2</mn></msub><mo stretchy=„false“>)</mo>
+</math></h4>
+<hr />
+<p>Random sampling model, <em>systematic</em> permutation, <math display=„inline“> <mi>p</mi> </math>-value <em>not</em> randomized, variation matrix <math display="inline"><mrow data-mjx-texclass="ORD"><msup><mi></mi><mi mathvariant="bold">w</mi></msup><msubsup><mi mathvariant="bold">V</mi><mn mathvariant="bold">2</mn><mi mathvariant="bold">m</mi></msubsup></mrow></math> required.</p>
+<p>$$\Theta^1_1=\sum_{i=1}^n{x_{1_i}},\Theta^1_2=\sum_{i=1}^n{x_{2_i}},$$</p>
+<p>$$\Theta^2=(\sum_{i=1}^n{x_{1_i}})^2+(\sum_{i=1}^n{x_{2_i}})^2$$</p>
+<p>with</p>
+<p>$$p^{exact}=\frac{\sum_{i=1}^{2^n}{1}}{2^n};\theta_i\ge \Theta$$</p>
+<p>where</p>
+<p><math display="inline"><msubsup><mi mathvariant="normal">&Theta;</mi><mn>1</mn><mn>1</mn></msubsup><mo>,</mo><msubsup><mi mathvariant="normal">&Theta;</mi><mn>2</mn><mn>1</mn></msubsup>
+</math> = one-tailed test values<br />
+<math display="inline"><msup><mi mathvariant="normal">&Theta;</mi><mn>2</mn></msup>
+</math> = two-tailed test value</p>
+<br>
+<h4 id="mpv_-randomized-permutation-test-mp-for-2-paired-samples-x_1x_2">[<code>mPV_</code>] Randomized permutation test <em>mP</em> for 2 paired samples <math display=„inline“><mo stretchy=„false“>(</mo><msub><mi>x</mi><mn>1</mn></msub><mrow data-mjx-texclass=„ORD“><mo stretchy=„false“>|</mo></mrow><msub><mi>x</mi><mn>2</mn></msub><mo stretchy=„false“>)</mo>
+</math></h4>
+<hr />
+<p>Random sampling model, <math display=„inline“> <mi>p</mi> </math>-value <em>not</em> randomized.</p>
+<p>$$\Theta^1_1=\sum_{i=1}^n{x_{1_i}},\Theta^1_2=\sum_{i=1}^n{x_{2_i}},$$</p>
+<p>$$\Theta^2=(\sum_{i=1}^n{x_{1_i}})^2+(\sum_{i=1}^n{x_{2_i}})^2$$</p>
+<p>with</p>
+<p>$$p=\frac{\sum_{i=1}^{M}{1}}{M};\theta_i\ge \Theta$$</p>
+<p>where</p>
+<p><math display="inline"><msubsup><mi mathvariant="normal">&Theta;</mi><mn>1</mn><mn>1</mn></msubsup><mo>,</mo><msubsup><mi mathvariant="normal">&Theta;</mi><mn>2</mn><mn>1</mn></msubsup>
+</math> = one-tailed test values<br />
+<math display="inline"><msup><mi mathvariant="normal">&Theta;</mi><mn>2</mn></msup>
+</math> = two-tailed test value<br />
+<math display=„inline“> <mi>M</mi> </math> = simulation cycles over variations <math display="inline"><msup><mi></mi><mi>w</mi></msup><msubsup><mi>V</mi><mn>2</mn><mi>m</mi></msubsup><mo>=</mo><msup><mn>2</mn><mi>n</mi></msup>
+</math></p>
+<br>
+<h4 id="pu_-permutation-test-p-for-2-independent-samples-xg">[<code>PU_</code>] Permutation test <em>P</em> for 2 independent samples <math display=„inline“><mo stretchy=„false“>(</mo><mi>x</mi><mrow data-mjx-texclass=„ORD“><mo stretchy=„false“>|</mo></mrow><mi>g</mi><mo stretchy=„false“>)</mo>
+</math></h4>
+<hr />
+<p>Random sampling model, <em>systematic</em> permutation, <math display=„inline“> <mi>p</mi> </math>-value <em>not</em> randomized, permutation matrix <math display="inline"><mrow data-mjx-texclass="ORD"><msup><mi></mi><mi mathvariant="bold">w</mi></msup><msubsup><mi mathvariant="bold">P</mi><mi mathvariant="bold">n</mi><mrow data-mjx-texclass="ORD"><mo mathvariant="bold" stretchy="false">(</mo><msub><mi mathvariant="bold">k</mi><mi mathvariant="bold">m</mi></msub><mo mathvariant="bold">,</mo><msub><mi mathvariant="bold">k</mi><mrow data-mjx-texclass="ORD"><mi mathvariant="bold">n</mi><mo mathvariant="bold">-</mo><mi mathvariant="bold">m</mi></mrow></msub><mo mathvariant="bold" stretchy="false">)</mo></mrow></msubsup></mrow>
+</math> required.</p>
+<p>$$\Theta^1_1=\sum_{i=1}^{n_1}{x_{g1_i}},\Theta^1_2=\sum_{i=1}^{n_2}{x_{g2_i}},$$</p>
+<p>$$\Theta^2=|\overline x_{g1}-\overline x_{g2}|$$</p>
+<p>with</p>
+<p>$$p^{exact}=\frac{\sum_{i=1}^{\frac{n!}{n_1!\cdot n_2!}}{1}}{\frac{n!}{n_1!\cdot n_2!}};\theta_i\ge \Theta$$</p>
+<p>where</p>
+<p><math display="inline"><msubsup><mi mathvariant="normal">&Theta;</mi><mn>1</mn><mn>1</mn></msubsup><mo>,</mo><msubsup><mi mathvariant="normal">&Theta;</mi><mn>2</mn><mn>1</mn></msubsup>
+</math> = one-tailed test values<br />
+<math display="inline"><msup><mi mathvariant="normal">&Theta;</mi><mn>2</mn></msup>
+</math> = two-tailed test value<br />
+<math display="inline"><mi>n</mi><mo>=</mo><msub><mi>n</mi><mn>1</mn></msub><mo>+</mo><msub><mi>n</mi><mn>2</mn></msub>
+</math></p>
+<br>
+<h4 id="mpu_-randomized-permutation-test-mp-for-2-independent-samples-xg">[<code>mPU_</code>] Randomized permutation test <em>mP</em> for 2 independent samples <math display=„inline“><mo stretchy=„false“>(</mo><mi>x</mi><mrow data-mjx-texclass=„ORD“><mo stretchy=„false“>|</mo></mrow><mi>g</mi><mo stretchy=„false“>)</mo>
+</math></h4>
+<hr />
+<p>Random sampling model, <math display=„inline“> <mi>p</mi> </math>-value <em>not</em> randomized.</p>
+<p>$$\Theta^1_1=\sum_{i=1}^{n_1}{x_{g1_i}},\Theta^1_2=\sum_{i=1}^{n_2}{x_{g2_i}},$$</p>
+<p>$$\Theta^2=|\overline x_{g1}-\overline x_{g2}|$$</p>
+<p>with</p>
+<p>$$p=\frac{\sum_{i=1}^M{1}}{M};\theta_i\ge \Theta$$</p>
+<p>where</p>
+<p><math display="inline"><msubsup><mi mathvariant="normal">&Theta;</mi><mn>1</mn><mn>1</mn></msubsup><mo>,</mo><msubsup><mi mathvariant="normal">&Theta;</mi><mn>2</mn><mn>1</mn></msubsup>
+</math> = one-tailed test values<br />
+<math display="inline"><msup><mi mathvariant="normal">&Theta;</mi><mn>2</mn></msup>
+</math> = two-tailed test value<br />
+<math display="inline"><mi>n</mi><mo>=</mo><msub><mi>n</mi><mn>1</mn></msub><mo>+</mo><msub><mi>n</mi><mn>2</mn></msub>
+</math><br />
+<math display=„inline“> <mi>M</mi> </math> = simulation cycles over permutations   <math display="inline"><msup><mi></mi><mi>w</mi></msup><msubsup><mi>P</mi><mi>n</mi><mrow data-mjx-texclass="ORD"><mo stretchy="false">(</mo><msub><mi>k</mi><mi>m</mi></msub><mo>,</mo><msub><mi>k</mi><mrow data-mjx-texclass="ORD"><mi>n</mi><mo>&minus;</mo><mi>m</mi></mrow></msub><mo stretchy="false">)</mo></mrow></msubsup><mo>=</mo><mfrac><mrow><mi>n</mi><mo>!</mo></mrow><mrow><msub><mi>n</mi><mn>1</mn></msub><mo>!</mo><mo>&middot;</mo><msub><mi>n</mi><mn>2</mn></msub><mo>!</mo></mrow></mfrac>
+</math></p>
+<br>
+<h4 id="btu_-bootstrap-test-bt-for-2-independent-samples-xg">[<code>BtU_</code>] Bootstrap test <em>Bt</em> for 2 independent samples <math display=„inline“><mo stretchy=„false“>(</mo><mi>x</mi><mrow data-mjx-texclass=„ORD“><mo stretchy=„false“>|</mo></mrow><mi>g</mi><mo stretchy=„false“>)</mo>
+</math></h4>
+<hr />
+<p>$$\Theta^1_1=\sum_{i=1}^{n_1}{x_{g1_i}},\Theta^1_2=\sum_{i=1}^{n_2}{x_{g2_i}},$$</p>
+<p>$$\Theta^2=|\overline x_{g1}-\overline x_{g2}|$$</p>
+<p>with</p>
+<p>$$p=\frac{\sum_{i=1}^B{1}}{B};\theta_i\ge \Theta$$</p>
+<p>where</p>
+<p><math display="inline"><msubsup><mi mathvariant="normal">&Theta;</mi><mn>1</mn><mn>1</mn></msubsup><mo>,</mo><msubsup><mi mathvariant="normal">&Theta;</mi><mn>2</mn><mn>1</mn></msubsup>
+</math> = one-tailed test values<br />
+<math display="inline"><msup><mi mathvariant="normal">&Theta;</mi><mn>2</mn></msup>
+</math> = two-tailed test value<br />
+<math display="inline"><mi>n</mi><mo>=</mo><msub><mi>n</mi><mn>1</mn></msub><mo>+</mo><msub><mi>n</mi><mn>2</mn></msub>
+</math><br />
+<math display=„inline“> <mi>B</mi> </math> = simulation cycles over variations <math display="inline"><msup><mi></mi><mi>w</mi></msup><msubsup><mi>V</mi><mi>n</mi><mi>m</mi></msubsup><mo>=</mo><msup><mi>n</mi><mi>n</mi></msup>
+</math></p>
+<br>
+<h3 id="complex-plane">Complex plane</h3>
+<br>
+<h4 id="cplxcplx2-f02z-geometric-representation-of-complex-numbers-z-in-the-complex-plane">[<code>CPLX</code>|<code>CPLX2</code>] [<code>F02Z</code>] Geometric representation of complex numbers <math display="inline">
+<mi>z</mi>
+</math> in the complex plane</h4>
+<hr />
+<p><em>Argand diagram</em>.</p>
+<p>$$z=\Re+\Im=x+iy,$$</p>
+<p>$$|z|=r=\sqrt{x^2+y^2}$$</p>
+<p>with</p>
+<p>$$\varphi=\pi;x\lt0\wedge y=0,$$</p>
+<p>$$\varphi=2\cdot\tan^{-1}{\frac{y}{\sqrt{x^2+y^2}+x}};y\ne0,$$</p>
+<p>$$\varphi=0;x\gt0\wedge y=0$$</p>
+<p>where</p>
+<p><math display=„inline“> <mi>r</mi> </math> = amplitude<br />
+<math display="inline">
+<mi>&phi;</mi>
+</math> = phase, argument</p>
+<br>
+<h4 id="cplhx-graph-of-the-complex-function-zreim">[<code>CPLHX</code>] Graph of the complex function <math display=„inline“><mi>z</mi><mo>=</mo><mi mathvariant=„normal“>&Re;</mi><mo>+</mo><mi mathvariant=„normal“>&Im;</mi></math></h4>
+<hr />
+<p>$$y_1=\Re \cdot x,$$</p>
+<p>$$y_2=\Im,$$</p>
+<p>$$y_3=\sqrt{(\Re\cdot x)^2+\Im^2},$$</p>
+<p>$$y_4=\frac{\Im}{|\Im|}\cdot\frac{\pi}{2}-\tan^{-1}({\frac{\Re}{\Im}\cdot x})$$</p>
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	tex2jax: {inlineMath: [['\\[','\\]'], ['\\(','\\)']]}
+	});
+</script>
+
+<hr WIDTH="75%">
+<blockquote ALIGN="CENTER">
+<center>
+<a href="https://github.com/Schrausser/HP_Prime_Math">
+HP_Prime_Math
+</a>
+<br><font color="#999999"><font size=-1>
+<a
+href="https://orcid.org/0000-0002-4924-8280">
+Dietmar Gerald Schrausser
+</a>
+<p>11.07.2025</p>
+</font></font>
+</center>
+</blockquote>
+
+</body>
+</html> 
