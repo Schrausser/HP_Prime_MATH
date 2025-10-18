@@ -282,7 +282,7 @@ Brown, M. B. (1977). Algorithm AS 116: The Tetrachoric Correlation and Its Asymp
 
 Burckel, R. B. (2021). *Classical Analysis in the Complex Plane*. New York, NY: Springer. [https://doi.org/10.1007/978-1-0716-1965-0](https://doi.org/10.1007/978-1-0716-1965-0)
 
-Cajori, F. (1919). Who Was the First Inventor of the Calculus? *The American Mathematical Monthly 26* (1): 15–20. [http://www.jstor.org/stable/2974042](http://www.jstor.org/stable/2974042)
+Cajori, F. (1919). Who Was the First Inventor of the Calculus? *The American Mathematical Monthly, 26*(1), 15–20. [http://www.jstor.org/stable/2974042](http://www.jstor.org/stable/2974042)
 
 Calinger, R. S. (2016). *Leonhard Euler: Mathematical Genius in the Enlightenment*. Princeton, New Jersey: Princeton University Press. [http://www.jstor.org/stable/j.ctv7h0smb](http://www.jstor.org/stable/j.ctv7h0smb)
 
@@ -298,7 +298,7 @@ Cohen, J. (1977). *Statistical Power Analysis for the Behavioral Science*. Amste
 
 ———. (1988). *Statistical Power Analysis for the Behavioral Science*. 2nd ed. Hillsdale, NJ: Lawrence Erlbaum Associates. [https://doi.org/10.4324/9780203771587](https://doi.org/10.4324/9780203771587)
 
-———. (1992). A Power Primer. *Psychological Bulletin 112* (1): 155–59. [https://doi.org/10.1037/0033-2909.112.1.15](https://doi.org/10.1037/0033-2909.112.1.15)
+———. (1992). A Power Primer. *Psychological Bulletin, 112*(1), 155–59. [https://doi.org/10.1037/0033-2909.112.1.15](https://doi.org/10.1037/0033-2909.112.1.15)
 
 Collins, J. (1671). *Extracts from a letter from James Gregory to John Collins, 15 February 1671.* Cambridge: University Library. [https://archivesearch.lib.cam.ac.uk/repositories/2/archival_objects/566767](https://archivesearch.lib.cam.ac.uk/repositories/2/archival_objects/566767)
 
@@ -554,7 +554,7 @@ Peladeau, N. (1993). SIMSTAT: Bootstrap computer simulation and statistical prog
 
 Plackett, R. L. (1983). Karl Pearson and the Chi-Squared Test. *International Statistical Review / Revue Internationale de Statistique, 51*(1), 59–72. [https://doi.org/10.2307/1402731](https://doi.org/10.2307/1402731)
 
-Quenouille, M. H. (1949). Approximate Tests of Correlation in Time-Series. *Journal of the Royal Statistical Society B, Methodological, 11* (1): 68–84. [https://doi.org/10.1111/j.2517-6161.1949.tb00023.x](https://doi.org/10.1111/j.2517-6161.1949.tb00023.x)
+Quenouille, M. H. (1949). Approximate Tests of Correlation in Time-Series. *Journal of the Royal Statistical Society B, Methodological, 11*(1), 68–84. [https://doi.org/10.1111/j.2517-6161.1949.tb00023.x](https://doi.org/10.1111/j.2517-6161.1949.tb00023.x)
 
 Rabinovitch, N. L. (1970). Rabbi Levi Ben Gershon and the Origins of Mathematical Induction. *Archive for History of Exact Sciences, 3*, 237–48. [http://www.jstor.org/stable/41133303](http://www.jstor.org/stable/41133303)
 
