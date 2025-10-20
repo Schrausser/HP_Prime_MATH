@@ -4092,3 +4092,6 @@ END;`
 
 <br>
 <br>
+
+## References
+`man_ref.md`
