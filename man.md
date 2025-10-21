@@ -11,9 +11,9 @@ Dietmar G. Schrausser
 
 Mathematical and statistical applications for *HP Prime* (s. HP Inc., [2017](https://www.hpcalc.org/details/7445); Schrausser, [2025](https://doi.org/10.5281/zenodo.14721085)). *Algorithms* are presented in context with the corresponding scope of application (s. Functions). *CAS* programs (1), HP Prime *User* functions (2) and functions for HP Prime *Applications* (3) are listed in alphabetical order (s. Source Codes), for a *comparison* to corresponding *Schrausser-MAT* functions (Schrausser, [2022a](https://www.academia.edu/81395688)) see Table 1. In addition to the source codes of the functions, *raw* data sets are provided for *correlation*- as well as *resampling*-methods (s. Data).
 
-On *mathematical statistical* methods in general see e.g. Cox & Hinkley ([1974](https://doi.org/10.1201/b14832)), Bortz & Weber ([2005](https://doi.org/10.1007/b137571)), Lehmann & Romano ([2008](https://books.google.com/books?id=IlJE_9_e8UEC)) or Bortz & Schuster ([2010](https://doi.org/10.1007/978-3-642-12770-0)),  Schrausser ([2024a](https://doi.org/10.5281/zenodo.10969144)) provides a comprehensive overview of the most important *distribution functions* and corresponding *algorithms*. Introducing works on *resampling* methods are given by e.g. Good ([2006](https://www.amazon.com/Resampling-Methods-Practical-Guide-Analysis/dp/0817643869)) or Beasley & Rodgers ([2009](https://psycnet.apa.org/doi/10.4135/9780857020994.n16)), for *calculus* and *theory of functions* see e.g. Meyberg & Vachenauer ([2001a](https://doi.org/10.1007/978-3-642-56654-7), [b](https://doi.org/10.1007/978-3-642-56655-4)) or Remmert & Schumacher ([2002](https://doi.org/10.1007/978-3-642-56281-5)), on *complex numbers* in the *complex plane* see e.g. Burckel ([2021](https://doi.org/10.1007/978-1-0716-1965-0)) and Vince ([2021](https://doi.org/10.1007/978-1-4471-7509-4_4)).
+On *mathematical statistical* methods in general see e.g. Cox and Hinkley ([1974](https://doi.org/10.1201/b14832)), Bortz and Weber ([2005](https://doi.org/10.1007/b137571)), Lehmann and Romano ([2008](https://books.google.com/books?id=IlJE_9_e8UEC)) or Bortz and Schuster ([2010](https://doi.org/10.1007/978-3-642-12770-0)),  Schrausser ([2024a](https://doi.org/10.5281/zenodo.10969144)) provides a comprehensive overview of the most important *distribution functions* and corresponding *algorithms*. Introducing works on *resampling* methods are given by e.g. Good ([2006](https://www.amazon.com/Resampling-Methods-Practical-Guide-Analysis/dp/0817643869)) or Beasley and Rodgers ([2009](https://psycnet.apa.org/doi/10.4135/9780857020994.n16)), for *calculus* and *theory of functions* see e.g. Meyberg and Vachenauer ([2001a](https://doi.org/10.1007/978-3-642-56654-7), [b](https://doi.org/10.1007/978-3-642-56655-4)) or Remmert and Schumacher ([2002](https://doi.org/10.1007/978-3-642-56281-5)), on *complex numbers* in the *complex plane* see e.g. Burckel ([2021](https://doi.org/10.1007/978-1-0716-1965-0)) and Vince ([2021](https://doi.org/10.1007/978-1-4471-7509-4_4)).
 
-For the history of *statistical inference* in general see e.g. Stigler ([1986](https://www.scirp.org/(S(351jmbntvnsjt1aadkposzje))/reference/ReferencesPapers.aspx?ReferenceID=1973131)) and Hald ([1990](https://onlinelibrary.wiley.com/doi/book/10.1002/0471725161), [1998](https://www.abebooks.com/History-Mathematical-Statistics-1750-1930-Wiley/31042381048/bd), [2003](https://www.wiley.com/en-us/A+History+of+Probability+and+Statistics+and+Their+Applications+before+1750-p-9780471725176), [2007](https://link.springer.com/book/10.1007/978-0-387-46409-1#bibliographic-information)), *historical foundations* of mathematics are thematized and discussed in e.g. Suter ([1887](https://doi.org/10.3931/e-rara-65095)), Heath ([1921a](https://archive.org/details/cu31924008704219), [b]([https://archive.org/details/historyofgreekma029268mbp/page/n5/mode/1up)), Boyer ([1968](https://archive.org/details/ahistoryofmathematicscarlbboyer1968_315_t)), Neugebauer ([1969](https://books.google.com/books?id=JVhTtVA2zr8C)), Ewald ([1996a](https://philpapers.org/rec/BRAFKT), [b](https://philpapers.org/rec/EWAFKT-4)), Katz ([2009](https://www.gettextbooks.com/isbn/9780321387004/)) or Merzbach & Boyer ([2011](https://books.google.com/books/about/A_History_of_Mathematics.html?id=bR9HAAAAQBAJ)), c.f. `paper.md`
+For the history of *statistical inference* in general see e.g. Stigler ([1986](https://www.scirp.org/(S(351jmbntvnsjt1aadkposzje))/reference/ReferencesPapers.aspx?ReferenceID=1973131)) and Hald ([1990](https://onlinelibrary.wiley.com/doi/book/10.1002/0471725161), [1998](https://www.abebooks.com/History-Mathematical-Statistics-1750-1930-Wiley/31042381048/bd), [2003](https://www.wiley.com/en-us/A+History+of+Probability+and+Statistics+and+Their+Applications+before+1750-p-9780471725176), [2007](https://link.springer.com/book/10.1007/978-0-387-46409-1#bibliographic-information)), *historical foundations* of mathematics are thematized and discussed in e.g. Suter ([1887](https://doi.org/10.3931/e-rara-65095)), Heath ([1921a](https://archive.org/details/cu31924008704219), [b]([https://archive.org/details/historyofgreekma029268mbp/page/n5/mode/1up)), Boyer ([1968](https://archive.org/details/ahistoryofmathematicscarlbboyer1968_315_t)), Neugebauer ([1969](https://books.google.com/books?id=JVhTtVA2zr8C)), Ewald ([1996a](https://philpapers.org/rec/BRAFKT), [b](https://philpapers.org/rec/EWAFKT-4)), Katz ([2009](https://www.gettextbooks.com/isbn/9780321387004/)) or Merzbach and Boyer ([2011](https://books.google.com/books/about/A_History_of_Mathematics.html?id=bR9HAAAAQBAJ)), c.f. `paper.md`
 
 <br>
 <br>
@@ -199,7 +199,7 @@ $df=1$
 
 ---
 
-Pearson ([1900a](https://royalsocietypublishing.org/doi/abs/10.1098/rsta.1900.0022)), Everitt ([1910](https://doi.org/10.1093/biomet/7.4.437), [1912](http://www.jstor.org/stable/2331587)), s. e.g. Brown ([1977](http://www.jstor.org/stable/2346985)), Digby ([1983](http://www.jstor.org/stable/2531104)), also Bonett & Price ([2005](http://www.jstor.org/stable/3701350)) or Long et al. ([2009](https://doi.org/10.1177/0013164408324463)), *proposed* approximate algorithm.
+Pearson ([1900a](https://royalsocietypublishing.org/doi/abs/10.1098/rsta.1900.0022)), Everitt ([1910](https://doi.org/10.1093/biomet/7.4.437), [1912](http://www.jstor.org/stable/2331587)), s. e.g. Brown ([1977](http://www.jstor.org/stable/2346985)), Digby ([1983](http://www.jstor.org/stable/2531104)), also Bonett and Price ([2005](http://www.jstor.org/stable/3701350)) or Long et al. ([2009](https://doi.org/10.1177/0013164408324463)), *proposed* approximate algorithm.
 
 $$r_{tet}=\cos\frac{\pi}{1+\sqrt{\frac{b\cdot c}{a\cdot d}}}$$
 
@@ -279,7 +279,7 @@ $$\overline Z=\frac{\sum_{i=1}^k{(n_i-3)}\cdot Z_i}{\sum_{i=1}^k{(n_i-3)}}$$
 
 ---
 
-For $\hat R_{c,12}^2$ see Olkin & Pratt ([1958](https://doi.org/10.1214/aoms/1177706717)).
+For $\hat R_{c,12}^2$ see Olkin and Pratt ([1958](https://doi.org/10.1214/aoms/1177706717)).
 
 $$R_{c,12}=\sqrt{\frac{r_{1c}^2+r_{2c}^2-2\cdot r_{12}\cdot r_{1c}\cdot r_{2c}}{1-r_{12}^2}},$$
 
@@ -301,7 +301,7 @@ $df_2 = n-4$
 
 ### Exposure functions
 
-To calculate the appropriate *time-aperture-speed* combination for given *light values* on a logarithmic scale, see e.g. Allbright ([1991](https://doi.org/10.1080/00223638.1991.11737126)), Marsden & Weinstein ([1985](https://doi.org/10.1007/978-1-4612-5024-1_9)), Howie ([2001](https://doi.org/10.1007/978-1-4471-0341-7_6)) and Sobot ([2021](https://doi.org/10.1007/978-3-030-79545-0_4)).
+To calculate the appropriate *time-aperture-speed* combination for given *light values* on a logarithmic scale, see e.g. Allbright ([1991](https://doi.org/10.1080/00223638.1991.11737126)), Marsden and Weinstein ([1985](https://doi.org/10.1007/978-1-4612-5024-1_9)), Howie ([2001](https://doi.org/10.1007/978-1-4471-0341-7_6)) and Sobot ([2021](https://doi.org/10.1007/978-3-030-79545-0_4)).
 
 <br>
 
@@ -480,7 +480,7 @@ $O=\pi$
 ---
 
 To extend the *factorial* to *non-integer* arguments, first considered by Daniel Bernoulli and Christian Goldbach 
-(Bernoulli, [1729](https://commons.m.wikimedia.org/wiki/File:DanielBernoulliLetterToGoldbach-1729-10-06.jpg)), later Leonhard Euler ([1738](https://scholarlycommons.pacific.edu/euler-works/19/)) and Johann Carl Friedrich Gauss (s. Remmert, [1998](https://doi.org/10.1007/978-1-4757-2956-6_2)), first tables were given by Jahnke & Emde ([1909](https://books.google.com/books?id=BVRzvgAACAAJ)).
+(Bernoulli, [1729](https://commons.m.wikimedia.org/wiki/File:DanielBernoulliLetterToGoldbach-1729-10-06.jpg)), later Leonhard Euler ([1738](https://scholarlycommons.pacific.edu/euler-works/19/)) and Johann Carl Friedrich Gauss (s. Remmert, [1998](https://doi.org/10.1007/978-1-4757-2956-6_2)), first tables were given by Jahnke and Emde ([1909](https://books.google.com/books?id=BVRzvgAACAAJ)).
 
 $$f(x,t)=\vartheta_\Gamma=t^{x-1}\cdot e^t$$
 
@@ -1117,9 +1117,9 @@ $^wP_n^{(k_m,k_{n-m})}=\frac{n!}{\prod_{i=1}^2 k_i!};n\ge m$
 
 ### Resampling
 
-*Permutation* or *randomization tests* were first mentioned by Fisher ([1935](https://psycnet.apa.org/record/1939-04964-000)), based on experiments in agriculture (Fisher, [1926](https://doi.org/10.23637/rothamsted.8v61q); Neyman, [1923](https://link.springer.com/chapter/10.1007/978-94-015-8816-4_10)). In this context see Pitman ([1937a](http://www.jstor.org/stable/2984124), [b](http://www.jstor.org/stable/2983647), [1938](http://www.jstor.org/stable/2332008)), Fisher ([1966](https://scirp.org/reference/referencespapers.aspx?referenceid=895747), [1971](https://home.iitk.ac.in/~shalab/anova/DOE-RAF.pdf), res.), especially Eugene Sinclair Edgington ([1964](https://doi.org/10.1080/00223980.1964.9916711), [1980](https://doi.org/10.2307/1164966), [1987](https://doi.org/10.1037/0022-0167.34.4.437), [2011](https://doi.org/10.1007/978-3-642-04898-2_56)) or Edgington & Onghena ([2007](https://doi.org/10.1201/9781420011814)).
+*Permutation* or *randomization tests* were first mentioned by Fisher ([1935](https://psycnet.apa.org/record/1939-04964-000)), based on experiments in agriculture (Fisher, [1926](https://doi.org/10.23637/rothamsted.8v61q); Neyman, [1923](https://link.springer.com/chapter/10.1007/978-94-015-8816-4_10)). In this context see Pitman ([1937a](http://www.jstor.org/stable/2984124), [b](http://www.jstor.org/stable/2983647), [1938](http://www.jstor.org/stable/2332008)), Fisher ([1966](https://scirp.org/reference/referencespapers.aspx?referenceid=895747), [1971](https://home.iitk.ac.in/~shalab/anova/DOE-RAF.pdf), res.), especially Eugene Sinclair Edgington ([1964](https://doi.org/10.1080/00223980.1964.9916711), [1980](https://doi.org/10.2307/1164966), [1987](https://doi.org/10.1037/0022-0167.34.4.437), [2011](https://doi.org/10.1007/978-3-642-04898-2_56)) or Edgington and Onghena ([2007](https://doi.org/10.1201/9781420011814)).
 
-The *bootstrap* method was introduced by Bradley Efron ([1979](https://doi.org/10.1214/aos/1176344552), [1981](https://doi.org/10.1093/biomet/68.3.589), [1982](https://doi.org/10.1137/1.9781611970319)) as a further development (Quenouille, [1949](https://doi.org/10.1111/j.2517-6161.1949.tb00023.x); Metropolis & Ulam, [1949](https://doi.org/10.1080/01621459.1949.10483310)), for *software* solutions see e.g. Solomon ([1982](https://doi.org/10.5555/1035853.1035900)), Dallal ([1986](http://www.jstor.org/stable/2684555), [1988](https://doi.org/https://doi.org/10.1016/0010-4809(88)90037-7)), Peladeau ([1993](https://doi.org/10.3758/BF03204533)), Wooff & Peladeau ([1994](https://doi.org/10.2307/2986032)), Mehta et al. ([2014](https://doi.org/10.1002/9781118445112.stat04892)),  also Schrausser ([2024d](https://doi.org/10.5281/zenodo.14280500)).
+The *bootstrap* method was introduced by Bradley Efron ([1979](https://doi.org/10.1214/aos/1176344552), [1981](https://doi.org/10.1093/biomet/68.3.589), [1982](https://doi.org/10.1137/1.9781611970319)) as a further development (Quenouille, [1949](https://doi.org/10.1111/j.2517-6161.1949.tb00023.x); Metropolis & Ulam, [1949](https://doi.org/10.1080/01621459.1949.10483310)), for *software* solutions see e.g. Solomon ([1982](https://doi.org/10.5555/1035853.1035900)), Dallal ([1986](http://www.jstor.org/stable/2684555), [1988](https://doi.org/https://doi.org/10.1016/0010-4809(88)90037-7)), Peladeau ([1993](https://doi.org/10.3758/BF03204533)), Wooff and Peladeau ([1994](https://doi.org/10.2307/2986032)), Mehta et al. ([2014](https://doi.org/10.1002/9781118445112.stat04892)),  also Schrausser ([2024d](https://doi.org/10.5281/zenodo.14280500)).
 
 <br>
 
@@ -1127,7 +1127,7 @@ The *bootstrap* method was introduced by Bradley Efron ([1979](https://doi.org/1
 
 ---
 
-Random sampling model, *systematic* permutation, $p$-value not randomized, variation matrix $\mathbf{ ^w V_2^m}$ *required*, s. Scambor ([1997](https://doi.org/10.13140/RG.2.2.28632.06405)), Scambor & Schrausser ([2022](https://www.academia.edu/94993376), p. 7), respectively.
+Random sampling model, *systematic* permutation, $p$-value not randomized, variation matrix $\mathbf{ ^w V_2^m}$ *required*, s. Scambor ([1997](https://doi.org/10.13140/RG.2.2.28632.06405)), Scambor and Schrausser ([2022](https://www.academia.edu/94993376), p. 7), respectively.
 
 $$\Theta^1_1=\sum_{i=1}^n{x_{1_i}},\Theta^1_2=\sum_{i=1}^n{x_{2_i}},$$
 
@@ -4075,7 +4075,7 @@ END;`
 
 ##### PV_  
 `{{1.,4.},{2.,6.},{2.,7.}}▶L1`  
-(see Scambor, [1997](https://doi.org/10.13140/RG.2.2.28632.06405); Scambor & Schrausser, [2022](https://www.academia.edu/94993376), p. 7, respectively)  
+(Scambor, [1997](https://doi.org/10.13140/RG.2.2.28632.06405); Scambor & Schrausser, [2022](https://www.academia.edu/94993376), p. 7)  
 
 `{{8.,9.},{2.,3.},{9.,7.},{2.,7.},{9.,8.}}▶L1`  
 
@@ -4084,11 +4084,11 @@ END;`
 ##### PU_  
 `{18.,30.,54.}▶L1`  
 `{6.,12.}▶L2`  
-(see Schrausser, [1996](https://doi.org/10.13140/RG.2.2.24500.32640/1), [2022b](https://www.academia.edu/82224369), p. 2).  
+(Schrausser, [1996](https://doi.org/10.13140/RG.2.2.24500.32640/1), [2022b](https://www.academia.edu/82224369), p. 2)  
 
 `{18.04,10.07,22.27,1.96,18.88,12.81,3.08,21.49,1.96,24.93}▶L1`  
 `{24.96,22.39}▶L2`  
-(see Schrausser, [1997](https://doi.org/10.13140/RG.2.2.14805.91369), [1998a](https://doi.org/10.13140/RG.2.2.19532.69768))  
+(Schrausser, [1997](https://doi.org/10.13140/RG.2.2.14805.91369), [1998a](https://doi.org/10.13140/RG.2.2.19532.69768))  
 
 <br>
 <br>
