@@ -1,0 +1,549 @@
+<html> 
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="Author" content="Dietmar Gerald Schrausser">
+
+<title>
+HP_Prime_Math/paper
+</title>
+
+</head> 
+<body style="font-family:calibri;font-size:85%;background-color:#efebe9;color:#37474f">
+
+<style>
+a {color: #78909c; }
+a:visited {color: #78909c;}
+</style>
+
+<h1 id="mathematical-and-statistical-applications-for-hp-prime">Mathematical and statistical applications for HP Prime</h1>
+<p>
+<a href="https://orcid.org/0000-0002-4924-8280">
+Dietmar G. Schrausser</a>, 2025</p>
+<br>
+<h2 id="abstract">Abstract</h2>
+<p>Applications for HP Prime <em>CAS</em>, <em>User</em> functions and <em>Applications</em>, an overview of the methods and their origins is given.</p>
+<br>
+<h2 id="1-introduction">1. Introduction</h2>
+<p>Mathematical and statistical applications <code>HP_Prime_MATH</code> for (1) the Computer Algebra System <em>CAS</em>, by means of the <em>Pascal</em> based <em>HP Prime Programming Language</em> (HP PPL), (2) the HP Prime <em>User</em> functions and (3) HP Prime <em>Applications</em> (s. HP Inc., <a href="https://www.hpcalc.org/details/7445">2017</a>),
+including methods for (1) <em>correlation</em>, (2) <em>exposure</em>, (3) <em>integration</em>, (4) <em>distribution</em>, (5) <em>probability</em>, (6) <em>combinatorics</em>, (7) <em>resampling</em> and (8) <em>complex plane</em> calculations (Schrausser, <a href="https://doi.org/10.5281/zenodo.14721085">2025</a>).</p>
+<p>The description of the <em>underlying</em> algorithms and functions is deliberately omitted, as these are presented and discussed in detail in <code>func.html</code>. Instead, an <em>overview</em> of the implemented methods is given and <em>additionally</em> their <em>historical development</em> is outlined (c.f. <code>paper_tab.html</code>).</p>
+<br>
+<h2 id="2-functions">2. Functions</h2>
+<h3 id="21-correlation">2.1. Correlation</h3>
+<p>To measure the degree of a linear <em>relation</em> between variables,
+Karl Pearson (<a href="https://openlibrary.org/books/OL24168960M">1904</a>) was developing statistical procedures for biometry including the <em>correlation</em> and <em>regression</em> coefficients based on the works of Bravais (<a href="https://books.google.com/books?id=7g_hAQAACAAJ">1844</a>) and
+Galton (<a href="https://doi.org/10.1038/015492a0">1877</a>) who introduced the symbol <math display="inline">
+<mi>r</mi>
+</math>, on the then designation of the term <em>reversion</em>.</p>
+<p>The methodological apparatus of <em>factor analysis</em> as a further and broader concept, based on <em>multiple regression</em> and <em>matrix</em> calculation was <em>first discussed</em> by
+Charles Edward Spearman (<a href="http://www.jstor.org/stable/1412159">1904</a>), later the <em>initial</em> developed took place by Louis Leon Thurstone (<a href="https://doi.org/10.1037/h0069792">1931</a>, <a href="https://doi.org/10.1037/h0075959">1934</a>, <a href="https://archive.org/details/vectorsofmindmul010122mbp/page/n7/mode/1up">1935</a>; s. also Cattell, <a href="https://doi.org/10.1207/s15327906mbr0102_10">1966</a>).</p>
+<p>The following functions for <em>correlation</em>- and <em>regression</em>-techniques are implemented (c.f. <code>correlation.md</code>):</p>
+<p>(1) Pearson <em>product-moment</em> correlation coefficient <math display="inline">
+<msub><mi>r</mi><mrow data-mjx-texclass="ORD"><mi>x</mi><mi>y</mi></mrow></msub>
+</math>, see Pearson (<a href="https://openlibrary.org/books/OL24168960M">1904</a>, <a href="https://openlibrary.org/books/OL6555066M">1905</a>).</p>
+<p>(2) Spearman's <math display="inline">
+<mi>&rho;</mi>
+</math>, being equivalent to the <em>product moment</em> correlation when <em>rank</em> values are present (s. Spearman, <a href="http://www.jstor.org/stable/1412159">1904</a>).</p>
+<p>(3) Kendall's tau  <math display="inline">
+<msub><mi>&tau;</mi><mi>a</mi></msub>
+</math>, i.e. without adjustment for <em>ties</em> (s. Kendall, <a href="http://www.jstor.org/stable/2332226">1938</a>).</p>
+<p>(4) Somers' <math display="inline">
+<mi>D</mi>
+</math>, for <em>binary</em> data [0,1] (s. Somers, <a href="http://www.jstor.org/stable/2090408">1962</a>).</p>
+<p>(5) <em>Point biserial</em> correlation coefficient  <math display="inline">
+<msub><mi>r</mi><mrow data-mjx-texclass="ORD"><mi>p</mi><mi>b</mi></mrow></msub>
+</math> or also <em>point biseral</em>.</p>
+<p>(6) <em>Biserial</em> correlation coefficient <math display="inline">
+<msub><mi>r</mi><mrow data-mjx-texclass="ORD"><mi>b</mi><mi>i</mi><mi>s</mi></mrow></msub>
+</math>, Pearson (<a href="http://www.jstor.org/stable/2345365">1909</a>), s. Tate (<a href="http://www.jstor.org/stable/2333437">1955</a>),
+also called <em>biseral</em>.</p>
+<p>(7) <em>Rank biserial</em> correlation coefficient <math display="inline">
+<msub><mi>r</mi><mrow data-mjx-texclass="ORD"><mi>b</mi><mi>i</mi><mi>s</mi><mi>R</mi></mrow></msub>
+</math> or <em>rank biseral</em>, corresponding to the <em>effect size</em> for the <em>Mann–Whitney</em> <math display="inline">
+<mi>U</mi><em>-test</em> (Mann & Whitney, <a href="https://doi.org/10.1214/aoms/1177730491">1947</a>).</p>
+<p>(8) <em>Phi</em> coefficient <math display="inline">
+<mi>&Phi;</mi>
+</math>, Yule (<a href="http://www.jstor.org/stable/2340126">1912</a>).</p>
+<p>(9) <em>Tetrachoric</em> correlation <math display="inline">
+<msub><mi>r</mi><mrow data-mjx-texclass="ORD"><mi>t</mi><mi>e</mi><mi>t</mi></mrow></msub>
+</math>, Pearson (<a href="https://royalsocietypublishing.org/doi/abs/10.1098/rsta.1900.0022">1900a</a>), Everitt (<a href="https://doi.org/10.1093/biomet/7.4.437">1910</a>, <a href="http://www.jstor.org/stable/2331587">1912</a>), s. e.g. Brown (<a href="http://www.jstor.org/stable/2346985">1977</a>), Digby (<a href="http://www.jstor.org/stable/2531104">1983</a>), also Bonett and Price (<a href="http://www.jstor.org/stable/3701350">2005</a>) or Long et al. (<a href="https://doi.org/10.1177/0013164408324463">2009</a>), <em>proposed</em> approximate algorithm.</p>
+<p>(10) <em>Partial</em> correlation <math display="inline">
+<msub><mi>r</mi><mrow data-mjx-texclass="ORD"><mi>x</mi><mi>y</mi><mo>&middot;</mo><mi>z</mi></mrow></msub>
+</math>.</p>
+<p>(11) Fisher <math display="inline">
+<mi>Z</mi>
+</math>-transformation, Fisher (<a href="https://doi.org/10.2307/2331838">1915</a>).</p>
+<p>(12) Fisher <math display="inline">
+<mi>Z</mi>
+</math> <em>difference</em>, also Cohen's <math display="inline">
+<mi>q</mi>
+</math> (Cohen, <a href="https://doi.org/10.4324/9780203771587">1988</a>, p. 110).</p>
+<p>(13) <em>Averaged</em> Fisher <math display="inline">
+<mi>Z</mi>
+</math>.</p>
+<p>(14) Coefficient of <em>multiple</em> correlation <math display="inline"><msub><mi>R</mi><mrow data-mjx-texclass="ORD"><mi>c</mi><mo>,</mo><mn>12</mn></mrow></msub>
+</math>, for <math display="inline"><msubsup><mrow data-mjx-texclass="ORD"><mover><mi>R</mi><mo stretchy="false">^</mo></mover></mrow><mrow data-mjx-texclass="ORD"><mi>c</mi><mo>,</mo><mn>12</mn></mrow><mn>2</mn></msubsup>
+</math> see Olkin and Pratt (<a href="https://doi.org/10.1214/aoms/1177706717">1958</a>), with the <em>effect size</em> for <em>multiple</em> regression <math display="inline"><msup><mi>f</mi><mn>2</mn></msup>
+</math> (Cohen, <a href="https://doi.org/10.4324/9780203771587">1988</a>, p. 410).</p>
+<h3 id="22-exposure">2.2. Exposure</h3>
+<p>To determine the appropriate <em>time-aperture-speed</em> combination for given <em>light values</em> on a logarithmic scale (c.f. Allbright, <a href="https://doi.org/10.1080/00223638.1991.11737126">1991</a>; Marsden & Weinstein, <a href="https://doi.org/10.1007/978-1-4612-5024-1_9">1985</a>; Howie, <a href="https://doi.org/10.1007/978-1-4471-0341-7_6">2001</a> and Sobot, <a href="https://doi.org/10.1007/978-3-030-79545-0_4">2021</a>), following functions are
+included for the calculation of (1) <em>exposure values</em> <math display="inline">
+<mi>E</mi><mi>v</mi></math>, where <math display="inline">
+<mi>E</mi><mi>v</mi><mo>=</mo><mfrac><mrow><mi>log</mi><mo stretchy="false">(</mo><mi>T</mi><mi>v</mi><mo>&middot;</mo><mi>A</mi><msup><mi>v</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><mrow><mi>log</mi><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mfrac>
+</math>, (2) <em>aperture</em> <math display="inline">
+<mi>A</mi><mi>v</mi></math> for time <math display="inline">
+<mi>T</mi><mi>v</mi></math> or speed <math display="inline">
+<mi>S</mi>
+</math> with given <math display="inline">
+<mi>E</mi><mi>v</mi></math>, (3) <em>aperture</em> <math display="inline">
+<mi>A</mi><mi>v</mi></math> <em>shift</em> from time <math display="inline">
+<mi>T</mi><mi>v</mi></math> or speed <math display="inline">
+<mi>S</mi>
+</math> in <em>steps</em> <math display="inline">
+<mi>k</mi>
+</math> and (4) <em>speed</em> <math display="inline">
+<mi>S</mi>
+</math> in <em>logarithmic</em> <math display="inline">
+<mi>I</mi><mi>S</mi><mi>O</mi><mi>°</mi></math> or <em>arithmetic</em> <math display="inline">
+<mi>I</mi><mi>S</mi><mi>O</mi></math> values.</p>
+<h3 id="23-functions-of-integration-for-pi-and-gamma">2.3. Functions of integration for <math display="inline">
+<mo>&pi;</mo>
+</math> and <math display="inline">
+<mi>&Gamma;</mi>
+</math></h3>
+<p>Gottfried Wilhelm Leibniz (<a href="https://gdz.sub.uni-goettingen.de/id/PPN788262599">1684</a>, <a href="https://gdz.sub.uni-goettingen.de/id/PPN788262947">1686</a>, <a href="https://archive.org/details/s1id13206590">1693</a>) along with Sir Isaac Newton (<a href="https://books.google.com/books?id=XJwx0lnKvOgC">1687</a>, <a href="https://digital.onb.ac.com/OnbViewer/viewer.faces?doc=ABO_%2BZ180810706&amp;order=7&amp;view=SINGLE">1713</a>, <a href="https://gdz.sub.uni-goettingen.de/id/PPN512261393">1726</a>) are considered the discoverers of <em>differential</em> and <em>integral calculus</em>. According to current consensus, both developed the methods independently of each other, see the so-called <em>Leibniz-Newton calculus controversy</em> (c.f. Cajori, <a href="http://www.jstor.org/stable/2974042">1919</a>; Cassirer, <a href="http://www.jstor.org/stable/2180670">1943</a>; Rosenthal, <a href="http://www.jstor.org/stable/2308368">1951</a>; Schrader, <a href="http://www.jstor.org/stable/27956626">1962</a>; Kossovsky, <a href="https://doi.org/10.1007/978-3-030-51744-1_33">2020</a>).</p>
+<p>Newton <em>began</em> working on a <em>geometric</em> form of <em>calculus</em> (the method of <em>fluxions and fluents</em>) in 1666, published in <a href="https://books.google.com/books?id=XJwx0lnKvOgC">1687</a> (c.f. Roero,  <a href="https://doi.org/https://doi.org/10.1016/B978-044450871-3/50085-1">2005</a>), yet, it was Leibniz who <em>introduced</em> the symbols <math display="inline">
+<mi>&int;</mi>
+</math> and <math display="inline">
+<mi>&part;</mi>
+</math>.</p>
+<p>Here, the functions are primarily intended to display and calculate <math display="inline">
+<mo>&pi;</mo>
+</math> and <math display="inline">
+<mi>&Gamma;</mi>
+</math> within the coordinate system:</p>
+<p>(1) <em>Circular</em> function for <math display="inline">
+<mo>&pi;</mo>
+</math>, where Weierstraß (<a href="https://quod.lib.umich.edu/u/umhistmath/AAN8481.0001.001">1894</a>, p. 53) describes <math display="inline"><mfrac><mo>&pi;</mo><mn>2</mn></mfrac><mo>=</mo><msubsup><mo data-mjx-texclass="OP">&int;</mo><mn>0</mn><mrow data-mjx-texclass="ORD"><mi mathvariant="normal">&infin;</mi></mrow></msubsup><mfrac><mn>1</mn><mrow><mn>1</mn><mo>&minus;</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mi>d</mi><mi>x</mi>
+</math>, which <em>may</em> be less heuristic (s. <code>func.md</code>).</p>
+<p>(2) <em>Spherical</em> functions for <math display="inline">
+<mo>&pi;</mo>
+</math>, for source codes to <em>volume integrals</em> of the <em>sphere</em> see e.g. Schrausser (<a href="https://doi.org/10.5281/zenodo.14280500">2024d</a>).</p>
+<p>(3) <em>Gamma</em> function <math display="inline">
+<mi>&Gamma;</mi>
+</math>, meant to extend the <em>factorial</em> to <em>non-integer</em> arguments, was first considered by Daniel Bernoulli and Christian Goldbach
+(Bernoulli, <a href="https://commons.m.wikimedia.org/wiki/File:DanielBernoulliLetterToGoldbach-1729-10-06.jpg">1729</a>), later Leonhard Euler (<a href="https://scholarlycommons.pacific.edu/euler-works/19/">1738</a>) and Johann Carl Friedrich Gauss (s. Remmert, <a href="https://doi.org/10.1007/978-1-4757-2956-6_2">1998</a>), first <em>tables</em> were given by Jahnke and Emde (<a href="https://books.google.com/books?id=BVRzvgAACAAJ">1909</a>, <a href="https://books.google.com/books?id=SB5tAAAAMAAJ">1933</a>, <a href="https://books.google.com/books?id=5vlrAAAAIAAJ">1938</a>, <a href="https://archive.org/details/tablesoffunction0000jahn">1945</a>), Knoll (<a href="https://doi.org/10.1007/BF01695545">1939</a>) and Jahnke et al. (<a href="https://dokumen.pub/jahnke-emde-lsch-tafeln-hherer-funktionen-tables-of-higher-functions-7nbsped.html">1966</a>).</p>
+<h3 id="24-distribution-functions">2.4. Distribution functions</h3>
+<p>The discovery of the <em>normal distribution</em> is attributed to Abraham de Moivre (<a href="https://books.google.com/books?id=PII_AAAAcAAJ">1738</a>), later Gauss (<a href="https://archive.org/details/theoriamotuscor00gausgoog/page/n1/mode/1up">1809</a>) described the <em>arithmetic mean</em> as an estimator in context with the <em>normal law of errors</em>. Beneath the <em>normal distribution</em>, Gauss (<a href="https://doi.org/10.3931/e-rara-2857">1823</a>) also introduces several important statistical concepts, such as the methods of <em>least squares</em> and of <em>maximum likelihood</em>.</p>
+<p>The <math display="inline">
+<mi>t</mi>
+</math><em>-distribution</em> first derived as a posterior distribution by Lüroth (<a href="https://doi.org/10.1002/asna.18760871402">1876</a>), appearing later as <em>Pearson Type IV</em> (Pearson, <a href="https://doi.org/10.1098/rsta.1895.0010">1895</a>),  however gets its name as <em>Student's</em> <math display="inline">
+<mi>t</mi>
+</math><em>-distribution</em> from William Sealy Gosset (<a href="https://doi.org/10.2307/2331554">1908</a>), who published it using the pseudonym <em>Student</em>, though it was actually through the <em>extensive</em> works of Sir Ronald Aylmer Fisher that the distribution became well known.</p>
+<p>The <math display="inline"><msup><mi>&chi;</mi><mn>2</mn></msup>
+</math><em>-distribution</em> was first described by Friedrich Robert Helmert (<a href="https://gdz.sub.uni-goettingen.de/id/PPN599415665_0021">1876</a>) and independently <em>rediscovered</em> by Pearson (<a href="https://doi.org/10.1080/14786440009463897">1900b</a>) in context with the <em>goodness of fit</em> paradigm, where he developed the <math display="inline"><msup><mi>&chi;</mi><mn>2</mn></msup>
+</math>-test with computed <em>table</em> of values, published by Elderton (<a href="https://doi.org/10.1093/biomet/1.2.155">1902</a>), s. further Pearson (<a href="https://doi.org/10.1093/biomet/10.1.85">1914</a>) or Plackett (<a href="https://doi.org/10.2307/1402731">1983</a>).</p>
+<p>Fisher (<a href="https://hdl.handle.net/2440/15097">1918</a>, <a href="https://hdl.handle.net/2440/15169">1921</a>, <a href="https://www.scirp.org/reference/referencespapers?referenceid=2056938">1925</a>) introduced the term <em>variance</em> and proposed its formal analysis, as well as the <math display="inline">
+<mi>F</mi><em>-distribution</em> (Fisher, <a href="https://repository.rothamsted.ac.uk/item/8w2q9/on-a-distribution-yielding-the-error-functions-of-several-well-known-statistics">1924</a>; s. also Snedecor, <a href="https://doi.org/10.1037/13308-000">1934</a> and Scheffé, <a href="https://psycnet.apa.org/record/1961-00074-000">1959</a>). The methods became widely known from <em>Methods for Research Workers</em> (Fisher, <a href="https://www.scirp.org/reference/referencespapers?referenceid=2056938">1925</a>, <a href="https://www.worldcat.org/de/title/statistical-methods-for-research-workers/oclc/312138">1954</a>, <a href="https://www.amazon.com/Statistical-methods-research-workers-Fourteenth/dp/0050021702">1973</a>, <a href="https://www.amazon.com/Statistical-Methods-Research-Workers-Fisher/dp/9351286584">2017</a>).</p>
+<p>Following functions for the most <em>relevant</em> methods are available:</p>
+<p>(1) <em>Standardizing</em>, i.e. <math display="inline">
+<mi>z</mi>
+</math>-values and <math display="inline">
+<mi>&zeta;</mi>
+</math>-values.</p>
+<p>(2) <em>Quantity proportion</em> of <math display="inline">
+<mi>a</mi>
+</math> at <math display="inline">
+<mi>N</mi>
+</math> for <math display="inline"><msub><mi>n</mi><mrow data-mjx-texclass="ORD"><msup><mi></mi><mo>&ge;</mo></msup><mi>p</mi></mrow></msub>
+</math>.</p>
+<p>(3) <em>Weighted arithmetic</em> mean <math display="inline"><mrow data-mjx-texclass="ORD"><mover><mover><mi>x</mi><mo accent="true">&minus;</mo></mover><mo>&dot;&dot;</mo></mover></mrow>
+</math>.</p>
+<p>(4) <em>Geometric</em> mean <math display="inline"><mrow data-mjx-texclass="ORD"><mover><mi>x</mi><mo>&dot;</mo></mover></mrow></math>, for the <em>weighted geometric</em> mean <math display="inline"><mrow data-mjx-texclass="ORD"><mover><mrow data-mjx-texclass="ORD"><mover><mi>x</mi><mo>&dot;</mo></mover></mrow><mo>&dot;&dot;</mo></mover></mrow>
+</math> s. Siegel (<a href="https://doi.org/10.1080/01621459.1942.10500636">1942</a>).</p>
+<p>(5) <em>Harmonic</em> mean <math display="inline"><mover><mover><mi>x</mi><mo accent="true">&minus;</mo></mover><mo accent="true">&minus;</mo></mover>
+</math>.</p>
+<p>(6) Coefficient of <em>variation</em> <math display="inline">
+<mi>&omega;</mi>
+</math>.</p>
+<p>(7) <em>Mean dispersion</em> <math display="inline"><mover><mi>d</mi><mo accent="true">&minus;</mo></mover>
+</math>, Schrausser (<a href="https://www.academia.edu/81395688">2022a</a>, p. 33).</p>
+<p>(8) <em>Standard normal distribution</em> <math display="inline"><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo>=</mo><mi>z</mi><mo stretchy="false">)</mo>
+</math>, de Moivre (<a href="https://books.google.com/books?id=PII_AAAAcAAJ">1738</a>), Gauss (<a href="https://archive.org/details/theoriamotuscor00gausgoog/page/n1/mode/1up">1809</a>, <a href="https://doi.org/10.3931/e-rara-2857">1823</a>).</p>
+<p>(9) <em>Bivariate normal distribution</em> <math display="inline"><mi>f</mi><mo stretchy="false">(</mo><msub><mi>z</mi><mn>1</mn></msub><mo>,</mo><msub><mi>z</mi><mn>2</mn></msub><mo stretchy="false">)</mo>
+</math>.</p>
+<p>(10) <em>Student's</em> <math display="inline">
+<mi>t</mi>
+</math><em>-distribution</em> <math display="inline"><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo>=</mo><mi>t</mi><mo stretchy="false">)</mo>
+</math>, Lüroth (<a href="https://doi.org/10.1002/asna.18760871402">1876</a>), Pearson (<a href="https://doi.org/10.1098/rsta.1895.0010">1895</a>), Gosset (<a href="https://doi.org/10.2307/2331554">1908</a>).</p>
+<p>(11) <math display="inline"><msup><mi>&chi;</mi><mn>2</mn></msup>
+</math><em>-distribution</em> <math display="inline"><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo>=</mo><msup><mi>&chi;</mi><mn>2</mn></msup><mo stretchy="false">)</mo>
+</math>, Helmert (<a href="https://gdz.sub.uni-goettingen.de/id/PPN599415665_0021">1876</a>), Pearson (<a href="https://doi.org/10.1080/14786440009463897">1900b</a>, <a href="https://doi.org/10.1093/biomet/10.1.85">1914</a>), Elderton (<a href="https://doi.org/10.1093/biomet/1.2.155">1902</a>), Plackett (<a href="https://doi.org/10.2307/1402731">1983</a>).</p>
+<p>(12) <math display="inline">
+<mi>F</mi><em>-distribution</em> <math display="inline"><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo>=</mo><mi>F</mi><mo stretchy="false">)</mo>
+</math>, Fisher (<a href="https://repository.rothamsted.ac.uk/item/8w2q9/on-a-distribution-yielding-the-error-functions-of-several-well-known-statistics">1924</a>), Snedecor (<a href="https://doi.org/10.1037/13308-000">1934</a>), Scheffé (<a href="https://psycnet.apa.org/record/1961-00074-000">1959</a>).</p>
+<p>(13) <em>Third</em> standardized moment, skewness <math display="inline"><msub><mi>&alpha;</mi><mn>3</mn></msub>
+</math>.</p>
+<p>(14) <em>Fourth</em> standardized moment, excess kurtosis <math display="inline"><msub><mi>&alpha;</mi><mn>4</mn></msub>
+</math>.</p>
+<p>(15) <em>Estimated standard error</em> of <em>mean</em> <math display="inline"><msub><mrow data-mjx-texclass="ORD"><mover><mi>&sigma;</mi><mo stretchy="false">^</mo></mover></mrow><mrow data-mjx-texclass="ORD"><mover><mi>x</mi><mo accent="true">&minus;</mo></mover></mrow></msub>
+</math>, <em>confidence interval</em> <math display="inline"><mi>C</mi><msub><mi>I</mi><mi>p</mi></msub>
+</math>. Neyman (<a href="https://doi.org/10.1098/rsta.1937.0005">1937</a>) introduced the <em>confidence interval</em> into statistical hypothesis testing vs. Fisher's <em>null hypothesis</em> testing, the <em>Neyman–Pearson lemma</em> (Neyman & Pearson, <a href="https://doi.org/10.1098/rsta.1933.0009">1933</a>; Lehmann, <a href="https://doi.org/10.1080/01621459.1993.10476404">1993</a>).</p>
+<p>(16) <em>Standard error</em> of <em>prediction</em> <math display="inline"><msub><mi>&sigma;</mi><mrow data-mjx-texclass="ORD"><mrow data-mjx-texclass="ORD"><mover><mi>y</mi><mo stretchy="false">^</mo></mover></mrow><mi>x</mi></mrow></msub>
+</math>, <em>confidence interval</em> <math display="inline"><mi>C</mi><msub><mi>I</mi><mi>p</mi></msub>
+</math>.</p>
+<p>(17) <em>Effect size</em> <math display="inline">
+<mi>&epsilon;</mi></math>, Cohen's <math display="inline">
+<mi>d</mi></math> (Cohen, <a href="https://doi.org/10.1016/C2013-0-10517-X">1977</a>, <a href="https://doi.org/10.4324/9780203771587">1988</a>, p. 20, p. 49, <a href="https://doi.org/10.1037/0033-2909.112.1.15">1992</a>), Borenstein et al.  (<a href="https://www.semanticscholar.org/paper/Power-and-precision-%3A-a-computer-program-for-power-Borenstein-Rothstein/f379f13a460b01488c35aea408e355436dbae839">1997</a>), Borenstein et al. (<a href="https://books.google.com/books?id=tYg02XZBeNAC&amp;printsec=frontcover&amp;hl=de#v=onepage&amp;q&amp;f=false">2001</a>).</p>
+<p>(18) <em>Optimal effect size</em> <math display="inline"><msub><mi>&epsilon;</mi><mi>p</mi></msub>
+</math>.</p>
+<p>(19) <em>Optimal alpha level</em>.</p>
+<p>(20) <em>Variance difference</em> <math display="inline">
+<mi>t</mi>
+</math>-test for <em>paired</em> samples <math display="inline"><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mrow data-mjx-texclass="ORD"><mo stretchy="false">|</mo></mrow><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo>
+</math>.</p>
+<p>(21) <em>Paired</em> 2-sample <math display="inline">
+<mi>t</mi>
+</math>-test.</p>
+<p>(22) <em>Unpaired</em> 2-sample <math display="inline">
+<mi>t</mi>
+</math>-test.</p>
+<p>(23) <em>One-sample</em> <math display="inline">
+<mi>t</mi>
+</math>-test.</p>
+<p>(24) <math display="inline"><msup><mi>&chi;</mi><mn>2</mn></msup>
+</math>-test for <em>independence</em>.</p>
+<p>(25) <em>2 × 2</em> <math display="inline"><msup><mi>&chi;</mi><mn>2</mn></msup>
+</math>-test for <em>independence</em>, for Yates's correction for <em>continuity</em> see Yates (<a href="http://www.jstor.org/stable/2983604">1934</a>).</p>
+<p>(26) McNemar's <math display="inline"><msup><mi>&chi;</mi><mn>2</mn></msup>
+</math>-test for <em>paired 2 × 2 contingency</em> tables with <em>dichotomous</em> trait, McNemar (<a href="https://doi.org/10.1007/BF02295996">1947</a>).</p>
+<h3 id="25-probability">2.5. Probability</h3>
+<p>Since until the Renaissance a <em>probable</em> opinion was merely <em>confirmed</em> by an authority and hence there was no further concept of <em>inductive</em> evidence (see Hacking, <a href="https://philpapers.org/rec/HACTEO-8">1975</a>; Hald, <a href="https://www.wiley.com/en-us/A%2BHistory%2Bof%2BProbability%2Band%2BStatistics%2Band%2BTheir%2BApplications%2Bbefore%2B1750-p-9780471725176">2003</a>, p. 31), an <em>objective</em> representation of <em>probability</em> as such was <em>first discussed</em> by Antoine Arnauld and Pierre Nicole (<a href="https://gallica.bnf.fr/ark:/12148/bpt6k574432.image">1662</a>, <a href="https://books.google.com/books?id=XQVaAAAAcAAJ">1682</a>, <a href="https://archive.org/details/logicorartofthin00arnaiala">1693</a>; c.f. also Arnauld et al., <a href="https://philpapers.org/rec/ARNLLO-8">1970</a>; van Evra, <a href="https://philpapers.org/rec/VANAAA-13">1997</a>; Dessì & Albury, <a href="https://doi.org/10.1080/01445349708837281">1997</a> or Finocchiaro, <a href="https://doi.org/10.1023/A:1007756105432">1997</a>).</p>
+<p>The <em>binomial distribution</em> is primarily attributable to de Moivre (<a href="https://doi.org/10.1098/rstl.1710.0018">1711</a>, <a href="https://books.google.com/books?id=3EPac6QpbuMC">1718</a>, <a href="https://books.google.com/books?id=PII_AAAAcAAJ">1738</a>) and Jacob Bernoulli (<a href="https://www.e-rara.ch/zut/doi/10.3931/e-rara-9001">1713</a>), see also Schneider (<a href="https://doi.org/10.1016/B978-044450871-3/50087-5">2005a</a>, <a href="https://doi.org/10.1016/B978-044450871-3/50087-5">b</a>). Although not included as function, due to its <em>considerability</em> in this context, the <em>configuration frequency analysis, CFA</em> should be mentioned particularly (c.f. Krauth, <a href="https://d-nb.info/740097938">1973</a>; Krauth & Lienert, <a href="https://books.google.com/books?id=4oeIAAAACAAJ">1993</a>).</p>
+<p>An account of the <em>systematics and logic</em> of <em>dependent probabilities</em> within the framework of <em>Bayes' theorem</em> (Bayes & Price, <a href="http://www.jstor.org/stable/105741">1763</a>; c.f. Stigler, <a href="https://www.jstor.org/stable/26770983">2018</a>) can be found in Schrausser (<a href="https://doi.org/10.5281/zenodo.14183565">2024c</a>).</p>
+<p>The arguably <em>most</em> important methods regarding the calculation of <em>probability parameters</em> are implemented as follows:</p>
+<p>(1) <em>Arcsine transformation</em>, Cohen's <math display="inline">
+<mi>h</mi>
+</math> (Cohen, <a href="https://doi.org/10.4324/9780203771587">1988</a>, p. 181).</p>
+<p>(2) <em>Additive probability</em> for <em>independent</em> events <math display="inline"><msup><mi></mi><mi>u</mi></msup><mi>p</mi><mo stretchy="false">(</mo><msub><mo>&cup;</mo><mi>n</mi></msub><mi>A</mi><mo stretchy="false">)</mo>
+</math>, which corresponding to the <em>geometric distribution</em> <math display="inline"><mi>f</mi><mo stretchy="false">(</mo><mi>X</mi><mo>&le;</mo><mi>r</mi><mrow data-mjx-texclass="ORD"><mo stretchy="false">|</mo></mrow><mi>p</mi><mo stretchy="false">)</mo>
+</math>.</p>
+<p>(3) <em>Geometric distribution</em> <math display="inline"><mi>f</mi><mo stretchy="false">(</mo><mi>X</mi><mo>&le;</mo><mi>r</mi><mrow data-mjx-texclass="ORD"><mo stretchy="false">|</mo></mrow><mi>p</mi><mo stretchy="false">)</mo>
+</math>, corresponding to the <em>additive</em> probability <math display="inline"><msup><mi></mi><mi>u</mi></msup><mi>p</mi><mo stretchy="false">(</mo><msub><mo>&cup;</mo><mi>n</mi></msub><mi>A</mi><mo stretchy="false">)</mo>
+</math>.</p>
+<p>(4) <em>Negative binomial distribution</em> <math display="inline"><mi>f</mi><mo stretchy="false">(</mo><mi>X</mi><mo>&le;</mo><mi>r</mi><mrow data-mjx-texclass="ORD"><mo stretchy="false">|</mo></mrow><mi>r</mi><mo>,</mo><mi>p</mi><mo stretchy="false">)</mo>
+</math>, with <math display="inline">
+<mi>k</mi>
+</math>=1 it corresponds to the <em>geometric distribution</em> <math display="inline"><mi>f</mi><mo stretchy="false">(</mo><mi>X</mi><mo>&le;</mo><mi>r</mi><mrow data-mjx-texclass="ORD"><mo stretchy="false">|</mo></mrow><mi>p</mi><mo stretchy="false">)</mo>
+</math> and the <em>additive</em> probability <math display="inline"><msup><mi></mi><mi>u</mi></msup><mi>p</mi><mo stretchy="false">(</mo><msub><mo>&cup;</mo><mi>n</mi></msub><mi>A</mi><mo stretchy="false">)</mo>
+</math>.</p>
+<p>(5) <em>Exact binomial</em> test.</p>
+<p>(6) <em>Exact hypergeometric 2 × 2</em> test, the so-called <em>Fisher Exact</em> test (Fisher, <a href="https://doi.org/10.2307/2340521">1922</a>; Agresti, <a href="https://doi.org/10.1214/ss/1177011454">1992</a>).</p>
+<h3 id="26-combinatorics">2.6. Combinatorics</h3>
+<p>After Gersonides' <em>pioneering</em> work from 1321 dealing with <em>arithmetical</em> operations and <em>combinatorics</em> (s. Abraham Bar Hiyya Savasorda, <a href="https://www.loc.gov/item/2021667539/">1450</a>; Rabinovitch, <a href="http://www.jstor.org/stable/41133303">1970</a>), the methods, being a fundamental part for <em>probability calculations</em>, are <em>mainly</em> based on Blaise Pascal (<a href="https://gallica.bnf.fr/ark:/12148/btv1b86262012.image#">1665</a>), Bernoulli (<a href="https://www.e-rara.ch/zut/doi/10.3931/e-rara-9001">1713</a>) and Euler (<a href="https://scholarlycommons.pacific.edu/euler-works/201/">1753</a>), c.f. Ettingshausen (<a href="https://archive.org/details/diecombinatoris00ettigoog/page/n70/mode/1up?view=theater">1826</a>).</p>
+<p>See further Sylvester (<a href="https://archive.org/details/collectedmathem01sylvrich/page/n7/mode/1up">1904</a>, <a href="https://archive.org/details/SylvesterCollected2/page/n3/mode/1up">1908</a>, <a href="https://archive.org/details/TheCollectedMathematicalPapersOfJamesJosephSylvesterVolumeIii/page/n3/mode/1up">1909</a>, <a href="https://archive.org/details/collectedmathema04sylvuoft/page/n8/mode/1up">1912</a>) and MacMahon (<a href="https://openlibrary.org/works/OL1109964W/Combinatory_analysis">1915</a>, <a href="https://books.google.com/books/about/Combinatory_Analysis.html?id=A_PuAAAAMAAJ&amp;redir_esc=y">1916</a>), giving fundamental contributions to <em>matrix-theory</em> and <em>combinatorics</em>.</p>
+<p>The following functions to <em>generate permutation</em> and <em>variation</em> matrices are available, <em>primarily</em> to support the <em>resampling</em> procedures described below:</p>
+<p>(1) <em>Permutation</em> matrix <math display="inline"><mrow data-mjx-texclass="ORD"><msub><mi mathvariant="bold">P</mi><mi mathvariant="bold">n</mi></msub></mrow>
+</math>, with <math display="inline">
+<mi>n</mi>
+</math> elements to <math display="inline">
+<mi>k</mi>
+</math>=1 class.</p>
+<p>(2) <em>Variation</em> matrix
+<math display="inline"><mrow data-mjx-texclass="ORD"><msup><mi></mi><mi mathvariant="bold">w</mi></msup><msubsup><mi mathvariant="bold">V</mi><mn mathvariant="bold">2</mn><mi mathvariant="bold">m</mi></msubsup></mrow></math> for the <em>dependent</em> 2 sample design, with <math display="inline">
+<mi>n</mi>
+</math>=2 elements to class <math display="inline">
+<mi>m</mi>
+</math>.</p>
+<p>(3) <em>Variation</em> matrix <math display="inline"><mrow data-mjx-texclass="ORD"><msup><mi></mi><mi mathvariant="bold">w</mi></msup><msubsup><mi mathvariant="bold">V</mi><mi mathvariant="bold">n</mi><mi mathvariant="bold">m</mi></msubsup></mrow></math>, with <math display="inline">
+<mi>n</mi>
+</math> elements to class <math display="inline">
+<mi>m</mi>
+</math>.</p>
+<p>(4) <em>Permutation</em> matrix <math display="inline"><mrow data-mjx-texclass="ORD"><msup><mi></mi><mi mathvariant="bold">w</mi></msup><msubsup><mi mathvariant="bold">P</mi><mi mathvariant="bold">n</mi><mrow data-mjx-texclass="ORD"><mo mathvariant="bold" stretchy="false">(</mo><msub><mi mathvariant="bold">k</mi><mi mathvariant="bold">m</mi></msub><mo mathvariant="bold">,</mo><msub><mi mathvariant="bold">k</mi><mrow data-mjx-texclass="ORD"><mi mathvariant="bold">n</mi><mo mathvariant="bold">-</mo><mi mathvariant="bold">m</mi></mrow></msub><mo mathvariant="bold" stretchy="false">)</mo></mrow></msubsup></mrow>
+</math> with <math display="inline">
+<mi>n</mi>
+</math> elements to class <math display="inline">
+<mi>m</mi>
+</math>.</p>
+<h3 id="27-resampling">2.7. Resampling</h3>
+<p><em>Permutation</em> or <em>randomization tests</em> were first mentioned by Fisher (<a href="https://psycnet.apa.org/record/1939-04964-000">1935</a>), based on experiments in agriculture (Fisher, <a href="https://doi.org/10.23637/rothamsted.8v61q">1926</a>; Neyman, <a href="https://link.springer.com/chapter/10.1007/978-94-015-8816-4_10">1923</a>). In this context see Pitman (<a href="http://www.jstor.org/stable/2984124">1937a</a>, <a href="http://www.jstor.org/stable/2983647">b</a>, <a href="http://www.jstor.org/stable/2332008">1938</a>), Fisher (<a href="https://scirp.org/reference/referencespapers.aspx?referenceid=895747">1966</a>, <a href="https://home.iitk.ac.in/~shalab/anova/DOE-RAF.pdf">1971</a>, res.), especially Eugene Sinclair Edgington (<a href="https://doi.org/10.1080/00223980.1964.9916711">1964</a>, <a href="https://doi.org/10.2307/1164966">1980</a>, <a href="https://doi.org/10.1037/0022-0167.34.4.437">1987</a>, <a href="https://doi.org/10.1007/978-3-642-04898-2_56">2011</a>) or Edgington and Onghena (<a href="https://doi.org/10.1201/9781420011814">2007</a>).</p>
+<p>The <em>bootstrap</em> method was introduced by Bradley Efron (<a href="https://doi.org/10.1214/aos/1176344552">1979</a>, <a href="https://doi.org/10.1093/biomet/68.3.589">1981</a>, <a href="https://doi.org/10.1137/1.9781611970319">1982</a>) as a further development (Quenouille, <a href="https://doi.org/10.1111/j.2517-6161.1949.tb00023.x">1949</a>; Metropolis & Ulam, <a href="https://doi.org/10.1080/01621459.1949.10483310">1949</a>), for <em>software</em> solutions see e.g. Solomon (<a href="https://doi.org/10.5555/1035853.1035900">1982</a>), Dallal (<a href="http://www.jstor.org/stable/2684555">1986</a>, <a href="https://doi.org/https://doi.org/10.1016/0010-4809(88)90037-7">1988</a>), Peladeau (<a href="https://doi.org/10.3758/BF03204533">1993</a>), Wooff and Peladeau (<a href="https://doi.org/10.2307/2986032">1994</a>), Mehta et al. (<a href="https://doi.org/10.1002/9781118445112.stat04892">2014</a>),  also Schrausser (<a href="https://doi.org/10.5281/zenodo.14280500">2024d</a>).</p>
+<p>Following functions were <em>developed</em>:</p>
+<p>(1) <em>Permutation test P</em> for 2 <em>paired</em> samples <math display="inline"><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mrow data-mjx-texclass="ORD"><mo stretchy="false">|</mo></mrow><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo>
+</math>. Random sampling model, <em>systematic</em> permutation, <math display="inline">
+<mi>p</mi>
+</math>-value <em>not</em> randomized, <em>variation</em> matrix <math display="inline"><mrow data-mjx-texclass="ORD"><msup><mi></mi><mi mathvariant="bold">w</mi></msup><msubsup><mi mathvariant="bold">V</mi><mn mathvariant="bold">2</mn><mi mathvariant="bold">m</mi></msubsup></mrow></math> <em>required</em>, s. Scambor (<a href="https://doi.org/10.13140/RG.2.2.28632.06405">1997</a>), Scambor and Schrausser (<a href="https://www.academia.edu/94993376">2022</a>, p. 7), respectively.</p>
+<p>(2) <em>Randomized permutation test mP</em> for 2 <em>paired</em> samples <math display="inline"><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mrow data-mjx-texclass="ORD"><mo stretchy="false">|</mo></mrow><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo>
+</math>. Random sampling model, <math display="inline">
+<mi>p</mi>
+</math>-value <em>not</em> randomized.</p>
+<p>(3) <em>Permutation test P</em> for 2 <em>independent</em> samples <math display="inline"><mo stretchy="false">(</mo><mi>x</mi><mrow data-mjx-texclass="ORD"><mo stretchy="false">|</mo></mrow><mi>g</mi><mo stretchy="false">)</mo>
+</math>. Random sampling model, <em>systematic</em> permutation, <math display="inline">
+<mi>p</mi>
+</math>-value <em>not</em> randomized, <em>permutation</em> matrix <math display="inline"><mrow data-mjx-texclass="ORD"><msup><mi></mi><mi mathvariant="bold">w</mi></msup><msubsup><mi mathvariant="bold">P</mi><mi mathvariant="bold">n</mi><mrow data-mjx-texclass="ORD"><mo mathvariant="bold" stretchy="false">(</mo><msub><mi mathvariant="bold">k</mi><mi mathvariant="bold">m</mi></msub><mo mathvariant="bold">,</mo><msub><mi mathvariant="bold">k</mi><mrow data-mjx-texclass="ORD"><mi mathvariant="bold">n</mi><mo mathvariant="bold">-</mo><mi mathvariant="bold">m</mi></mrow></msub><mo mathvariant="bold" stretchy="false">)</mo></mrow></msubsup></mrow>
+</math> <em>required</em>, see Schrausser (<a href="https://doi.org/10.13140/RG.2.2.24500.32640/1">1996</a>, <a href="https://doi.org/10.5281/zenodo.11673333">1998b</a>, <a href="https://www.academia.edu/82224369">2022b</a>, p. 2).</p>
+<p>(4) <em>Randomized permutation test mP</em> for 2 <em>independent</em> samples <math display="inline"><mo stretchy="false">(</mo><mi>x</mi><mrow data-mjx-texclass="ORD"><mo stretchy="false">|</mo></mrow><mi>g</mi><mo stretchy="false">)</mo>
+</math>. Random sampling model, <math display="inline">
+<mi>p</mi>
+</math>-value <em>not</em> randomized.</p>
+<p>(5) <em>Bootstrap</em> test <em>Bt</em> for 2 <em>independent</em> samples <math display="inline"><mo stretchy="false">(</mo><mi>x</mi><mrow data-mjx-texclass="ORD"><mo stretchy="false">|</mo></mrow><mi>g</mi><mo stretchy="false">)</mo>
+</math>, c.f. Quenouille (<a href="https://doi.org/10.1111/j.2517-6161.1949.tb00023.x">1949</a>), Efron (<a href="https://doi.org/10.1214/aos/1176344552">1979</a>, <a href="https://doi.org/10.1093/biomet/68.3.589">1981</a>, <a href="https://doi.org/10.1137/1.9781611970319">1982</a>).</p>
+<h3 id="28-complex-plane">2.8. Complex plane</h3>
+<p>It was the Italian mathematician Gerolamo Cardano (<a href="https://archive.org/details/arsmagnaorruleso0000card">1545a</a>, <a href="https://web.archive.org/web/20220201093634/http://www.filosofia.unimi.it/cardano/testi/operaomnia/vol_4_s_4.pdf">b</a>) who <em>first</em> conceived the term <em>imaginary</em>, for the further historical development of <em>imaginary</em> or <em>complex numbers</em> see René Descartes (<a href="https://books.google.com/books?id=VtFcAAAAcAAJ">1664</a>, <a href="https://books.google.com/books?id=MB7F32p0y5MC">2012</a>, res.) and Gauss (<a href="https://doi.org/10.3931/e-rara-61066">1828</a>, <a href="https://doi.org/10.3931/e-rara-61067">1832</a>), c.f. also Wirtinger (<a href="https://doi.org/10.1007/BF01447872">1927</a>).</p>
+<p>Here finally realized are (1) the <em>geometric</em> representation of <em>complex numbers</em> <math display="inline">
+<mi>z</mi>
+</math> in the complex plane, the <em>Argand diagram</em> (s. Argand, <a href="https://fr.wikisource.org/wiki/Annales_de_math%C3%A9matiques_pures_et_appliqu%C3%A9es/Tome_04/Philosophie_math%C3%A9matique,_article_4">1813</a>, <a href="http://catalogue.bnf.fr/ark:/12148/cb300261909">1874</a>, res.) and (2) the <em>graph</em> of the <em>complex function</em>, where <math display="inline"><mi>z</mi><mo>=</mo><mi mathvariant="normal">&Re;</mi><mo>+</mo><mi mathvariant="normal">&Im;</mi></math>.</p>
+<p>At this point, one should recall the <em>definitional</em> importance of <em>geometry</em> and <em>trigonometry</em> in context with the calculation of <em>complex numbers</em> itself, where <math display="inline"><mo stretchy="false">|</mo><mi>z</mi><mo stretchy="false">|</mo>
+</math> is <em>calculated</em> according to Pythagoras (c.f. Ratdolt, <a href="https://catalog.lindahall.org/discovery/delivery/01LINDAHALL_INST:LHL/1286816310005961">1482</a>, propositio 46) by <math display="inline"><mo stretchy="false">|</mo><mi>z</mi><mrow data-mjx-texclass="ORD"><mo stretchy="false">|</mo></mrow><mo>=</mo><mi>r</mi><mo>=</mo><msqrt><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></msqrt></math>.</p>
+<p>After the fundamental change in mathematics from <em>geometric</em> to <em>algebraic</em> representation took place in the 16th century (c.f. Heath, <a href="https://archive.org/details/thirteenbookseu02heibgoog">1908a</a>, <a href="https://archive.org/details/thirteenbookseu00heibgoog">b</a>, <a href="https://archive.org/details/thirteenbookseu03heibgoog">c</a>; Bochner, <a href="https://hdl.handle.net/1911/63315">1978</a>; Anglin & Lambek, <a href="https://doi.org/10.1007/978-1-4612-0803-7_25">1995</a>; Malet, <a href="https://doi.org/10.1016/j.hm.2004.11.011">2006</a> or Alten et al., <a href="https://doi.org/10.1007/978-3-642-38239-0_4">2014</a>), the origins of <em>trigonometric series</em> of <em>tangents</em> and <em>sine</em> can be seen following early attempts (s. Jyesthadeva, <a href="https://archive.org/details/raswhishNA-124">1530</a>; Whish, <a href="https://doi.org/10.1017/S0950473700001221">1834</a>; Gupta, <a href="https://doi.org/10.1016/0315-0860(74)90067-6">1974</a> or Divakaran, <a href="http://www.jstor.org/stable/23497280">2007</a>) during the European <em>reinvention</em> in the works of Gregory (<a href="https://archivesearch.lib.cam.ac.uk/repositories/2/archival_objects/566767">1671</a>, <a href="https://books.google.com/books?id=ZtRYqgyD5YsC">1668a</a>, <a href="https://archive.org/details/gregory_universalis">b</a>), Leibniz (<a href="https://books.google.com/books/about/Acta_eruditorum.html?id=E7MasYIsMKQC">1682</a>, <a href="https://doi.org/10.26015/adwdocs-1924">2012</a>), Newton (<a href="https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00204">1669</a>, <a href="https://doi.org/10.3931/e-rara-8934">1711</a>) and Brook Taylor (<a href="https://books.google.com/books?id=iXN1xgEACAAJ">1715</a>, <a href="https://books.google.com/books?id=r-Gq9YyZYXYC">1717</a>) with the definition of the <em>Taylor series</em> of <em>sine</em>, where <math display="inline"><mo>sin</mo><mi>x</mi><mo>=</mo><munderover><mo data-mjx-texclass="OP">&Sigma;</mo><mrow data-mjx-texclass="ORD"><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">&infin;</mi></munderover><mfrac><mrow><mo stretchy="false">(</mo><mo>-</mo><mn>1</mn><msup><mo stretchy="false">)</mo><mi>n</mi></msup></mrow><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>&middot;</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo><mo>!</mo></mrow></mfrac><mo>&middot;</mo><msup><mi>x</mi><mrow data-mjx-texclass="ORD"><mn>2</mn><mo>&middot;</mo><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></math> (c.f. Gregory & Collins, <a href="https://books.google.com/books?id=_eruAAAAMAAJ">1939</a>; Boyer, <a href="https://archive.org/details/ahistoryofmathematicscarlbboyer1968_315_t">1968</a>, p. 422 ff.; Feigenbaum, <a href="http://www.jstor.org/stable/41133765">1985</a>).</p>
+<p>Finally, Euler (<a href="https://scholarlycommons.pacific.edu/euler-works/101/">1748a</a>, <a href="https://scholarlycommons.pacific.edu/euler-works/102/">b</a>) established the <em>analytic</em> treatment of <em>trigonometric</em> functions, defining them in relation with <em>complex exponential</em> functions by <math display="inline"><msup><mi>e</mi><mrow data-mjx-texclass="ORD"><mi>i</mi><mi>x</mi></mrow></msup><mo>=</mo><mo>cos</mo><mi>x</mi><mo>+</mo><mi>i</mi><mo>sin</mo><mi>x</mi></math>, where <math display="inline"><mo>e</mo><mo>=</mo><munderover><mo data-mjx-texclass="OP">&Sigma;</mo><mrow data-mjx-texclass="ORD"><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">&infin;</mi></munderover><mfrac><mn>1</mn><mrow><mi>n</mi><mo>!</mo></mrow></mfrac></math>
+and thus laid the foundation of <em>modern</em> mathematical analysis (c.f. Finkel, <a href="http://www.jstor.org/stable/2968971">1897</a>; Walter, <a href="http://www.jstor.org/stable/2320218">1982</a>; Koyama & Kurokawa, <a href="http://www.jstor.org/stable/4097775">2005</a>; Calinger, <a href="http://www.jstor.org/stable/j.ctv7h0smb">2016</a> and Schrausser, <a href="https://doi.org/10.5281/zenodo.11356370">2024b</a>).</p>
+<br>
+<h2 id="3-conclusion">3. Conclusion</h2>
+<p>In addition to the <em>source codes</em> of the functions, <em>raw</em> data sets are provided for <em>correlation-</em> as well as <em>resampling</em>-methods.
+<em>CAS</em> programs, HP Prime <em>User</em> functions and functions for HP Prime <em>Applications</em> in comparison to corresponding <code>SCHRAUSSER-MAT</code> functions (Schrausser, <a href="https://www.academia.edu/81395688">2022a</a>) are displayed in <code>func_tab.md</code>. Furthermore, the application <code>FunktionWin</code> for a precise calculation of <em>probability distributions</em> can additionally be considered (Schrausser, <a href="https://doi.org/10.5281/zenodo.7651660">2023c</a>) as well as the author's further software applications for <em>mathematical</em> and <em>statistical</em> analyses (Schrausser, <a href="https://doi.org/10.5281/zenodo.7664141">2023a</a>, <a href="https://doi.org/10.5281/zenodo.7655056">b</a>, <a href="https://doi.org/10.5281/zenodo.7664088">d</a>).</p>
+<p>On <em>mathematical statistical</em> methods in general see e.g. Cox and Hinkley (<a href="https://doi.org/10.1201/b14832">1974</a>), Bortz and Weber (<a href="https://doi.org/10.1007/b137571">2005</a>), Lehmann and Romano (<a href="https://books.google.com/books?id=IlJE_9_e8UEC">2008</a>) or Bortz and Schuster (<a href="https://doi.org/10.1007/978-3-642-12770-0">2010</a>), Schrausser (<a href="https://doi.org/10.5281/zenodo.10969144">2024a</a>) provides a comprehensive overview of the most important <em>distribution functions</em> and corresponding <em>algorithms</em>.</p>
+<p>For <em>calculus</em> and <em>theory of functions</em> see e.g. Meyberg and Vachenauer (<a href="https://doi.org/10.1007/978-3-642-56654-7">2001a</a>, <a href="https://doi.org/10.1007/978-3-642-56655-4">b</a>) or Remmert and Schumacher (<a href="https://doi.org/10.1007/978-3-642-56281-5">2002</a>), on <em>complex numbers</em> in the <em>complex plane</em> see e.g. Burckel (<a href="https://doi.org/10.1007/978-1-0716-1965-0">2021</a>) and Vince (<a href="https://doi.org/10.1007/978-1-4471-7509-4_4">2021</a>), introducing works on <em>resampling</em> methods are given by e.g. Good (<a href="https://www.amazon.com/Resampling-Methods-Practical-Guide-Analysis/dp/0817643869">2006</a>) or Beasley and Rodgers (<a href="https://psycnet.apa.org/doi/10.4135/9780857020994.n16">2009</a>).</p>
+<p>For the history of <em>statistical inference</em> in general see e.g. Stigler (<a href="https://www.scirp.org/reference/ReferencesPapers?ReferenceID=1973131">1986</a>) and Hald (<a href="https://onlinelibrary.wiley.com/doi/book/10.1002/0471725161">1990</a>, <a href="https://www.abebooks.com/History-Mathematical-Statistics-1750-1930-Wiley/31042381048/bd">1998</a>, <a href="https://www.wiley.com/en-us/A%2BHistory%2Bof%2BProbability%2Band%2BStatistics%2Band%2BTheir%2BApplications%2Bbefore%2B1750-p-9780471725176">2003</a>, <a href="https://link.springer.com/book/10.1007/978-0-387-46409-1#bibliographic-information">2007</a>), the <em>historical foundations</em> of mathematics are thematized and discussed in e.g. Suter (<a href="https://doi.org/10.3931/e-rara-65095">1887</a>), Heath (<a href="https://archive.org/details/cu31924008704219">1921a</a>, <a href="https://archive.org/details/historyofgreekma029268mbp/page/n5/mode/1up">b</a>), Boyer (<a href="https://archive.org/details/ahistoryofmathematicscarlbboyer1968_315_t">1968</a>), Neugebauer (<a href="https://books.google.com/books?id=JVhTtVA2zr8C">1969</a>), Ewald (<a href="https://philpapers.org/rec/BRAFKT">1996a</a>, <a href="https://philpapers.org/rec/EWAFKT-4">b</a>), Katz (<a href="https://www.gettextbooks.com/isbn/9780321387004/">2009</a>) or Merzbach and Boyer (<a href="https://books.google.com/books/about/A_History_of_Mathematics.html?id=bR9HAAAAQBAJ">2011</a>), c.f. <code>paper_tab.md</code>.</p>
+<br>
+<h2 id="references">References</h2>
+<p>Abraham Bar Hiyya Savasorda, &amp; et al. (1450). <em>Ma’aseh Hoshev</em>. Retrieved from the Library of Congress. <a href="https://www.loc.gov/item/2021667539/">https://www.loc.gov/item/2021667539/</a></p>
+<p>Agresti, A. (1992). A Survey of Exact Inference for Contingency Tables. <em>Statistical Science, 7</em>(1), 131–53. <a href="https://doi.org/10.1214/ss/1177011454">https://doi.org/10.1214/ss/1177011454</a></p>
+<p>Allbright, G. S. (1991). Emulsion Speed Rating Systems. <em>The Journal of Photographic Science, 39</em>(2), 95–99. <a href="https://doi.org/10.1080/00223638.1991.11737126">https://doi.org/10.1080/00223638.1991.11737126</a></p>
+<p>Alten, H. -W., Naini, A. D., Eick, B., Folkerts, M., Schlosser, H., Schlote, K. -H., Wesemüller-Kock, H., &amp; Wussing, H. (2014). Algebra Im Europa Des Mittelalters Und Der Renaissance. In <em>4000 Jahre Algebra: Geschichte – Kulturen – Menschen</em>, 207–63. Berlin, Heidelberg: Springer. <a href="https://doi.org/10.1007/978-3-642-38239-0_4">https://doi.org/10.1007/978-3-642-38239-0_4</a></p>
+<p>Anglin, W. S., &amp; Lambek, J. (1995). Mathematics in the Renaissance. In <em>The Heritage of Thales</em>, 125–31. New York, NY: Springer. <a href="https://doi.org/10.1007/978-1-4612-0803-7_25">https://doi.org/10.1007/978-1-4612-0803-7_25</a></p>
+<p>Argand, R. (1813). Essai sur une manière de représenter les quantités imaginaires dans les constructions géométriques. <em>Annales de Mathématiques Pures Et Appliquées, 4</em>, 133–47. <a href="https://fr.wikisource.org/wiki/Annales_de_math%C3%A9matiques_pures_et_appliqu%C3%A9es/Tome_04/Philosophie_math%C3%A9matique,_article_4">https://fr.wikisource.org/wiki/Annales_de_math%C3%A9matiques_pures_et_appliqu%C3%A9es/Tome_04/Philosophie_math%C3%A9matique,_article_4</a></p>
+<p>———. (1874). <em>Essai sur une manière de représenter les quantités imaginaires dans les constructions géométriques. Précédée d’une préface par M. J. Hoüel, et suivie d’un appendice contenant des extraits des &quot;Annales de Gergonne&quot;, relatifs à la question des imaginaires</em>. 2nd ed. Paris: Gauthier-Villars. <a href="http://catalogue.bnf.fr/ark:/12148/cb300261909">http://catalogue.bnf.fr/ark:/12148/cb300261909</a></p>
+<p>Arnauld, A., &amp; Nicole, P. (1662). <em>La logique ou L’art de penser</em>. 1st ed. A Paris: Chez Charles Savreux, au pied de la Tour de Nostre Dame. <a href="https://gallica.bnf.fr/ark:/12148/bpt6k574432.image">https://gallica.bnf.fr/ark:/12148/bpt6k574432.image</a></p>
+<p>———. (1682). <em>Logica Sive Ars Cogitandi: In Qua Praeter Vulgares Regulas Plura Nova Habentur Ad Rationem Dirigendam Utilia</em>. Editio optima &amp; ultima. Lugduni Batavorum: Apud Jacobum Gaal. <a href="https://books.google.com/books?id=XQVaAAAAcAAJ">https://books.google.com/books?id=XQVaAAAAcAAJ</a></p>
+<p>———. (1693). <em>Logic: Or, the Art of Thinking: In Which Besides the Common, Are Contain’d Many Excellent New Rules, Very Profitable for Directing of Reason, and Acquiring of Judgment, in Things as Well Relating to the Instruction of a Man’s Self, as of Others. In Four Parts. I. Consistin of Reflections Upon Ideas, or Upon the First Operation of the Mind, Which Is Called Apprehension, &amp;c. II. Of Considerations of Men about Proper Judgments, &amp;c. III. Of the Nature and Various Kinds of Reasoning, &amp;c. IV. Treats of the Most Profitable Method for Demonstrating or Illustrating Any Truth to Which Is Added an Index to the Whole Book. For the Excellency of the Matter, Printed Many Times in French and Latin, and Now for Publick Good Translated into English by Several Hands</em>. 2nd ed. London: Printed by T. B. for John Taylor at the Ship at St. Paul’s Church Yard. <a href="https://archive.org/details/logicorartofthin00arnaiala">https://archive.org/details/logicorartofthin00arnaiala</a></p>
+<p>Arnauld, A., Claire, P., Girbal, F., &amp; Nicole, P. (1970). <em>La Logique: Ou, l’art de Penser: Contenant, Outre Les Regles Communes, Plusieurs Observations Nouvelles, Propres a Former Le Jugement</em>. Edited by Nicole, P. Paris: Flammarion. <a href="https://philpapers.org/rec/ARNLLO-8">https://philpapers.org/rec/ARNLLO-8</a></p>
+<p>Bayes, T., &amp; Price, R. (1763). An Essay Towards Solving a Problem in the Doctrine of Chances. By the Late Rev. Mr. Bayes, f. R. S. Communicated by Mr. Price, in a Letter to John Canton, a. M. F. R. s. <em>Philosophical Transactions (1683-1775), 53</em>, 370–418. <a href="http://www.jstor.org/stable/105741">http://www.jstor.org/stable/105741</a></p>
+<p>Beasley, W. H., &amp; Rodgers, J. L. (2009). Resampling Methods. In <em>The Sage Handbook of Quantitative Methods in Psychology</em>, edited by Millsap, R. E., &amp; Maydeu-Olivares, A., 362–86. Thousand Oaks, California: Sage Publications Ltd. <a href="https://psycnet.apa.org/doi/10.4135/9780857020994.n16">https://psycnet.apa.org/doi/10.4135/9780857020994.n16</a></p>
+<p>Bernoulli, D. (1729). Lettre XLVII. D. Bernoulli a Goldbach. St.-Petersbourg ce 6. octobre 1729. <a href="https://commons.m.wikimedia.org/wiki/File:DanielBernoulliLetterToGoldbach-1729-10-06.jpg">https://commons.m.wikimedia.org/wiki/File:DanielBernoulliLetterToGoldbach-1729-10-06.jpg</a></p>
+<p>Bernoulli, J. (1713). <em>Ars conjectandi, opus posthumum. Accedit Tractatus de seriebus infinitis, et epistola gallicé scripta de ludo pilae reticularis</em>. Basileae: Impensis Thurnisiorum, Fratrum. <a href="https://www.e-rara.ch/zut/doi/10.3931/e-rara-9001">https://www.e-rara.ch/zut/doi/10.3931/e-rara-9001</a></p>
+<p>Bochner, S. (1978). The Emergence of Analysis in the Renaissance and After. <em>Rice Institute Pamphlet - Rice University Studies, 64</em>(2-3). <a href="https://hdl.handle.net/1911/63315">https://hdl.handle.net/1911/63315</a></p>
+<p>Bonett, D. G., &amp; Price, R. M. (2005). Inferential Methods for the Tetrachoric Correlation Coefficient. <em>Journal of Educational and Behavioral Statistics, 30</em>(2), 213–25. <a href="http://www.jstor.org/stable/3701350">http://www.jstor.org/stable/3701350</a></p>
+<p>Borenstein, M., Rothstein, H., &amp; Cohen, J. (1997). Power and Precision : A Computer Program for Statistical Power Analysis and Confidence Intervals. <em>Computer Science</em>. <a href="https://www.semanticscholar.org/paper/Power-and-precision-%3A-a-computer-program-for-power-Borenstein-Rothstein/f379f13a460b01488c35aea408e355436dbae839">https://www.semanticscholar.org/paper/Power-and-precision-%3A-a-computer-program-for-power-Borenstein-Rothstein/f379f13a460b01488c35aea408e355436dbae839</a></p>
+<p>Borenstein, M., Rothstein, H., Cohen, J., Schoenfeld, D., Berlin, J., &amp; Lakatos, E. (2001). <em>Power and Precision: A Computer Program for Statistical Power Analysis and Confidence Intervals</em>. Englewood, NJ: Biostat, Inc. <a href="https://books.google.com/books?id=tYg02XZBeNAC&amp;printsec=frontcover&amp;hl=de#v=onepage&amp;q&amp;f=false">https://books.google.com/books?id=tYg02XZBeNAC&amp;printsec=frontcover&amp;hl=de#v=onepage&amp;q&amp;f=false</a></p>
+<p>Bortz, J., &amp; Schuster, C. (2010). <em>Statistik Für Human- Und Sozialwissenschaftler: Limitierte Sonderausgabe</em>. 7th ed. Springer-Lehrbuch. Berlin, Heidelberg: Springer. <a href="https://doi.org/10.1007/978-3-642-12770-0">https://doi.org/10.1007/978-3-642-12770-0</a></p>
+<p>Bortz, J., &amp; Weber, R. (2005). <em>Statistik: Für Human- Und Sozialwissenschaftler</em>. 6th ed. Springer-Lehrbuch. Berlin, Heidelberg: Springer. <a href="https://doi.org/10.1007/b137571">https://doi.org/10.1007/b137571</a></p>
+<p>Boyer, C. B. (1968). <em>A History of Mathematics</em>. 1st ed. New York: John Wiley &amp; Sons, Inc. <a href="https://archive.org/details/ahistoryofmathematicscarlbboyer1968_315_t">https://archive.org/details/ahistoryofmathematicscarlbboyer1968_315_t</a></p>
+<p>Bravais, A. (1844). <em>Analyse Mathematique. Sur les probabilités des erreurs de situation d’un point</em>. Paris: Imprimerie Royale. <a href="https://books.google.com/books?id=7g_hAQAACAAJ">https://books.google.com/books?id=7g_hAQAACAAJ</a></p>
+<p>Brown, M. B. (1977). Algorithm AS 116: The Tetrachoric Correlation and Its Asymptotic Standard Error. <em>Journal of the Royal Statistical Society. Series C (Applied Statistics), 26</em>(3), 343–51. <a href="http://www.jstor.org/stable/2346985">http://www.jstor.org/stable/2346985</a></p>
+<p>Burckel, R. B. (2021). <em>Classical Analysis in the Complex Plane</em>. New York, NY: Springer. <a href="https://doi.org/10.1007/978-1-0716-1965-0">https://doi.org/10.1007/978-1-0716-1965-0</a></p>
+<p>Cajori, F. (1919). Who Was the First Inventor of the Calculus? <em>The American Mathematical Monthly, 26</em>(1), 15–20. <a href="http://www.jstor.org/stable/2974042">http://www.jstor.org/stable/2974042</a></p>
+<p>Calinger, R. S. (2016). <em>Leonhard Euler: Mathematical Genius in the Enlightenment</em>. Princeton, New Jersey: Princeton University Press. <a href="http://www.jstor.org/stable/j.ctv7h0smb">http://www.jstor.org/stable/j.ctv7h0smb</a></p>
+<p>Cardano, G. (1545a). <em>Ars magna or The Rules of Algebra</em>. New York: Dover (published 1993). <a href="https://archive.org/details/arsmagnaorruleso0000card">https://archive.org/details/arsmagnaorruleso0000card</a></p>
+<p>———. (1545b). <em>Artis Magnae, Sive De Regvlis Algebraicis, Liber Vnvs</em>. S. P. D: Andreae Osiandro viro eruditiss. <a href="https://web.archive.org/web/20220201093634/http://www.filosofia.unimi.it/cardano/testi/operaomnia/vol_4_s_4.pdf">https://web.archive.org/web/20220201093634/http://www.filosofia.unimi.it/cardano/testi/operaomnia/vol_4_s_4.pdf</a></p>
+<p>Cassirer, E. (1943). Newton and Leibniz. <em>The Philosophical Review, 52</em>(4), 366–91. <a href="http://www.jstor.org/stable/2180670">http://www.jstor.org/stable/2180670</a></p>
+<p>Cattell, R. B. (1966). The Scree Test for the Number of Factors. <em>Multivariate Behavioral Research, 1</em>(2), 245–76. <a href="https://doi.org/10.1207/s15327906mbr0102_10">https://doi.org/10.1207/s15327906mbr0102_10</a></p>
+<p>Cohen, J. (1977). <em>Statistical Power Analysis for the Behavioral Science</em>. Amsterdam: Elsevier Academic Press. <a href="https://doi.org/10.1016/C2013-0-10517-X">https://doi.org/10.1016/C2013-0-10517-X</a></p>
+<p>———. (1988). <em>Statistical Power Analysis for the Behavioral Science</em>. 2nd ed. Hillsdale, NJ: Lawrence Erlbaum Associates. <a href="https://doi.org/10.4324/9780203771587">https://doi.org/10.4324/9780203771587</a></p>
+<p>———. (1992). A Power Primer. <em>Psychological Bulletin, 112</em>(1), 155–59. <a href="https://doi.org/10.1037/0033-2909.112.1.15">https://doi.org/10.1037/0033-2909.112.1.15</a></p>
+<p>Collins, J. (1671). <em>Extracts from a letter from James Gregory to John Collins, 15 February 1671.</em> Cambridge: University Library. <a href="https://archivesearch.lib.cam.ac.uk/repositories/2/archival_objects/566767">https://archivesearch.lib.cam.ac.uk/repositories/2/archival_objects/566767</a></p>
+<p>Cox, D. R., &amp; Hinkley, D. V. (1974). <em>Theoretical Statistics</em>. 1st ed. New York: Chapman; Hall/CRC. <a href="https://doi.org/10.1201/b14832">https://doi.org/10.1201/b14832</a></p>
+<p>Dallal, G. E. (1986). STATOOLS: Statistical Utility Programs. <em>The American Statistician, 40</em>(3), 236–36. <a href="http://www.jstor.org/stable/2684555">http://www.jstor.org/stable/2684555</a></p>
+<p>———. (1988). PITMAN: A FORTRAN Program for Exact Randomization Tests. <em>Computers and Biomedical Research, 21</em>(1), 9–15. <a href="https://doi.org/https://doi.org/10.1016/0010-4809(88)90037-7">https://doi.org/https://doi.org/10.1016/0010-4809(88)90037-7</a></p>
+<p>De Moivre, A. (1711). De mensura sortis, seu, de probabilitate eventuum in ludis a casu fortuito pendentibus. <em>Philosophical Transactions of the Royal Society of London, 27</em>(329), 213–64. <a href="https://doi.org/10.1098/rstl.1710.0018">https://doi.org/10.1098/rstl.1710.0018</a></p>
+<p>———. (1718). <em>The Doctrine of Chances: Or, A Method of Calculating the Probability of Events in Play</em>. 1st ed. London: W. Pearson. <a href="https://books.google.com/books?id=3EPac6QpbuMC">https://books.google.com/books?id=3EPac6QpbuMC</a></p>
+<p>———. (1738). <em>The Doctrine of Chances: Or, A Method of Calculating the Probability of Events in Play</em>. 2nd ed. London: H. Woodfall. <a href="https://books.google.com/books?id=PII_AAAAcAAJ">https://books.google.com/books?id=PII_AAAAcAAJ</a></p>
+<p>Descartes, R. (1664). <em>La Géométrie</em>. A Paris: Chez Charles Angot, Libraire Iuré, ruë S. Iacques, au Lion d’Or. M. DC. LXIV. Avec Privilege du Roy. <a href="https://books.google.com/books?id=VtFcAAAAcAAJ">https://books.google.com/books?id=VtFcAAAAcAAJ</a></p>
+<p>———. (2012). <em>The Geometry of René Descartes: With a Facsimile of the First Edition</em>. Dover Books on Mathematics. New York: Dover Publications. <a href="https://books.google.com/books?id=MB7F32p0y5MC">https://books.google.com/books?id=MB7F32p0y5MC</a></p>
+<p>Dessì, P., &amp; Albury, W. R. (1997). Book Reviews. <em>History and Philosophy of Logic, 18</em>(2), 121–22. <a href="https://doi.org/10.1080/01445349708837281">https://doi.org/10.1080/01445349708837281</a></p>
+<p>Digby, P. G. N. (1983). Approximating the Tetrachoric Correlation Coefficient. <em>Biometrics, 39</em>(3), 753–57. <a href="http://www.jstor.org/stable/2531104">http://www.jstor.org/stable/2531104</a></p>
+<p>Divakaran, P. P. (2007). The First Textbook of Calculus: &quot;Yuktibhāṣā&quot;. <em>Journal of Indian Philosophy, 35</em>(5/6), 417–43. <a href="http://www.jstor.org/stable/23497280">http://www.jstor.org/stable/23497280</a></p>
+<p>Efron, B. (1979). Bootstrap Methods: Another Look at the Jackknife. <em>The Annals of Statistics, 7</em>(1), 1–26. <a href="https://doi.org/10.1214/aos/1176344552">https://doi.org/10.1214/aos/1176344552</a></p>
+<p>———. (1981). Nonparametric Estimates of Standard Error: The Jackknife, the Bootstrap and Other Methods. <em>Biometrika, 68</em>(3), 589–99. <a href="https://doi.org/10.1093/biomet/68.3.589">https://doi.org/10.1093/biomet/68.3.589</a></p>
+<p>———. (1982). <em>The Jackknife, the Bootstrap and Other Resampling Plans</em>. CBMS-NSF Regional Conference Series in Applied Mathematics, Monograph 38. Philadelphia: SIAM, Society for Industrial and Applied Mathematics. <a href="https://doi.org/10.1137/1.9781611970319">https://doi.org/10.1137/1.9781611970319</a></p>
+<p>Edgington, E. S. (1964). Randomization Tests. <em>The Journal of Psychology: Interdisciplinary and Applied, 57</em>(2), 445–49. <a href="https://doi.org/10.1080/00223980.1964.9916711">https://doi.org/10.1080/00223980.1964.9916711</a></p>
+<p>———. (1980). Validity of Randomization Tests for One-Subject Experiments. <em>Journal of Educational Statistics, 5</em>(3), 235–51. <a href="https://doi.org/10.2307/1164966">https://doi.org/10.2307/1164966</a></p>
+<p>———. (1987). Randomized Single-Subject Experiments and Statistical Tests. <em>Journal of Counseling Psychology, 34</em>(4), 437–42. <a href="https://doi.org/10.1037/0022-0167.34.4.437">https://doi.org/10.1037/0022-0167.34.4.437</a></p>
+<p>———. (2011). Randomization Tests. In <em>International Encyclopedia of Statistical Science</em>, edited by Lovric, M., 1182–83. Berlin, Heidelberg: Springer. <a href="https://doi.org/10.1007/978-3-642-04898-2_56">https://doi.org/10.1007/978-3-642-04898-2_56</a></p>
+<p>Edgington, E. S., &amp; Onghena, P. (2007). <em>Randomization Tests</em>. 4th ed. New York: Chapman and Hall/CRC. <a href="https://doi.org/10.1201/9781420011814">https://doi.org/10.1201/9781420011814</a></p>
+<p>Elderton, W. P. (1902). Tables for Testing the Goodness of Fit of Theory to Observation. <em>Biometrika, 1</em>(2), 155–63. <a href="https://doi.org/10.1093/biomet/1.2.155">https://doi.org/10.1093/biomet/1.2.155</a></p>
+<p>Ettingshausen, A. (1826). <em>Die combinatorische Analysis: als Vorbereitungslehre zum Studium der theoretischen höhern Mathematik</em>. Wien: Wallishausser. <a href="https://archive.org/details/diecombinatoris00ettigoog/page/n70/mode/1up?view=theater">https://archive.org/details/diecombinatoris00ettigoog/page/n70/mode/1up?view=theater</a></p>
+<p>Euler, L. (1738). De progressionibus transcendentibus seu quarum termini generales algebraice dari nequeunt. <em>Commentarii Academiae Scientiarum Petropolitanae 5</em>: 36–57. <a href="https://scholarlycommons.pacific.edu/euler-works/19/">https://scholarlycommons.pacific.edu/euler-works/19/</a></p>
+<p>———. (1748a). <em>Introductio in analysin infinitorum</em>. Vol. 1. Lausannae: Apud Marcum-Michaelem Bousqujet &amp; Socio. <a href="https://scholarlycommons.pacific.edu/euler-works/101/">https://scholarlycommons.pacific.edu/euler-works/101/</a></p>
+<p>———. (1748b). <em>Introductio in analysin infinitorum</em>. Vol. 2. Lausannae: Apud Marcum-Michaelem Bousqujet &amp; Socio. <a href="https://scholarlycommons.pacific.edu/euler-works/102/">https://scholarlycommons.pacific.edu/euler-works/102/</a></p>
+<p>———. (1753). Calcul de la probabilité dans le jeu de rencontre. <em>Mémoires de l’académie Des Sciences de Berlin, 7</em>, 255–70. <a href="">https://scholarlycommons.pacific.edu/euler-works/201/</a></p>
+<p>Everitt, P. F. (1910). Tables of the Tetrachoric Functions for Fourfold Correlation Tables. <em>Biometrika, 7</em>(4), 437–51. <a href="https://doi.org/10.1093/biomet/7.4.437">https://doi.org/10.1093/biomet/7.4.437</a></p>
+<p>———. (1912). Supplementary Tables for Finding the Correlation Coefficient from Tetrachoric Groupings. <em>Biometrika, 8</em>(3/4), 385–95. <a href="http://www.jstor.org/stable/2331587">http://www.jstor.org/stable/2331587</a></p>
+<p>Ewald, W. B. (1996a). <em>From Kant to Hilbert: A Source Book in the Foundations of Mathematics</em>. Vol. 1. Oxford: Oxford University Press OUP. <a href="https://philpapers.org/rec/BRAFKT">https://philpapers.org/rec/BRAFKT</a></p>
+<p>———. (1996b). <em>From Kant to Hilbert: A Source Book in the Foundations of Mathematics</em>. Vol. 2. Oxford: Oxford University Press OUP. <a href="https://philpapers.org/rec/EWAFKT-4">https://philpapers.org/rec/EWAFKT-4</a></p>
+<p>Feigenbaum, L. (1985). Brook Taylor and the Method of Increments. <em>Archive for History of Exact Sciences, 34</em>(1/2), 1–140. <a href="http://www.jstor.org/stable/41133765">http://www.jstor.org/stable/41133765</a></p>
+<p>Finkel, B. F. (1897). Biography: Leonhard Euler. <em>The American Mathematical Monthly, 4</em>(12), 297–302. <a href="http://www.jstor.org/stable/2968971">http://www.jstor.org/stable/2968971</a></p>
+<p>Finocchiaro, M. A. (1997). The Port-Royal Logic’s Theory of Argument. <em>Argumentation, 11</em>(4), 393–410. <a href="https://doi.org/10.1023/A:1007756105432">https://doi.org/10.1023/A:1007756105432</a></p>
+<p>Fisher, R. A. (1915). Frequency Distribution of the Values of the Correlation Coefficient in Samples from an Indefinitely Large Population. <em>Biometrika, 10</em>(4), 507–21. <a href="https://doi.org/10.2307/2331838">https://doi.org/10.2307/2331838</a></p>
+<p>———. (1918). The Correlation Between Relatives on the Supposition of Mendelian Inheritance. <em>Philosophical Transactions of the Royal Society of Edinburgh, 52</em>, 399–433. <a href="https://hdl.handle.net/2440/15097">https://hdl.handle.net/2440/15097</a></p>
+<p>———. (1921). On the &quot;Probable Error&quot; of a Coefficient of Correlation Deduced from a Small Sample. <em>Metron, 1</em>, 3–32. <a href="https://hdl.handle.net/2440/15169">https://hdl.handle.net/2440/15169</a></p>
+<p>———. (1922). On the Interpretation of χ2 from Contingency Tables, and the Calculation of p. <em>Journal of the Royal Statistical Society, 85</em>(1), 87–94. <a href="https://doi.org/10.2307/2340521">https://doi.org/10.2307/2340521</a></p>
+<p>———. (1924). On a Distribution Yielding the Error Functions of Several Well-Known Statistics. <em>Proceedings International Mathematical Congress, Toronto 2</em>: 805–13. <a href="https://repository.rothamsted.ac.uk/item/8w2q9/on-a-distribution-yielding-the-error-functions-of-several-well-known-statistics">https://repository.rothamsted.ac.uk/item/8w2q9/on-a-distribution-yielding-the-error-functions-of-several-well-known-statistics</a></p>
+<p>———. (1925). <em>Statistical Methods for Research Workers</em>. 1st ed. Edinburgh: Oliver; Boyd. <a href="https://www.scirp.org/reference/referencespapers?referenceid=2056938">https://www.scirp.org/reference/referencespapers?referenceid=2056938</a></p>
+<p>———. (1926). The Arrangement of Field Experiments. <em>Journal of the Ministry of Agriculture 33</em>: 503–15. <a href="https://doi.org/10.23637/rothamsted.8v61q">https://doi.org/10.23637/rothamsted.8v61q</a></p>
+<p>———. (1935). <em>The Design of Experiments</em>. 1st ed. Edinburgh: Oliver &amp; Boyd. <a href="https://psycnet.apa.org/record/1939-04964-000">https://psycnet.apa.org/record/1939-04964-000</a></p>
+<p>———. (1954). <em>Statistical Methods for Research Workers</em>. 12th ed. Edinburgh: Oliver; Boyd. <a href="https://www.worldcat.org/de/title/statistical-methods-for-research-workers/oclc/312138">https://www.worldcat.org/de/title/statistical-methods-for-research-workers/oclc/312138</a></p>
+<p>———. (1966). <em>The Design of Experiments</em>. 8th ed. Edinburgh: Hafner. <a href="https://scirp.org/reference/referencespapers.aspx?referenceid=895747">https://scirp.org/reference/referencespapers.aspx?referenceid=895747</a></p>
+<p>———. (1971). <em>The Design of Experiments</em>. 9th ed. New York: Hafner Press. <a href="https://home.iitk.ac.in/~shalab/anova/DOE-RAF.pdf">https://home.iitk.ac.in/~shalab/anova/DOE-RAF.pdf</a></p>
+<p>———. (1973). <em>Statistical Methods for Research Workers</em>. 14th ed. New York: ‎Hafner Publishing Company. <a href="https://www.amazon.com/Statistical-methods-research-workers-Fourteenth/dp/0050021702">https://www.amazon.com/Statistical-methods-research-workers-Fourteenth/dp/0050021702</a></p>
+<p>———. (2017). <em>Statistical Methods for Research Workers</em>. 14th rev. ed. New Delhi: ‎‎Gyan Books. <a href="https://www.amazon.com/Statistical-Methods-Research-Workers-Fisher/dp/9351286584">https://www.amazon.com/Statistical-Methods-Research-Workers-Fisher/dp/9351286584</a></p>
+<p>Galton, F. (1877). Typical Laws of Heredity 1. <em>Nature, 15</em>, 492–95. <a href="https://doi.org/10.1038/015492a0">https://doi.org/10.1038/015492a0</a></p>
+<p>Gauss, C. F. (1809). <em>Theoria motvs corporvm coelestivm in sectionibvs conicis Solem ambientivm</em>. Hambvrgi: Svmtibvs F. Perthes et I. H. Besser. <a href="https://archive.org/details/theoriamotuscor00gausgoog/page/n1/mode/1up">https://archive.org/details/theoriamotuscor00gausgoog/page/n1/mode/1up</a></p>
+<p>———. (1823). <em>Theoria Combinationis Observationum Erroribus Minimis Obnoxiae</em>. Göttingen: apud Henricum Dieterich. <a href="https://doi.org/10.3931/e-rara-2857">https://doi.org/10.3931/e-rara-2857</a></p>
+<p>———. (1828). <em>Theoria residuorum biquadraticorum: commentatio prima</em>. Gottingae: typis Dieterichianis. <a href="https://doi.org/10.3931/e-rara-61066">https://doi.org/10.3931/e-rara-61066</a></p>
+<p>———. (1832). <em>Theoria residuorum biquadraticorum: commentatio secunda</em>. Gottingae: typis Dieterichianis. <a href="https://doi.org/10.3931/e-rara-61067">https://doi.org/10.3931/e-rara-61067</a></p>
+<p>Gerhardt, C. I. (1848). <em>Die Entdeckung der Differentialrechnung durch Leibniz mit Benutzung der Leibnizischen Manuscripte auf der Königlichen Bibliothek zu Hannover</em>. Halle: H. W. Schmidt. <a href="https://doi.org/10.3931/e-rara-4272">https://doi.org/10.3931/e-rara-4272</a></p>
+<p>Good, P. (2006). <em>Resampling Methods</em>. 3rd ed. Basel: Birkhäuser. <a href="https://www.amazon.com/Resampling-Methods-Practical-Guide-Analysis/dp/0817643869">https://www.amazon.com/Resampling-Methods-Practical-Guide-Analysis/dp/0817643869</a></p>
+<p>Gosset, W. S. (1908). The Probable Error of a Mean. <em>Biometrika, 6</em>(1), 1–25. <a href="https://doi.org/10.2307/2331554">https://doi.org/10.2307/2331554</a></p>
+<p>Gregory, J. (1668a). <em>Exercitationes Geometricae</em>. Londini: Typis Guilielmi Godbid, &amp; Impensis Mosis Pitt Bibliopolae, in vico vulgo vocato Little Britain. <a href="https://books.google.com/books?id=ZtRYqgyD5YsC">https://books.google.com/books?id=ZtRYqgyD5YsC</a></p>
+<p>———. (1668b). <em>Geometriae Pars Universalis, Inferuiens Quantitatum Curvarum transmutationi &amp; mensurae</em>. Patavii: Typis Heredum Pauli Frambotti. <a href="https://archive.org/details/gregory_universalis">https://archive.org/details/gregory_universalis</a></p>
+<p>Gregory, J., &amp; Collins, J. (1939). <em>James Gregory: Tercentenary Memorial Volume, Containing His Correspondence with John Collins and His Hitherto Unpublished Mathematical Manuscripts, Together with Addresses and Essays Communicated to the Royal Society of Edinburgh, July 4, 1938</em>. Edited by Turnbull, H.W., &amp; Royal Society of Edinburgh. Edinburgh: Royal Society of Edinburgh. <a href="https://books.google.com/books?id=_eruAAAAMAAJ">https://books.google.com/books?id=_eruAAAAMAAJ</a></p>
+<p>Gupta, R. C. (1974). An Indian Form of Third Order Taylor Series Approximation of the Sine. <em>Historia Mathematica, 1</em>(3), 287–89. <a href="https://doi.org/10.1016/0315-0860(74)90067-6">https://doi.org/10.1016/0315-0860(74)90067-6</a></p>
+<p>Hacking, I. (1975). <em>The Emergence of Probability: A Philosophical Study of Early Ideas About Probability, Induction and Statistical Inference</em>. Cambridge University Press. <a href="https://philpapers.org/rec/HACTEO-8">https://philpapers.org/rec/HACTEO-8</a></p>
+<p>Hald, A. (1990). <em>History of Probability and Statistics and Their Applications before 1750</em>. New York: Wiley Series in Probability; Statistics, Wiley-Interscience. <a href="https://onlinelibrary.wiley.com/doi/book/10.1002/0471725161">https://onlinelibrary.wiley.com/doi/book/10.1002/0471725161</a></p>
+<p>———. (1998). <em>A History of Mathematical Statistics from 1750 to 1930</em>. New York: Wiley. <a href="https://www.abebooks.com/History-Mathematical-Statistics-1750-1930-Wiley/31042381048/bd">https://www.abebooks.com/History-Mathematical-Statistics-1750-1930-Wiley/31042381048/bd</a></p>
+<p>———. (2003). <em>A History of Probability and Statistics and Their Applications before 1750</em>. Hoboken, NJ: Wiley-Interscience. <a href="https://www.wiley.com/en-us/A%2BHistory%2Bof%2BProbability%2Band%2BStatistics%2Band%2BTheir%2BApplications%2Bbefore%2B1750-p-9780471725176">https://www.wiley.com/en-us/A+History+of+Probability+and+Statistics+and+Their+Applications+before+1750-p-9780471725176</a></p>
+<p>———. (2007). <em>A History of Parametric Statistical Inference from Bernoulli to Fisher, 1713–1935</em>. New York: Springer. <a href="https://link.springer.com/book/10.1007/978-0-387-46409-1#bibliographic-information">https://link.springer.com/book/10.1007/978-0-387-46409-1#bibliographic-information</a></p>
+<p>Heath, T. L. (1908a). <em>The Thirteen Books of Euclid’s Elements Translated from the Text of Heiberg with Introduction and Commentary</em>. Vol. I Introduction and Books I, II. Cambridge: University Press. <a href="https://archive.org/details/thirteenbookseu02heibgoog">https://archive.org/details/thirteenbookseu02heibgoog</a></p>
+<p>———. (1908b). <em>The Thirteen Books of Euclid’s Elements Translated from the Text of Heiberg with Introduction and Commentary</em>. Vol. II Books III–IX. Cambridge: University Press. <a href="https://archive.org/details/thirteenbookseu00heibgoog">https://archive.org/details/thirteenbookseu00heibgoog</a></p>
+<p>———. (1908c). <em>The Thirteen Books of Euclid’s Elements Translated from the Text of Heiberg with Introduction and Commentary</em>. Vol. III Books X–XIII and Appendix. Cambridge: University Press. <a href="https://archive.org/details/thirteenbookseu03heibgoog">https://archive.org/details/thirteenbookseu03heibgoog</a></p>
+<p>———. (1921a). <em>A History of Greek Mathematics. Vol. I From Thales to Euclid</em>. Oxford: At the Clarendon Press. <a href="https://archive.org/details/cu31924008704219">https://archive.org/details/cu31924008704219</a></p>
+<p>———. (1921b). <em>A History of Greek Mathematics. Vol. II From Aristarchus to Diophantus</em>. Oxford: At the Clarendon Press. <a href="https://archive.org/details/historyofgreekma029268mbp/page/n5/mode/1up">https://archive.org/details/historyofgreekma029268mbp/page/n5/mode/1up</a></p>
+<p>Helmert, F. R. (1876). Ueber die Wahrscheinlichkeit der Potenzsummen der Beobachtungsfehler und über einige damit im Zusammenhange stehende Fragen. <em>Zeitschrift für Mathematik und Physik, 21</em>, 192–219. <a href="https://gdz.sub.uni-goettingen.de/id/PPN599415665_0021">https://gdz.sub.uni-goettingen.de/id/PPN599415665_0021</a></p>
+<p>Howie, J. M. (2001). The Logarithmic and Exponential Functions. In <em>Real Analysis</em>, 165–79. London: Springer. <a href="https://doi.org/10.1007/978-1-4471-0341-7_6">https://doi.org/10.1007/978-1-4471-0341-7_6</a></p>
+<p>HP Inc. (2017). <em>HP Prime Graphing Calculator: Manual</em>. 3rd ed. Stanford Research Park, Palo Alto, California, U.S.: HP Development Company, L.P. <a href="https://www.hpcalc.org/details/7445">https://www.hpcalc.org/details/7445</a></p>
+<p>Jahnke, E., &amp; Emde, F. (1909). <em>Funktionentafeln Mit Formeln Und Kurven</em>. 1st ed. Mathematisch-Physikalische Schriften für Ingenieure Und Studierende. Leipzig: B. G. Teubner. <a href="https://books.google.com/books?id=BVRzvgAACAAJ">https://books.google.com/books?id=BVRzvgAACAAJ</a></p>
+<p>———. (1933). <em>Funktionentafeln Mit Formeln Und Kurven</em>. 2nd ed. Mathematisch-Physikalische Schriften für Ingenieure Und Studierende. Leipzig: B. G. Teubner. <a href="https://books.google.com/books?id=SB5tAAAAMAAJ">https://books.google.com/books?id=SB5tAAAAMAAJ</a></p>
+<p>———. (1938). <em>Funktionentafeln Mit Formeln Und Kurven</em>. 3rd ed. Leipzig: Teubner. <a href="https://books.google.com/books?id=5vlrAAAAIAAJ">https://books.google.com/books?id=5vlrAAAAIAAJ</a></p>
+<p>———. (1945). <em>Funktionentafeln Mit Formeln Und Kurven</em>. 4th ed. Dover Book. New York: Dover Publications. <a href="https://archive.org/details/tablesoffunction0000jahn">https://archive.org/details/tablesoffunction0000jahn</a></p>
+<p>Jahnke, E., Emde, F., &amp; Lösch, F. (1966). <em>Tafeln höherer Funktionen</em>. 7th ed. Stuttgart: B. G. Teubner Verlagsgesellschaft. <a href="https://dokumen.pub/jahnke-emde-lsch-tafeln-hherer-funktionen-tables-of-higher-functions-7nbsped.html">https://dokumen.pub/jahnke-emde-lsch-tafeln-hherer-funktionen-tables-of-higher-functions-7nbsped.html</a></p>
+<p>Jyesthadeva. (1530). <em>Ganita-Yukti-Bhasa (Rationales in Mathematical Astronomy)</em>. Kingdom of Cochin: Kerala school of astronomy; mathematics. <a href="https://archive.org/details/raswhishNA-124">https://archive.org/details/raswhishNA-124</a></p>
+<p>Katz, V. (2009). <em>Elementary Probability. A History of Mathematics: An Introduction</em>. 3rd ed. London: Pearson. <a href="https://www.gettextbooks.com/isbn/9780321387004/">https://www.gettextbooks.com/isbn/9780321387004/</a></p>
+<p>Kendall, M. G. (1938). A New Measure of Rank Correlation. <em>Biometrika, 30</em>(1/2), 81–93. <a href="http://www.jstor.org/stable/2332226">http://www.jstor.org/stable/2332226</a></p>
+<p>Knoll, F. (1939). Funktionentafeln mit Formeln und Kurven. <em>Monatshefte Für Mathematik Und Physik</em>. <a href="https://doi.org/10.1007/BF01695545">https://doi.org/10.1007/BF01695545</a></p>
+<p>Kossovsky, A. E. (2020). The Bitter Dispute with Leibniz over Calculus Priority. In <em>The Birth of Science</em>, 161–61. Cham: Springer International Publishing. <a href="https://doi.org/10.1007/978-3-030-51744-1_33">https://doi.org/10.1007/978-3-030-51744-1_33</a></p>
+<p>Koyama, S. -J., &amp; Kurokawa, N. (2005). Euler’s Integrals and Multiple Sine Functions. <em>Proceedings of the American Mathematical Society, 133</em>(5), 1257–65. <a href="http://www.jstor.org/stable/4097775">http://www.jstor.org/stable/4097775</a></p>
+<p>Krauth, J. (1993). <em>Einführung in die Konfigurationsfrequenzanalyse (KFA): Ein multivariates nichtparametrisches Verfahren zum Nachweis und zur Interpretation von Typen und Syndromen</em>. Weinheim: BELTZ Psychologie Verlags Union. <a href="https://books.google.com/books?id=4oeIAAAACAAJ">https://books.google.com/books?id=4oeIAAAACAAJ</a></p>
+<p>Krauth, J., &amp; Lienert, G. (1973). <em>Die Konfigurationsfrequenzanalyse (KFA) und ihre Anwendung in Psychologie und Medizin: Ein multivariates nichtparametrisches Verfahren zum Aufdeckung von Typen und Syndromen; mit 70 Tab</em>. Freiburg: Alber. <a href="https://d-nb.info/740097938">https://d-nb.info/740097938</a></p>
+<p>Lehmann, E. L. (1993). The Fisher, Neyman-Pearson Theories of Testing Hypotheses: One Theory or Two? <em>Journal of the American Statistical Association, 88</em>(424), 1242–49. <a href="https://doi.org/10.1080/01621459.1993.10476404">https://doi.org/10.1080/01621459.1993.10476404</a></p>
+<p>Lehmann, E. L., &amp; Romano, J. P. (2008). <em>Testing Statistical Hypotheses</em>. 3rd ed. Springer Texts in Statistics. New York: Springer. <a href="https://books.google.com/books?id=IlJE_9_e8UEC">https://books.google.com/books?id=IlJE_9_e8UEC</a></p>
+<p>Leibniz, G. W. (1682). De vera proportione circuli ad quadratum circumscriptum in numeris rationalibus. <em>Acta Eruditorum Anno MDCLXXXII</em>, 41–46. <a href="https://books.google.com/books/about/Acta_eruditorum.html?id=E7MasYIsMKQC">https://books.google.com/books/about/Acta_eruditorum.html?id=E7MasYIsMKQC</a></p>
+<p>———. (1684). Nova methodus pro maximis et minimis itemque tangentibus, quae nec fractas nec irrationales quantitates moratur, et singulare pro illis calculi genus, per G.G.L. <em>Acta Eruditorum Anno MDCLXXXIV</em>, 467–73. <a href="https://gdz.sub.uni-goettingen.de/id/PPN788262599">https://gdz.sub.uni-goettingen.de/id/PPN788262599</a></p>
+<p>———. (1686). De geometria recondita et analysi indivisibilium atque infinitorum. <em>Acta Eruditorum Anno MDCLXXXVI</em>, 292–300. <a href="https://gdz.sub.uni-goettingen.de/id/PPN788262947">https://gdz.sub.uni-goettingen.de/id/PPN788262947</a></p>
+<p>———. (1693). Supplementum geometriae dimensoriae, seu generalissima omnium tetragonismorum effectio per motum: similiterque multiplex constructio lineae ex data tangentium conditione. <em>Acta Eruditorum Anno MDCLXCIII</em>, 385–92. <a href="https://archive.org/details/s1id13206590">https://archive.org/details/s1id13206590</a></p>
+<p>———. (2012). <em>Sämtliche Schriften und Briefe</em>. Edited by Berlin-Brandenburgischen Akademie der Wissenschaften, &amp; Akademie der Wissenschaften zu Göttingen. Vol. 6: 1673–1676: Arithmetische Kreisquadratur. 7: Mathematische Schriften. Berlin: Akademie Verlag. <a href="https://doi.org/10.26015/adwdocs-1924">https://doi.org/10.26015/adwdocs-1924</a></p>
+<p>Long, M. A., Berry, K. J., &amp; Mielke, P. W. (2009). Tetrachoric Correlation: A Permutation Alternative. <em>Educational and Psychological Measurement, 69</em>(3), 429–37. <a href="https://doi.org/10.1177/0013164408324463">https://doi.org/10.1177/0013164408324463</a></p>
+<p>Lüroth, J. (1876). Vergleichung von zwei Werthen des wahrscheinlichen Fehlers. <em>Astronomische Nachrichten, 87</em>(14), 209–20. <a href="https://doi.org/10.1002/asna.18760871402">https://doi.org/10.1002/asna.18760871402</a></p>
+<p>MacMohan, P. A. (1915). <em>Combinatory Analysis</em>. Vol. 1. Cambridge: University Press. <a href="https://openlibrary.org/works/OL1109964W/Combinatory_analysis">https://openlibrary.org/works/OL1109964W/Combinatory_analysis</a></p>
+<p>———. (1916). <em>Combinatory Analysis</em>. Vol. 2. Cambridge: University Press. <a href="https://books.google.com/books/about/Combinatory_Analysis.html?id=A_PuAAAAMAAJ&amp;redir_esc=y">https://books.google.com/books/about/Combinatory_Analysis.html?id=A_PuAAAAMAAJ&amp;redir_esc=y</a></p>
+<p>Malet, A. (2006). Renaissance Notions of Number and Magnitude. <em>Historia Mathematica, 33</em>(1), 63–81. <a href="https://doi.org/10.1016/j.hm.2004.11.011">https://doi.org/10.1016/j.hm.2004.11.011</a></p>
+<p>Mann, H. B., &amp; Whitney, D. R. (1947). On a Test of Whether one of Two Random Variables is Stochastically Larger than the Other. <em>The Annals of Mathematical Statistics, 18</em>(1), 50–60. <a href="https://doi.org/10.1214/aoms/1177730491">https://doi.org/10.1214/aoms/1177730491</a></p>
+<p>Marsden, J., &amp; Weinstein, A. (1985). Exponentials and Logarithms. In <em>Calculus i</em>, 307–35. New York, NY: Springer. <a href="https://doi.org/10.1007/978-1-4612-5024-1_9">https://doi.org/10.1007/978-1-4612-5024-1_9</a></p>
+<p>McNemar, Q. (1947). Note on the Sampling Error of the Difference Between Correlated Proportions or Percentages. <em>Psychometrika, 12</em>(2), 153–157. <a href="https://doi.org/10.1007/BF02295996">https://doi.org/10.1007/BF02295996</a></p>
+<p>Mehta, C. R., Patel, N. R., Senchaudhuri, P., &amp; Corcoran, C. D. (2014). StatXact. In <em>Wiley StatsRef: Statistics Reference Online</em>. John Wiley &amp; Sons, Ltd. <a href="https://doi.org/10.1002/9781118445112.stat04892">https://doi.org/10.1002/9781118445112.stat04892</a></p>
+<p>Merzbach, U. C., &amp; Boyer, C. B. (2011). <em>A History of Mathematics</em>. 3rd ed. Hoboken, New Jersey: John Wiley &amp; Sons, Inc. <a href="https://books.google.com/books/about/A_History_of_Mathematics.html?id=bR9HAAAAQBAJ">https://books.google.com/books/about/A_History_of_Mathematics.html?id=bR9HAAAAQBAJ</a></p>
+<p>Metropolis, N., &amp; Ulam, S. (1949). The Monte Carlo Method. <em>Journal of the American Statistical Association, 44</em>(247), 335–41. <a href="https://doi.org/10.1080/01621459.1949.10483310">https://doi.org/10.1080/01621459.1949.10483310</a></p>
+<p>Meyberg, K., &amp; Vachenauer, P. (2001a). <em>Höhere Mathematik 1: Differential- und Integralrechnung Vektor- und Matrizenrechnung</em>. Berlin, Heidelberg: Springer. <a href="https://doi.org/10.1007/978-3-642-56654-7">https://doi.org/10.1007/978-3-642-56654-7</a></p>
+<p>———. (2001b). <em>Höhere Mathematik 2: Differentialgleichungen, Funktionentheorie, Fourier-Analysis, Variationsrechnung</em>. Berlin, Heidelberg: Springer. <a href="https://doi.org/10.1007/978-3-642-56655-4">https://doi.org/10.1007/978-3-642-56655-4</a></p>
+<p>Neugebauer, O. (1969). <em>The Exact Sciences in Antiquity</em>. 2nd ed. Acta Historica Scientiarum Naturalium Et Medicinalium. New York: Dover Publications. <a href="https://books.google.com/books?id=JVhTtVA2zr8C">https://books.google.com/books?id=JVhTtVA2zr8C</a></p>
+<p>Newton, I. (1669). <em>De analysi per aequationes numero terminorum infinitas</em>. Sent by Dr. Barrow to Mr. Collins in a Letter dated July 31. 1669. London: Royal Society Library. <a href="https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00204">https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00204</a></p>
+<p>———. (1687). <em>Philosophiae naturalis principia mathematica</em>. 1st ed. Londini: Jussu Societatis Regiae ac typis Josephi Streater, prostant venales apud Sam. Smith. <a href="https://books.google.com/books?id=XJwx0lnKvOgC">https://books.google.com/books?id=XJwx0lnKvOgC</a></p>
+<p>———. (1711). <em>Analysis per quantitatum series, fluxiones, ac differentias: cum enumeratione linearum tertii ordinis</em>. Londini: ex officina Pearsoniana. <a href="https://doi.org/10.3931/e-rara-8934">https://doi.org/10.3931/e-rara-8934</a></p>
+<p>———. (1713). <em>Philosophiae naturalis principia mathematica</em>. 2nd ed. Cantabrigiae: Newton, I. <a href="https://digital.onb.ac.com/OnbViewer/viewer.faces?doc=ABO_%2BZ180810706&amp;order=7&amp;view=SINGLE">https://digital.onb.ac.com/OnbViewer/viewer.faces?doc=ABO_%2BZ180810706&amp;order=7&amp;view=SINGLE</a></p>
+<p>———. (1726). <em>Philosophiae naturalis principia mathematica</em>. 3rd ed. Londini: Apud Guil. &amp; Joh. Innys. <a href="https://gdz.sub.uni-goettingen.de/id/PPN512261393">https://gdz.sub.uni-goettingen.de/id/PPN512261393</a></p>
+<p>Neyman, J. (1923). Sur les applications de la theorie des probabilites aux experience agricoles: Essay de principes. <em>Roczniki Nank Polniczek, 10</em>, 1–51. <a href="https://link.springer.com/chapter/10.1007/978-94-015-8816-4_10">https://link.springer.com/chapter/10.1007/978-94-015-8816-4_10</a></p>
+<p>———. (1937). Outline of a Theory of Statistical Estimation Based on the Classical Theory of Probability. <em>Philosophical Transactions of the Royal Society of London A, Mathematical and physical sciences, 236</em>(767), 333–80. <a href="https://doi.org/10.1098/rsta.1937.0005">https://doi.org/10.1098/rsta.1937.0005</a></p>
+<p>Neyman, J., &amp; Pearson, E. S. (1933). On the problem of the most efficient tests of statistical hypotheses. <em>Phil. Trans. R. Soc. Lond. A., 231</em>(694–706), 289–337. <a href="https://doi.org/10.1098/rsta.1933.0009">https://doi.org/10.1098/rsta.1933.0009</a></p>
+<p>Olkin, I., &amp; Pratt, J. W. (1958). Unbiased Estimation of Certain Correlation Coefficients. <em>The Annals of Mathematical Statistics, 29</em>(1), 201–11. <a href="https://doi.org/10.1214/aoms/1177706717">https://doi.org/10.1214/aoms/1177706717</a></p>
+<p>Pascal, B. (1665). <em>Traite´ du triangle arithmetique : auec quelques autres petits traitez sur la mesme matie‘re</em>. A Paris: Chez Guillaume Desprez, rue Saint Jacques, a Saint Prosper. <a href="https://gallica.bnf.fr/ark:/12148/btv1b86262012.image#">https://gallica.bnf.fr/ark:/12148/btv1b86262012.image#</a></p>
+<p>Pearson, K. (1895). Contributions to the Mathematical Theory of Evolution. II. Skew Variation in Homogeneous Material. <em>Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences, 186</em>, 343–414. <a href="https://doi.org/10.1098/rsta.1895.0010">https://doi.org/10.1098/rsta.1895.0010</a></p>
+<p>———. (1900a). I. Mathematical Contributions to the Theory of Evolution. —VII. On the Correlation of Characters Not Quantitatively Measurable. <em>Philosophical Transactions of the Royal Society of London. Series A, Containing Papers of a Mathematical or Physical Character, 195</em>(262-273), 1–47. <a href="https://doi.org/10.1098/rsta.1900.0022">https://doi.org/10.1098/rsta.1900.0022</a></p>
+<p>———. (1900b). X. On the criterion that a given system of deviations from the probable in the case of a correlated system of variables is such that it can be reasonably supposed to have arisen from random sampling. <em>The London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science, 50</em>(302), 157–75. <a href="https://doi.org/10.1080/14786440009463897">https://doi.org/10.1080/14786440009463897</a></p>
+<p>———. (1904). <em>Mathematical contributions to the theory of evolution. XIII. On the Theory of Contingency and its Relation to Association and Normal Correlation. Drapers’ Company research memoirs</em>. Biometric Series, I. Department of Applied Mathematics. University College, University of London: Dulau &amp; Co. <a href="https://openlibrary.org/books/OL24168960M">https://openlibrary.org/books/OL24168960M</a></p>
+<p>———. (1905). <em>Mathematical contributions to the theory of evolution. XIV. On the general theory of skew correlation and non-linear regression. Drapers’ Company research memoirs</em>. Biometric Series, II. Department of Applied Mathematics. University College, University of London: Dulau &amp; Co. <a href="https://openlibrary.org/books/OL6555066M">https://openlibrary.org/books/OL6555066M</a></p>
+<p>———. (1909). On a New Method of Determining Correlation Between a Measured Character a, and a Character b, of Which Only the Percentage of Cases Wherein b Exceeds (or Falls Short of) a Given Intensity Is Recorded for Each Grade of a. <em>Biometrika, 7</em>(1/2), 96–105. <a href="http://www.jstor.org/stable/2345365">http://www.jstor.org/stable/2345365</a></p>
+<p>———. (1914). On the Probability That Two Independent Distributions of Frequency Are Really Samples of the Same Population, with Special Reference to Recent Work on the Identity of Trypanosome Strains. <em>Biometrika, 10</em>, 85–154. <a href="https://doi.org/10.1093/biomet/10.1.85">https://doi.org/10.1093/biomet/10.1.85</a></p>
+<p>Pitman, E. J. G. (1937a). Significance Tests Which May Be Applied to Samples from Any Populations. <em>Supplement to the Journal of the Royal Statistical Society, 4</em>(1), 119–30. <a href="http://www.jstor.org/stable/2984124">http://www.jstor.org/stable/2984124</a></p>
+<p>———. (1937b). Significance Tests Which May Be Applied to Samples from Any Populations. II. The Correlation Coefficient Test. <em>Supplement to the Journal of the Royal Statistical Society, 4</em>(2), 225–32. <a href="http://www.jstor.org/stable/2983647">http://www.jstor.org/stable/2983647</a></p>
+<p>———. (1938). Significance Tests Which May Be Applied to Samples from Any Populations: III. The Analysis of Variance Test. <em>Biometrika, 29</em>(3/4), 322–35. <a href="http://www.jstor.org/stable/2332008">http://www.jstor.org/stable/2332008</a></p>
+<p>Peladeau, N. (1993). SIMSTAT: Bootstrap computer simulation and statistical program for IBM personal computers. <em>Behavior Research Methods, Instruments, &amp; Computers, 25</em>(3), 410–13. <a href="https://doi.org/10.3758/BF03204533">https://doi.org/10.3758/BF03204533</a></p>
+<p>Plackett, R. L. (1983). Karl Pearson and the Chi-Squared Test. <em>International Statistical Review / Revue Internationale de Statistique, 51</em>(1), 59–72. <a href="https://doi.org/10.2307/1402731">https://doi.org/10.2307/1402731</a></p>
+<p>Quenouille, M. H. (1949). Approximate Tests of Correlation in Time-Series. <em>Journal of the Royal Statistical Society B, Methodological, 11</em>(1), 68–84. <a href="https://doi.org/10.1111/j.2517-6161.1949.tb00023.x">https://doi.org/10.1111/j.2517-6161.1949.tb00023.x</a></p>
+<p>Rabinovitch, N. L. (1970). Rabbi Levi Ben Gershon and the Origins of Mathematical Induction. <em>Archive for History of Exact Sciences, 3</em>, 237–48. <a href="http://www.jstor.org/stable/41133303">http://www.jstor.org/stable/41133303</a></p>
+<p>Ratdolt, E. (1482). <em>Euclides. Elementa geometriae</em>. Edited by Campano da Novara. Venice: Erhard Ratdolt. <a href="https://catalog.lindahall.org/discovery/delivery/01LINDAHALL_INST:LHL/1286816310005961">https://catalog.lindahall.org/discovery/delivery/01LINDAHALL_INST:LHL/1286816310005961</a></p>
+<p>Remmert, R. (1998). The Gamma Function. In <em>Classical Topics in Complex Function Theory</em>, 33–72. New York, NY: Springer. <a href="https://doi.org/10.1007/978-1-4757-2956-6_2">https://doi.org/10.1007/978-1-4757-2956-6_2</a></p>
+<p>Remmert, R., &amp; Schumacher, G. (2002). <em>Funktionentheorie 1</em>. Berlin, Heidelberg: Springer Berlin Heidelberg. <a href="https://doi.org/10.1007/978-3-642-56281-5">https://doi.org/10.1007/978-3-642-56281-5</a></p>
+<p>Roero, C. S. (2005). Chapter 4 - Gottfried Wilhelm Leibniz, First Three Papers on the Calculus (1684, 1686, 1693). In <em>Landmark Writings in Western Mathematics 1640-1940</em>, edited by Grattan-Guinness, I., Cooke, R., Corry, L., Crépel, P., &amp; Guicciardini, N., 46–58. Amsterdam: Elsevier Science. <a href="https://doi.org/https://doi.org/10.1016/B978-044450871-3/50085-1">https://doi.org/https://doi.org/10.1016/B978-044450871-3/50085-1</a></p>
+<p>Rosenthal, A. (1951). The History of Calculus. <em>The American Mathematical Monthly 58</em> (2): 75–86. <a href="http://www.jstor.org/stable/2308368">http://www.jstor.org/stable/2308368</a></p>
+<p>Scambor, C. (1997). <em>Permutationsverfahren in Einzelfallstudien: Grundlagen, Anwendungen und Teststärke</em>. Universität Graz: Naturwissenschaftliche Fakultät. <a href="https://doi.org/10.13140/RG.2.2.28632.06405">https://doi.org/10.13140/RG.2.2.28632.06405</a></p>
+<p>Scambor, C., &amp; Schrausser, D. G. (2023). Introduction (part II, permutation tests for repeated measurement designs). <em>Thesis Chapters. Academia</em>. <a href="https://www.academia.edu/94993376">https://www.academia.edu/94993376</a></p>
+<p>Scheffé, H. (1959). <em>The Analysis of Variance</em>. New York: Wiley. <a href="https://psycnet.apa.org/record/1961-00074-000">https://psycnet.apa.org/record/1961-00074-000</a></p>
+<p>Schneider, I. (2005a). Chapter 6 - Jakob Bernoulli, Ars conjectandi (1713). In <em>Landmark Writings in Western Mathematics 1640-1940</em>, edited by Grattan-Guinness, I., Cooke, R., Corry, L., Crépel, P., &amp; Guicciardini, N., 88–104. Amsterdam: Elsevier Science. <a href="https://doi.org/10.1016/B978-044450871-3/50087-5">https://doi.org/10.1016/B978-044450871-3/50087-5</a></p>
+<p>———. (2005b). Chapter 7 -Abraham De Moivre, The Doctrine of Chances (1718, 1738, 1756). In <em>Landmark Writings in Western Mathematics 1640-1940</em>, edited by Grattan-Guinness, I., Cooke, R., Corry, L., Crépel, P., &amp; Guicciardini, N., 105–20. Amsterdam: Elsevier Science. <a href="https://doi.org/10.1016/B978-044450871-3/50087-5">https://doi.org/10.1016/B978-044450871-3/50087-5</a></p>
+<p>Schrader, D. V. (1962). The Newton-Leibniz Controversy Concerning the Discovery of the Calculus. <em>The Mathematics Teacher, 55</em>(5), 385–96. <a href="http://www.jstor.org/stable/27956626">http://www.jstor.org/stable/27956626</a></p>
+<p>Schrausser, D. G. (1996). <em>Permutationstests: Theoretische und praktische Arbeitsweise von Permutationsverfahren beim unverbundenen 2 Stichprobenproblem</em>. Universität Graz: Naturwissenschaftliche Fakultät. <a href="https://doi.org/10.13140/RG.2.2.24500.32640/1">https://doi.org/10.13140/RG.2.2.24500.32640/1</a></p>
+<p>———. (1997). Exakte Verfahren oder Asymptotische Approximation? In <em>3. Tagung der österreichischen Gesellschaft für Psychologie (ÖGP)</em>. Salzburg, Österreich: Universität Salzburg. <a href="https://doi.org/10.13140/RG.2.2.14805.91369">https://doi.org/10.13140/RG.2.2.14805.91369</a></p>
+<p>———. (1998a). Die Permutationsmethode: Voraussetzungsfrei testen. In <em>41. Kongreß der Deutschen Gesellschaft für Psychologie</em>. Dresden, Deutschland: Technische Universität Dresden. <a href="https://doi.org/10.13140/RG.2.2.19532.69768">https://doi.org/10.13140/RG.2.2.19532.69768</a></p>
+<p>———. (1998b). Exakte Verfahren oder Asymptotische Approximation? In <em>Perspektiven Psychologischer Forschung in Österreich</em>, edited by Glück, J., Jirasco, M., &amp; Rollett, B. Vol. 2. WUV-Univ.-Verl., Wien. <a href="https://doi.org/10.5281/zenodo.11673333">https://doi.org/10.5281/zenodo.11673333</a></p>
+<p>———. (2022a). Mathematical-Statistical Algorithm Interpreter, SCHRAUSSER-MAT: Function Index, Manual. <em>Handbooks. Academia</em>. <a href="https://www.academia.edu/81395688">https://www.academia.edu/81395688</a></p>
+<p>———. (2022b). Thesis chapter 1: Introduction. <em>Thesis Chapters. Academia</em>. <a href="https://www.academia.edu/82224369">https://www.academia.edu/82224369</a></p>
+<p>———. (2023a). <em>Schrausser/ConsoleApp_DistributionFunctions: Console applicationes for distribution functions</em> (version v1.0.0). Zenodo. <a href="https://doi.org/10.5281/zenodo.7664141">https://doi.org/10.5281/zenodo.7664141</a></p>
+<p>———. (2023b). <em>Schrausser/ConsoleApp_Integral: Console applications for integral and interpolation</em> (version v1.0.0). Zenodo. <a href="https://doi.org/10.5281/zenodo.7655056">https://doi.org/10.5281/zenodo.7655056</a></p>
+<p>———. (2023c). <em>Schrausser/FunktionWin: Windows Interface for distribution functions</em> (version v1.0.0). Zenodo. <a href="https://doi.org/10.5281/zenodo.7651660">https://doi.org/10.5281/zenodo.7651660</a></p>
+<p>———. (2023d). <em>Schrausser/PCE500_MATH: Mathematical and statistical applications for SHARP PC-E500</em> (version v1.0.0). Zenodo. <a href="https://doi.org/10.5281/zenodo.7664088">https://doi.org/10.5281/zenodo.7664088</a></p>
+<p>———. (2024a). <em>Handbook: Distribution Functions (Verteilungs Funktionen)</em>. PsyArXiv. <a href="https://doi.org/10.5281/zenodo.10969144">https://doi.org/10.5281/zenodo.10969144</a></p>
+<p>———. (2024b). Ptolemy’s Table of Chords: Implications Considered and Discussed. <em>Zenodo. May 2024</em>.
+<a href="https://doi.org/10.5281/zenodo.11356370">https://doi.org/10.5281/zenodo.11356370</a></p>
+<p>———. (2024c). <em>Schrausser/Abh_wkt: 1.5</em> (version v1.5.0). Zenodo. <a href="https://doi.org/10.5281/zenodo.14183565">https://doi.org/10.5281/zenodo.14183565</a></p>
+<p>———. (2024d). <em>Schrausser/Various_programs: 3.5</em> (version v3.5.2). Zenodo. <a href="https://doi.org/10.5281/zenodo.14280500">https://doi.org/10.5281/zenodo.14280500</a></p>
+<p>———. (2025). Schrausser/HP_Prime_MATH: 3.0. <em>Zenodo. June 2025</em>. <a href="https://doi.org/10.5281/zenodo.14721085">https://doi.org/10.5281/zenodo.14721085</a></p>
+<p>Siegel, I. H. (1942). Index-Number Differences: Geometric Means. <em>Journal of the American Statistical Association, 37</em>(218), 271–74. <a href="https://doi.org/10.1080/01621459.1942.10500636">https://doi.org/10.1080/01621459.1942.10500636</a></p>
+<p>Snedecor, G. W. (1934). <em>Calculation and Interpretation of Analysis of Variance and Covariance</em>. Ames, Iowa: Collegiate Press. <a href="https://doi.org/10.1037/13308-000">https://doi.org/10.1037/13308-000</a></p>
+<p>Sobot, R. (2021). Exponential and Logarithmic Functions. In <em>Engineering Mathematics by Example</em>, 51–66. Cham: Springer International Publishing. <a href="https://doi.org/10.1007/978-3-030-79545-0_4">https://doi.org/10.1007/978-3-030-79545-0_4</a></p>
+<p>Solomon, S. L. (1982). Simstat a Simple Statistical Package to Support Simulation. In <em>Proceedings of the 14th Conference on Winter Simulation</em> - Volume 1, 307–11. WSC ’82. San Diego, California: Winter Simulation Conference. <a href="https://doi.org/10.5555/1035853.1035900">https://doi.org/10.5555/1035853.1035900</a></p>
+<p>Somers, R. H. (1962). A New Asymmetric Measure of Association for Ordinal Variables. <em>American Sociological Review, 27</em>(6), 799–811. <a href="http://www.jstor.org/stable/2090408">http://www.jstor.org/stable/2090408</a></p>
+<p>Spearman, C. (1904). The Proof and Measurement of Association Between Two Things. <em>The American Journal of Psychology, 15</em>(1), 72–101. <a href="http://www.jstor.org/stable/1412159">http://www.jstor.org/stable/1412159</a></p>
+<p>Stigler, S. M. (1986). <em>The history of statistics: the measurement of uncertainty before 1900</em>. Cambridge, MA: Belknap Press of Harvard University Press. <a href="https://www.scirp.org/reference/ReferencesPapers?ReferenceID=1973131">https://www.scirp.org/reference/ReferencesPapers?ReferenceID=1973131</a></p>
+<p>———. (2018). Richard Price, the First Bayesian. <em>Statistical Science, 33</em>(1), 117–25. <a href="https://www.jstor.org/stable/26770983">https://www.jstor.org/stable/26770983</a></p>
+<p>Suter, H. (1887). <em>Die Mathematik auf den Universitäten des Mittelalters</em>. Zürich: Druck von Zürcher und Furrer. <a href="https://doi.org/10.3931/e-rara-65095">https://doi.org/10.3931/e-rara-65095</a></p>
+<p>Sylvester, J. J. (1904). <em>The Collected Mathematical Papers of James Joseph Sylvester</em>. Edited by Baker, H. F. Vol. 1. Cambridge: University Press. <a href="https://archive.org/details/collectedmathem01sylvrich/page/n7/mode/1up">https://archive.org/details/collectedmathem01sylvrich/page/n7/mode/1up</a></p>
+<p>———. (1908). <em>The Collected Mathematical Papers of James Joseph Sylvester</em>. Edited by Baker, H. F. Vol. 2. Cambridge: University Press. <a href="https://archive.org/details/SylvesterCollected2/page/n3/mode/1up">https://archive.org/details/SylvesterCollected2/page/n3/mode/1up</a></p>
+<p>———. (1909). <em>The Collected Mathematical Papers of James Joseph Sylvester</em>. Edited by Baker, H. F. Vol. 3. Cambridge: University Press. <a href="https://archive.org/details/TheCollectedMathematicalPapersOfJamesJosephSylvesterVolumeIii/page/n3/mode/1up">https://archive.org/details/TheCollectedMathematicalPapersOfJamesJosephSylvesterVolumeIii/page/n3/mode/1up</a></p>
+<p>———. (1912). <em>The Collected Mathematical Papers of James Joseph Sylvester</em>. Edited by Baker, H. F. Vol. 4. Cambridge: University Press. <a href="https://archive.org/details/collectedmathema04sylvuoft/page/n8/mode/1up">https://archive.org/details/collectedmathema04sylvuoft/page/n8/mode/1up</a></p>
+<p>Tate, R. F. (1955). The Theory of Correlation Between Two Continuous Variables When One Is Dichotomized. <em>Biometrika, 42</em>(1/2), 205–16. <a href="http://www.jstor.org/stable/2333437">http://www.jstor.org/stable/2333437</a></p>
+<p>Taylor, B. (1715). <em>Methodus incrementorum directa &amp; inversa</em>. Auctore Brook Taylor, LL. D. &amp; Regiae Societatis Secretario. Londini: Typis Pearsonianis: Prostant apud Gul. Innys ad Insignia Principis in Coemeterio Paulino MDCCXV. <a href="https://books.google.com/books?id=iXN1xgEACAAJ">https://books.google.com/books?id=iXN1xgEACAAJ</a></p>
+<p>———. (1717). <em>Methodus incrementorum directa &amp; inversa</em>. Auctore Brook Taylor, LL. D. &amp; Regiae Societatis Secretario. Londini: Impensis Gulielmi Innys ad Insignia Principis in Coemetrio D. Pauli. MDCCXVII. <a href="https://books.google.com/books?id=r-Gq9YyZYXYC">https://books.google.com/books?id=r-Gq9YyZYXYC</a></p>
+<p>Thurstone, L. L. (1931). Multiple Factor Analysis. <em>Psychological Review, 38</em>(5), 406–27. <a href="https://doi.org/10.1037/h0069792">https://doi.org/10.1037/h0069792</a></p>
+<p>———. (1934). The Vectors of Mind. <em>Psychological Review, 41</em>, 1–32. <a href="https://doi.org/10.1037/h0075959">https://doi.org/10.1037/h0075959</a></p>
+<p>———. (1935). <em>The Vectors of Mind. Multiple-Factor Analysis for the Isolation of Primary Traits</em>. Chicago, Illinois: University of Chicago Press. <a href="https://archive.org/details/vectorsofmindmul010122mbp/page/n7/mode/1up">https://archive.org/details/vectorsofmindmul010122mbp/page/n7/mode/1up</a></p>
+<p>van Evra, J. (1997). Antoine Arnauld and Pierre Nicole, Logic or the Art of Thinking. <em>Philosophy in Review, 17</em>(3), 153–55. <a href="https://philpapers.org/rec/VANAAA-13">https://philpapers.org/rec/VANAAA-13</a></p>
+<p>Vince, J. (2021). The Complex Plane. In <em>Quaternions for Computer Graphics</em>, 55–70. London: Springer. <a href="https://doi.org/10.1007/978-1-4471-7509-4_4">https://doi.org/10.1007/978-1-4471-7509-4_4</a></p>
+<p>Walter, W. (1982). Old and New Approaches to Euler’s Trigonometric Expansions. <em>The American Mathematical Monthly, 89</em>(4), 225–30. <a href="http://www.jstor.org/stable/2320218">http://www.jstor.org/stable/2320218</a></p>
+<p>Weierstraß, K. (1894). <em>Mathematische Werke</em>. Vol. 1. Berlin: Mayer &amp; Müller. <a href="https://quod.lib.umich.edu/u/umhistmath/AAN8481.0001.001">https://quod.lib.umich.edu/u/umhistmath/AAN8481.0001.001</a></p>
+<p>Whish, C. M. (1834). XXXIII. On the Hindú Quadrature of the Circle, and the infinite Series of the proportion of the circumference to the diameter exhibited in the four S’ástras, the Tantra Sangraham, Yucti Bháshá, Carana Padhati, and Sadratnamála. <em>Transactions of the Royal Asiatic Society of Great Britain and Ireland, 3</em>(3), 509–23. <a href="https://doi.org/10.1017/S0950473700001221">https://doi.org/10.1017/S0950473700001221</a></p>
+<p>Wirtinger, W. (1927). Zur formalen Theorie der Funktionen von mehr komplexen Veränderlichen. <em>Mathematische Annalen, 97</em>, 357–74. <a href="https://doi.org/10.1007/BF01447872">https://doi.org/10.1007/BF01447872</a></p>
+<p>Wooff, D., &amp; Peladeau, N. (1994). Simstat: Simulation and Statistics for Ibm Personal Computers or Compatibles, Version 2.0. <em>Journal of the Royal Statistical Society Series C, 43</em>(2), 417–22. <a href="https://doi.org/10.2307/2986032">https://doi.org/10.2307/2986032</a></p>
+<p>Yates, F. (1934). Contingency Tables Involving Small Numbers and the <math display="inline"><msup><mi>&chi;</mi><mn>2</mn></msup>
+</math> Test. <em>Supplement to the Journal of the Royal Statistical Society, 1</em>(2), 217–35. <a href="http://www.jstor.org/stable/2983604">http://www.jstor.org/stable/2983604</a></p>
+<p>Yule, G. U. (1912). On the Methods of Measuring Association Between Two Attributes. <em>Journal of the Royal Statistical Society, 75</em>(6), 579–652. <a href="http://www.jstor.org/stable/2340126">http://www.jstor.org/stable/2340126</a></p>
+
+<hr WIDTH="75%">
+<blockquote ALIGN="CENTER">
+<center>
+<a href="https://github.com/Schrausser/HP_Prime_Math">
+HP_Prime_Math
+</a>
+<br><font color="#999999"><font size=-2>
+<a
+href="https://orcid.org/0000-0002-4924-8280">
+Dietmar Gerald Schrausser
+</a>
+<p>07.07.2025</p>
+</font></font>
+</center>
+</blockquote>
+
+</body>
+</html>
