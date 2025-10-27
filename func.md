@@ -646,6 +646,8 @@ with
 
 $$CI_p=\hat y_x\pm z_{(1-\frac{1-p}{2})}\cdot\sigma_{\hat yx}$$
 
+where
+
 $p$ = probability  
 $r$ = correlation  
 $\hat y$ = predicted value $y$  
