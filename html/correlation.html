@@ -15,10 +15,25 @@ HP_Prime_Math/correlation
 <style>
 a {color: #78909c; }
 a:visited {color: #78909c;}
+table 
+{
+text-align: center;
+border-collapse: collapse;
+margin: 1 auto;
+height: 12vh;
+width: 45vh;
+}
+th 
+{
+border-bottom: 1px solid black;
+border-top: 1px solid black;
+}
 </style>
 
 <h1 id="correlationhtml">correlation.html</h1>
-<p>Table 1. Appropriate <em>correlation</em> coefficients; <em>product-moment</em> or Pearson <em>correlation</em>  <math display="inline">
+<table>
+<caption style="text-align:left; font-size:80%">
+<strong>Table 1. </strong>Appropriate <em>correlation</em> coefficients; <em>product-moment</em> or Pearson <em>correlation</em>  <math display="inline">
 <msub><mi>r</mi><mrow data-mjx-texclass="ORD"><mi>x</mi><mi>y</mi></mrow></msub>
 </math>, Spearman's <em>rank correlation</em> coefficient <em>rho</em> <math display="inline">
 <mi>&rho;</mi>
@@ -30,22 +45,48 @@ a:visited {color: #78909c;}
 <msub><mi>r</mi><mrow data-mjx-texclass="ORD"><mi>b</mi><mi>i</mi><mi>s</mi><mi>R</mi></mrow></msub>
 </math> and <em>phi</em> coefficient <math display="inline">
 <mi>&Phi;</mi>
-</math> at the corresponding <em>scale</em> levels, <em>interval i</em>, <em>ordinal o</em>, and <em>nominal n</em>.</p>
-<pre><code>	i 		o 		n 
-
-i 	rxy	             
-o       		rho¹      	
-n     	rpb, rbis    	rbisR	    	phi²
-</code></pre>
-<p>¹) also Kendall's tau <math display="inline">
-<mi>&tau;</mi>
-</math> (<a href="http://www.jstor.org/stable/2332226">1938</a>) or Somers' <math display="inline">
-<mi>D</mi>
-</math> (<a href="http://www.jstor.org/stable/2090408">1962</a>).<br />
-²) also <em>tetrachoric correlation</em> <math display="inline">
-<msub><mi>r</mi><mrow data-mjx-texclass="ORD"><mi>t</mi><mi>e</mi><mi>t</mi></mrow></msub>
-</math> (Pearson, <a href="https://royalsocietypublishing.org/doi/abs/10.1098/rsta.1900.0022">1900</a>).</p>
-
+</math> at the corresponding <em>scale</em> levels, <em>interval i</em>, <em>ordinal o</em>, and <em>nominal n</em>.</caption>
+<tr>
+<th></th>
+<th style="font-size: 80%"><em>i</em></th>
+<th style="font-size: 80%"><em>o</em></th>
+<th style="font-size: 80%"><em>n</em></th>
+</tr>
+<td style="font-size: 80%"><strong><em>i</em></strong></td>
+<td style="font-size: 80%"><math display="inline">
+<msub><mi>r</mi><mrow data-mjx-texclass="ORD"><mi>x</mi><mi>y</mi></mrow></msub>
+</math></td>
+<td></td>
+<td></td>
+ </tr>
+ <tr>
+ <td style="font-size: 80%"><strong><em>o</em></strong></td>
+<td></td>
+<td style="font-size: 80%"><math display="inline">
+<mi>&rho;</mi>
+</math>¹</td>
+<td></td>
+</tr>
+<tr>
+<td style="font-size: 80%"><strong><em>n</em></strong></td>
+<td style="font-size: 80%"><math display="inline">
+<msub><mi>r</mi><mrow data-mjx-texclass="ORD"><mi>b</mi><mi>i</mi><mi>s</mi></mrow></msub>
+</math>,  <math display="inline">
+<msub><mi>r</mi><mrow data-mjx-texclass="ORD"><mi>p</mi><mi>b</mi></mrow></msub>
+</math></td>
+<td style="font-size: 80%"><math display="inline">
+<msub><mi>r</mi><mrow data-mjx-texclass="ORD"><mi>b</mi><mi>i</mi><mi>s</mi><mi>R</mi></mrow></msub>
+</math></td>
+<td style="font-size: 80%"><math display="inline">
+<mi>&Phi;</mi></math>²</td>
+</tr>
+<tfoot style="text-align:left; font-size:70%; border-top: 1px solid black;">
+<tr>
+<td colspan="4"><p>¹) also Kendall's tau <math display="inline"><mi>&tau;</mi></math> (<a href="http://www.jstor.org/stable/2332226">1938</a>) or Somers' <math display="inline"><mi>D</mi></math> (<a href="http://www.jstor.org/stable/2090408">1962</a>).<br />
+²) also <em>tetrachoric correlation</em> <math display="inline"><msub><mi>r</mi><mrow data-mjx-texclass="ORD"><mi>t</mi><mi>e</mi><mi>t</mi></mrow></msub></math> (Pearson, <a href="https://royalsocietypublishing.org/doi/abs/10.1098/rsta.1900.0022">1900</a>).</p></td>
+</tr>
+</tfoot>
+</table>
 <br>
 <h3 id="references">References</h3>
 
