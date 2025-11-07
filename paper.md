@@ -70,7 +70,7 @@ included for the calculation of (1) *exposure values* $Ev$, where $Ev=\frac{\log
 
 Gottfried Wilhelm Leibniz ([1684](https://gdz.sub.uni-goettingen.de/id/PPN788262599), [1686](https://gdz.sub.uni-goettingen.de/id/PPN788262947), [1693](https://archive.org/details/s1id13206590)) along with Sir Isaac Newton ([1687](https://books.google.com/books?id=XJwx0lnKvOgC), [1713](https://digital.onb.ac.com/OnbViewer/viewer.faces?doc=ABO_%2BZ180810706&order=7&view=SINGLE), [1726](https://gdz.sub.uni-goettingen.de/id/PPN512261393)) are considered the discoverers of *differential* and *integral calculus*. According to current consensus, both developed the methods independently of each other, see the so-called *Leibniz-Newton calculus controversy* (c.f. Cajori, [1919](http://www.jstor.org/stable/2974042); Cassirer, [1943](http://www.jstor.org/stable/2180670); Rosenthal, [1951](http://www.jstor.org/stable/2308368); Schrader, [1962](http://www.jstor.org/stable/27956626); Kossovsky, [2020](https://doi.org/10.1007/978-3-030-51744-1_33)).
 
-Newton *began* working on a *geometric* form of *calculus* (the method of *fluxions and fluents*) in 1666, published in [1687](https://books.google.com/books?id=XJwx0lnKvOgC) (c.f. Roero,  [2005](https://doi.org/https://doi.org/10.1016/B978-044450871-3/50085-1)), yet, it was Leibniz who *introduced* the symbols $\int$ and $\partial$.
+Newton *began* working on a *geometric* form of *calculus* (the method of *fluxions and fluents*) in 1666, published in [1687](https://books.google.com/books?id=XJwx0lnKvOgC) (c.f. Roero,  [2005](https://doi.org/10.1016/B978-044450871-3/50085-1)), yet, it was Leibniz who *introduced* the symbols $\int$ and $\partial$.
 
 Here, the functions are primarily intended to display and calculate $\pi$ and $\Gamma$ within the coordinate system:
 
@@ -187,7 +187,7 @@ The following functions to *generate permutation* and *variation* matrices are a
 
 *Permutation* or *randomization tests* were first mentioned by Fisher ([1935](https://psycnet.apa.org/record/1939-04964-000)), based on experiments in agriculture (Fisher, [1926](https://doi.org/10.23637/rothamsted.8v61q); Neyman, [1923](https://link.springer.com/chapter/10.1007/978-94-015-8816-4_10)). In this context see Pitman ([1937a](http://www.jstor.org/stable/2984124), [b](http://www.jstor.org/stable/2983647), [1938](http://www.jstor.org/stable/2332008)), Fisher ([1966](https://scirp.org/reference/referencespapers.aspx?referenceid=895747), [1971](https://home.iitk.ac.in/~shalab/anova/DOE-RAF.pdf), res.), especially Eugene Sinclair Edgington ([1964](https://doi.org/10.1080/00223980.1964.9916711), [1980](https://doi.org/10.2307/1164966), [1987](https://doi.org/10.1037/0022-0167.34.4.437), [2011](https://doi.org/10.1007/978-3-642-04898-2_56)) or Edgington and Onghena ([2007](https://doi.org/10.1201/9781420011814)).
 
-The *bootstrap* method was introduced by Bradley Efron ([1979](https://doi.org/10.1214/aos/1176344552), [1981](https://doi.org/10.1093/biomet/68.3.589), [1982](https://doi.org/10.1137/1.9781611970319)) as a further development (Quenouille, [1949](https://doi.org/10.1111/j.2517-6161.1949.tb00023.x); Metropolis & Ulam, [1949](https://doi.org/10.1080/01621459.1949.10483310)), for *software* solutions see e.g. Solomon ([1982](https://doi.org/10.5555/1035853.1035900)), Dallal ([1986](http://www.jstor.org/stable/2684555), [1988](https://doi.org/https://doi.org/10.1016/0010-4809(88)90037-7)), Peladeau ([1993](https://doi.org/10.3758/BF03204533)), Wooff and Peladeau ([1994](https://doi.org/10.2307/2986032)), Mehta et al. ([2014](https://doi.org/10.1002/9781118445112.stat04892)),  also Schrausser ([2024d](https://doi.org/10.5281/zenodo.14280500)).
+The *bootstrap* method was introduced by Bradley Efron ([1979](https://doi.org/10.1214/aos/1176344552), [1981](https://doi.org/10.1093/biomet/68.3.589), [1982](https://doi.org/10.1137/1.9781611970319)) as a further development (Quenouille, [1949](https://doi.org/10.1111/j.2517-6161.1949.tb00023.x); Metropolis & Ulam, [1949](https://doi.org/10.1080/01621459.1949.10483310)), for *software* solutions see e.g. Solomon ([1982](https://doi.org/10.5555/1035853.1035900)), Dallal ([1986](http://www.jstor.org/stable/2684555), [1988](https://doi.org/10.1016/0010-4809(88)90037-7)), Peladeau ([1993](https://doi.org/10.3758/BF03204533)), Wooff and Peladeau ([1994](https://doi.org/10.2307/2986032)), Mehta et al. ([2014](https://doi.org/10.1002/9781118445112.stat04892)),  also Schrausser ([2024d](https://doi.org/10.5281/zenodo.14280500)).
 
 Following functions were *developed*:
 
@@ -306,7 +306,7 @@ Cox, D. R., & Hinkley, D. V. (1974). *Theoretical Statistics*. 1st ed. New York:
 
 Dallal, G. E. (1986). STATOOLS: Statistical Utility Programs. *The American Statistician, 40*(3), 236–36. [http://www.jstor.org/stable/2684555](http://www.jstor.org/stable/2684555)
 
-———. (1988). PITMAN: A FORTRAN Program for Exact Randomization Tests. *Computers and Biomedical Research, 21*(1), 9–15. [https://doi.org/https://doi.org/10.1016/0010-4809(88)90037-7](https://doi.org/https://doi.org/10.1016/0010-4809(88)90037-7)
+———. (1988). PITMAN: A FORTRAN Program for Exact Randomization Tests. *Computers and Biomedical Research, 21*(1), 9–15. [https://doi.org/10.1016/0010-4809(88)90037-7](https://doi.org/10.1016/0010-4809(88)90037-7)
 
 De Moivre, A. (1711). De mensura sortis, seu, de probabilitate eventuum in ludis a casu fortuito pendentibus. *Philosophical Transactions of the Royal Society of London, 27*(329), 213–64. [https://doi.org/10.1098/rstl.1710.0018](https://doi.org/10.1098/rstl.1710.0018)
 
@@ -564,7 +564,7 @@ Remmert, R. (1998). The Gamma Function. In *Classical Topics in Complex Function
 
 Remmert, R., & Schumacher, G. (2002). *Funktionentheorie 1*. Berlin, Heidelberg: Springer Berlin Heidelberg. [https://doi.org/10.1007/978-3-642-56281-5](https://doi.org/10.1007/978-3-642-56281-5)
 
-Roero, C. S. (2005). Chapter 4 - Gottfried Wilhelm Leibniz, First Three Papers on the Calculus (1684, 1686, 1693). In *Landmark Writings in Western Mathematics 1640-1940*, edited by Grattan-Guinness, I., Cooke, R., Corry, L., Crépel, P., & Guicciardini, N., 46–58. Amsterdam: Elsevier Science. [https://doi.org/https://doi.org/10.1016/B978-044450871-3/50085-1](https://doi.org/https://doi.org/10.1016/B978-044450871-3/50085-1)
+Roero, C. S. (2005). Chapter 4 - Gottfried Wilhelm Leibniz, First Three Papers on the Calculus (1684, 1686, 1693). In *Landmark Writings in Western Mathematics 1640-1940*, edited by Grattan-Guinness, I., Cooke, R., Corry, L., Crépel, P., & Guicciardini, N., 46–58. Amsterdam: Elsevier Science. [https://doi.org/10.1016/B978-044450871-3/50085-1](https://doi.org/10.1016/B978-044450871-3/50085-1)
 
 Rosenthal, A. (1951). The History of Calculus. *The American Mathematical Monthly, 58*(2), 75–86. [http://www.jstor.org/stable/2308368](http://www.jstor.org/stable/2308368)
 
