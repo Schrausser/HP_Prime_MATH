@@ -745,7 +745,7 @@ $\hat y$ = predicted value $y$
 
 ---
 
-Cohen ([1977](https://doi.org/10.1016/C2013-0-10517-X), [1988](https://www.scirp.org/(S(lz5mqp453edsnp55rrgjct55))/reference/ReferencesPapers.aspx?ReferenceID=2041144), p. 20, p. 49, [1992](https://doi.org/10.1037/0033-2909.112.1.15)), Borenstein et al.  ([1997](https://www.semanticscholar.org/paper/Power-and-precision-%3A-a-computer-program-for-power-Borenstein-Rothstein/f379f13a460b01488c35aea408e355436dbae839)), Borenstein et al. ([2001](https://books.google.com/books?id=tYg02XZBeNAC&printsec=frontcover&hl=de#v=onepage&q&f=false)).
+Cohen ([1977](https://doi.org/10.1016/C2013-0-10517-X), [1988](https://www.scirp.org/(S(lz5mqp453edsnp55rrgjct55))/reference/ReferencesPapers.aspx?ReferenceID=2041144), p. 20, p. 49, [1992](https://doi.org/10.1037/0033-2909.112.1.155)), Borenstein et al.  ([1997](https://www.semanticscholar.org/paper/Power-and-precision-%3A-a-computer-program-for-power-Borenstein-Rothstein/f379f13a460b01488c35aea408e355436dbae839)), Borenstein et al. ([2001](https://books.google.com/books?id=tYg02XZBeNAC&printsec=frontcover&hl=de#v=onepage&q&f=false)).
 
 $$\epsilon=d=\frac{\mu_1-\mu_0}{\hat\sigma},$$
 
