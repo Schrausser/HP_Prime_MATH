@@ -67,7 +67,7 @@ Cohen, J. (1977). *Statistical Power Analysis for the Behavioral Science*. Amste
 
 ———. (1988). *Statistical Power Analysis for the Behavioral Science*. 2nd ed. Hillsdale, NJ: Lawrence Erlbaum Associates. [https://www.scirp.org/(S(lz5mqp453edsnp55rrgjct55))/reference/ReferencesPapers.aspx?ReferenceID=2041144](https://www.scirp.org/(S(lz5mqp453edsnp55rrgjct55))/reference/ReferencesPapers.aspx?ReferenceID=2041144)
 
-———. (1992). A Power Primer. *Psychological Bulletin 112* (1): 155–59. [https://doi.org/10.1037/0033-2909.112.1.15](https://doi.org/10.1037/0033-2909.112.1.15)
+———. (1992). A Power Primer. *Psychological Bulletin 112* (1): 155–59. [https://doi.org/10.1037/0033-2909.112.1.155](https://doi.org/10.1037/0033-2909.112.1.155)
 
 Collins, J. (1671). *Extracts from a letter from James Gregory to John Collins, 15 February 1671.* Cambridge: University Library. [https://archivesearch.lib.cam.ac.uk/repositories/2/archival_objects/566767](https://archivesearch.lib.cam.ac.uk/repositories/2/archival_objects/566767)
 
