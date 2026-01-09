@@ -592,7 +592,7 @@ Schrausser, D. G. (1996). *Permutationstests: Theoretische und praktische Arbeit
 
 ———. (2022b). Thesis chapter 1: Introduction. *Thesis Chapters. Academia*. [https://www.academia.edu/82224369](https://www.academia.edu/82224369)
 
-———. (2023a). *Schrausser/ConsoleApp_DistributionFunctions: Console applicationes for distribution functions* (version v1.0.0). Zenodo. [https://doi.org/10.5281/zenodo.7664141](https://doi.org/10.5281/zenodo.7664141)
+———. (2023a). *Schrausser/ConsoleApp_DistributionFunctions: Console applications for distribution functions* (version v1.0.0). Zenodo. [https://doi.org/10.5281/zenodo.7664141](https://doi.org/10.5281/zenodo.7664141)
 
 ———. (2023b). *Schrausser/ConsoleApp_Integral: Console applications for integral and interpolation* (version v1.0.0). Zenodo. [https://doi.org/10.5281/zenodo.7655056](https://doi.org/10.5281/zenodo.7655056)
 

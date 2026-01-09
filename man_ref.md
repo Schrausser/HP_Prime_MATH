@@ -361,7 +361,7 @@ Schrausser, D. G. (1996). *Permutationstests: Theoretische und praktische Arbeit
 
 ———. (2022b). Thesis chapter 1: Introduction. *Thesis Chapters. Academia*. [https://www.academia.edu/82224369](https://www.academia.edu/82224369)
 
-———. (2023a). *Schrausser/ConsoleApp_DistributionFunctions: Console applicationes for distribution functions* (version v1.0.0). Zenodo. [https://doi.org/10.5281/zenodo.7664141](https://doi.org/10.5281/zenodo.7664141)
+———. (2023a). *Schrausser/ConsoleApp_DistributionFunctions: Console applications for distribution functions* (version v1.0.0). Zenodo. [https://doi.org/10.5281/zenodo.7664141](https://doi.org/10.5281/zenodo.7664141)
 
 ———. (2023b). *Schrausser/ConsoleApp_Integral: Console applications for integral and interpolation* (version v1.0.0). Zenodo. [https://doi.org/10.5281/zenodo.7655056](https://doi.org/10.5281/zenodo.7655056)
 
@@ -435,5 +435,4 @@ Wooff, D., & Peladeau, N. (1994). Simstat: Simulation and Statistics for Ibm Per
 Yates, F. (1934). Contingency Tables Involving Small Numbers and the $\chi^2$ Test. *Supplement to the Journal of the Royal Statistical Society 1* (2): 217–35. [http://www.jstor.org/stable/2983604](http://www.jstor.org/stable/2983604)
 
 Yule, G. U. (1912). On the Methods of Measuring Association Between Two Attributes. *Journal of the Royal Statistical Society 75* (6): 579–652. [http://www.jstor.org/stable/2340126](http://www.jstor.org/stable/2340126) 
-
 
